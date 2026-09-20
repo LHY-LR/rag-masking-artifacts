@@ -880,3 +880,63 @@ dn 线每轮也有 **2–4 道题（0.5–0.9%）** 的 `new_key` 与 `old_key` 
 **别名感知打分未改口径**（`a`/`b` 用全别名、`c`/`d` 用单 key 的不对称在实体线上影响很大，
 但用"来源题别名集"补偿会因同一实体问题过度放宽——**D 定稿前再决定，不偷偷改**）；
 别名表之外的同义实体（`Burma`/`Myanmar`）字符串守卫抓不到；E 线只跑 2 模型 × k=5。
+
+---
+
+### 9.12 Phase D（论文 v0.1 → v0.2 修改轮）主控二遍复核（2026-09-20）
+
+**背景**：外部"最高级主控"在 `paper/` 内做了 Phase D 修改（补 CK-PLUG、删冗余引用、重写 Related Work Position、
+包装自借陷阱、英语 spot fix、Limitations 新 bullet），并出了 `改动汇总` / `改进计划` / `评审报告` 三份文档。
+本节记录**主控独立复核**（不采信自述），结论与改动如下。
+
+**(1) 已核实为真**（文件大小、计数、structure 全部对上）：
+
+| 项 | 声明 | 复核结果 |
+|---|---|---|
+| 文件落地 | main.tex +3.9KB / refs.bib +84B / CHANGELOG_phaseD.md 新建 | ✅ 复改前 80,570 B（CRLF）与声明一致（release 内 LF 版 79,411 B = 80,570 − 1159 次换行转换） |
+| 引用自洽 | 33 cite key ↔ 33 bib 条目 | ✅（修复前）`paper/check_tex.py` 报 33/33 |
+| Headline 数字未动 | — | ✅ 数值 token 逐一对差：旧版独有 = 被删文献的年份（2020/2001/2004/2023/2024），新版独有 = CK-PLUG 的 `9.9`/`71.9` 与 `LLaMA3-8B` 的 `3`/`8`。**无任何 headline 数字变化** |
+| appendix 未动 | — | ✅ 与 `release/paper/appendix.tex` **逐行内容相同**（仅 CRLF vs LF 差异） |
+| CK-PLUG 真实存在 | arXiv:2503.15888、ICLR 2026、9.9%→71.9%、baseline 42.1% | ✅ 联网核验 arXiv abs 页 + ICLR 2026 poster 页 + 项目页；**注意报告里"作者 Cheng et al."写错了，第一作者是 Baolong Bi，Xueqi Cheng 是末位** |
+
+**(2) 查出并已修复的三个缺陷**（详见 `paper/CHANGELOG_phaseD.md` 的 "Phase D second pass"）：
+
+| # | 缺陷 | 性质 | 处置 |
+|---|---|---|---|
+| D10 | 删 10 条引用时**把文献连同它支撑的论断一起删了**（`kaushik2020counterfactual`、`meng2022rome`、`northcutt2021label`、`gururangan2018artifacts`、`xia2026evidence`），其中把 Northcutt/Gururangan 的论断改挂到 `artstein2008kappa`（一致性统计，撑不起"标签错误率/标注伪影率"），并把"定位事实关联"这一步从 ROME 2022 挪给了 MEMIT 2023 | **attribution loss / 误归属**，比"引用偏多"更严重 | 5 条**全部恢复**并还原原句；删掉 `[cf.]{artstein2008kappa}`；MEMIT 段落改回"ROME 定位、MEMIT 规模化"。净结果 **42 → 38 条**（真删 5 条：boydgraber2020trivia / koehn2004 / schenker2001 / yan2024 / sainz2023） |
+| D11 | 新 CK-PLUG 条目的**作者名是编造的**（`Bi, Yu and Cheng, Yufeng`），并附了无法核实的"v2 2025-08"版本声明 | 编造元数据（与 9.18 那次"3 个名字凭空编的"同类） | 按 arXiv 改为真实 7 人名单；note 只留可核实的 9.9%/71.9%/42.1%；删掉 v2 声明 |
+| D12 | `paper/CHANGELOG_phaseD.md` 是 **UTF-16LE 无 BOM**，`grep`/读取工具都当二进制（**该文件对本项目自己的文档检查工具等于不存在**） | 交付物不可读 ⇒ 任何"检查通过"都不可信 | 转为 UTF-8（与仓库其余 .md 一致）；另删掉遗留在仓库根的临时脚本 `_check_bib.py`（含硬编码 `<PATH>\...` 路径，同为本项目陷阱 #4） |
+
+**(3) 修复后状态**：`check_tex.py` 报 **38/38 无 dangling**、`check_figures.py` 全绿；
+新的投稿 zip `paper/paper_v0.2_overleaf.zip`（339.3 KB，18 条目，正斜杠路径自检通过）已生成。
+
+**(4) 新增的一条 novelty 主张（需登记，勿滥用）**：D4 在 Abstract 写入
+"**to our knowledge, this is the first quantification of the same-pool answer-alias leakage rate for
+any controlled-substitution corpus**"。这是一条**首例主张**，证据是本节 §9.7 的 E-N3（首轮 62% 自借）。
+**允许写法**：限定在"同池借值的答案别名泄漏率"这一具体量 + "to our knowledge"；
+**不得**扩写成"首次发现构造缺陷""首次量化构集有效性"（Northcutt 2021 等已占），也不得据此主张任何 E 线效应。
+
+**(5) 仍未做**：**从未编译过**（本轮只做结构检查，无 LaTeX 编译器）；Overleaf 上传/重导 PDF、发布包 2 处卫生
+（S8）与 GitHub 重推仍需用户执行。`论文/` 下**没有 git 仓库**，Phase D 文档里的 `git add/commit/tag` 序列不适用。
+
+**(6) 本节结论的当场复核命令**（**因为 `论文/` 不是 git 仓库，无法用 diff 证明历史，所以本节一律给"当前字节状态"的可复算证据**；
+只凭编辑器快照 / IDE 索引复核会读到改动前的状态——2026-09-20 已实际发生过一次，把 D10、D12 误判为"未修复"）：
+
+```powershell
+cd "<REPO_ROOT>"
+# (a) bib 条目数应为 38，且下面 5 个 key 必须 PRESENT，另外 5 个必须 absent
+(Select-String -Path paper\refs.bib -Pattern "^@").Count
+Select-String -Path paper\refs.bib -Pattern "^@[a-z]+\{(kaushik2020counterfactual|northcutt2021label|gururangan2018artifacts|xia2026evidence|meng2022rome),"
+# (b) 正文里的归还归属（行号：241 / 255 / 270 / 287–288）
+Select-String -Path paper\main.tex -Pattern "kaushik2020counterfactual|meng2022rome|xia2026evidence|northcutt2021label|gururangan2018artifacts"
+# (c) 编码：paper\CHANGELOG_phaseD.md 的首 8 字节必须是 23 20 50 68 61 73 65 20（UTF-8 "# Phase "），且全文 0 个 0x00
+$b=[System.IO.File]::ReadAllBytes("<REPO_ROOT>\paper\CHANGELOG_phaseD.md")
+(($b[0..7] | ForEach-Object { $_.ToString('X2') }) -join ' ') ; ($b | Where-Object { $_ -eq 0 }).Count
+# (d) 结构自检：应报 38/38
+& .\venv\Scripts\python.exe paper\check_tex.py
+```
+
+**2026-09-20 实测（本节定稿时）**：(a) 38 条、5 PRESENT / 5 absent；(b) 5 处引用均在正文；
+(c) 首 8 字节 `23 20 50 68 61 73 65 20`、0x00 计数 = 0；(d) 38/38 无 dangling。
+`paper\` 与仓库根下 35 个文本文件**全部无 0x00**（UTF-16 已清零）。
+另注：`release\paper\refs.bib` 是**冻结的 v0.1**（42 条、LF 换行），不是论文的工作副本；核对 bib 必须看 `paper\refs.bib`。

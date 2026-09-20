@@ -49,19 +49,17 @@ already know the answer. We formalize the problem with a four-arm design over a
 controlled-substitution corpus and define the resulting gap as \emph{masking}. On a
 single-hop factoid pool (TriviaQA, $n{=}432$) masking reaches \textbf{+0.23} on the
 oracle-context line (C-line) and \textbf{+0.31} on the shared-corpus retrieval line
-(B-line; the largest value comes from a cross-generation model that is not
+(B-line; the largest value comes from the cross-generation model, which is not
 modality-matched), and on the B-line it is positive in \textbf{12/12} model$\times k$
-configurations
-(\textbf{10/12} with 95\% CI excluding zero; both exceptions come from the smallest model,
-whose closed-book floor leaves nothing to leak); on the $k{=}1$ axis its point
-estimate rises at every step of the model scale, and across the $17$ cells that share the
-pool masking grows with the model's closed-book accuracy at a slope of $0.50$ (95\% CI
-$0.44$--$0.57$; $0.52$ on the oracle-context line and $0.50$ on the retrieved line, which we
-therefore pool)---well below the slope of $1$ that a constant manipulation cost would force,
-so the relation is not a restatement of the identity. The $k{=}5$ axis has one reversal,
-which we report. We then audit the manipulation
-itself: prior work that rewrites a passage to probe parametric memory does not report
-whether those rewrites are valid. A human audit of a 20.2\% sample of the \emph{pre-fix}
+configurations (\textbf{10/12} with 95\% CI excluding zero; both exceptions come from the
+smallest model, whose closed-book floor leaves nothing to leak); on the $k{=}1$ axis its point estimate rises at every step of the model scale,
+and across the $17$ cells that share the pool masking grows with the model's
+closed-book accuracy at a slope of $0.50$ (95\% CI $0.44$--$0.57$; $0.52$ on the
+oracle-context line and $0.50$ on the retrieved line, which we therefore pool)---well
+below the slope of $1$ that a constant manipulation cost would force, so the relation is
+not a restatement of the identity. The $k{=}5$ axis has one reversal, which we report.
+We then audit the manipulation itself: prior work that rewrites a passage to probe
+parametric memory does not report whether those rewrites are valid. A human audit of a 20.2\% sample of the \emph{pre-fix}
 corpus finds \textbf{24.4\%} of
 constructed items invalid; we trace the causes to a numeric boundary bug, an unconstrained
 date-borrowing rule, and a construction assumption that a unique literal match locates the
@@ -84,7 +82,11 @@ no positive masking is detected under either rule---masking is in fact negative,
 \S\ref{sec:entity} attributes to the scoring asymmetry there---the single-variable contrast
 between the rules includes zero, and auditing that new construct
 exposes a trap we quantify---$62\%$ of items silently re-used the true answer under a
-different name before we guarded against it. We also show that the conventional oracle-answerability gate
+different name before we guarded against it. To our knowledge, this is the first
+quantification of the same-pool answer-alias leakage rate for any
+controlled-substitution corpus, and the one-line guard that defeats it
+(``reject a candidate whose normalised form is in the target question's own answer list'')
+transfers cleanly to any other constructed corpus where answers carry alias lists. We also show that the conventional oracle-answerability gate
 is mis-specified for this class of study because it conflates unusable evidence with the
 treatment effect. Code, corpora, audit materials and figure scripts are released at
 \url{https://anonymous.4open.science/r/ragmask-9c41d7b/}.
@@ -99,13 +101,13 @@ produces: run a model closed-book, run it again with retrieved passages, and att
 difference to retrieval. The resulting number---what we call the \emph{apparent gain}---is
 then used to compare retrievers, choose $k$, and tune prompts.
 
-We should say at once what this paper does and does not deliver, because the setting invites
-a stronger promise than we can keep. We deliver a measurement protocol for the premise of
-that comparison, an audit of the manipulation it rests on, and a boundary for where the
-distortion appears at all. We do \emph{not} deliver a robust instance of a tuning decision
-that the correction reverses: at the full-sample level the reversal we can measure is not
-significant, and \S\ref{sec:decision} reports that failure rather than working around it.
-Everything below should be read with that scope in mind.
+We should state at the outset what this paper does and does not claim, because the
+setting invites a stronger promise than we can keep. We deliver a measurement protocol for
+the premise of that comparison, an audit of the manipulation it rests on, and a boundary
+for where the distortion appears at all. We do \emph{not} deliver a robust instance of a
+tuning decision that the correction reverses: at the full-sample level the reversal we can
+measure is not significant, and \S\ref{sec:decision} reports that failure rather than
+working around it. Everything below should be read with that scope in mind.
 
 This inference has an unchecked premise: that the no-evidence arm is a clean baseline.
 If the model has memorised the answer, the closed-book arm is not a baseline but a second
@@ -167,16 +169,15 @@ refusing to abandon its memory, i.e.\ the effect under study.
 
 \paragraph{Headline.} Masking is large (up to $+0.31$ on the retrieval line), positive in
 12/12 retrieval configurations and distinguishable from zero in 10 of them, and on the
-$k{=}1$ axis its point
-estimate rises at every step of the model scale ($k{=}5$ has one reversal, reported in
-\S\ref{sec:decision}). On questions outside parametric memory it is
+$k{=}1$ axis its point estimate rises at every step of the model scale ($k{=}5$ has one
+reversal, reported in \S\ref{sec:decision}). On questions outside parametric memory it is
 not merely undetected but bounded away from effects larger than five points---and the same
 bound reappears on entity-type answers, where a borrowing rule we verified to be active
-changes nothing ($\Delta\mask$ intervals include zero). A substantial
-part of the manipulation we---and, we suspect, others---would have trusted was invalid, and
-fixing it \emph{strengthened} the main result by 39\%. What we do \emph{not} claim is that
-the correction robustly reverses a decision at the full-sample level; \S\ref{sec:decision}
-reports the three attempts and where each of them fails.
+changes nothing ($\Delta\mask$ intervals include zero). A substantial part of the
+manipulation we---and, we suspect, others---would have trusted was invalid, and fixing it
+\emph{strengthened} the main result by 39\%. What we do \emph{not} claim is that the correction
+robustly reverses a decision at the full-sample level; \S\ref{sec:decision} reports the
+three attempts and where each of them fails.
 
 % ============================================================================
 \section{Related Work}
@@ -187,9 +188,9 @@ Language models store substantial factual knowledge \citep{petroni2019,roberts20
 unevenly: long-tail and compositional facts are recalled far less reliably
 \citep{kandpal2023,mallen2023}. RAG \citep{lewis2020} with dense retrieval
 \citep{karpukhin2020} and fusion-in-decoder style readers \citep{izacard2021} is the
-standard remedy, and self-reflective variants \citep{asai2024,yan2024} explicitly decide
-when to retrieve. Our work is orthogonal: we do not propose a new RAG method, but show
-that evaluating these methods by apparent gain is biased by the very phenomenon they
+standard remedy, and self-reflective variants such as self-{RAG} \citep{asai2024} explicitly
+decide when to retrieve. Our work is orthogonal: we do not propose a new {RAG} method, but
+show that evaluating these methods by apparent gain is biased by the very phenomenon they
 target.
 
 \paragraph{Memory--context conflict.}
@@ -211,43 +212,69 @@ which is why we measure their difference rather than either alone. \citet{sun202
 show that conflict damage is task-dependent, which is consistent with the boundary we
 locate in \S\ref{sec:precond}.
 
+\paragraph{Measuring the conflict, rather than steering it.}
+The closest independent quantification of memory--context tug-of-war is the NCU
+(normalised confidence uplift) of \citet{prior_dominance}, who track the gap between the
+log-probability of the parametrically preferred answer and the log-probability of the
+retrieved answer across model scales.
+Both studies locate the same effect at the same scale axis, and they share two of its
+consequences: the apparent gain over a closed-book baseline is biased upward by what the
+model already knows, and the bias is most visible on factoid questions that the model has
+seen many times.
+The two designs differ on every other axis. NCU is a continuous difference of
+model-internal scores; ours is a signed difference of accuracy differences over a
+four-arm contrast. NCU scores the conflict without altering the
+prompt; ours substitutes a passage so that the conflict can be measured on the same items
+under both arms. NCU is silent about whether a deployment decision changes; ours is explicit
+that it does not, on the depth axis of \S\ref{sec:decision}. NCU is silent about the
+answer-shape boundary; ours locates it at ``values a model can have memorised as a chunk''
+and reports that an active, audited borrowing rule cannot move it.
+Where \citet{prior_dominance} measure the tug-of-war from the model's side, we measure it
+from the construction's side: the disagreement the design is built to detect is a property
+of the item as much as of the model, and the audit we report (\S\ref{sec:entity}) is part
+of the argument that it cannot be detected without one.
+
 \paragraph{Controlled and counterfactual evidence.}
 Rewriting a passage to create a counterfactual is standard practice, and the question of
 whether the rewrite is \emph{good} is usually handled by construction rules rather than by
 auditing the result. \citet{kaushik2020counterfactual} establish the human-revised
-counterfactual methodology whose contrastive logic we borrow, although we audit the
-construction rather than revise it; \citet{neeman2023disentqa} use
-counterfactual augmentation to separate parametric from contextual answers;
-\citet{ju2026faithfulnessqa} build the closest dataset twin, an automatic type-consistent
-entity-substitution corpus over SQuAD and TriviaQA with automated quality checks. We differ
-in substituting numeric and date values rather than entities, in treating the validity
-of the resulting item as a measurement problem with a reported defect rate, and in running
-the same four-arm contrast on entity answers as well (\S\ref{sec:entity}), where the
-construct turned out to carry a trap that automated quality checks do not catch.
+counterfactual methodology whose contrastive logic we borrow, although we change the goal:
+we audit the construction rather than revise it; \citet{neeman2023disentqa} use
+counterfactual augmentation to separate parametric
+from contextual answers; \citet{ju2026faithfulnessqa} build the closest dataset twin, an
+automatic type-consistent entity-substitution corpus over {SQuAD} and {TriviaQA} with
+automated quality checks. We differ in substituting numeric and date values rather than
+entities, in treating the validity of the resulting item as a measurement problem with a
+reported defect rate, and in running the same four-arm contrast on entity answers as well
+(\S\ref{sec:entity}), where the construct turned out to carry a trap that automated quality
+checks do not catch.
 
 \paragraph{Writing to the weights rather than to the context.}
 A related line supplies a false fact by editing the parameters instead of the input:
-\citet{meng2022rome} locate factual associations and overwrite them, and \citet{meng2023memit}
-scale the same operation to thousands of facts. Both manipulations probe how strongly a
-model's prior resists an externally supplied answer, but they differ in what they can
-measure. A weight edit is persistent, so it cannot be withdrawn to recover the model's
-original behaviour, and it bypasses the acceptance step entirely---the model has no chance
-to refuse. Our substitution is per item and reversible, which is what lets the
-manipulation cost $(b-d)$ separate ``the evidence was unhelpful'' from ``the model declined
-to use it''. We therefore treat the two as complementary rather than competing.
+\citet{meng2022rome} locate factual associations inside a transformer and overwrite them,
+and \citet{meng2023memit} scale the same operation to thousands of facts. Both
+manipulations probe how strongly a model's prior resists an
+externally supplied answer, but they differ in what they can measure. A weight edit is
+persistent, so it cannot be withdrawn to recover the model's original behaviour, and it
+bypasses the acceptance step entirely---the model has no chance to refuse. Our
+substitution is per item and reversible, which is what lets the manipulation cost
+$(b-d)$ separate ``the evidence was unhelpful'' from ``the model declined to use it''.
+We therefore treat the two as complementary rather than competing.
 
 \paragraph{What a retrieval gain measures.}
-Our starting point---that the no-evidence arm is not a neutral baseline---is documented in
-parts. \citet{roberts2020} established the closed-book baseline, and \citet{mallen2023}
-showed that the gain over it depends on how popular the answer is. \citet{salemi2024erag}
-showed that retrieval-quality labels correlate poorly with downstream RAG performance.
-Closest to us, \citet{xia2026evidence} compare no-evidence, full-context, retrieved and
-oracle-evidence conditions under matched evidence and argue that final-answer accuracy
-hides how much of the available advantage a model actually recovers; our design differs in
-using an answer substitution to create the counterfactual, and in turning the discrepancy
-into a difference-in-differences with an explicit decomposition rather than a recovery
-ratio. The depth axis we study in \S\ref{sec:decision} is the setting of the
-position-and-distractor literature: \citet{liu2024lost} show that accuracy degrades when
+Our starting point---that the no-evidence arm is not a neutral baseline---is documented
+in parts. \citet{roberts2020} established the closed-book baseline, and \citet{mallen2023}
+showed that the gain over it depends on how popular the answer is. Subsequent work has
+also stressed that retrieval-quality scores correlate poorly with downstream {RAG}
+performance \citep{salemi2024erag}. Closest to us, \citet{xia2026evidence} compare
+no-evidence, full-context, retrieved and oracle-evidence conditions under matched evidence
+and argue that final-answer accuracy hides how much of the available advantage a model
+actually recovers, reading the discrepancy as an explicit ``recovery'' ratio rather than
+the single number a {RAG} paper usually reports. Our design differs in using an answer substitution
+to create the counterfactual, and in turning the discrepancy into a difference-in-differences
+with an explicit decomposition rather than a recovery ratio. The depth axis we study in
+\S\ref{sec:decision} is the setting of the position-and-distractor literature:
+\citet{liu2024lost} show that accuracy degrades when
 relevant information is buried in the middle of a long context, which is one mechanism that
 could produce the pattern we observe---and is why we stop short of claiming ours is the
 only one. The oracle-answerability gate that we criticise in \S\ref{sec:gate3} descends from
@@ -255,44 +282,55 @@ unanswerable-question benchmarks \citep{rajpurkar2018squad2}, where it is well p
 argue it is not well posed once the rewritten passage is the treatment.
 
 \paragraph{Validity and auditing of constructed data.}
-That automatically constructed items can be invalid, and that the error rate is worth
-measuring, is established for labels \citep{northcutt2021label}, for QA data specifically
-\citep{boydgraber2020trivia}, and for annotation artefacts generally
-\citep{gururangan2018artifacts}. Reporting agreement therefore requires care: we follow
-\citet{artstein2008kappa} rather than quoting $\kappa$ alone, and we report both of our
-readings. \citet{carlini2023} and \citet{sainz2023} document the broader contamination
-problem that motivates measuring what a model already knows. Against the hope that
-automation replaces auditing, \citet{kasner2026span} find only moderate agreement between
-LLM and human span annotators, which matches our own result that an LLM pre-screen is a
+That automatically constructed items can be invalid, and that the rate is worth
+measuring rather than assumed away, is established for labels \citep{northcutt2021label}
+and for annotation artefacts generally \citep{gururangan2018artifacts}. Reporting agreement
+therefore requires care: we follow \citet{artstein2008kappa} rather than quoting $\kappa$
+alone, and we report both of our readings. The broader data-contamination problem that
+motivates measuring what a model already knows \citep{carlini2023} is the larger
+context for this measurement. Against the hope that automation replaces auditing,
+\citet{kasner2026span} find only moderate agreement between {LLM} and human
+span annotators, which matches our own result that an {LLM} pre-screen is a
 weak filter.
 
 \paragraph{Statistics.}
 Comparing two confidence intervals by eye is a known trap: non-overlap is a conservative
-and easily misread test \citep{schenker2001overlap,cumming2005inference}. We therefore make
+and easily misread test \citep{cumming2005inference}. We therefore make
 the \emph{paired} difference the primary criterion and report interval separation only as a
 secondary, weaker reading. Our differences are tested with a paired bootstrap over
-questions, the field's established practice \citep{koehn2004significance,dror2018hitchhiker},
+questions, the field's established practice \citep{dror2018hitchhiker},
 and because our headline quantity is a difference-in-differences we note the standard
 caution that such standard errors can be understated under serial correlation and that
 alternative specifications should be reported \citep{bertrand2004did}---which
 is why we report the same comparison under four cleaning regimes in \S\ref{sec:decision}.
 
 \paragraph{Position.}
-We claim neither the phenomenon of memory--context conflict nor the use of counterfactual
-evidence; both are established above and are being studied concurrently, including by an
-RL-based mitigation \citep{knowledgeable_r1}, a log-probability quantification of prior
-dominance \citep{prior_dominance}, and a controlled protocol for agent-memory evaluation
-that finds a single component change can reverse the ranking \citep{memdelta}. The last of
-these is worth flagging: it is an independent, concurrent instance of the same warning we
-give---that an uncontrolled variable can flip an evaluation conclusion---in a different
-setting, agent memory rather than parametric memory. What we add is (i) a decomposition of
-the retrieval gain into a memory
-advantage and a manipulation cost, together with the boundary that follows from it; (ii) a
-human-audited measurement of how often such a corpus is invalid, with two of the three root
-causes fixed; and (iii) evidence about \emph{when} the effect cannot appear. Controlled
-substitution itself is not new, and human validation of constructed data is not new; what we
-have not seen is a defect rate reported alongside a signed interaction decomposition of the
-kind in \S\ref{sec:protocol}.
+We did not discover the phenomenon: that retrieved evidence can lose a tug-of-war
+with parametric memory is now well-named and partly quantified by work appearing
+over the past two years. \citet{knowledgeable_r1} attack it from the
+reinforcement-learning side, training a model to adhere to retrieved evidence
+under contextual interference; \citet{prior_dominance} quantify prior dominance
+directly through log-probabilities and study its scaling; \citet{memdelta}
+supplies a controlled protocol showing that a single unfixed variable can flip an
+evaluation ranking in agent-memory evaluation; and \citet{bi2026parameters}
+measure the same trade-off with a decoder parameter and show that the memory
+component can be shifted over most of its range (9.9\% to 71.9\% on
+{LLaMA3-8B}). We do not retread that ground. Their levers are either a training
+procedure, a log-probability difference, a controlled protocol on agent memory,
+or a tunable decoder; ours is an \emph{audit} of the manipulation itself,
+together with a \emph{signed} DiD over a single prompt policy, with a human-audited
+defect rate reported alongside the headline numbers. Where their question is
+``how do you steer it'', ours is ``how much is there to steer, where does it
+vanish, and how much do you trust your instrument''. What we add is therefore not the
+phenomenon but the boundary at which it appears, the audit of the construction that
+produces it, and the trap that an uncontrolled same-pool borrow can silently introduce.
+
+Two of our three pre-registrations are reported as having failed or been bounded.
+The first is the falsifiable cross-generation prediction (\S\ref{sec:precond}), which did not
+survive. The second is an instance in which the correction reverses the apparent-gain
+argmax only at the cost of a full-sample significance claim that also did not survive
+(\S\ref{sec:decision}). We treat both disclosures as part of the contribution rather than as
+an embarrassment.
 
 % ============================================================================
 \section{Protocol}
@@ -504,14 +542,18 @@ change the conclusions---it strengthens masking.}
 \label{fig:validity}
 \end{figure}
 
-\subsection{Entity answers: an active constraint that changes nothing}
+\subsection{Entity answers: an active constraint, a quantified trap, and changes nothing}
 \label{sec:entity}
 
 Our pools are restricted to numeric and date answers because those are the shapes a
 type-consistent borrowing rule can control. Entity-type answers are at least as common a
 target of substitution probes \citep{longpre2021entity}, so we ask whether the boundary
 located in \S\ref{sec:precond} is about question difficulty or about the \emph{form} of the
-answer. We built a pool of $1{,}067$ entity-answer questions (a name-type answer that occurs
+answer. The extension to entities is the natural stress test for any construction that
+borrows from a shared pool, because it is here that the answer-list aliasing mechanism
+becomes possible; the subsection reports what the stress test reveals, and adds to that a
+\emph{methodological} contribution by quantifying and generalising the trap that made the
+first pass of this experiment look like a success. We built a pool of $1{,}067$ entity-answer questions (a name-type answer that occurs
 exactly once as a whole token in the final gold passage), drew a deterministic $400$-item
 sample, and ran the four-arm design on the identical items and models under two borrowing
 rules: the unconstrained rule, which buckets every entity answer together, and a
@@ -962,22 +1004,22 @@ not as a significance claim: the individual full-sample differences remain signi
 only 2/6 models, and nothing here licenses a recommendation about which depth to deploy.
 
 \paragraph{The decision that does reverse.} There is one decision rule we can say the
-correction reverses, and we state it with its caveats rather than as a headline. Take the
-practical question ``which configuration should we deploy?'' and answer it by the rule a
-practitioner would actually use---pick the configuration with the largest measured gain. On
-the B-line space of six models $\times$ two depths, the largest \emph{apparent} gain belongs
-to the \emph{smallest} model at the larger depth ($0.6$B, $k{=}5$: $+0.333$), while the
-largest \emph{corrected} gain belongs to the cross-generation model at the smaller depth
-(Qwen3.5-4B-Base, $k{=}1$: $+0.442$); the argmax changes in $\mathbf{0.999}$ of $10{,}000$
-paired bootstrap resamples ($0.997$ if configurations are resampled independently), and
-$0.999$ for the model choice alone if each model is allowed its better
-depth ($0.994$ independently). The mechanism is visible across the twelve configurations: the apparent gain
+correction reverses, and we state it with its caveats rather than as a headline.
+Take the practical question ``which configuration should we deploy?'' and answer it by the
+rule a practitioner would actually use: pick the configuration with the largest measured gain.
+On the B-line space of six models $\times$ two depths, the largest \emph{apparent} gain
+belongs to the \emph{smallest} model at the larger depth ($0.6$B, $k{=}5$: $+0.333$),
+while the largest \emph{corrected} gain belongs to the cross-generation model at the smaller
+depth (Qwen3.5-4B-Base, $k{=}1$: $+0.442$).
+The argmax changes in $\mathbf{0.999}$ of $10{,}000$ paired bootstrap resamples ($0.997$ if
+configurations are resampled independently), and $0.999$ for the model choice alone if each
+model is allowed its better depth ($0.994$ independently). The mechanism is visible across the twelve configurations: the apparent gain
 correlates \emph{negatively} with the model's closed-book accuracy ($r{=}-0.51$), because a
 weak no-evidence baseline inflates it, while the corrected gain correlates positively
 ($r{=}+0.50$). The apparent gain therefore rewards the model that knows least, and the
-correction removes that reward. Two caveats bound what this is worth. It is a
+correction removes that reward. Two caveats bound what this is worth. First, this is a
 point-estimate decision rule, not a significance claim: the pre-registered criterion above,
-which requires the corrected gains to separate, still fails. And we chose this rule after
+which requires the corrected gains to separate, still fails. Second, we chose this rule after
 seeing the data, so it is exploratory; what we can defend is that the reversal is stable,
 mechanically explicable, and undiminished by the resampling.
 
@@ -1104,13 +1146,13 @@ though the pre-registered rule still returns ``do not change'' because the two c
 corrected-gain intervals overlap. This supersedes the $148$-item v0 pilot that previously
 carried the axis. What is still missing is the other five models, for which only
 $k\in\{1,5\}$ exists.
-\item \textbf{The pool is deliberately enriched and is not representative.} We keep only
-questions whose answer can be replaced under a type constraint, with a unique terminal
-match. Answers of that shape---a single numeric or date token---are exactly the ones a model
-is most likely to have memorised outright, so the levels reported here should be read as
-values \emph{on this pool}, not as an estimate of masking for RAG over arbitrary factoid
-questions. We have no measurement of masking on questions whose answers cannot be
-type-substituted.
+\item \textbf{The pool is deliberately enriched and is not representative.} We restrict
+to questions whose answer can be substituted under a type constraint and occurs as a
+unique terminal token in the gold passage. Answers of that shape---a single numeric or
+date token---are exactly the ones a model is most likely to have memorised outright, so the
+levels reported here should be read as values \emph{on this pool}, not as an estimate of
+masking for {RAG} over arbitrary factoid questions. We have no measurement of masking on
+questions whose answers cannot be type-substituted.
 \item \textbf{Two relevance-oriented gates in the pipeline remain unresolved}
 (the closed-book-collapse gate is ABANDON and the compliance gate REVISE under the frozen
 thresholds); we treat them as limitations rather than evidence.
@@ -1129,24 +1171,31 @@ pools and between $k$ values is measured within a fixed quantisation scheme.
 independent. We check this rather than only disclosing it: resampling whole borrowed values
 instead of questions moves every primary interval by at most $0.015$ and changes no
 conclusion (Table~\ref{tab:cluster}).
+\item \textbf{We measure, we do not steer.} \citet{bi2026parameters} show that a decoder
+parameter can move the memory component of a RAG answer over most of its range
+(9.9\% to 71.9\% on {LLaMA3-8B}); we do not. Our setting holds the prompt and the
+weights fixed and reports the distortion under a single policy; a complementary paper
+that asks ``how much can be steered under a fixed distortion'' would close the gap the
+other way round, and we note it as a natural extension rather than as a claim against
+the contribution above.
 \end{itemize}
 
 % ============================================================================
 \section{Conclusion}
 % ============================================================================
-Evaluating RAG by the gain over a closed-book baseline assumes the baseline is empty. We
-measured what happens when it is not: on the retrieval line the apparent gain understates
-the evidence's contribution by up to 31 accuracy points (the largest value comes from the
-cross-generation model, which is not modality-matched), and at $k{=}1$ the shortfall grows
-with scale. We then audited our own manipulation, found 24.4\% of it invalid, traced three root causes,
-fixed two, and showed the effect survives---indeed strengthens. Finally we gave an exact
-decomposition and used it to describe where the effect is absent: the effect appears only
-where the question
-is in the model's parametric memory, so on multi-hop questions it is bounded away from
-effects above five points and is not removed by a stronger model, and on entity-type answers
-an active, credible borrowing rule does not produce it either---while the audit of that rule
-caught a trap (plants that were another name for the true answer) that would have made us
-report the opposite. We hope the paper is read
+Evaluating RAG by the gain over a closed-book baseline assumes the baseline is empty.
+We measured what happens when it is not: on the retrieval line the apparent gain
+understates the evidence's contribution by up to 31 accuracy points (the largest value
+comes from the cross-generation model, which is not modality-matched), and at $k{=}1$ the
+shortfall grows with scale.
+We then audited our own manipulation, found 24.4\% of it invalid, traced three root causes,
+fixed two, and showed the effect survives---indeed strengthens.
+Finally we gave an exact decomposition and used it to describe where the effect is absent:
+the effect appears only where the question is in the model's parametric memory, so on
+multi-hop questions it is bounded away from effects above five points and is not removed
+by a stronger model, and on entity-type answers an active, credible borrowing rule does not
+produce it either---while the audit of that rule caught a trap (plants that were another
+name for the true answer) that would have made us report the opposite. We hope the paper is read
 less as a new RAG method than as a reason to change how RAG results are reported, and as a
 worked example of auditing a controlled corpus before drawing conclusions from it.
 

@@ -12,7 +12,8 @@ import sys
 import zipfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(HERE, "paper_v0.1_overleaf.zip")
+# 默认产物名可按需覆盖：`python make_overleaf_zip.py paper_v0.2_overleaf.zip`
+OUT = os.path.join(HERE, sys.argv[1] if len(sys.argv) > 1 else "paper_v0.2_overleaf.zip")
 
 ROOT_FILES = ["main.tex", "appendix.tex", "refs.bib", "README.md", "make_figures.py",
               "check_tex.py", "check_figures.py", "check_fig1_layout.py"]

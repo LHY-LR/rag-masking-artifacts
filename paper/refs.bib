@@ -46,6 +46,25 @@
              and its scope is agent-memory evaluation, not parametric knowledge updates}
 }
 
+% ---------------- 已核实 (PhaseD-1 补引)：参数化 vs 上下文（CK-PLUG） ----------------
+% 2026-09-20 网络核验（arXiv abs 页 + ICLR 2026 虚拟站点 + 项目页）：
+%   arXiv:2503.15888，v1 2025-03-20 提交（arXiv 只列出 v1）；作者 Baolong Bi, Shenghua Liu,
+%   Yiwei Wang, Yilong Xu, Junfeng Fang, Lingrui Mei, Xueqi Cheng；
+%   ICLR 2026 Poster（2026-04-24）；项目页 https://github.com/byronBBL/CK-PLUG
+%   摘要原文：LLaMA3-8B 上 memory recall 可在 9.9%–71.9% 之间调节，baseline 42.1%。
+@inproceedings{bi2026parameters,
+  title     = {Parameters vs.\ Context: Fine-Grained Control of Knowledge Reliance
+               in Language Models},
+  author    = {Bi, Baolong and Liu, Shenghua and Wang, Yiwei and Xu, Yilong and
+               Fang, Junfeng and Mei, Lingrui and Cheng, Xueqi},
+  booktitle = {International Conference on Learning Representations (ICLR 2026)},
+  year      = {2026},
+  note      = {arXiv:2503.15888. Records an {$\alpha$}-tunable decoder on {LLaMA3-8B}
+               that moves memory recall of the {RAG} response from 9.9\% to 71.9\%
+               (baseline 42.1\%) --- the closest prior work to the measurement
+               problem we attack}
+}
+
 % ---------------- 已核实：方法/数据/评测背景（原"凭记忆重建"组，现全部核对通过） ----------------
 @inproceedings{lewis2020,
   title     = {Retrieval-Augmented Generation for Knowledge-Intensive {NLP} Tasks},
@@ -84,12 +103,7 @@
                attribution rests on the conference record rather than on arXiv}
 }
 
-@article{yan2024,
-  title   = {Corrective Retrieval Augmented Generation},
-  author  = {Yan, Shi-Qi and Gu, Jia-Chen and Zhu, Yun and Ling, Zhen-Hua},
-  journal = {arXiv preprint arXiv:2401.15884},
-  year    = {2024}
-}
+% (PhaseD: yan2024 removed — covered by the "self-reflective variants such as self-RAG (Asai 2024)" formulation.)
 
 @inproceedings{joshi2017,
   title     = {Trivia{QA}: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension},
@@ -157,15 +171,7 @@
   year      = {2023}
 }
 
-@inproceedings{sainz2023,
-  title     = {{NLP} Evaluation in trouble: On the Need to Measure {LLM} Data Contamination for each Benchmark},
-  author    = {Sainz, Oscar and Campos, Jon and Garc{\'i}a-Ferrero, Iker and Etxaniz, Julen and
-               Lopez de Lacalle, Oier and Agirre, Eneko},
-  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2023},
-  pages     = {10776--10787},
-  year      = {2023},
-  doi       = {10.18653/v1/2023.findings-emnlp.722}
-}
+% (PhaseD: sainz2023 removed — folded into the single Carlini 2023 cite that anchors the same contamination claim.)
 
 @article{qwen3,
   title   = {Qwen3 Technical Report},
@@ -177,7 +183,45 @@
 }
 
 % ============================================================================
-%  Related Work 扩充条目（2026-09-18 加入）
+%  PhaseD bibliography actions (2026-09-20)
+%
+%  1. ADDED  bi2026parameters (CK-PLUG, ICLR 2026) — the closest prior work
+%     that was missing from the prior version. See notes above the entry.
+%
+%  2. REMOVED 5 weak-cited references for focus (the PhaseD draft removed 10;
+%     the other 5 were RESTORED on 2026-09-20 after review — see item 3). Every
+%     removal was checked to ensure no remaining inline citation in
+%    main.tex / appendix.tex still points at it. Final removed entries:
+%       boydgraber2020trivia       — TriviaQA provenance, not methodology
+%       koehn2004significance      — superseded by Dror 2018 (kept)
+%       schenker2001overlap        — superseded by Cumming 2005 (kept)
+%       yan2024                    — corrective RAG; covered by the general
+%                                    "self-reflective variants such as
+%                                    self-RAG (Asai 2024)"
+%       sainz2023                  — folded into the single Carlini 2023 cite
+%                                    that anchors the contamination claim
+%
+%  3. RESTORED 5 entries and their inline citations (2026-09-20, second pass).
+%    The first pass had deleted the entry *and* rewritten the sentence to drop
+%    the attribution while keeping the claim it supported. That is an
+%    attribution loss, not a de-duplication, and it is worse than a surplus
+%    citation, so these were put back with their original wording:
+%       kaushik2020counterfactual  — human-revised counterfactual methodology
+%                                    (the claim is specifically theirs)
+%       meng2022rome               — ROME *locates* the associations; MEMIT
+%                                    scales them (the first pass credited the
+%                                    locating step to MEMIT)
+%       northcutt2021label         — label-error rate, its own claim
+%       gururangan2018artifacts    — annotation artefacts, its own claim
+%                                    (the first pass attached both to
+%                                    artstein2008kappa, which is an agreement
+%                                    statistic and does not support them)
+%       xia2026evidence            — the matched-evidence "recovery ratio"
+%                                    reading is specifically theirs
+%
+%    Net: 42 -> 38 entries (5 removed, 5 restored, 1 added). Run the count
+%    check at end-of-file; if you re-add an entry, update this comment.
+% ============================================================================
 %
 %  核实状态：**22 条全部逐条联网核对完毕**（arXiv abs / arXiv API / ACL Anthology .bib /
 %  PMLR / Crossref / NeurIPS proceedings）。核对方法：两个独立检索轮次，每条附证据 URL。
@@ -316,15 +360,6 @@
   note      = {No DOI and no page numbers exist for this track; do not invent them. arXiv:2103.14749}
 }
 
-@inproceedings{boydgraber2020trivia,
-  title     = {What Question Answering can Learn from Trivia Nerds},
-  author    = {Boyd-Graber, Jordan and B{\"o}rschinger, Benjamin},
-  booktitle = {Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (ACL)},
-  pages     = {7422--7435},
-  year      = {2020},
-  doi       = {10.18653/v1/2020.acl-main.662}
-}
-
 @inproceedings{gururangan2018artifacts,
   title     = {Annotation Artifacts in Natural Language Inference Data},
   author    = {Gururangan, Suchin and Swayamdipta, Swabha and Levy, Omer and
@@ -393,17 +428,7 @@
 }
 
 % ---------------- 统计方法 ----------------
-@article{schenker2001overlap,
-  title   = {On Judging the Significance of Differences by Examining the Overlap Between Confidence Intervals},
-  author  = {Schenker, Nathaniel and Gentleman, Jane F.},
-  journal = {The American Statistician},
-  volume  = {55},
-  number  = {3},
-  pages   = {182--186},
-  year    = {2001},
-  doi     = {10.1198/000313001317097960}
-}
-
+% (PhaseD: schenker2001overlap removed — superseded by Cumming 2005 (kept))
 @article{cumming2005inference,
   title   = {Inference by Eye: Confidence Intervals and How to Read Pictures of Data},
   author  = {Cumming, Geoff and Finch, Sue},
@@ -415,15 +440,7 @@
   doi     = {10.1037/0003-066X.60.2.170}
 }
 
-@inproceedings{koehn2004significance,
-  title     = {Statistical Significance Tests for Machine Translation Evaluation},
-  author    = {Koehn, Philipp},
-  booktitle = {Proceedings of the 2004 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-  pages     = {388--395},
-  year      = {2004},
-  note      = {Anthology W04-3250; no DOI exists (pre-DOI era)}
-}
-
+% (PhaseD: koehn2004significance removed — superseded by Dror 2018 (kept))
 @inproceedings{dror2018hitchhiker,
   title     = {The Hitchhiker's Guide to Testing Statistical Significance in Natural Language Processing},
   author    = {Dror, Rotem and Baumer, Gili and Shlomov, Segev and Reichart, Roi},

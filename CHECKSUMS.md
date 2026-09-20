@@ -10,7 +10,7 @@ documentation files (`README.md`, `REPRODUCE.md`, `DATA_LICENSES.md`, `LICENSE`,
 
 | file | bytes | md5 |
 |---|---|---|
-| `Claims_Ledger.md` | 65829 | `0136D9F334C235FC4E80513473688AA2` |
+| `Claims_Ledger.md` | 71739 | `A228D35844A54D7BF6287A3E84475311` |
 | `RAG研究方案.md` | 13753 | `C8F0C3CF9469F4ED7B94CC5CE4A59D6B` |
 | `data/empty_hotpot.json` | 2 | `D751713988987E9331980363E24189CE` |
 | `data/empty_nq.json` | 2 | `D751713988987E9331980363E24189CE` |
@@ -33,12 +33,12 @@ documentation files (`README.md`, `REPRODUCE.md`, `DATA_LICENSES.md`, `LICENSE`,
 | `paper/figures/fig4_precondition.png` | 54231 | `D2BE60A716A91409E2A0DA8483962F68` |
 | `paper/figures/fig5_kaxis.pdf` | 18530 | `602E4F9A4A449A7C0D75E2BD51895DBC` |
 | `paper/figures/fig5_kaxis.png` | 38764 | `DC6008DF98FC042FD7C8F8EA786B95BA` |
-| `paper/main.tex` | 79411 | `DF67D7213638EACB9544B4A3139F4A15` |
+| `paper/main.tex` | 83249 | `163A1C72FBD1C84A574636CBD9B716AF` |
 | `paper/make_figures.py` | 15178 | `CC1F44D77C0E5043A7FA7E5E9C4094CE` |
-| `paper/make_overleaf_zip.py` | 2045 | `3B7DFF7D7DFDD94A4A0D76E16B720730` |
-| `paper/refs.bib` | 21756 | `A4938659001E48BF8A2DABABB15BCC52` |
+| `paper/make_overleaf_zip.py` | 2172 | `C3DA022BEBDE0387AB185A581B20EC40` |
+| `paper/refs.bib` | 24055 | `446EDE6C9ECE2FA71F822827CEAADEBC` |
 | `rag_leak/CHANGELOG_phaseB.md` | 2003 | `721D565611B04C32266CAED350BD9CBD` |
-| `rag_leak/CHANGELOG_phaseC.md` | 86998 | `C988E1D83B0D3298C435B6D705FF4BAD` |
+| `rag_leak/CHANGELOG_phaseC.md` | 87436 | `5EFD83616348716B2914318DEE98CF67` |
 | `rag_leak/README.md` | 3358 | `AD9688C759534175E10112D9816563F7` |
 | `rag_leak/__init__.py` | 685 | `B1BDE3EDA64119526FD6C42DF3C87EF3` |
 | `rag_leak/analyze_bline.py` | 16783 | `E80019260DA0C7AFC589E4D99C680F6E` |
@@ -444,7 +444,7 @@ documentation files (`README.md`, `REPRODUCE.md`, `DATA_LICENSES.md`, `LICENSE`,
 | `rag_leak/out_diag_test/mini_oracle_rows.jsonl` | 4643 | `40E1F399CD0701C34956282F7713C003` |
 | `rag_leak/out_diag_test/mini_substituted.jsonl` | 9409 | `6C962EBC7E409EA4BEDD26E6C8887737` |
 | `rag_leak/out_diag_test/mini_summary.txt` | 1489 | `7C74C3B64D14F9632B865E7F950B2F34` |
-| `rag_leak/out_dose_strength.json` | 13600 | `494455794485E57FC5A1CA1B1F84E3E2` |
+| `rag_leak/out_dose_strength.json` | 14956 | `8DD480035F0AF22EEA1FAD55BA77C4F4` |
 | `rag_leak/out_ent_new2_17b/pilot_Qwen3-1.7B_fourarm.jsonl` | 53332 | `DA2D80BD1275A40FA52D74384C7D8CF6` |
 | `rag_leak/out_ent_new2_17b/pilot_Qwen3-1.7B_manifest.json` | 4936 | `65885C6B85895CE5302CCF71E4213B10` |
 | `rag_leak/out_ent_new2_17b/pilot_Qwen3-1.7B_metrics.json` | 426 | `CCA26BBDAD4CC2C8D78FAB8E8F356266` |

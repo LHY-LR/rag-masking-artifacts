@@ -884,5 +884,97 @@
   },
   "_n_monotone": 0,
   "_n_mono_spearman": 5
+ },
+ "strata": {
+  "Qwen3-0.6B": {
+   "date": {
+    "n": 234,
+    "a": 0.0726,
+    "masking": 0.0
+   },
+   "numeric": {
+    "n": 198,
+    "a": 0.1364,
+    "masking": 0.0707
+   },
+   "diff_masking": -0.0707,
+   "diff_ci": [
+    -0.1511,
+    0.0058
+   ],
+   "answer_type_other": 0
+  },
+  "Qwen3-1.7B": {
+   "date": {
+    "n": 234,
+    "a": 0.2094,
+    "masking": 0.094
+   },
+   "numeric": {
+    "n": 198,
+    "a": 0.2172,
+    "masking": 0.096
+   },
+   "diff_masking": -0.0019,
+   "diff_ci": [
+    -0.1061,
+    0.0998
+   ],
+   "answer_type_other": 0
+  },
+  "Qwen3-4B": {
+   "date": {
+    "n": 234,
+    "a": 0.4103,
+    "masking": 0.1838
+   },
+   "numeric": {
+    "n": 198,
+    "a": 0.3485,
+    "masking": 0.0758
+   },
+   "diff_masking": 0.108,
+   "diff_ci": [
+    0.0035,
+    0.2121
+   ],
+   "answer_type_other": 0
+  },
+  "Qwen3-4B-Instruct": {
+   "date": {
+    "n": 234,
+    "a": 0.4274,
+    "masking": 0.2991
+   },
+   "numeric": {
+    "n": 198,
+    "a": 0.2879,
+    "masking": 0.1111
+   },
+   "diff_masking": 0.188,
+   "diff_ci": [
+    0.0921,
+    0.2871
+   ],
+   "answer_type_other": 0
+  },
+  "Qwen3-8B": {
+   "date": {
+    "n": 234,
+    "a": 0.5598,
+    "masking": 0.3675
+   },
+   "numeric": {
+    "n": 198,
+    "a": 0.3687,
+    "masking": 0.0707
+   },
+   "diff_masking": 0.2968,
+   "diff_ci": [
+    0.1908,
+    0.4005
+   ],
+   "answer_type_other": 0
+  }
  }
 }
