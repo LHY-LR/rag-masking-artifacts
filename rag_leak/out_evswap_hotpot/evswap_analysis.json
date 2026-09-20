@@ -1,0 +1,238 @@
+{
+ "n": 1176,
+ "bootstrap_b": 10000,
+ "seed": 20260903,
+ "per_model": {
+  "Qwen/Qwen3.5-4B-Base": {
+   "n": 392,
+   "a": 0.0561,
+   "em_gold": 0.8878,
+   "em_nogold": 0.0281,
+   "reliance": 0.8597,
+   "cost_oracle": 0.0281,
+   "cost_retr": 0.0561,
+   "slope_reliance_on_a": -0.2848,
+   "slope_costoracle_on_a": 0.0184,
+   "slope_reliance_on_lp": 0.0037,
+   "slope_reliance_on_lp_ctrl_a": 0.0433,
+   "slope_costoracle_on_lp": 0.0026,
+   "slope_costretr_on_lp": 0.0264
+  },
+  "Qwen3-4B": {
+   "n": 392,
+   "a": 0.0561,
+   "em_gold": 0.8776,
+   "em_nogold": 0.0255,
+   "reliance": 0.852,
+   "cost_oracle": 0.0,
+   "cost_retr": 0.0485,
+   "slope_reliance_on_a": -0.2285,
+   "slope_costoracle_on_a": 0.0963,
+   "slope_reliance_on_lp": 0.0206,
+   "slope_reliance_on_lp_ctrl_a": 0.0556,
+   "slope_costoracle_on_lp": -0.0128,
+   "slope_costretr_on_lp": 0.0292
+  },
+  "Qwen3-8B": {
+   "n": 392,
+   "a": 0.051,
+   "em_gold": 0.8622,
+   "em_nogold": 0.0179,
+   "reliance": 0.8444,
+   "cost_oracle": 0.0153,
+   "cost_retr": 0.0536,
+   "slope_reliance_on_a": -0.0995,
+   "slope_costoracle_on_a": 0.0892,
+   "slope_reliance_on_lp": 0.0732,
+   "slope_reliance_on_lp_ctrl_a": 0.0978,
+   "slope_costoracle_on_lp": 0.0009,
+   "slope_costretr_on_lp": 0.0422
+  }
+ },
+ "pooled": {
+  "slope_reliance_on_a": {
+   "point": -0.2071,
+   "lo": -0.3654,
+   "hi": -0.048,
+   "n_ok": 10000
+  },
+  "mean_reliance": 0.852,
+  "slope_cost_oracle_on_a": {
+   "point": 0.0673,
+   "lo": 0.0009,
+   "hi": 0.1527,
+   "n_ok": 10000
+  },
+  "mean_cost_oracle": 0.0145,
+  "slope_cost_retr_on_a": {
+   "point": 0.1425,
+   "lo": -0.0087,
+   "hi": 0.2976,
+   "n_ok": 10000
+  },
+  "mean_cost_retr": 0.0527,
+  "slope_reliance_on_lp": {
+   "point": 0.0363,
+   "lo": -0.0201,
+   "hi": 0.0904,
+   "n_ok": 10000
+  },
+  "slope_reliance_on_lp_ctrl_a": {
+   "point": 0.0694,
+   "lo": 0.0165,
+   "hi": 0.1202,
+   "n_ok": 10000
+  },
+  "slope_cost_oracle_on_lp": {
+   "point": -0.0032,
+   "lo": -0.0243,
+   "hi": 0.0172,
+   "n_ok": 10000
+  },
+  "slope_cost_oracle_on_lp_ctrl_a": {
+   "point": -0.0127,
+   "lo": -0.0343,
+   "hi": 0.0074,
+   "n_ok": 10000
+  },
+  "slope_cost_retr_on_lp": {
+   "point": 0.0335,
+   "lo": -0.0004,
+   "hi": 0.0686,
+   "n_ok": 10000
+  },
+  "slope_cost_retr_on_lp_ctrl_a": {
+   "point": 0.0192,
+   "lo": -0.009,
+   "hi": 0.0472,
+   "n_ok": 10000
+  }
+ },
+ "dataset": "hotpot",
+ "slices": {
+  "all": {
+   "n": 1176,
+   "mean_reliance": 0.852,
+   "mean_em_nogold": 0.0238,
+   "slope_reliance_on_a": {
+    "point": -0.2071,
+    "lo": -0.3654,
+    "hi": -0.048,
+    "n_ok": 10000
+   },
+   "slope_cost_oracle_on_a": {
+    "point": 0.0673,
+    "lo": 0.0009,
+    "hi": 0.1527,
+    "n_ok": 10000
+   },
+   "slope_cost_retr_on_a": {
+    "point": 0.1425,
+    "lo": -0.0087,
+    "hi": 0.2976,
+    "n_ok": 10000
+   },
+   "slope_reliance_on_lp": {
+    "point": 0.0363,
+    "lo": -0.0201,
+    "hi": 0.0904,
+    "n_ok": 10000
+   },
+   "slope_reliance_on_lp_ctrl_a": {
+    "point": 0.0694,
+    "lo": 0.0165,
+    "hi": 0.1202,
+    "n_ok": 10000
+   },
+   "slope_cost_retr_on_lp": {
+    "point": 0.0335,
+    "lo": -0.0004,
+    "hi": 0.0686,
+    "n_ok": 10000
+   }
+  },
+  "clean": {
+   "n": 1176,
+   "mean_reliance": 0.852,
+   "mean_em_nogold": 0.0238,
+   "slope_reliance_on_a": {
+    "point": -0.2071,
+    "lo": -0.3654,
+    "hi": -0.048,
+    "n_ok": 10000
+   },
+   "slope_cost_oracle_on_a": {
+    "point": 0.0673,
+    "lo": 0.0009,
+    "hi": 0.1527,
+    "n_ok": 10000
+   },
+   "slope_cost_retr_on_a": {
+    "point": 0.1425,
+    "lo": -0.0087,
+    "hi": 0.2976,
+    "n_ok": 10000
+   },
+   "slope_reliance_on_lp": {
+    "point": 0.0363,
+    "lo": -0.0201,
+    "hi": 0.0904,
+    "n_ok": 10000
+   },
+   "slope_reliance_on_lp_ctrl_a": {
+    "point": 0.0694,
+    "lo": 0.0165,
+    "hi": 0.1202,
+    "n_ok": 10000
+   },
+   "slope_cost_retr_on_lp": {
+    "point": 0.0335,
+    "lo": -0.0004,
+    "hi": 0.0686,
+    "n_ok": 10000
+   }
+  },
+  "clean_size_matched": {
+   "n": 837,
+   "mean_reliance": 0.8363,
+   "mean_em_nogold": 0.0275,
+   "slope_reliance_on_a": {
+    "point": -0.2015,
+    "lo": -0.3766,
+    "hi": -0.0336,
+    "n_ok": 10000
+   },
+   "slope_cost_oracle_on_a": {
+    "point": 0.0644,
+    "lo": -0.0116,
+    "hi": 0.1684,
+    "n_ok": 10000
+   },
+   "slope_cost_retr_on_a": {
+    "point": 0.1401,
+    "lo": -0.0128,
+    "hi": 0.3022,
+    "n_ok": 10000
+   },
+   "slope_reliance_on_lp": {
+    "point": 0.0377,
+    "lo": -0.0298,
+    "hi": 0.1035,
+    "n_ok": 10000
+   },
+   "slope_reliance_on_lp_ctrl_a": {
+    "point": 0.0716,
+    "lo": 0.0064,
+    "hi": 0.1366,
+    "n_ok": 10000
+   },
+   "slope_cost_retr_on_lp": {
+    "point": 0.0438,
+    "lo": 0.0051,
+    "hi": 0.0838,
+    "n_ok": 10000
+   }
+  }
+ },
+ "contamination_rate": 0.0
+}

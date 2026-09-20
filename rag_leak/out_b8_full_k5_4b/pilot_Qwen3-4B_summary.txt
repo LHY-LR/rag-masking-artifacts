@@ -1,0 +1,25 @@
+[T1 构集审计]
+  替换条数: 446  类型分布: {'numeric': 213, 'date': 233}
+  ⑤ key 唯一通过率: 1.000
+  ⑥ 编辑局部通过率: 1.000（构造保证）
+[T2 闸门① 检索等价]
+  bm25-corpus[k=5]|trivia: conditional_retain=0.998 (416/417) joint_hit=0.933 recall 0.935->0.933 (drop +0.002) n=446
+[T3 闸门②③④ × 规模]
+  （GO/REVISE/ABANDON 为三档诊断出口，INSUFFICIENT=样本不足）
+  Qwen3-4B:
+    ②塌陷: ABANDON value=1.000 | resid_old=1.000 Wilson95=(0.978,1.000) n=167 new=0 other=0 limit=0.05 seq=ABANDON
+    ③oracle: ABANDON value=0.296 | EM_orig=0.661 EM_sub=0.365 drop=+0.296
+    ④顺从: ABANDON value=0.365 | compliance=0.365 limit=0.9 n=446
+[T4 DiD 干跑（单配置）]
+  注(B2)：DiD<0 表示记忆顶高闭卷地板、掩盖真实检索收益；记忆掩盖量=-DiD（非负）。
+  model          n      表观增益      校正增益      DiD      记忆掩盖量               95%CI     PP掩盖
+  Qwen3-4B     446     0.247     0.247    0.000     -0.000  [-0.049,+0.049]   -0.000
+[T5 功效反推]
+  逐题 DiD 样本方差: 0.2921
+  检出 2pp @80% power -> n/格 >= 5733
+  检出 3pp @80% power -> n/格 >= 2548
+[T6 失败模式台账] 总计 6 条
+    3  全部 proposal 校验失败
+    1  trivia-194/trivia-194:positive_ctxs:0 提案校验失败: ["类型不一致: '3-2-1' -> '1,080'"]
+    1  trivia-237/trivia-237:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 0 次（须恰好 1 次）']
+    1  trivia-425/trivia-425:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 0 次（须恰好 1 次）']

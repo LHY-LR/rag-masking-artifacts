@@ -1,0 +1,457 @@
+# κ 标注 90 题 · 中英对照
+
+> 这份**只是翻译**，帮你读懂题目；**判定仍以英文原题为准**（模型当时看到的也是英文）。
+> 替换列的 `旧值→新值` 是段落里被改动的那个答案。
+> ⑤ 要看段落才能判 → 见 `anno_90题_A.txt` / `anno_90题_B.txt`；⑦ 只看本表就够。
+
+```
+[01] trivia-0   (numeric)
+原：Which highway was Revisited in a classic 60s album by Bob Dylan?
+中：鲍勃·迪伦 60 年代那张经典专辑里“重访（Revisited）”的是哪条公路？
+换：61 → 57
+
+[02] trivia-101   (date)
+原：In which year did Captain Scott reach the South Pole?
+中：斯科特船长是哪一年到达南极点的？
+换：1912 → 1941
+
+[03] trivia-106   (numeric)
+原：According to UK research in 2009 on average how many TV ads do viewers see each day, 25; 43; 105 or 207?
+中：2009 年英国一项研究称，观众平均每天看到多少条电视广告？25；43；105；还是 207？
+换：43 → 28
+
+[04] trivia-110   (numeric)
+原：The names of how many states of the USA start and end with the letter "a"?
+中：美国有多少个州的州名以字母 a 开头、并以字母 a 结尾？
+换：3 → 4
+
+[05] trivia-115   (date)
+原：Project SCORE, the worlds first communications satellite, was launched when?
+中：世界上第一颗通信卫星“SCORE 计划”是什么时候发射的？
+换：1958 → 1926
+
+[06] trivia-12   (numeric)
+原：In which year did St George die?
+中：圣乔治是哪一年去世的？
+换：303 → 451
+
+[07] trivia-124   (date)
+原：Argentina invaded UK's Falkland Islands, Israel invaded Southern Lebanon, Canada became officially independent of the UK, Leonid Brezhnev, leader of the USSR, died, all in what year?
+中：阿根廷入侵英国福克兰群岛、以色列入侵黎巴嫩南部、加拿大正式脱离英国独立、苏联领导人勃列日涅夫去世——这些都发生在哪一年？
+换：1982 → 1296
+
+[08] trivia-129   (date)
+原：The world's first publicly subscribed passenger railway, the Stockton and Darlington, opened in England with steam engines when?
+中：世界上第一条公开招股的客运铁路——斯托克顿至达灵顿铁路——在英格兰以蒸汽机车开通，是哪一年？
+换：1825 → 1994
+
+[09] trivia-133   (date)
+原：General Franco, the Spanish military general, was head of state of Spain from October 1936 following the Spanish Civil War, until when?
+中：西班牙军事将领佛朗哥自 1936 年 10 月（西班牙内战之后）起担任西班牙国家元首，直到哪一年？
+换：1975 → 2001
+
+[10] trivia-138   (date)
+原：Cable News Network (CNN), the first channel to provide 24-hour television news coverage, was founded by Ted Turner in what year?
+中：第一个提供 24 小时电视新闻的频道 CNN（有线电视新闻网），由特德·特纳创办于哪一年？
+换：1980 → 1927
+
+[11] trivia-142   (date)
+原：Which was the first year in which the football World Cup final was broadcast on television in colour?
+中：足球世界杯决赛第一次以彩色电视转播，是哪一年？
+换：1970 → 1989
+
+[12] trivia-147   (date)
+原：Give a year in the life of Emily Bronte.
+中：说出艾米莉·勃朗特生平中的某一年。
+换：1818-1848 → one thousand, two hundred and fifteen
+
+[13] trivia-151   (date)
+原：In which year was Mrs Indira Gandhi assassinated?
+中：英迪拉·甘地夫人是哪一年遇刺的？
+换：1984 → 1914
+
+[14] trivia-156   (numeric)
+原：How many squares are found along one side of a Scrabble board?
+中：拼字游戏（Scrabble）棋盘的一条边上有多少个格子？
+换：15 → 24
+
+[15] trivia-160   (date)
+原：Give a year in the reign of King Stephen.
+中：说出斯蒂芬国王在位期间的某一年。
+换：1135-1154 → two thousand and four
+
+[16] trivia-165   (date)
+原：In what year was the Battle of Stamford Bridge?
+中：斯坦福桥战役发生在哪一年？
+换：1066 → 1664
+
+[17] trivia-17   (numeric)
+原：How many times was Boris Becker runner-up in the Men's Singles at Wimbledon?
+中：鲍里斯·贝克尔在温布尔登网球赛男单中拿过几次亚军？
+换：4 → 7
+
+[18] trivia-174   (date)
+原：In which year did John Stonehouse disappear and the Flixborough chemical plant exploded?
+中：约翰·斯通豪斯失踪、弗利克斯伯勒化工厂爆炸，是哪一年？
+换：1974 → 1863
+
+[19] trivia-179   (date)
+原：Operation Barbarossa, Hitler invades Russia.
+中：“巴巴罗萨行动”——希特勒入侵苏联，是哪一年？
+换：1941 → 1926
+
+[20] trivia-183   (date)
+原：Name the year; Baring's Bank collapsed, Blackburn Rovers won the Premier League and Cliff Richard was knighted?
+中：说出年份：巴林银行倒闭、布莱克本流浪者队夺得英超冠军、克里夫·理查德被封爵。
+换：1995 → 1961
+
+[21] trivia-188   (date)
+原：Name the year: Kate Middleton is born; Mail on Sunday first published; Laker Airways collapsed
+中：说出年份：凯特·米德尔顿出生；《星期日邮报》首次发行；莱克航空倒闭。
+换：1982 → 1885
+
+[22] trivia-192   (date)
+原：In which year did Alcock and Brown make the first flight across the Atlantic?
+中：阿尔科克和布朗完成首次横跨大西洋飞行，是哪一年？
+换：1919 → 1986
+
+[23] trivia-198   (date)
+原：Give a year in the life of St Ignatius Loyola, founder of the Jesuits.
+中：说出耶稣会创始人圣依纳爵·罗耀拉生平中的某一年。
+换：1491-1556 → one thousand, nine hundred and twenty-seven
+
+[24] trivia-200   (date)
+原：To within a year either side, in which year were the proceedings of the House of Commons first televised?
+中：误差前后一年以内，英国下议院的议事过程第一次被电视转播，是哪一年？
+换：1989 → 1914
+
+[25] trivia-205   (numeric)
+原：According to the rules of golf, what is the maximum number of golf clubs that a player is permitted to carry in his bag?
+中：按高尔夫规则，球员球包里最多允许携带多少支球杆？
+换：14 → 50
+
+[26] trivia-21   (numeric)
+原：In UK currency, how many sides does a twenty pence piece have?
+中：英国货币中，20 便士硬币有多少条边？
+换：7 → 0.5
+
+[27] trivia-214   (date)
+原：In which year was the Jarrow Crusade march to London?
+中：贾罗远征（Jarrow Crusade）向伦敦进发，是哪一年？
+换：1936 → 1296
+
+[28] trivia-219   (date)
+原：Which was the first year that the Queen's Christmas speech was televised?
+中：女王圣诞致辞第一次上电视，是哪一年？
+换：1957 → 1929
+
+[29] trivia-223   (numeric)
+原：This quiz is printed on A4 paper which has a length of 297mm. How wide, in millimetres, is A4 paper?
+中：本测验印在 A4 纸上，A4 纸长 297 毫米。A4 纸宽多少毫米？
+换：210 → 911
+
+[30] trivia-228   (numeric)
+原：How many edges are there on a tetrahedron?
+中：四面体有多少条棱？
+换：6 → 4
+
+[31] trivia-232   (numeric)
+原：238 AD is known in Roman history as the Year of the ........ (how many) Emperors?
+中：公元 238 年在罗马史上被称作“……帝之年”——共有几位皇帝？
+换：6 → 1
+
+[32] trivia-238   (numeric)
+原：In yachting how many crew are there in the Flying Dutchman class
+中：帆船“飞行荷兰人”级有几名船员？
+换：2 → 6
+
+[33] trivia-242   (date)
+原：The traditional 'Daily rum ration' was ended in what year?
+中：传统的“每日朗姆酒配给”是哪一年取消的？
+换：1970 → 1927
+
+[34] trivia-247   (date)
+原：In what year did Captain Matthew Webb become the first to swim the English Channel?
+中：马修·韦布船长成为第一个游过英吉利海峡的人，是哪一年？
+换：1875 → 1958
+
+[35] trivia-251   (date)
+原：Being developed from earlier keyboard instruments, what year was the piano invented?
+中：钢琴由更早的键盘乐器发展而来，它发明于哪一年？
+换：1709 → 1881
+
+[36] trivia-256   (numeric)
+原：How many 'Pockets' would you find on a pool table?
+中：台球桌上有几个球袋？
+换：6 → 9
+
+[37] trivia-260   (numeric)
+原：Star Trek: TOS was cancelled in 1969 after how many years on the air?
+中：《星际迷航：原初系列》1969 年被砍，它一共播出了多少年？
+换：3 → 5
+
+[38] trivia-265   (date)
+原：NASA celebrated another anniversary today. In what year was it founded?
+中：NASA 今天庆祝了又一个周年。它是哪一年成立的？
+换：1958 → 1863
+
+[39] trivia-27   (date)
+原：In which year did it become compulsory to wear seat belts in front seats of cars in the UK?
+中：英国规定汽车前排必须系安全带，是哪一年？
+换：1983 → 1961
+
+[40] trivia-274   (date)
+原：In which year was the Encyclopedia Britannica first published?
+中：《大英百科全书》首次出版是哪一年？
+换：1768 → 1973
+
+[41] trivia-279   (date)
+原：The Asian Tsunami or Boxing day tsunami that hit Thailand, Indonesia and many other countries happened in what year?
+中：袭击泰国、印尼等许多国家的亚洲海啸（又称节礼日海啸）发生在哪一年？
+换：2004 → 1960
+
+[42] trivia-283   (date)
+原：In which year was the storming of the Bastille, which started the French Revolution?
+中：引发法国大革命的攻占巴士底狱，是哪一年？
+换：1789 → 1919
+
+[43] trivia-288   (numeric)
+原：What do the interior angles of a hexagon add up to in degrees?
+中：六边形的内角和是多少度？
+换：720 → 364
+
+[44] trivia-292   (date)
+原：In which year did students first enrol in the Open University in the UK
+中：英国开放大学第一次招收学生，是哪一年？
+换：1971 → 1970
+
+[45] trivia-297   (numeric)
+原：How many BTU's (British Thermal Units) in one therm?
+中：一个 therm（撒姆）等于多少 BTU（英热单位）？
+换：100,000 → 100000
+
+[46] trivia-300   (numeric)
+原：What number shirt did England rugby union player Jonny Wilkinson wear in the 2011 World Cup?
+中：英格兰橄榄球运动员乔尼·威尔金森在 2011 年世界杯上穿几号球衣？
+换：10 → 25
+
+[47] trivia-304   (numeric)
+原：Italy is divided into how many regions?
+中：意大利划分为多少个行政区（大区）？
+换：20 → 75
+
+[48] trivia-309   (date)
+原：In which year did children's television show 'Sesame Street' debut on US television?
+中：儿童电视节目《芝麻街》在美国电视上首播，是哪一年？
+换：1969 → 1869
+
+[49] trivia-313   (date)
+原：In which year did both T-Rex's Marc Bolan and Elvis Presley die ?
+中：T-Rex 乐队的马克·博兰和“猫王”埃尔维斯·普雷斯利都在哪一年去世？
+换：1977 → 1976
+
+[50] trivia-318   (numeric)
+原：How many Oscars did the 1994 film 'Forrest Gump' win?
+中：1994 年的电影《阿甘正传》获得了多少项奥斯卡奖？
+换：6 → 4
+
+[51] trivia-322   (numeric)
+原：The first Apollo moon landing?
+中：第一次阿波罗登月是哪一年？
+换：11 → 17
+
+[52] trivia-327   (numeric)
+原：Name Adele's record-breaking 2015 album?
+中：阿黛尔 2015 年那张破纪录的专辑叫什么？
+换：25 → 28
+
+[53] trivia-331   (numeric)
+原：How many gold medals did Great Britain win at the 2008 Summer Olympics?
+中：英国在 2008 年夏季奥运会上赢得多少枚金牌？
+换：19 → 18
+
+[54] trivia-336   (numeric)
+原：How many books in the Bible's Old Testament are included in the Catholic version but not in the Protestant one?
+中：《圣经》旧约中有多少卷是天主教版本收录、而新教版本没有的？
+换：7 → 5
+
+[55] trivia-340   (date)
+原：The capital of Brazil was moved from Rio de Janeiro to the purpose-built capital city of Brasilia in what year?
+中：巴西首都从里约热内卢迁往专门建造的巴西利亚，是哪一年？
+换：1960 → 1994
+
+[56] trivia-345   (date)
+原：Argentina invaded UK's Falkland Islands, Israel invaded Southern Lebanon, Canada became officially independent of the UK, Leonid Brezhnev, leader of the USSR, died, all in what year?
+中：（与第 07 条同一句题面）阿根廷入侵福克兰群岛、以色列入侵黎巴嫩南部、加拿大独立、勃列日涅夫去世，都发生在哪一年？
+换：1982 → 1989
+
+[57] trivia-35   (numeric)
+原：How many imperial gallons are in a firkin?
+中：一 firkin（小木桶）等于多少英制加仑？
+换：9 → 7
+
+[58] trivia-354   (date)
+原：When did the Goa'uld first appear in the US/Canada TV series Stargate SG-1?
+中：Goa'uld 一族在美加电视剧《星际之门 SG-1》中第一次出现，是哪一年？
+换：1997 → 1972
+
+[59] trivia-359   (date)
+原：Which was the first year in which the football World Cup final was broadcast on television in colour?
+中：（与第 11 条同一句题面）足球世界杯决赛第一次彩色电视转播是哪一年？
+换：1970 → 1947
+
+[60] trivia-363   (numeric)
+原：What is the number 17 in binary?
+中：数字 17 用二进制怎么写？
+换：10001 → 20000
+
+[61] trivia-368   (date)
+原：In which year did the Battle of Gettysburg take place?
+中：葛底斯堡战役发生在哪一年？
+换：1863 → 1977
+
+[62] trivia-372   (numeric)
+原：Which is the highest prime number less than 100?
+中：小于 100 的最大质数是几？
+换：97 → 15
+
+[63] trivia-377   (numeric)
+原：How many fences do horses need to encounter at the Grand National?
+中：英国国家大赛马（Grand National）中，马要跨过多少道障碍？
+换：30 → 99
+
+[64] trivia-381   (date)
+原：In which year was Olaf Palme assassinated and the Chernobyl nuclear power station exploded?
+中：奥洛夫·帕尔梅遇刺、切尔诺贝利核电站爆炸，是哪一年？
+换：1986 → 1919
+
+[65] trivia-386   (date)
+原：In which year did Reference Point win the Derby and Maori Venture win the Grand National?
+中：“Reference Point”赢得德比大赛、“Maori Venture”赢得国家大赛马，是哪一年？
+换：1987 → 1812
+
+[66] trivia-390   (date)
+原：Name the year; the Warrington bombings, Grand National cancelled after false starts and Arsenal beat Sheffield Wednesday in the finals of both major cup competitions?
+中：说出年份：沃灵顿爆炸案、国家大赛马因起跑失误取消、阿森纳在两项主要杯赛决赛中都击败谢菲尔德星期三。
+换：1993 → 1709
+
+[67] trivia-395   (numeric)
+原：In Rugby Union, how high, in metres, is the crossbar?
+中：英式橄榄球（Rugby Union）中，球门横梁高多少米？
+换：3 → 2
+
+[68] trivia-4   (numeric)
+原：How many of his 45 races did Mike Hawthorn, a former Formula One motor racing world champion, win?
+中：前 F1 世界冠军迈克·霍索恩参加过 45 场比赛，赢了多少场？
+换：3 → 1
+
+[69] trivia-402   (date)
+原：To within five years either way, in which year was the Boy Scout movement founded by Robert Baden-Powell?
+中：误差前后五年以内，罗伯特·贝登堡创立童子军运动，是哪一年？
+换：1907 → 1929
+
+[70] trivia-407   (date)
+原：Name the year: American gangster AI Capone dies, Princess Elizabeth marries and India gains its independence?
+中：说出年份：美国黑帮头目阿尔·卡彭去世、伊丽莎白公主结婚、印度独立。
+换：1947 → 1990
+
+[71] trivia-411   (date)
+原：Name the year: John F Kennedy was elected president; U-2 spy plane was shot down and Hollywood actor Clark Gable died?
+中：说出年份：肯尼迪当选总统；U-2 侦察机被击落；好莱坞演员克拉克·盖博去世。
+换：1960 → 1789
+
+[72] trivia-416   (date)
+原：In which year of the 1940's did Al Capone die?
+中：卡彭是在 1940 年代的哪一年去世的？
+换：1947 → 1812
+
+[73] trivia-420   (date)
+原：In which year of the nineteenth century was the most notable eruption of Krakatoa
+中：喀拉喀托火山最著名的那次喷发，是 19 世纪的哪一年？
+换：1883 → 1768
+
+[74] trivia-426   (date)
+原：In which year in the 20's did the General Strike occur
+中：英国大罢工发生在 20 年代的哪一年？
+换：1926 → 1840
+
+[75] trivia-430   (date)
+原：In what year did Torville and Dean (Jane and Christopher) win their first Olympic gold, scoring 12 perfect sixes in their free-dance routine?
+中：托维尔和迪安（简与克里斯托弗）在自由舞中获得 12 个满分 6.0、赢得他们第一枚奥运金牌，是哪一年？
+换：1984 → 2005
+
+[76] trivia-435   (numeric)
+原：How is the number 14 written in Roman numerals?
+中：数字 14 用罗马数字怎么写？
+换：14 → 27
+
+[77] trivia-44   (date)
+原：In which year did students first enrol in the Open University in the UK
+中：（与第 44 条同一句题面）英国开放大学第一次招收学生是哪一年？
+换：1971 → 1080
+
+[78] trivia-444   (date)
+原：Name the year: The Macintosh is introduced, Louisiana hosted the last World's Fair to be held in the US, Vanessa Williams resigns her Miss America crown, Band Aid records the song "Do They Know It's Christmas" for famine relief, Union Carbide wipes out a good chunk of Bhopal, India
+中：说出年份：Macintosh 电脑问世；路易斯安那举办美国最后一届世界博览会；凡妮莎·威廉姆斯放弃“美国小姐”桂冠；Band Aid 为赈济饥荒录制《Do They Know It's Christmas》；联合碳化物公司在印度博帕尔酿成惨剧。
+换：1984 → 1066
+
+[79] trivia-45   (date)
+原：Michael J Fox travels back to which year in the Wild West in the 1990 film 'Back To The Future Part III'?
+中：在 1990 年的电影《回到未来 3》里，迈克尔·J·福克斯穿越回了西部时代的哪一年？
+换：1885 → 1958
+
+[80] trivia-5   (date)
+原：In which year was the Juilliard School founded in New York?
+中：纽约茱莉亚学院是哪一年成立的？
+换：1905 → 1990
+
+[81] trivia-54   (numeric)
+原：In religion, there are how many Stations of the Cross?
+中：宗教中“苦路”（Stations of the Cross）共有多少站？
+换：14 → 22
+
+[82] trivia-59   (numeric)
+原：Italy is divided into how many regions?
+中：（与第 47 条同一句题面）意大利划分为多少个行政区（大区）？
+换：20 → 55
+
+[83] trivia-63   (numeric)
+原：How many ‘E’ tiles are provided in a Scrabble game?
+中：拼字游戏里提供多少个字母 E 的牌？
+换：12 → 19
+
+[84] trivia-68   (date)
+原：In which year did divorce become officially legal in the Republic of Ireland?
+中：爱尔兰共和国哪一年离婚正式合法化？
+换：1997 → 1822
+
+[85] trivia-72   (numeric)
+原：Over how many complete furlongs is the Chester Cup now run?
+中：切斯特杯现在跑多少弗隆（按整弗隆计）？
+换：18 → 43
+
+[86] trivia-77   (date)
+原：Name the year - Norfolk farmer Tony Martin shoots and kills a 16 year old burglar in his farmhouse, UK fuel protesters almost bring the country to a standstill and Paula Yates and Robin Day both sadly die ?
+中：说出年份：诺福克农民托尼·马丁在自家农舍开枪打死一名 16 岁窃贼；英国燃油抗议者几乎让全国停摆；宝拉·耶茨和罗宾·戴相继离世。
+换：2000 → 1919
+
+[87] trivia-81   (numeric)
+原：Said to refer erroneously to the temperature at which book paper catches fire, the title of Ray Bradbury's 1953 novel about a futuristic society in which reading books is illegal, is called 'Fahrenheit...' what? 972; 451; 100; or 25?
+中：雷·布拉德伯里 1953 年那部描写“读书违法”的未来社会的小说，书名是《华氏……》多少？（据说它错误地指向书纸的燃点）972；451；100；还是 25？
+换：451 → 960
+
+[88] trivia-86   (numeric)
+原：The first Apollo moon landing?
+中：（与第 51 条同一句题面）第一次阿波罗登月是哪一年？
+换：11 → 81
+
+[89] trivia-90   (numeric)
+原：What number is Hurricane on the Beaufort Scale?
+中：蒲福风级中“飓风（Hurricane）”是几级？
+换：12 → 13
+
+[90] trivia-95   (numeric)
+原：What's the cube root of 27,000?
+中：27,000 的立方根是多少？
+换：30 → 37
+```

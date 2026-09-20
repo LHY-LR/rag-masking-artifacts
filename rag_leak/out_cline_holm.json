@@ -1,0 +1,60 @@
+{
+ "alpha": 0.05,
+ "rows": [
+  {
+   "model": "Qwen3-0.6B",
+   "n": 432,
+   "masking": 0.032407407407407406,
+   "pos_items": 29,
+   "neg_items": 42,
+   "p_raw": 0.1539127693264563,
+   "holm_threshold": 0.05,
+   "holm_significant": false,
+   "p_holm": 0.1539127693264563
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "n": 432,
+   "masking": 0.09490740740740741,
+   "pos_items": 38,
+   "neg_items": 77,
+   "p_raw": 0.0003509981791372753,
+   "holm_threshold": 0.025,
+   "holm_significant": true,
+   "p_holm": 0.0007019963582745506
+  },
+  {
+   "model": "Qwen3-4B",
+   "n": 432,
+   "masking": 0.13425925925925927,
+   "pos_items": 38,
+   "neg_items": 96,
+   "p_raw": 5.721978776596946e-07,
+   "holm_threshold": 0.016666666666666666,
+   "holm_significant": true,
+   "p_holm": 1.7165936329790837e-06
+  },
+  {
+   "model": "Qwen3-4B-Instruct",
+   "n": 432,
+   "masking": 0.21296296296296297,
+   "pos_items": 23,
+   "neg_items": 114,
+   "p_raw": 1.090507026135235e-15,
+   "holm_threshold": 0.01,
+   "holm_significant": true,
+   "p_holm": 5.452535130676175e-15
+  },
+  {
+   "model": "Qwen3-8B",
+   "n": 432,
+   "masking": 0.23148148148148148,
+   "pos_items": 32,
+   "neg_items": 131,
+   "p_raw": 2.022610920125978e-15,
+   "holm_threshold": 0.0125,
+   "holm_significant": true,
+   "p_holm": 8.090443680503912e-15
+  }
+ ]
+}

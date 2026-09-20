@@ -1,0 +1,16 @@
+{
+ "runs": "hotpot_s6",
+ "bits": 4,
+ "models": [
+  "Qwen3-8B"
+ ],
+ "dirs": {
+  "Qwen3-4B": "out_s6_hotpot_fix_4b",
+  "Qwen3-8B": "out_s6_hotpot_fix_8b",
+  "Qwen/Qwen3.5-4B-Base": "out_s6_hotpot_fix_q35_4b"
+ },
+ "n_per_model": {
+  "Qwen3-8B": 393
+ },
+ "definition": "lp_old = 闭卷 prompt 下旧答案串的 teacher-forced 平均对数概率；margin_mean = lp_old.mean - lp_new.mean；不参与 a/b/c/d 计算"
+}

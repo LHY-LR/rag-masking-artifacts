@@ -1,0 +1,15 @@
+{
+ "label": "pilot_Qwen3-4B",
+ "model": "Qwen3-4B",
+ "config_key": "gran=paragraph,bud=1024,k=5,rerank=False",
+ "n": 447,
+ "a": 0.37360178970917224,
+ "b": 0.6711409395973155,
+ "c": 0.011185682326621925,
+ "d": 0.436241610738255,
+ "apparent_gain": 0.29753914988814323,
+ "corrected_gain": 0.4250559284116331,
+ "oracle_em_orig": 0.6621923937360179,
+ "oracle_em_sub": 0.44742729306487694,
+ "compliance": 0.44742729306487694
+}

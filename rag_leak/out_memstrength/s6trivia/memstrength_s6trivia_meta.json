@@ -1,0 +1,26 @@
+{
+ "runs": "s6trivia",
+ "bits": 4,
+ "models": [
+  "Qwen3-0.6B",
+  "Qwen3-1.7B",
+  "Qwen3-4B",
+  "Qwen3-4B-Instruct",
+  "Qwen3-8B"
+ ],
+ "dirs": {
+  "Qwen3-0.6B": "out_s6_trivia_fix_06b",
+  "Qwen3-1.7B": "out_s6_trivia_fix_17b",
+  "Qwen3-4B": "out_s6_trivia_fix_4b",
+  "Qwen3-4B-Instruct": "out_s6_trivia_fix_4bi",
+  "Qwen3-8B": "out_s6_trivia_fix_8b"
+ },
+ "n_per_model": {
+  "Qwen3-0.6B": 432,
+  "Qwen3-1.7B": 432,
+  "Qwen3-4B": 432,
+  "Qwen3-4B-Instruct": 432,
+  "Qwen3-8B": 432
+ },
+ "definition": "lp_old = 闭卷 prompt 下旧答案串的 teacher-forced 平均对数概率；margin_mean = lp_old.mean - lp_new.mean；不参与 a/b/c/d 计算"
+}

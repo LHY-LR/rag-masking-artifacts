@@ -1,0 +1,1527 @@
+{
+ "protocol": "bline-11q-mechanism-audit-v1",
+ "note": "只读逐题拆解：结构真冲突集中 open_sub 由 k=1 正确转为 k=5 错误的题。class_strict 复用 metrics.compliance.classify_output；整词判定复用 whole_occurrence_count。",
+ "inputs": {
+  "analysis": "rag_leak/out_b8_recall_analysis_b10000_cached.json",
+  "k1": "rag_leak\\out_b8_recall_k1",
+  "k5": "rag_leak\\out_b8_recall_k5",
+  "trivia": "data/trivia_dn.json",
+  "corpus": "data/trivia-dev.json",
+  "budget": 1024,
+  "granularity": "paragraph"
+ },
+ "analysis_mechanism": {
+  "n": 133,
+  "sub_gold_recall_by_open_sub_transition": {
+   "1->1": {
+    "0->1": 1,
+    "0->0": 59,
+    "1->1": 29,
+    "1->0": 11
+   },
+   "0->0": {
+    "0->0": 12
+   },
+   "0->1": {
+    "0->0": 19,
+    "0->1": 2
+   }
+  },
+  "open_sub_transition": {
+   "0->1": 3,
+   "0->0": 90,
+   "1->1": 29,
+   "1->0": 11
+  },
+  "k5_context_at_budget": 0,
+  "k5_gold_present_but_open_sub_lost": 11
+ },
+ "summary": {
+  "n": 11,
+  "k1_class": {
+   "new": 11,
+   "old": 0,
+   "other": 0
+  },
+  "k5_class": {
+   "new": 0,
+   "old": 4,
+   "other": 7
+  },
+  "k5_contains_old": 4,
+  "k5_mentions_old_but_other": 0,
+  "k5_empty": 0,
+  "questions_with_added_old_value": 0,
+  "added_windows_total": 44,
+  "gold_rank_moved": 0,
+  "answer_type": {
+   "date": 6,
+   "numeric": 5
+  }
+ },
+ "rows": [
+  {
+   "question_id": "trivia-126",
+   "question": "When was curling first played as a Winter Olympic sport?",
+   "gold": "1998",
+   "answer_type": "date",
+   "old_aliases": [
+    "1998",
+    "one thousand, nine hundred and ninety-eight"
+   ],
+   "new_key": "1885",
+   "old_passage": "Eight teams for men and women participated in Nagano, this was increased to ten teams from the Salt Lake City Olympic Winter Games (2002) onwards. In the Women’s competition at the Nagano 1998 Olympic Winter Games, Canada defeated Denmark to capture the first ever Women’s Curling gold medal. At the Salt Lake Games in 2002, Great Britain defeated Switzerland and Sweden took home the gold medal at the Torino 2006 Olympic Winter Games, with Switzerlan",
+   "new_passage": "Eight teams for men and women participated in Nagano, this was increased to ten teams from the Salt Lake City Olympic Winter Games (2002) onwards. In the Women’s competition at the Nagano 1885 Olympic Winter Games, Canada defeated Denmark to capture the first ever Women’s Curling gold medal. At the Salt Lake Games in 2002, Great Britain defeated Switzerland and Sweden took home the gold medal at the Torino 2006 Olympic Winter Games, with Switzerlan",
+   "k1": {
+    "open_sub_em": 1,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-126:positive_ctxs:0"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-126:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 453
+     }
+    ],
+    "open_sub_raw": "1885.",
+    "cls": {
+     "class_strict": "new",
+     "contains_new": true,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "k5": {
+    "open_sub_em": 0,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-126:positive_ctxs:0",
+     "corpus:92",
+     "corpus:1236",
+     "corpus:431",
+     "corpus:427"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-126:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 453
+     },
+     {
+      "doc_id": "corpus:92",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 522
+     },
+     {
+      "doc_id": "corpus:1236",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 522
+     },
+     {
+      "doc_id": "corpus:431",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 531
+     },
+     {
+      "doc_id": "corpus:427",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 534
+     }
+    ],
+    "open_sub_raw": "1992.",
+    "cls": {
+     "class_strict": "other",
+     "contains_new": false,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "added_at_k5": [
+    {
+     "doc_id": "corpus:92",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 522,
+     "snippet": "Olympics, which was 13, set by the former Soviet Union in 1976 and Norway in 2002. The United States won the most medals in total, their second time doing so at the Winter Olympics, and broke the record for the most medals won at a single Winter Olympics with 37, a record held up to then by Germany in 2002 with 36 medals. Athletes from Slovakia and Belarus won the first Winter Olympic gold medals …"
+    },
+    {
+     "doc_id": "corpus:1236",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 522,
+     "snippet": "Olympics, which was 13, set by the former Soviet Union in 1976 and Norway in 2002. The United States won the most medals in total, their second time doing so at the Winter Olympics, and broke the record for the most medals won at a single Winter Olympics with 37, a record held up to then by Germany in 2002 with 36 medals. Athletes from Slovakia and Belarus won the first Winter Olympic gold medals …"
+    },
+    {
+     "doc_id": "corpus:431",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 531,
+     "snippet": "d medal in beach volleyball in its first Olympic appearance in 1996, adding that to the two Olympic golds he won as part of the USA men's indoor team, and has won 142 titles. In 1987, the FIVB created the first World Beach Volleyball Championships, played in Rio Janeiro, Brazil won By Sinjin Smith and Randy Stoklos. The FIVB began organizing worldwide professional tournaments, and laid the groundw…"
+    },
+    {
+     "doc_id": "corpus:427",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 534,
+     "snippet": "llowing a December 2003 ruling by the Court of Arbitration for Sport (CAS), the I.O.C in February 2004 withdrew all the doped athletes' medals from the Games, amending the result lists accordingly. * South Korean speedskater Kim Dong-Sung was disqualified for cross-tracking (cutting off another skater) through the final turn of the men's 1500 metre short-track speedskating final. This disqualifica…"
+    }
+   ],
+   "added_has_old_answer": 0,
+   "gold_rank_k1": 1,
+   "gold_rank_k5": 1,
+   "k5_ctx_tokens": null
+  },
+  {
+   "question_id": "trivia-161",
+   "question": "In which year was the 50p coin introduced into circulation in Britain?",
+   "gold": "1969",
+   "answer_type": "date",
+   "old_aliases": [
+    "1969",
+    "one thousand, nine hundred and sixty-nine"
+   ],
+   "new_key": "1990",
+   "old_passage": "New 50-pence coin sparks confusion About This Site | Text Only 1969: New 50-pence coin sparks confusion The seven-sided 50p coin has come into circulation to replace the 10-shilling note - but it has received a mixed reception. It is the third decimal coin to be introduced into the British currency which goes totally decimal",
+   "new_passage": "New 50-pence coin sparks confusion About This Site | Text Only 1990: New 50-pence coin sparks confusion The seven-sided 50p coin has come into circulation to replace the 10-shilling note - but it has received a mixed reception. It is the third decimal coin to be introduced into the British currency which goes totally decimal",
+   "k1": {
+    "open_sub_em": 1,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-161:positive_ctxs:0"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-161:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 328
+     }
+    ],
+    "open_sub_raw": "1990.",
+    "cls": {
+     "class_strict": "new",
+     "contains_new": true,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "k5": {
+    "open_sub_em": 0,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-161:positive_ctxs:0",
+     "corpus:668",
+     "corpus:1663",
+     "corpus:696",
+     "corpus:1257"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-161:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 328
+     },
+     {
+      "doc_id": "corpus:668",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 530
+     },
+     {
+      "doc_id": "corpus:1663",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 524
+     },
+     {
+      "doc_id": "corpus:696",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 524
+     },
+     {
+      "doc_id": "corpus:1257",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 528
+     }
+    ],
+    "open_sub_raw": "1998.",
+    "cls": {
+     "class_strict": "other",
+     "contains_new": false,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "added_at_k5": [
+    {
+     "doc_id": "corpus:668",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 530,
+     "snippet": "ion. 1 bid + £2.25 P&P 2016 Beatrix Potter Anniversary 50p coin. Brand new, uncirculated.1 Jemima Puddleduck 50p coin Brand new uncirculated. & 1 Squirrel Nutkin 50p coin Brand new, uncirculated. All 3 coins come in their o... Free P&P 18 watching This is the Kew Garden 50p Coin which commemorates the 250th Anniversary. The coin has been in circulation but is in a very good condition. This is the …"
+    },
+    {
+     "doc_id": "corpus:1663",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 524,
+     "snippet": "t design by Jody Clark being introduced in 2015. The reverse features an abstract design symbolising the history of technological achievement. A new reverse design featuring Britannia began to enter circulation during 2015. The coin was introduced on 15 June 1998 (coins minted 1997) after a review of the United Kingdom's coinage decided that a general-circulation £2 coin was needed. The new bi-met…"
+    },
+    {
+     "doc_id": "corpus:696",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 524,
+     "snippet": "e the value on them. It was intended that a new two pound coin of the same diameter but thinner than the commemorative versions be introduced in November 1997, but due to technical problems (vending machines rejected them), the introduction was delayed until 1998. This new coin is bimetallic, being the first such coin to be issued in the UK since the tin farthings and halfpennies of the late 17th …"
+    },
+    {
+     "doc_id": "corpus:1257",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 528,
+     "snippet": "iated the Acts of Union 1707, under which England and Scotland were united into a single Kingdom of Great Britain, with succession under the rules prescribed by the Act of Settlement. In 1714, Queen Anne was succeeded by her second cousin, and Sophia's son, George I, Elector of Hanover, who consolidated his position by defeating Jacobite rebellions in 1715 and 1719. The new monarch was less active…"
+    }
+   ],
+   "added_has_old_answer": 0,
+   "gold_rank_k1": 1,
+   "gold_rank_k5": 1,
+   "k5_ctx_tokens": null
+  },
+  {
+   "question_id": "trivia-22",
+   "question": "How many medals did the United States win at the 2010 Winter Olympics?",
+   "gold": "37",
+   "answer_type": "numeric",
+   "old_aliases": [
+    "37",
+    "thirty-seven"
+   ],
+   "new_key": "20",
+   "old_passage": "Olympics, which was 13, set by the former Soviet Union in 1976 and Norway in 2002. The United States won the most medals in total, their second time doing so at the Winter Olympics, and broke the record for the most medals won at a single Winter Olympics with 37, a record held up to then by Germany in 2002 with 36 medals. Athletes from Slovakia and Belarus won the first Winter Olympic gold medals for their nations. Bid and preparations The Canadian Olympic Association chose Vancouver as the Canadian candidate cit",
+   "new_passage": "Olympics, which was 13, set by the former Soviet Union in 1976 and Norway in 2002. The United States won the most medals in total, their second time doing so at the Winter Olympics, and broke the record for the most medals won at a single Winter Olympics with 20, a record held up to then by Germany in 2002 with 36 medals. Athletes from Slovakia and Belarus won the first Winter Olympic gold medals for their nations. Bid and preparations The Canadian Olympic Association chose Vancouver as the Canadian candidate cit",
+   "k1": {
+    "open_sub_em": 1,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-22:positive_ctxs:0"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-22:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 522
+     }
+    ],
+    "open_sub_raw": "20.",
+    "cls": {
+     "class_strict": "new",
+     "contains_new": true,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "k5": {
+    "open_sub_em": 0,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-22:positive_ctxs:0",
+     "corpus:478",
+     "corpus:1545",
+     "corpus:649",
+     "corpus:42"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-22:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 522
+     },
+     {
+      "doc_id": "corpus:478",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 179
+     },
+     {
+      "doc_id": "corpus:1545",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 333
+     },
+     {
+      "doc_id": "corpus:649",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 380
+     },
+     {
+      "doc_id": "corpus:42",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 541
+     }
+    ],
+    "open_sub_raw": "not directly provided in the context. However, the context mentions that the United States broke the record for the most medals won at a single Winter Olympics with 20, a record previously held by Germany in 2002 with 36 medals. This indicates that the record was set by Germany in 2",
+    "cls": {
+     "class_strict": "other",
+     "contains_new": true,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "added_at_k5": [
+    {
+     "doc_id": "corpus:478",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 179,
+     "snippet": "that it has become second nature. Prior to 1968, there was no standard emergency number. So how did 911 become one of the most recognizable numbers in the United States? Choosing"
+    },
+    {
+     "doc_id": "corpus:1545",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 333,
+     "snippet": "The latest winter sport added to the Winter Olympics was curling in 1998. Previous Olympic Games included sports which are no longer present on the current program, like polo and tug of war. In the early days of the modern Olympics, the organizers were able to decide which sports or disciplines were included on the program, until"
+    },
+    {
+     "doc_id": "corpus:649",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 380,
+     "snippet": "#14. Battle of Gettysburg at homeschool - StudyBlue StudyBlue In what year did the battle of Gettysburg take place? 1863 How many days did the battle of Gettysburg last? 3 days The battle of Gettysburg was the __________ Confederate invasion of the ___________. last, Union Why did General Lee invade Pennsylvania? To turn Union public opinion against the war and to get badly nee"
+    },
+    {
+     "doc_id": "corpus:42",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 541,
+     "snippet": "n six straight gold medals in men's Hockey. Another winning streak began in 1928. Hungary earned the first of seven consecutive gold medals in team sabre fencing. Luigina Giavotti became the youngest ever medallist when she gained silver in gymnastics at 11 years and 302 days, an Olympic record which still stands today. Firsts for the 1932 Olympics: Village to house men First to shorten 16 days pr…"
+    }
+   ],
+   "added_has_old_answer": 0,
+   "gold_rank_k1": 1,
+   "gold_rank_k5": 1,
+   "k5_ctx_tokens": null
+  },
+  {
+   "question_id": "trivia-279",
+   "question": "The Asian Tsunami or Boxing day tsunami that hit Thailand, Indonesia and many other countries happened in what year?",
+   "gold": "2004",
+   "answer_type": "date",
+   "old_aliases": [
+    "2004",
+    "two thousand and four"
+   ],
+   "new_key": "1905",
+   "old_passage": "mi. In Lhoknga, a town within the district of the same name, in Aceh Besar Regency, Aceh Special Region, Indonesia, located on the western side of the island of Sumatra, 13 km (8.08 miles) southwest of Banda Aceh was completely flattened and destroyed by the 2004 Boxing Day Tsunami, where its population dwindled from 7,500 to 400. Tsunami runups following eyewitness accounts of waves were recorded being 35 m (114.8 ft) in height (waves hitting land at the height of 35 m), the highest known tsunami wave known to date.",
+   "new_passage": "mi. In Lhoknga, a town within the district of the same name, in Aceh Besar Regency, Aceh Special Region, Indonesia, located on the western side of the island of Sumatra, 13 km (8.08 miles) southwest of Banda Aceh was completely flattened and destroyed by the 1905 Boxing Day Tsunami, where its population dwindled from 7,500 to 400. Tsunami runups following eyewitness accounts of waves were recorded being 35 m (114.8 ft) in height (waves hitting land at the height of 35 m), the highest known tsunami wave known to date.",
+   "k1": {
+    "open_sub_em": 1,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-279:positive_ctxs:0"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-279:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 524
+     }
+    ],
+    "open_sub_raw": "1905.",
+    "cls": {
+     "class_strict": "new",
+     "contains_new": true,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "k5": {
+    "open_sub_em": 0,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-279:positive_ctxs:0",
+     "corpus:1555",
+     "corpus:1050",
+     "corpus:832",
+     "corpus:1779"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-279:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 524
+     },
+     {
+      "doc_id": "corpus:1555",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 522
+     },
+     {
+      "doc_id": "corpus:1050",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 257
+     },
+     {
+      "doc_id": "corpus:832",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 422
+     },
+     {
+      "doc_id": "corpus:1779",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 422
+     }
+    ],
+    "open_sub_raw": "2004.",
+    "cls": {
+     "class_strict": "old",
+     "contains_new": false,
+     "contains_old": true,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "added_at_k5": [
+    {
+     "doc_id": "corpus:1555",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 522,
+     "snippet": "e other four suits and is the origin of the word \"trump\". The tarot deck was never as popular as the standard decks, as it was more expensive, so lower classes preferred smaller decks. In many countries or regions, the regular 52 or 56 card deck shrank to 48, 40, 36, 32, or 24 cards. Instead of having a permanent trump suit like tarot, many trick-taking games starting with Triomphe simply use one …"
+    },
+    {
+     "doc_id": "corpus:1050",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 257,
+     "snippet": "What is the day after Halloween called? | Reference.com What is the day after Halloween called? A: Quick Answer The day after Halloween is called All Saints Day. Celebrated on Nov. 1 each year, it is a Christian day of solemnity that is also referred to as"
+    },
+    {
+     "doc_id": "corpus:832",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 422,
+     "snippet": "Organization of the Petroleum Exporting Countries (OPEC, , or OPEP in several other languages) is an intergovernmental organization of 14 nations, founded in 1960 in Baghdad by the first five members, and headquartered since 1965 in Vienna. As of 2015, the 14 countries accounted for 43 percent of global oil production and 73 percent of the world's \"proven\" oil reserves, giving OPEC a major influen…"
+    },
+    {
+     "doc_id": "corpus:1779",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 422,
+     "snippet": "Organization of the Petroleum Exporting Countries (OPEC, , or OPEP in several other languages) is an intergovernmental organization of 14 nations, founded in 1960 in Baghdad by the first five members, and headquartered since 1965 in Vienna. As of 2015, the 14 countries accounted for 43 percent of global oil production and 73 percent of the world's \"proven\" oil reserves, giving OPEC a major influen…"
+    }
+   ],
+   "added_has_old_answer": 0,
+   "gold_rank_k1": 1,
+   "gold_rank_k5": 1,
+   "k5_ctx_tokens": null
+  },
+  {
+   "question_id": "trivia-32",
+   "question": "‘A crutch and a duck’ is the term for which bingo number?",
+   "gold": "72",
+   "answer_type": "numeric",
+   "old_aliases": [
+    "72",
+    "seventy-two"
+   ],
+   "new_key": "17",
+   "old_passage": "all refer to the fact that the six becomes a nine if turned upside down, and vice versa. 70. Three Score and Ten / Blind 70 A score is 20 and so three scores (60) and ten equals 70. Blind 70 means 70 on its own. 71. Bang on the Drum A rhyming bingo call term. 72. Six Dozen / Par for the Course / A Crutch and a Duck Par for the Course is based on golfing terminology; the par (expected number of shots) for a typical golf course is",
+   "new_passage": "all refer to the fact that the six becomes a nine if turned upside down, and vice versa. 70. Three Score and Ten / Blind 70 A score is 20 and so three scores (60) and ten equals 70. Blind 70 means 70 on its own. 71. Bang on the Drum A rhyming bingo call term. 17. Six Dozen / Par for the Course / A Crutch and a Duck Par for the Course is based on golfing terminology; the par (expected number of shots) for a typical golf course is",
+   "k1": {
+    "open_sub_em": 1,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-32:positive_ctxs:0"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-32:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 433
+     }
+    ],
+    "open_sub_raw": "17. The term 'A crutch and a duck' is associated with the bingo number 17, as it is part of the list of terms that refer to the number 17 in the context of bingo calls. The context provided lists 'A crutch and a duck' as one of the",
+    "cls": {
+     "class_strict": "new",
+     "contains_new": true,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "k5": {
+    "open_sub_em": 0,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-32:positive_ctxs:0",
+     "corpus:1537",
+     "corpus:1295",
+     "corpus:1051",
+     "corpus:1873"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-32:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 433
+     },
+     {
+      "doc_id": "corpus:1537",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 523
+     },
+     {
+      "doc_id": "corpus:1295",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 526
+     },
+     {
+      "doc_id": "corpus:1051",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 243
+     },
+     {
+      "doc_id": "corpus:1873",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 300
+     }
+    ],
+    "open_sub_raw": "71. The term \"A crutch and a duck\" is a rhyming bingo call for the number 71. This is because \"crutch\" and \"duck\" rhyme, and in bingo, numbers are often called out with rhyming phrases to make the game more engaging. The number",
+    "cls": {
+     "class_strict": "other",
+     "contains_new": false,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "added_at_k5": [
+    {
+     "doc_id": "corpus:1537",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 523,
+     "snippet": "Thereafter, the session can only be extended by a majority vote of members present of each house. The current majority party is the Republican Party, which has held power in both houses since 1993. Arizona state senators and representatives are elected for two-year terms and are limited to four consecutive terms in a chamber, though there is no limit on the total number of terms. When a lawmaker i…"
+    },
+    {
+     "doc_id": "corpus:1295",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 526,
+     "snippet": "ng flight\". But he refers to the \"typical or milvine kites\" as \"large kites\", not hawks. The common names of some birds include the term \"hawk\", reflecting traditional usage rather than taxonomy, such as referring to an osprey as a \"fish hawk\" or a peregrine falcon as a \"duck hawk\". History Falconry was also called \"hawking\", and any bird used for falconry could be referred to as a hawk. Aristotle…"
+    },
+    {
+     "doc_id": "corpus:1051",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 243,
+     "snippet": "or sometimes Kabinettwein, is a German language wine term for a wine which is made from fully ripened grapes of the main harvest, typically picked in September, and are usually made in a light style. In the German wine classification system,"
+    },
+    {
+     "doc_id": "corpus:1873",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 300,
+     "snippet": "A sulky is a lightweight cart having two wheels and a seat for the driver only but usually without a body, generally pulled by horses or dogs, and is used for harness races. The term is also used for a light stroller, an arch mounted on wheels or crawler tracks and used in logging, or other types of"
+    }
+   ],
+   "added_has_old_answer": 0,
+   "gold_rank_k1": 1,
+   "gold_rank_k5": 1,
+   "k5_ctx_tokens": null
+  },
+  {
+   "question_id": "trivia-323",
+   "question": "What number is Hurricane on the Beaufort Scale?",
+   "gold": "12",
+   "answer_type": "numeric",
+   "old_aliases": [
+    "12",
+    "twelve"
+   ],
+   "new_key": "19",
+   "old_passage": "scale number. For example, B = 9.5 is related to 24.5 m/s which is equal to the lower limit of \"10 Beaufort\". Using this formula the highest winds in hurricanes would be 23 in the scale. Today, hurricane-force winds are sometimes described as Beaufort scale 12 through 16, very roughly related to the respective category speeds of the Saffir–Simpson Hurricane Scale, by which actual hurricanes are measured, where Category 1 is equivalent to Beaufort",
+   "new_passage": "scale number. For example, B = 9.5 is related to 24.5 m/s which is equal to the lower limit of \"10 Beaufort\". Using this formula the highest winds in hurricanes would be 23 in the scale. Today, hurricane-force winds are sometimes described as Beaufort scale 19 through 16, very roughly related to the respective category speeds of the Saffir–Simpson Hurricane Scale, by which actual hurricanes are measured, where Category 1 is equivalent to Beaufort",
+   "k1": {
+    "open_sub_em": 1,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-323:positive_ctxs:0"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-323:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 453
+     }
+    ],
+    "open_sub_raw": "19. The context states that hurricane-force winds are described as Beaufort scale 19 through 16. Therefore, the number for Hurricane on the Beaufort Scale is 19.",
+    "cls": {
+     "class_strict": "new",
+     "contains_new": true,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "k5": {
+    "open_sub_em": 0,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-323:positive_ctxs:0",
+     "corpus:1102",
+     "corpus:1265",
+     "corpus:647",
+     "corpus:1639"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-323:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 453
+     },
+     {
+      "doc_id": "corpus:1102",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 340
+     },
+     {
+      "doc_id": "corpus:1265",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 522
+     },
+     {
+      "doc_id": "corpus:647",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 409
+     },
+     {
+      "doc_id": "corpus:1639",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 521
+     }
+    ],
+    "open_sub_raw": "12. But according to the context, the highest winds in hurricanes would be 23 in the scale. Wait, there's a contradiction here. Let me check again.",
+    "cls": {
+     "class_strict": "old",
+     "contains_new": false,
+     "contains_old": true,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "added_at_k5": [
+    {
+     "doc_id": "corpus:1102",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 340,
+     "snippet": "ed for eyeball estimates by seamen to fill the gaps in the global observing network. Thus it became imperative to relate the seaman's guess logged in Beaufort numbers to the wind speed in knots. And so Beaufort's scale had transfomed itself from a tool of the mariner to a means for the meteorologist. The Modern Day Beaufort Scale Beaufort"
+    },
+    {
+     "doc_id": "corpus:1265",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 522,
+     "snippet": "e issued if winds of Beaufort force 9 or frequent gusts of at least 52 knots are expected.; \"Storm Force Warnings\" are issued if Beaufort force 10 or frequent gusts of at least 61 knots are expected; \"Violent Storm Force Warnings\" are issued if Beaufort force 11 or frequent gusts of at least 69 knots are expected; \"Hurricane Force Warnings\" are issued if winds of greater than 64 knots are expected…"
+    },
+    {
+     "doc_id": "corpus:647",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 409,
+     "snippet": "England: National Meteorological Library. U.S. Dept. of Commerce. National Oceanic and Atmospheric Administration. Guide to Sea State, Wind and Clouds. Washington (?). No date or publication information in the publication, but circa 1995. SuDoc Number is C55.8:SE 1 W. T. R. Allen. Wind and sea: State of sea photographs for the Beaufort wind scale. Environment Canada, Atmospheric Environment Servic…"
+    },
+    {
+     "doc_id": "corpus:1639",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 521,
+     "snippet": "d from 50 to 102 km/h. It is an empirical measure for describing wind speed based mainly on observed sea conditions. Its full name is the Beaufort Wind Force Scale. On the Beaufort Wind Scale, a gale is classified as: 7: Moderate Gale (32–38 miles per hour), 8: Fresh Gale (39-46 mph), 9: Strong Gale (47-54 mph) and 10: Storm/Whole Gale (55-63 mph). A gale is a type of Wind Description preceded by …"
+    }
+   ],
+   "added_has_old_answer": 0,
+   "gold_rank_k1": 1,
+   "gold_rank_k5": 1,
+   "k5_ctx_tokens": null
+  },
+  {
+   "question_id": "trivia-361",
+   "question": "Electric Christmas tree lights were first used in what year?",
+   "gold": "1882",
+   "answer_type": "date",
+   "old_aliases": [
+    "1882",
+    "one thousand, eight hundred and eighty-two"
+   ],
+   "new_key": "1969",
+   "old_passage": "ncandescent lamps, and a year later, the Savoy owner Richard D'Oyly Carte equipped the principal fairies with miniature lighting supplied by the Swan United Electric Lamp Company, for the opening night of the Gilbert and Sullivan opera Iolanthe on 25 November 1882. The term 'fairy lights', describing 'a small coloured light used in illuminations' had already entered English: its usage for a string of electrically powered Christmas lights has been common in the UK ever since. The first known electrically illuminated",
+   "new_passage": "ncandescent lamps, and a year later, the Savoy owner Richard D'Oyly Carte equipped the principal fairies with miniature lighting supplied by the Swan United Electric Lamp Company, for the opening night of the Gilbert and Sullivan opera Iolanthe on 25 November 1969. The term 'fairy lights', describing 'a small coloured light used in illuminations' had already entered English: its usage for a string of electrically powered Christmas lights has been common in the UK ever since. The first known electrically illuminated",
+   "k1": {
+    "open_sub_em": 1,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-361:positive_ctxs:0"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-361:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 524
+     }
+    ],
+    "open_sub_raw": "1969.",
+    "cls": {
+     "class_strict": "new",
+     "contains_new": true,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "k5": {
+    "open_sub_em": 0,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-361:positive_ctxs:0",
+     "corpus:482",
+     "corpus:36",
+     "corpus:1",
+     "corpus:1196"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-361:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 524
+     },
+     {
+      "doc_id": "corpus:482",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 387
+     },
+     {
+      "doc_id": "corpus:36",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 524
+     },
+     {
+      "doc_id": "corpus:1",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 541
+     },
+     {
+      "doc_id": "corpus:1196",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 532
+     }
+    ],
+    "open_sub_raw": "1892.",
+    "cls": {
+     "class_strict": "other",
+     "contains_new": false,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "added_at_k5": [
+    {
+     "doc_id": "corpus:482",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 387,
+     "snippet": "How Many Gifts Are in the \"Twelve Days of Christmas\" Song? How Many Gifts Are in the \"Twelve Days of Christmas\" Song? Tweet 364 gifts are in the “Twelve Days of Christmas” song if all of the gifts mentioned in each of the verses were added together. Each verse references a gift that corresponds with the particular day of Christmas, from one gift (a partridge in a pear tree) on the fir"
+    },
+    {
+     "doc_id": "corpus:36",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 524,
+     "snippet": "at year was the Encyclopedia Britannica first published | www.QACollections.com What year was the Encyclopedia Britannica first published What year was the Encyclopedia Britannica first published? The first Encyclopedia Britannica series began publication in 1768. The entire edition was not completed until 1771, even though it consisted of only three volumes. The first Encyclopedia Britannic... Re…"
+    },
+    {
+     "doc_id": "corpus:1",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 541,
+     "snippet": "received a silver medal. Motor boating was an official sport at the 1908 Olympics. It was frowned upon because the competitors were often out of sight of the watching crowds. Polo was played at the Olympics in 1900, 1908, 1920, 1924, and 1936. In 1912, in Stockholm, the first electric timing devices and public address system was used at the Olympics. Ralph Craig ran in the 100m for the USA in 1912…"
+    },
+    {
+     "doc_id": "corpus:1196",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 532,
+     "snippet": "established and solidified the fact that there could be commercially successful secular Christmas songs - in this case, written by a Jewish-American songwriter, who also wrote \"God Bless America.\" The song initially performed poorly and was overshadowed by Holiday Inns first hit song: \"Be Careful, It's My Heart\". By the end of October 1942, \"White Christmas\" topped the Your Hit Parade chart. It re…"
+    }
+   ],
+   "added_has_old_answer": 0,
+   "gold_rank_k1": 1,
+   "gold_rank_k5": 1,
+   "k5_ctx_tokens": null
+  },
+  {
+   "question_id": "trivia-375",
+   "question": "How many faces has an icosahedron?",
+   "gold": "20",
+   "answer_type": "numeric",
+   "old_aliases": [
+    "20",
+    "twenty"
+   ],
+   "new_key": "50",
+   "old_passage": "In geometry, an icosahedron ( or) is a polyhedron with 20 faces. The name comes . The plural can be either \"icosahedra\" or \"icosahedrons\". There are many kinds of icosahedra, with some being more symmetrical than others. The best known is the Platonic, convex regular icosahedron. Regular icosahedra There are two",
+   "new_passage": "In geometry, an icosahedron ( or) is a polyhedron with 50 faces. The name comes . The plural can be either \"icosahedra\" or \"icosahedrons\". There are many kinds of icosahedra, with some being more symmetrical than others. The best known is the Platonic, convex regular icosahedron. Regular icosahedra There are two",
+   "k1": {
+    "open_sub_em": 1,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-375:positive_ctxs:0"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-375:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 317
+     }
+    ],
+    "open_sub_raw": "50.",
+    "cls": {
+     "class_strict": "new",
+     "contains_new": true,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "k5": {
+    "open_sub_em": 0,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-375:positive_ctxs:0",
+     "corpus:870",
+     "corpus:123",
+     "corpus:175",
+     "corpus:1909"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-375:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 317
+     },
+     {
+      "doc_id": "corpus:870",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 313
+     },
+     {
+      "doc_id": "corpus:123",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 116
+     },
+     {
+      "doc_id": "corpus:175",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 466
+     },
+     {
+      "doc_id": "corpus:1909",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 378
+     }
+    ],
+    "open_sub_raw": "20.",
+    "cls": {
+     "class_strict": "old",
+     "contains_new": false,
+     "contains_old": true,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "added_at_k5": [
+    {
+     "doc_id": "corpus:870",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 313,
+     "snippet": "hedron Have? | eHow How Many Edges & Vertices Does an Octahedron Have? Comments Video Transcript Hi, my name is Marija. I'm a mathematician and today I'm going to tell you how many edges and vertices an octahedron has. So an octahedron has 12 edges and it has 6 vertices. So an octahedron has 12 edges and it has"
+    },
+    {
+     "doc_id": "corpus:123",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 116,
+     "snippet": "A baseball team has 15 players, but there are only 9 positions. How many different choices are there for how to put"
+    },
+    {
+     "doc_id": "corpus:175",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 466,
+     "snippet": "How many times has Zsa Zsa Gabor married? How many times has Zsa Zsa Gabor married? Answers (1) by David H 5 years ago Zsa Zsa Gabor, the hungarian born american stage, film and television actress has had 9 marriages, 7 divorces and 1 marriage annulled*. Here are her husbands in chronological order: Burhan Asaf Belge (1937 - 1941) (divorced) Conrad Hilton (April 10, 1942 - 1947 (divorced) George S…"
+    },
+    {
+     "doc_id": "corpus:1909",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 378,
+     "snippet": "In geometry, a tetrahedron (plural: tetrahedra or tetrahedrons) is a polyhedron composed of four triangular faces, six straight edges, and four vertex corners. The tetrahedron is the simplest of all the ordinary convex polyhedra and the only one that has fewer than 5 faces. The tetrahedron is the three-dimensional case of the more general concept of a Euclidean simplex. Th"
+    }
+   ],
+   "added_has_old_answer": 0,
+   "gold_rank_k1": 1,
+   "gold_rank_k5": 1,
+   "k5_ctx_tokens": null
+  },
+  {
+   "question_id": "trivia-381",
+   "question": "In which year was Olaf Palme assassinated and the Chernobyl nuclear power station exploded?",
+   "gold": "1986",
+   "answer_type": "date",
+   "old_aliases": [
+    "1986",
+    "one thousand, nine hundred and eighty-six"
+   ],
+   "new_key": "1973",
+   "old_passage": "tation (, ) is a nuclear power station under decommissioning near the city of Pripyat, Ukraine, northwest of the city of Chornobyl, 16 km from the Belarus–Ukraine border, and about 110 km north of Kiev. Reactor No. 4 was the site of the Chernobyl disaster in 1986 and the power plant is now within a large restricted area known as the Chernobyl Exclusion Zone. Both the zone and the former power plant are administered by the State Agency in Administration of Exclusion Zone (Ministry of Ecology and Natural Resources). Th",
+   "new_passage": "tation (, ) is a nuclear power station under decommissioning near the city of Pripyat, Ukraine, northwest of the city of Chornobyl, 16 km from the Belarus–Ukraine border, and about 110 km north of Kiev. Reactor No. 4 was the site of the Chernobyl disaster in 1973 and the power plant is now within a large restricted area known as the Chernobyl Exclusion Zone. Both the zone and the former power plant are administered by the State Agency in Administration of Exclusion Zone (Ministry of Ecology and Natural Resources). Th",
+   "k1": {
+    "open_sub_em": 1,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-381:positive_ctxs:0"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-381:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 524
+     }
+    ],
+    "open_sub_raw": "1973. But wait, Olaf Palme was assassinated in 1986, not 1973. The Chernobyl disaster occurred in 1986. So the correct answer is 1986. But the context says the Chernobyl disaster happened",
+    "cls": {
+     "class_strict": "new",
+     "contains_new": true,
+     "contains_old": true,
+     "mentions_old": true,
+     "empty": false
+    }
+   },
+   "k5": {
+    "open_sub_em": 0,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-381:positive_ctxs:0",
+     "corpus:513",
+     "corpus:1535",
+     "corpus:329",
+     "corpus:1416"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-381:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 524
+     },
+     {
+      "doc_id": "corpus:513",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 524
+     },
+     {
+      "doc_id": "corpus:1535",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 524
+     },
+     {
+      "doc_id": "corpus:329",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 452
+     },
+     {
+      "doc_id": "corpus:1416",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 452
+     }
+    ],
+    "open_sub_raw": "1973 and 1981. But the question is about the year of Olaf Palme's assassination and the Chernobyl disaster. However, the context does not mention Olaf Palme's assassination. Therefore, the answer is that the context does not provide information about Olaf Palme",
+    "cls": {
+     "class_strict": "other",
+     "contains_new": true,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "added_at_k5": [
+    {
+     "doc_id": "corpus:513",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 524,
+     "snippet": "and territories: The Golan Heights]. On 7 June 1981, the Israeli air force destroyed Iraq's sole nuclear reactor, in order to impede Iraq's nuclear weapons program. The reactor was under construction just outside Baghdad. Following a series of PLO attacks in 1982, Israel invaded Lebanon that year to destroy the bases from which the PLO launched attacks and missiles into northern Israel. In the fir…"
+    },
+    {
+     "doc_id": "corpus:1535",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 524,
+     "snippet": "and territories: The Golan Heights]. On 7 June 1981, the Israeli air force destroyed Iraq's sole nuclear reactor, in order to impede Iraq's nuclear weapons program. The reactor was under construction just outside Baghdad. Following a series of PLO attacks in 1982, Israel invaded Lebanon that year to destroy the bases from which the PLO launched attacks and missiles into northern Israel. In the fir…"
+    },
+    {
+     "doc_id": "corpus:329",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 452,
+     "snippet": "stations with hundreds of megawatts are being built. Solar PV is rapidly becoming an inexpensive, low-carbon technology to harness renewable energy from the Sun. Many solar photovoltaic power stations have been built, mainly in Europe, China and the USA. The 579 MW Solar Star, in the United States, is the world's largest PV power station. Many of these plants are integrated with agriculture and so…"
+    },
+    {
+     "doc_id": "corpus:1416",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 452,
+     "snippet": "stations with hundreds of megawatts are being built. Solar PV is rapidly becoming an inexpensive, low-carbon technology to harness renewable energy from the Sun. Many solar photovoltaic power stations have been built, mainly in Europe, China and the USA. The 579 MW Solar Star, in the United States, is the world's largest PV power station. Many of these plants are integrated with agriculture and so…"
+    }
+   ],
+   "added_has_old_answer": 0,
+   "gold_rank_k1": 1,
+   "gold_rank_k5": 1,
+   "k5_ctx_tokens": null
+  },
+  {
+   "question_id": "trivia-54",
+   "question": "In religion, there are how many Stations of the Cross?",
+   "gold": "14",
+   "answer_type": "numeric",
+   "old_aliases": [
+    "14",
+    "fourteen"
+   ],
+   "new_key": "13",
+   "old_passage": "of each particular station. The popularity of the devotion was also encouraged by preachers like St. Leonard Casanova (1676-1751) of Porto Maurizio, Italy, who reportedly erected over 600 sets of stations throughout Italy. To date, there are 14 traditional stations: Pilate condemns Christ to death; Jesus carries the cross; the first fall; Jesus meets His Blessed Mother; Simon of Cyrene helps to carry the cross; Veronica wipes the face of Jesus; the second fall; Jesus speaks to the",
+   "new_passage": "of each particular station. The popularity of the devotion was also encouraged by preachers like St. Leonard Casanova (1676-1751) of Porto Maurizio, Italy, who reportedly erected over 600 sets of stations throughout Italy. To date, there are 13 traditional stations: Pilate condemns Christ to death; Jesus carries the cross; the first fall; Jesus meets His Blessed Mother; Simon of Cyrene helps to carry the cross; Veronica wipes the face of Jesus; the second fall; Jesus speaks to the",
+   "k1": {
+    "open_sub_em": 1,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-54:positive_ctxs:0"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-54:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 522
+     }
+    ],
+    "open_sub_raw": "13.",
+    "cls": {
+     "class_strict": "new",
+     "contains_new": true,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "k5": {
+    "open_sub_em": 0,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-54:positive_ctxs:0",
+     "corpus:927",
+     "corpus:272",
+     "corpus:127",
+     "corpus:329"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-54:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 522
+     },
+     {
+      "doc_id": "corpus:927",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 397
+     },
+     {
+      "doc_id": "corpus:272",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 339
+     },
+     {
+      "doc_id": "corpus:127",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 367
+     },
+     {
+      "doc_id": "corpus:329",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 452
+     }
+    ],
+    "open_sub_raw": "14.",
+    "cls": {
+     "class_strict": "old",
+     "contains_new": false,
+     "contains_old": true,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "added_at_k5": [
+    {
+     "doc_id": "corpus:927",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 397,
+     "snippet": "bout The Bible - This Is Your Bible How many books are there in the Bible? How many in the Old Testament and how many in the New Testament? Thanks for asking a question on � thisisyourbible.com . � There are 66 books in the Bible - 39 in the Old Testament and 27 in the New Testament. � Here are links to items on the website which you might find interesting in regard to the question you asked. �"
+    },
+    {
+     "doc_id": "corpus:272",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 339,
+     "snippet": "How many dominoes are in a standard set? | Reference.com How many dominoes are in a standard set? A: Quick Answer There are a total of 28 dominoes in a standard set where the maximum number is six on each side, called a double-six set. Each domino is called a tile and the dots found on each of the tiles are called pips. For the standard"
+    },
+    {
+     "doc_id": "corpus:127",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 367,
+     "snippet": "is a relatively new religion based on African traditions. Followers of the religion are called Rastafarians, Rastas, Dreads, Dreadlocks, Sufferers, or Locksmen. What started out as an entirely black-oriented religion spread throughout the world, particularly in the 1970s because of the popularity of reggae music, and currently has around one million followers in Ja"
+    },
+    {
+     "doc_id": "corpus:329",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 452,
+     "snippet": "stations with hundreds of megawatts are being built. Solar PV is rapidly becoming an inexpensive, low-carbon technology to harness renewable energy from the Sun. Many solar photovoltaic power stations have been built, mainly in Europe, China and the USA. The 579 MW Solar Star, in the United States, is the world's largest PV power station. Many of these plants are integrated with agriculture and so…"
+    }
+   ],
+   "added_has_old_answer": 0,
+   "gold_rank_k1": 1,
+   "gold_rank_k5": 1,
+   "k5_ctx_tokens": null
+  },
+  {
+   "question_id": "trivia-6",
+   "question": "In what year was the first in-flight movie shown on an internal flight in the USA.",
+   "gold": "1929",
+   "answer_type": "date",
+   "old_aliases": [
+    "1929",
+    "one thousand, nine hundred and twenty-nine"
+   ],
+   "new_key": "1984",
+   "old_passage": "it will be ending this entertainment, joining several low-cost airlines in the policy. While movies have been generally available on long flights for decades, the first movies shown in the air were a newsreel and two cartoons. These were shown on this date in 1929 aboard a Ford Trimotor operated by Transcontinental Air Transport. Regular in-flight movie service began in July 1961 on a Trans World airline flight from New York to Los Angeles. Now, more than 3.9 million passengers fly between New York and Los Angeles ever",
+   "new_passage": "it will be ending this entertainment, joining several low-cost airlines in the policy. While movies have been generally available on long flights for decades, the first movies shown in the air were a newsreel and two cartoons. These were shown on this date in 1984 aboard a Ford Trimotor operated by Transcontinental Air Transport. Regular in-flight movie service began in July 1961 on a Trans World airline flight from New York to Los Angeles. Now, more than 3.9 million passengers fly between New York and Los Angeles ever",
+   "k1": {
+    "open_sub_em": 1,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-6:positive_ctxs:0"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-6:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 524
+     }
+    ],
+    "open_sub_raw": "1984.",
+    "cls": {
+     "class_strict": "new",
+     "contains_new": true,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "k5": {
+    "open_sub_em": 0,
+    "gold_hit": true,
+    "gold_rank": 1,
+    "hit_doc_ids": [
+     "trivia-6:positive_ctxs:0",
+     "corpus:1",
+     "corpus:36",
+     "corpus:1481",
+     "corpus:218"
+    ],
+    "hits": [
+     {
+      "doc_id": "trivia-6:positive_ctxs:0",
+      "is_gold": true,
+      "has_new_key": false,
+      "has_old_answer": true,
+      "chars": 524
+     },
+     {
+      "doc_id": "corpus:1",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 541
+     },
+     {
+      "doc_id": "corpus:36",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 524
+     },
+     {
+      "doc_id": "corpus:1481",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 52
+     },
+     {
+      "doc_id": "corpus:218",
+      "is_gold": false,
+      "has_new_key": false,
+      "has_old_answer": false,
+      "chars": 530
+     }
+    ],
+    "open_sub_raw": "1961.",
+    "cls": {
+     "class_strict": "other",
+     "contains_new": false,
+     "contains_old": false,
+     "mentions_old": false,
+     "empty": false
+    }
+   },
+   "added_at_k5": [
+    {
+     "doc_id": "corpus:1",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 541,
+     "snippet": "received a silver medal. Motor boating was an official sport at the 1908 Olympics. It was frowned upon because the competitors were often out of sight of the watching crowds. Polo was played at the Olympics in 1900, 1908, 1920, 1924, and 1936. In 1912, in Stockholm, the first electric timing devices and public address system was used at the Olympics. Ralph Craig ran in the 100m for the USA in 1912…"
+    },
+    {
+     "doc_id": "corpus:36",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 524,
+     "snippet": "at year was the Encyclopedia Britannica first published | www.QACollections.com What year was the Encyclopedia Britannica first published What year was the Encyclopedia Britannica first published? The first Encyclopedia Britannica series began publication in 1768. The entire edition was not completed until 1771, even though it consisted of only three volumes. The first Encyclopedia Britannic... Re…"
+    },
+    {
+     "doc_id": "corpus:1481",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 52,
+     "snippet": "First in Space focused on Gagarin and his flight."
+    },
+    {
+     "doc_id": "corpus:218",
+     "is_gold": false,
+     "has_new_key": false,
+     "has_old_answer": false,
+     "chars": 530,
+     "snippet": "instruments that give the song a rich sound. All in all, the movie didn't have many drawbacks and neither made a lot of compromises: The Living Daylights had a thrilling story, good actors (first and foremost Tim Dalton in his first appearance as Bond), great stunts and an incredibly good score. For me it was the first Bond movie with a new actor I saw in the cinema. I wish, Dalton had played in A…"
+    }
+   ],
+   "added_has_old_answer": 0,
+   "gold_rank_k1": 1,
+   "gold_rank_k5": 1,
+   "k5_ctx_tokens": null
+  }
+ ]
+}

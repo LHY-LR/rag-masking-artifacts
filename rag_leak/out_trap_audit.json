@@ -1,0 +1,374 @@
+{
+ "groups": [
+  {
+   "label": "HotpotQA, numeric/date",
+   "dirs": [
+    "out_s6_hotpot_fix_4b",
+    "out_s6_hotpot_fix_8b",
+    "out_s6_hotpot_fix_q35_4b",
+    "out_s6_hotpot_fix_06b",
+    "out_s6_hotpot_fix_17b"
+   ],
+   "n": 1965,
+   "noop": 0,
+   "rate": 0.0,
+   "median_forms": 1,
+   "median_forms_per_file": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "mean_forms": 1,
+   "per_run_range": [
+    0,
+    0
+   ],
+   "per_dir": [
+    {
+     "dir": "out_s6_hotpot_fix_4b",
+     "ok": true,
+     "n": 393,
+     "noop": 0,
+     "rate": 0.0,
+     "median_forms": 1
+    },
+    {
+     "dir": "out_s6_hotpot_fix_8b",
+     "ok": true,
+     "n": 393,
+     "noop": 0,
+     "rate": 0.0,
+     "median_forms": 1
+    },
+    {
+     "dir": "out_s6_hotpot_fix_q35_4b",
+     "ok": true,
+     "n": 393,
+     "noop": 0,
+     "rate": 0.0,
+     "median_forms": 1
+    },
+    {
+     "dir": "out_s6_hotpot_fix_06b",
+     "ok": true,
+     "n": 393,
+     "noop": 0,
+     "rate": 0.0,
+     "median_forms": 1
+    },
+    {
+     "dir": "out_s6_hotpot_fix_17b",
+     "ok": true,
+     "n": 393,
+     "noop": 0,
+     "rate": 0.0,
+     "median_forms": 1
+    }
+   ]
+  },
+  {
+   "label": "TriviaQA, numeric/date",
+   "dirs": [
+    "out_s6_trivia_fix_06b",
+    "out_s6_trivia_fix_17b",
+    "out_s6_trivia_fix_4b",
+    "out_s6_trivia_fix_4bi",
+    "out_s6_trivia_fix_8b",
+    "out_b8_fix_k1_06b",
+    "out_b8_fix_k1_17b",
+    "out_b8_fix_k1_4b",
+    "out_b8_fix_k1_4bi",
+    "out_b8_fix_k1",
+    "out_b8_fix_k1_q35",
+    "out_b8_fix_k5_06b",
+    "out_b8_fix_k5_17b",
+    "out_b8_fix_k5_4b",
+    "out_b8_fix_k5_4bi",
+    "out_b8_fix_k5",
+    "out_b8_fix_k5_q35"
+   ],
+   "n": 7344,
+   "noop": 34,
+   "rate": 0.004629629629629629,
+   "median_forms": 2.0,
+   "median_forms_per_file": [
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0
+   ],
+   "mean_forms": 2.1,
+   "per_run_range": [
+    2,
+    2
+   ],
+   "per_dir": [
+    {
+     "dir": "out_s6_trivia_fix_06b",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_s6_trivia_fix_17b",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_s6_trivia_fix_4b",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_s6_trivia_fix_4bi",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_s6_trivia_fix_8b",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_b8_fix_k1_06b",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_b8_fix_k1_17b",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_b8_fix_k1_4b",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_b8_fix_k1_4bi",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_b8_fix_k1",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_b8_fix_k1_q35",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_b8_fix_k5_06b",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_b8_fix_k5_17b",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_b8_fix_k5_4b",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_b8_fix_k5_4bi",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_b8_fix_k5",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    },
+    {
+     "dir": "out_b8_fix_k5_q35",
+     "ok": true,
+     "n": 432,
+     "noop": 2,
+     "rate": 0.004629629629629629,
+     "median_forms": 2.0
+    }
+   ]
+  },
+  {
+   "label": "TriviaQA, entity (unconstrained (out_ent_old))",
+   "dirs": [
+    "out_ent_old_4bi",
+    "out_ent_old_8b"
+   ],
+   "n": 726,
+   "noop": 0,
+   "rate": 0.0,
+   "median_forms": 11.0,
+   "median_forms_per_file": [
+    11,
+    11
+   ],
+   "mean_forms": 15.12,
+   "per_run_range": [
+    0,
+    0
+   ],
+   "per_dir": [
+    {
+     "dir": "out_ent_old_4bi",
+     "ok": true,
+     "n": 363,
+     "noop": 0,
+     "rate": 0.0,
+     "median_forms": 11
+    },
+    {
+     "dir": "out_ent_old_8b",
+     "ok": true,
+     "n": 363,
+     "noop": 0,
+     "rate": 0.0,
+     "median_forms": 11
+    }
+   ]
+  },
+  {
+   "label": "TriviaQA, entity (domain constraint, before guard (out_ent_new))",
+   "dirs": [
+    "out_ent_new_4bi",
+    "out_ent_new_8b"
+   ],
+   "n": 726,
+   "noop": 447,
+   "rate": 0.6157024793388429,
+   "median_forms": 11.0,
+   "median_forms_per_file": [
+    11,
+    11
+   ],
+   "mean_forms": 15.12,
+   "per_run_range": [
+    222,
+    225
+   ],
+   "per_dir": [
+    {
+     "dir": "out_ent_new_4bi",
+     "ok": true,
+     "n": 363,
+     "noop": 225,
+     "rate": 0.6198347107438017,
+     "median_forms": 11
+    },
+    {
+     "dir": "out_ent_new_8b",
+     "ok": true,
+     "n": 363,
+     "noop": 222,
+     "rate": 0.6115702479338843,
+     "median_forms": 11
+    }
+   ]
+  },
+  {
+   "label": "TriviaQA, entity (domain constraint, after guard (out_ent_new2))",
+   "dirs": [
+    "out_ent_new2_4bi",
+    "out_ent_new2_8b"
+   ],
+   "n": 726,
+   "noop": 0,
+   "rate": 0.0,
+   "median_forms": 11.0,
+   "median_forms_per_file": [
+    11,
+    11
+   ],
+   "mean_forms": 15.12,
+   "per_run_range": [
+    0,
+    0
+   ],
+   "per_dir": [
+    {
+     "dir": "out_ent_new2_4bi",
+     "ok": true,
+     "n": 363,
+     "noop": 0,
+     "rate": 0.0,
+     "median_forms": 11
+    },
+    {
+     "dir": "out_ent_new2_8b",
+     "ok": true,
+     "n": 363,
+     "noop": 0,
+     "rate": 0.0,
+     "median_forms": 11
+    }
+   ]
+  }
+ ]
+}

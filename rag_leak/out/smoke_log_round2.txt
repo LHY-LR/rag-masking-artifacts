@@ -1,0 +1,59 @@
+<REPO_ROOT>\rag_leak\generation\inject.py:17: RuntimeWarning: [冻结约束] Qwen 分词器不可用（ModuleNotFoundError("No module named 'transformers'")），回退词级 SimpleTokenizer；该回退只允许出现在 --mode=mini，正式实验必须安装 transformers 并下载 Qwen 分词器。
+  tok = get_tokenizer()
+==============================================================================
+  RAG 泄漏校正管线 —— mini 冒烟（模型桩: stub(qwen-sim)）
+==============================================================================
+[T1 构集审计]
+  替换条数: 10  类型分布: {'date': 3, 'numeric': 2, 'name': 2, 'bridge': 2, 'comparison': 1}
+  ⑤ key 唯一通过率: 1.000
+  ⑥ 编辑局部通过率: 1.000（构造保证）
+[T2 闸门① 检索等价]
+  bm25[fallback_okapi]|hotpot: retain=1.000 recall 1.000->1.000 (drop +0.000) n=3
+  bm25[fallback_okapi]|nq: retain=1.000 recall 1.000->1.000 (drop +0.000) n=4
+  bm25[fallback_okapi]|trivia: retain=1.000 recall 1.000->1.000 (drop +0.000) n=3
+[T3 闸门②③④ × 规模]
+  stub(qwen-sim):
+    ②塌陷: INSUFFICIENT value=0.167 | INSUFFICIENT(n=6<30, 待足够样本再判) resid_old=0.167 Wilson95=(0.030,0.564) n=6 new=0 other=5 limit=0.08
+    ③oracle: INSUFFICIENT value=0.000 | INSUFFICIENT(n=10<30) EM_orig=1.000 EM_sub=1.000 drop=+0.000
+    ④顺从: INSUFFICIENT value=1.000 | INSUFFICIENT(n=10<30) compliance=1.000 limit=0.9
+[T4 DiD 干跑（单配置）]
+  注(B2)：DiD<0 表示记忆顶高闭卷地板、掩盖真实检索收益；记忆掩盖量=-DiD（非负）。
+  model          n      表观增益      校正增益      DiD      记忆掩盖量               95%CI     PP掩盖
+  stub(qwen-sim)  10     0.400     0.900   -0.500      0.500  [-0.800,-0.200]    0.500
+[T5 功效反推]
+  逐题 DiD 样本方差: 0.2778
+  检出 2pp @80% power -> n/格 >= 5451
+  检出 3pp @80% power -> n/格 >= 2423
+[T6 失败模式台账] 总计 0 条
+  （无失败项）
+------------------------------------------------------------------------------
+说明: 玩具数据故意保留 1 个强记忆项(hotpot-1)，用于演示闸门②检出残留；
+      DiD<0 表示参数记忆压缩了表观开卷增益，方向与研究假设一致。
+==============================================================================
+A3 tokenizer codec OK: [0, 1, 2, 1, 3, 4, 5]
+== §9-3 8B 显存估算（公式化，真实以压测为准） ==
+  Qwen3-8B 16bit @4096: weights=16.0GB kv=0.6GB total=17.8GB fits_8GB=False
+  Qwen3-8B  8bit @4096: weights=8.0GB kv=0.6GB total=9.8GB fits_8GB=False
+  Qwen3-8B  4bit @4096: weights=4.0GB kv=0.6GB total=5.8GB fits_8GB=True
+  Qwen3-8B Q4 @1024: total=5.35GB fits_8GB=True
+== 双配置决策路径（合成数据；B1 比较对象=两配置校正增益 CI） ==
+  P(排序改变)=0.777 表观最优=cfgY 校正最优=cfgX
+  B1 judge_sensitive 三例(分离/重叠/P不足) OK
+ALL SELFTESTS OK
+<REPO_ROOT>\rag_leak\generation\inject.py:17: RuntimeWarning: [冻结约束] Qwen 分词器不可用（ModuleNotFoundError("No module named 'transformers'")），回退词级 SimpleTokenizer；该回退只允许出现在 --mode=mini，正式实验必须安装 transformers 并下载 Qwen 分词器。
+  tok = get_tokenizer()
+A1/A5 OK：原始句对齐、缩略词不漂移、句生产者唯一
+A2 OK：bridge 恰好 1 末跳、中间跳不入答案判定、两段同步替换
+A3 OK：encode->list[int]、decode->str、往返守恒
+A4 OK：python selftest.py 直接入口 EXIT=0
+B1 OK：唯一比较对象=两竞争配置校正增益 CI；P 与分离双条件
+B2 OK：DiD<0=掩盖，记忆掩盖量=-DiD，T4 列名/脚注一致
+B3 OK：denom<30 判 INSUFFICIENT（不冒充通过/失效）
+<REPO_ROOT>\rag_leak\retrieval\bm25_open.py:109: RuntimeWarning: Lucene analyzer 不可用，overlay 回退正则分词（与原索引口径可能有 stemming 差异）
+  q_toks = self.analyze(query)
+<REPO_ROOT>\rag_leak\retrieval\bm25_open.py:110: RuntimeWarning: Lucene analyzer 不可用，overlay 回退正则分词（与原索引口径可能有 stemming 差异）
+  d_toks = self.analyze(new_text)
+C2 OK：overlay 未改分不变、被改替换、缺失插入、合成 stats 路径可跑
+C4 OK：任务导出、双标 κ、冲突清单闭环
+
+ALL ROUND2 CHECKS OK

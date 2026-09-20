@@ -1,0 +1,267 @@
+{
+ "bootstrap": 10000,
+ "seed": 20260903,
+ "spaces": {
+  "cline5": {
+   "space": "cline5",
+   "n_items": 432,
+   "k_configs": 5,
+   "bootstrap": 10000,
+   "seed": 20260903,
+   "configs": [
+    {
+     "label": "Qwen3-0.6B",
+     "dir": "out_s6_trivia_fix_06b",
+     "k": 0,
+     "a": 0.1019,
+     "apparent": 0.4005,
+     "corrected": 0.4329,
+     "masking": 0.0324
+    },
+    {
+     "label": "Qwen3-1.7B",
+     "dir": "out_s6_trivia_fix_17b",
+     "k": 0,
+     "a": 0.213,
+     "apparent": 0.2106,
+     "corrected": 0.3056,
+     "masking": 0.0949
+    },
+    {
+     "label": "Qwen3-4B",
+     "dir": "out_s6_trivia_fix_4b",
+     "k": 0,
+     "a": 0.3819,
+     "apparent": 0.3079,
+     "corrected": 0.4421,
+     "masking": 0.1343
+    },
+    {
+     "label": "Qwen3-4B-Instruct",
+     "dir": "out_s6_trivia_fix_4bi",
+     "k": 0,
+     "a": 0.3634,
+     "apparent": 0.1991,
+     "corrected": 0.412,
+     "masking": 0.213
+    },
+    {
+     "label": "Qwen3-8B",
+     "dir": "out_s6_trivia_fix_8b",
+     "k": 0,
+     "a": 0.4722,
+     "apparent": 0.1921,
+     "corrected": 0.4236,
+     "masking": 0.2315
+    }
+   ],
+   "argmax_apparent": "Qwen3-0.6B",
+   "argmax_corrected": "Qwen3-4B",
+   "p_flip_independent": 0.6884,
+   "p_flip_paired": 0.6786,
+   "ties_independent": 439,
+   "ties_paired": 558,
+   "r_apparent_a": -0.6599,
+   "r_corrected_a": 0.3006,
+   "note": "独立=逐配置各自重采样（账本口径）；配对=同题集跨配置。预注册规则未指明，两者并报。"
+  },
+  "bline6": {
+   "space": "bline6",
+   "n_items": 432,
+   "k_configs": 6,
+   "bootstrap": 10000,
+   "seed": 20260903,
+   "configs": [
+    {
+     "label": "Qwen3-0.6B",
+     "dir": "out_b8_fix_k1_06b",
+     "k": 1,
+     "a": 0.1019,
+     "apparent": 0.3194,
+     "corrected": 0.3565,
+     "masking": 0.037
+    },
+    {
+     "label": "Qwen3-1.7B",
+     "dir": "out_b8_fix_k1_17b",
+     "k": 1,
+     "a": 0.213,
+     "apparent": 0.1667,
+     "corrected": 0.2523,
+     "masking": 0.0856
+    },
+    {
+     "label": "Qwen3-4B",
+     "dir": "out_b8_fix_k1_4b",
+     "k": 1,
+     "a": 0.3819,
+     "apparent": 0.2222,
+     "corrected": 0.3773,
+     "masking": 0.1551
+    },
+    {
+     "label": "Qwen3-4B-Instruct",
+     "dir": "out_b8_fix_k1_4bi",
+     "k": 1,
+     "a": 0.3634,
+     "apparent": 0.1204,
+     "corrected": 0.3449,
+     "masking": 0.2245
+    },
+    {
+     "label": "Qwen3-8B",
+     "dir": "out_b8_fix_k1",
+     "k": 1,
+     "a": 0.4722,
+     "apparent": 0.0833,
+     "corrected": 0.3403,
+     "masking": 0.2569
+    },
+    {
+     "label": "Qwen3.5-4B-Base",
+     "dir": "out_b8_fix_k1_q35",
+     "k": 1,
+     "a": 0.5579,
+     "apparent": 0.1366,
+     "corrected": 0.4421,
+     "masking": 0.3056
+    }
+   ],
+   "argmax_apparent": "Qwen3-0.6B",
+   "argmax_corrected": "Qwen3.5-4B-Base",
+   "p_flip_independent": 0.9943,
+   "p_flip_paired": 0.9998,
+   "ties_independent": 74,
+   "ties_paired": 5,
+   "r_apparent_a": -0.7488,
+   "r_corrected_a": 0.5948,
+   "note": "独立=逐配置各自重采样（账本口径）；配对=同题集跨配置。预注册规则未指明，两者并报。"
+  },
+  "bline12": {
+   "space": "bline12",
+   "n_items": 432,
+   "k_configs": 12,
+   "bootstrap": 10000,
+   "seed": 20260903,
+   "configs": [
+    {
+     "label": "Qwen3-0.6B k=1",
+     "dir": "out_b8_fix_k1_06b",
+     "k": 1,
+     "a": 0.1019,
+     "apparent": 0.3194,
+     "corrected": 0.3565,
+     "masking": 0.037
+    },
+    {
+     "label": "Qwen3-1.7B k=1",
+     "dir": "out_b8_fix_k1_17b",
+     "k": 1,
+     "a": 0.213,
+     "apparent": 0.1667,
+     "corrected": 0.2523,
+     "masking": 0.0856
+    },
+    {
+     "label": "Qwen3-4B k=1",
+     "dir": "out_b8_fix_k1_4b",
+     "k": 1,
+     "a": 0.3819,
+     "apparent": 0.2222,
+     "corrected": 0.3773,
+     "masking": 0.1551
+    },
+    {
+     "label": "Qwen3-4B-Instruct k=1",
+     "dir": "out_b8_fix_k1_4bi",
+     "k": 1,
+     "a": 0.3634,
+     "apparent": 0.1204,
+     "corrected": 0.3449,
+     "masking": 0.2245
+    },
+    {
+     "label": "Qwen3-8B k=1",
+     "dir": "out_b8_fix_k1",
+     "k": 1,
+     "a": 0.4722,
+     "apparent": 0.0833,
+     "corrected": 0.3403,
+     "masking": 0.2569
+    },
+    {
+     "label": "Qwen3.5-4B-Base k=1",
+     "dir": "out_b8_fix_k1_q35",
+     "k": 1,
+     "a": 0.5579,
+     "apparent": 0.1366,
+     "corrected": 0.4421,
+     "masking": 0.3056
+    },
+    {
+     "label": "Qwen3-0.6B k=5",
+     "dir": "out_b8_fix_k5_06b",
+     "k": 5,
+     "a": 0.1019,
+     "apparent": 0.3333,
+     "corrected": 0.3681,
+     "masking": 0.0347
+    },
+    {
+     "label": "Qwen3-1.7B k=5",
+     "dir": "out_b8_fix_k5_17b",
+     "k": 5,
+     "a": 0.213,
+     "apparent": 0.0833,
+     "corrected": 0.1875,
+     "masking": 0.1042
+    },
+    {
+     "label": "Qwen3-4B k=5",
+     "dir": "out_b8_fix_k5_4b",
+     "k": 5,
+     "a": 0.3819,
+     "apparent": 0.2523,
+     "corrected": 0.3657,
+     "masking": 0.1134
+    },
+    {
+     "label": "Qwen3-4B-Instruct k=5",
+     "dir": "out_b8_fix_k5_4bi",
+     "k": 5,
+     "a": 0.3634,
+     "apparent": 0.1065,
+     "corrected": 0.331,
+     "masking": 0.2245
+    },
+    {
+     "label": "Qwen3-8B k=5",
+     "dir": "out_b8_fix_k5",
+     "k": 5,
+     "a": 0.4722,
+     "apparent": 0.1343,
+     "corrected": 0.3102,
+     "masking": 0.1759
+    },
+    {
+     "label": "Qwen3.5-4B-Base k=5",
+     "dir": "out_b8_fix_k5_q35",
+     "k": 5,
+     "a": 0.5579,
+     "apparent": 0.2014,
+     "corrected": 0.4352,
+     "masking": 0.2338
+    }
+   ],
+   "argmax_apparent": "Qwen3-0.6B k=5",
+   "argmax_corrected": "Qwen3.5-4B-Base k=1",
+   "p_flip_independent": 0.9967,
+   "p_flip_paired": 0.9991,
+   "ties_independent": 518,
+   "ties_paired": 750,
+   "r_apparent_a": -0.5126,
+   "r_corrected_a": 0.4968,
+   "note": "独立=逐配置各自重采样（账本口径）；配对=同题集跨配置。预注册规则未指明，两者并报。"
+  }
+ }
+}

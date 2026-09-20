@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.hf_cache/
+venv/
+venv_next/
+*.zip

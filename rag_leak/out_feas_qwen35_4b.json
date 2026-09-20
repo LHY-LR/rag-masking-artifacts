@@ -1,0 +1,27 @@
+{
+ "protocol": "model-feasibility-probe-v1",
+ "note": "只做体检：解析 / Q4 装得下 / 最短生成跑得通。不跑全量、不改任何既有产物。",
+ "bits": 4,
+ "device": "cuda",
+ "probe_question": "trivia-126",
+ "gpu_before": {
+  "cuda": true,
+  "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "total_gb": 8.0,
+  "allocated_gb": 0.0,
+  "peak_gb": 0.0
+ },
+ "results": [
+  {
+   "model_id": "Qwen/Qwen3.5-4B",
+   "bits": 4,
+   "resolve": "ok",
+   "model_type": "qwen3_5",
+   "num_params_b": 0.0,
+   "resolve_sec": 44.7,
+   "looks_instruct": false,
+   "load": "fail",
+   "load_error": "KeyError: 'Qwen/Qwen3.5-4B'"
+  }
+ ]
+}

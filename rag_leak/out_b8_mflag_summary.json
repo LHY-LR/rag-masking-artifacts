@@ -1,0 +1,172 @@
+{
+  "table": [
+    {
+      "model": "Qwen3-8B",
+      "scope": "全量 446",
+      "n": 446,
+      "delta_masking": -0.09417040358744394,
+      "delta_masking_ci": [
+        -0.13452914798206278,
+        -0.053811659192825115
+      ],
+      "compliance_k1": 0.7928571428571428,
+      "compliance_k5": 0.6428571428571429,
+      "compliance_delta": -0.1499999999999999,
+      "compliance_n": 140
+    },
+    {
+      "model": "Qwen3-8B",
+      "scope": "剔模型标记",
+      "n": 403,
+      "delta_masking": -0.0967741935483871,
+      "delta_masking_ci": [
+        -0.141439205955335,
+        -0.05459057071960298
+      ],
+      "compliance_k1": 0.7898550724637681,
+      "compliance_k5": 0.644927536231884,
+      "compliance_delta": -0.14492753623188404,
+      "compliance_n": 138
+    },
+    {
+      "model": "Qwen3.5-4B-Base",
+      "scope": "全量 446",
+      "n": 446,
+      "delta_masking": -0.10089686098654709,
+      "delta_masking_ci": [
+        -0.14349775784753363,
+        -0.05829596412556054
+      ],
+      "compliance_k1": 0.8393782383419689,
+      "compliance_k5": 0.6994818652849741,
+      "compliance_delta": -0.13989637305699476,
+      "compliance_n": 193
+    },
+    {
+      "model": "Qwen3.5-4B-Base",
+      "scope": "剔模型标记",
+      "n": 403,
+      "delta_masking": -0.09429280397022333,
+      "delta_masking_ci": [
+        -0.13895781637717122,
+        -0.04962779156327544
+      ],
+      "compliance_k1": 0.8359788359788359,
+      "compliance_k5": 0.6984126984126984,
+      "compliance_delta": -0.13756613756613756,
+      "compliance_n": 189
+    },
+    {
+      "model": "Qwen3-0.6B",
+      "scope": "全量 446",
+      "n": 446,
+      "delta_masking": -0.033632286995515695,
+      "delta_masking_ci": [
+        -0.08071748878923767,
+        0.013452914798206279
+      ],
+      "compliance_k1": 0.8361581920903954,
+      "compliance_k5": 0.5988700564971752,
+      "compliance_delta": -0.23728813559322026,
+      "compliance_n": 177
+    },
+    {
+      "model": "Qwen3-0.6B",
+      "scope": "剔模型标记",
+      "n": 403,
+      "delta_masking": -0.02729528535980149,
+      "delta_masking_ci": [
+        -0.07692307692307693,
+        0.022332506203473945
+      ],
+      "compliance_k1": 0.847953216374269,
+      "compliance_k5": 0.6198830409356725,
+      "compliance_delta": -0.22807017543859653,
+      "compliance_n": 171
+    },
+    {
+      "model": "Qwen3-1.7B",
+      "scope": "全量 446",
+      "n": 446,
+      "delta_masking": 0.004484304932735426,
+      "delta_masking_ci": [
+        -0.04035874439461883,
+        0.04932735426008968
+      ],
+      "compliance_k1": 0.7819548872180451,
+      "compliance_k5": 0.3308270676691729,
+      "compliance_delta": -0.45112781954887216,
+      "compliance_n": 133
+    },
+    {
+      "model": "Qwen3-1.7B",
+      "scope": "剔模型标记",
+      "n": 403,
+      "delta_masking": 0.0024813895781637717,
+      "delta_masking_ci": [
+        -0.04714640198511166,
+        0.052109181141439205
+      ],
+      "compliance_k1": 0.7878787878787878,
+      "compliance_k5": 0.3333333333333333,
+      "compliance_delta": -0.45454545454545453,
+      "compliance_n": 132
+    },
+    {
+      "model": "Qwen3-4B",
+      "scope": "全量 446",
+      "n": 446,
+      "delta_masking": -0.07847533632286996,
+      "delta_masking_ci": [
+        -0.12556053811659193,
+        -0.033632286995515695
+      ],
+      "compliance_k1": 0.8074534161490683,
+      "compliance_k5": 0.6211180124223602,
+      "compliance_delta": -0.1863354037267081,
+      "compliance_n": 161
+    },
+    {
+      "model": "Qwen3-4B",
+      "scope": "剔模型标记",
+      "n": 403,
+      "delta_masking": -0.07692307692307693,
+      "delta_masking_ci": [
+        -0.12655086848635236,
+        -0.02729528535980149
+      ],
+      "compliance_k1": 0.8050314465408805,
+      "compliance_k5": 0.6226415094339622,
+      "compliance_delta": -0.1823899371069183,
+      "compliance_n": 159
+    },
+    {
+      "model": "Qwen3-4B-Instruct",
+      "scope": "全量 446",
+      "n": 446,
+      "delta_masking": -0.02466367713004484,
+      "delta_masking_ci": [
+        -0.06502242152466367,
+        0.01569506726457399
+      ],
+      "compliance_k1": 0.7905405405405406,
+      "compliance_k5": 0.6216216216216216,
+      "compliance_delta": -0.16891891891891897,
+      "compliance_n": 148
+    },
+    {
+      "model": "Qwen3-4B-Instruct",
+      "scope": "剔模型标记",
+      "n": 403,
+      "delta_masking": -0.03722084367245657,
+      "delta_masking_ci": [
+        -0.0794044665012407,
+        0.007444168734491315
+      ],
+      "compliance_k1": 0.7891156462585034,
+      "compliance_k5": 0.6258503401360545,
+      "compliance_delta": -0.16326530612244894,
+      "compliance_n": 147
+    }
+  ]
+}

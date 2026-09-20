@@ -1,0 +1,57 @@
+{
+ "bootstrap": 10000,
+ "seed": 20260903,
+ "source": "out_review_round2.json",
+ "estimator": "Lincoln-Petersen (+Chapman)",
+ "human_n": 22,
+ "model_n": 43,
+ "overlap": 9,
+ "union": 56,
+ "recall": 0.4091,
+ "pools": {
+  "pre_fix_446": {
+   "n1": 43,
+   "n2": 22,
+   "m": 9,
+   "recall": 0.4090909090909091,
+   "N_lp": 105.11111111111111,
+   "N_chapman": 100.2,
+   "pool": "pre_fix_446",
+   "dir": "out_b8_full_k1",
+   "n_items": 446,
+   "n_human": 22,
+   "n_model": 43,
+   "n_both": 9,
+   "rate_lp": 0.2356751370204285,
+   "rate_chapman": 0.22466367713004484,
+   "ci_lp": [
+    0.1521,
+    0.4486
+   ],
+   "ci_undef_replicates": 5,
+   "model_flags_lost_in_pool_change": 0
+  },
+  "fixed_432": {
+   "n1": 37,
+   "n2": 18,
+   "m": 6,
+   "recall": 0.3333333333333333,
+   "N_lp": 111.0,
+   "N_chapman": 102.14285714285714,
+   "pool": "fixed_432",
+   "dir": "out_b8_fix_k1",
+   "n_items": 432,
+   "n_human": 18,
+   "n_model": 37,
+   "n_both": 6,
+   "rate_lp": 0.2569444444444444,
+   "rate_chapman": 0.23644179894179893,
+   "ci_lp": [
+    0.1486,
+    0.6311
+   ],
+   "ci_undef_replicates": 25,
+   "model_flags_lost_in_pool_change": 6
+  }
+ }
+}

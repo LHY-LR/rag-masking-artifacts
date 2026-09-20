@@ -1,0 +1,302 @@
+{
+  "n_items": 90,
+  "n_defect": 22,
+  "by_annotator": {
+    "甲": [
+      4,
+      12,
+      15,
+      17,
+      23,
+      26,
+      32,
+      37,
+      45,
+      49,
+      51,
+      53,
+      54,
+      55,
+      68,
+      76,
+      85,
+      88
+    ],
+    "乙": [
+      4,
+      15,
+      17,
+      26,
+      32,
+      37,
+      45,
+      49,
+      50,
+      51,
+      53,
+      54,
+      55,
+      68,
+      71,
+      76,
+      85
+    ],
+    "round1_undecided": [
+      26,
+      51,
+      54,
+      85
+    ]
+  },
+  "defects": [
+    {
+      "anno_index": 3,
+      "task_id": "trivia-106",
+      "flagged_by": "两人均漏判",
+      "class": "改错位置：引文编号 42 ,【43】→【28】"
+    },
+    {
+      "anno_index": 4,
+      "task_id": "trivia-110",
+      "flagged_by": "甲乙",
+      "class": "改错位置：【3】→【4】 落在 2.3 million 的小数里"
+    },
+    {
+      "anno_index": 12,
+      "task_id": "trivia-147",
+      "flagged_by": "甲",
+      "class": "形式坏：年份 1818-1848 被换成英文单词"
+    },
+    {
+      "anno_index": 15,
+      "task_id": "trivia-160",
+      "flagged_by": "甲乙",
+      "class": "形式坏：1135-1154 被换成 two thousand and four"
+    },
+    {
+      "anno_index": 17,
+      "task_id": "trivia-17",
+      "flagged_by": "甲乙",
+      "class": "改错位置：(August【4】→【7】, 2002) 生日"
+    },
+    {
+      "anno_index": 23,
+      "task_id": "trivia-198",
+      "flagged_by": "甲",
+      "class": "形式坏：1491-1556 被换成英文单词"
+    },
+    {
+      "anno_index": 26,
+      "task_id": "trivia-21",
+      "flagged_by": "甲乙",
+      "class": "改错位置：£【7】→£【0.5】,100 eBay 报价"
+    },
+    {
+      "anno_index": 32,
+      "task_id": "trivia-238",
+      "flagged_by": "甲乙",
+      "class": "改错位置：catamarans crewed by【2】→【6】 Tornado 而非 Flying Dutchman"
+    },
+    {
+      "anno_index": 37,
+      "task_id": "trivia-260",
+      "flagged_by": "甲乙",
+      "class": "改错位置：on June【3】→【5】 日期"
+    },
+    {
+      "anno_index": 45,
+      "task_id": "trivia-297",
+      "flagged_by": "甲乙",
+      "class": "新值即真答案：100,000 → 100000 只去掉千分位逗号"
+    },
+    {
+      "anno_index": 49,
+      "task_id": "trivia-313",
+      "flagged_by": "甲乙",
+      "class": "改错位置：(【1977】→【1976】) 专辑年表"
+    },
+    {
+      "anno_index": 50,
+      "task_id": "trivia-318",
+      "flagged_by": "乙",
+      "class": "改错位置：on July【6】→【4】 上映日期"
+    },
+    {
+      "anno_index": 51,
+      "task_id": "trivia-322",
+      "flagged_by": "甲乙",
+      "class": "改错位置：图注 as seen from Apollo【11】→【17】"
+    },
+    {
+      "anno_index": 53,
+      "task_id": "trivia-331",
+      "flagged_by": "甲乙",
+      "class": "改错位置：expectations on【19】→【18】 日期"
+    },
+    {
+      "anno_index": 54,
+      "task_id": "trivia-336",
+      "flagged_by": "甲乙",
+      "class": "改错位置：a grand total of【7】→【5】 耶和华出现次数"
+    },
+    {
+      "anno_index": 55,
+      "task_id": "trivia-340",
+      "flagged_by": "甲乙",
+      "class": "改错位置：Between【1960】→【1994】 and 1975 州存续期"
+    },
+    {
+      "anno_index": 67,
+      "task_id": "trivia-395",
+      "flagged_by": "两人均漏判",
+      "class": "改错位置（两人共同漏判）：won the Rugby World Cup the most (【3】→【2】 times)"
+    },
+    {
+      "anno_index": 68,
+      "task_id": "trivia-4",
+      "flagged_by": "甲乙",
+      "class": "改错位置：ill-fated Jaguar【3】→【1】.4 车型"
+    },
+    {
+      "anno_index": 71,
+      "task_id": "trivia-411",
+      "flagged_by": "乙",
+      "class": "改错位置：born in late November【1960】→【1789】 小肯尼迪出生年"
+    },
+    {
+      "anno_index": 76,
+      "task_id": "trivia-435",
+      "flagged_by": "甲乙",
+      "class": "改错位置：1789 is【14】→【27】 June 1789 日期"
+    },
+    {
+      "anno_index": 85,
+      "task_id": "trivia-72",
+      "flagged_by": "甲乙",
+      "class": "改错位置：on April【18】→【43】 日期"
+    },
+    {
+      "anno_index": 88,
+      "task_id": "trivia-86",
+      "flagged_by": "甲",
+      "class": "新值自相矛盾：Apollo【11】→【81】 却同时给出 AS-506"
+    }
+  ],
+  "sample_ids": [
+    "trivia-0",
+    "trivia-101",
+    "trivia-106",
+    "trivia-110",
+    "trivia-115",
+    "trivia-12",
+    "trivia-124",
+    "trivia-129",
+    "trivia-133",
+    "trivia-138",
+    "trivia-142",
+    "trivia-147",
+    "trivia-151",
+    "trivia-156",
+    "trivia-160",
+    "trivia-165",
+    "trivia-17",
+    "trivia-174",
+    "trivia-179",
+    "trivia-183",
+    "trivia-188",
+    "trivia-192",
+    "trivia-198",
+    "trivia-200",
+    "trivia-205",
+    "trivia-21",
+    "trivia-214",
+    "trivia-219",
+    "trivia-223",
+    "trivia-228",
+    "trivia-232",
+    "trivia-238",
+    "trivia-242",
+    "trivia-247",
+    "trivia-251",
+    "trivia-256",
+    "trivia-260",
+    "trivia-265",
+    "trivia-27",
+    "trivia-274",
+    "trivia-279",
+    "trivia-283",
+    "trivia-288",
+    "trivia-292",
+    "trivia-297",
+    "trivia-300",
+    "trivia-304",
+    "trivia-309",
+    "trivia-313",
+    "trivia-318",
+    "trivia-322",
+    "trivia-327",
+    "trivia-331",
+    "trivia-336",
+    "trivia-340",
+    "trivia-345",
+    "trivia-35",
+    "trivia-354",
+    "trivia-359",
+    "trivia-363",
+    "trivia-368",
+    "trivia-372",
+    "trivia-377",
+    "trivia-381",
+    "trivia-386",
+    "trivia-390",
+    "trivia-395",
+    "trivia-4",
+    "trivia-402",
+    "trivia-407",
+    "trivia-411",
+    "trivia-416",
+    "trivia-420",
+    "trivia-426",
+    "trivia-430",
+    "trivia-435",
+    "trivia-44",
+    "trivia-444",
+    "trivia-45",
+    "trivia-5",
+    "trivia-54",
+    "trivia-59",
+    "trivia-63",
+    "trivia-68",
+    "trivia-72",
+    "trivia-77",
+    "trivia-81",
+    "trivia-86",
+    "trivia-90",
+    "trivia-95"
+  ],
+  "exclude_ids": [
+    "trivia-106",
+    "trivia-110",
+    "trivia-147",
+    "trivia-160",
+    "trivia-17",
+    "trivia-198",
+    "trivia-21",
+    "trivia-238",
+    "trivia-260",
+    "trivia-297",
+    "trivia-313",
+    "trivia-318",
+    "trivia-322",
+    "trivia-331",
+    "trivia-336",
+    "trivia-340",
+    "trivia-395",
+    "trivia-4",
+    "trivia-411",
+    "trivia-435",
+    "trivia-72",
+    "trivia-86"
+  ],
+  "note": "exclude_ids = 两人判『否』的全集 ∪ 主控逐条 diff 复核确认的缺陷（含两人共同漏判的 3、67）。仅覆盖这 90 题抽样；全量 446 条中未被抽到的缺陷无法由此清单识别，故 all_minus_excluded 的清洗效应是**下界**。"
+}

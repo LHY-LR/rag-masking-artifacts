@@ -1,0 +1,7273 @@
+{
+ "protocol": "bline-paired-v3",
+ "note": "只读重评；historical_all 是 Gate 5 前置化之前的历史 ITT，正式审计以 structural_gate567 与 term_present 子集为准。",
+ "inputs": {
+  "k1": {
+   "oracle": "<REPO_ROOT>\\rag_leak\\out_b8_recall_k1\\pilot_Qwen3-8B_oracle_rows.jsonl",
+   "fourarm": "<REPO_ROOT>\\rag_leak\\out_b8_recall_k1\\pilot_Qwen3-8B_fourarm.jsonl",
+   "substituted": "<REPO_ROOT>\\rag_leak\\out_b8_recall_k1\\pilot_Qwen3-8B_substituted.jsonl"
+  },
+  "k5": {
+   "oracle": "<REPO_ROOT>\\rag_leak\\out_b8_recall_k5\\pilot_Qwen3-8B_oracle_rows.jsonl",
+   "fourarm": "<REPO_ROOT>\\rag_leak\\out_b8_recall_k5\\pilot_Qwen3-8B_fourarm.jsonl",
+   "substituted": "<REPO_ROOT>\\rag_leak\\out_b8_recall_k5\\pilot_Qwen3-8B_substituted.jsonl"
+  },
+  "trivia": "<REPO_ROOT>\\data\\trivia_dn.json",
+  "corpus": "<REPO_ROOT>\\data\\trivia-dev.json"
+ },
+ "n": {
+  "historical_all": 148,
+  "structural_gate567": 137,
+  "term_present": 133
+ },
+ "groups": {
+  "historical_all": {
+   "k1": {
+    "n": 148,
+    "a": 0.4391891891891892,
+    "b": 0.5405405405405406,
+    "c": 0.006756756756756757,
+    "d": 0.28378378378378377,
+    "apparent_gain": 0.10135135135135136,
+    "corrected_gain": 0.27702702702702703,
+    "corrected_ci": [
+     0.20270270270270271,
+     0.35135135135135137
+    ],
+    "did": -0.17567567567567569,
+    "did_ci": [
+     -0.2635135135135135,
+     -0.08108108108108109
+    ],
+    "masking": 0.17567567567567569
+   },
+   "k5": {
+    "n": 148,
+    "a": 0.4391891891891892,
+    "b": 0.6013513513513513,
+    "c": 0.006756756756756757,
+    "d": 0.22972972972972974,
+    "apparent_gain": 0.16216216216216217,
+    "corrected_gain": 0.22297297297297297,
+    "corrected_ci": [
+     0.1554054054054054,
+     0.2905405405405405
+    ],
+    "did": -0.060810810810810814,
+    "did_ci": [
+     -0.14864864864864866,
+     0.02702702702702703
+    ],
+    "masking": 0.060810810810810814
+   },
+   "paired": {
+    "delta_apparent_k5_minus_k1": {
+     "mean": 0.060810810810810814,
+     "ci": [
+      -0.006756756756756757,
+      0.12837837837837837
+     ],
+     "positive": 18,
+     "negative": 9,
+     "zero": 121,
+     "sign_test_two_sided": 0.12207812070846558
+    },
+    "delta_corrected_k5_minus_k1": {
+     "mean": -0.05405405405405406,
+     "ci": [
+      -0.10810810810810811,
+      0.0
+     ],
+     "positive": 4,
+     "negative": 12,
+     "zero": 132,
+     "sign_test_two_sided": 0.076812744140625
+    },
+    "delta_did_k5_minus_k1": {
+     "mean": 0.11486486486486487,
+     "ci": [
+      0.04054054054054054,
+      0.1891891891891892
+     ],
+     "positive": 25,
+     "negative": 8,
+     "zero": 115,
+     "sign_test_two_sided": 0.004551384132355452
+    },
+    "delta_masking_k5_minus_k1": {
+     "mean": -0.11486486486486487,
+     "ci": [
+      -0.1891891891891892,
+      -0.04054054054054054
+     ],
+     "positive": 8,
+     "negative": 25,
+     "zero": 115,
+     "sign_test_two_sided": 0.004551384132355452
+    }
+   },
+   "formal_b1": {
+    "apparent_best": "k=5",
+    "corrected_best": "k=1",
+    "corrected_ci_apparent_best": [
+     0.1554054054054054,
+     0.2905405405405405
+    ],
+    "corrected_ci_corrected_best": [
+     0.20270270270270271,
+     0.35135135135135137
+    ],
+    "p_flip": 0.7274,
+    "corrected_ci_separated": false,
+    "in_sensitive_band": false,
+    "verdict": "建议不变"
+   }
+  },
+  "structural_gate567": {
+   "k1": {
+    "n": 137,
+    "a": 0.45985401459854014,
+    "b": 0.5620437956204379,
+    "c": 0.0072992700729927005,
+    "d": 0.291970802919708,
+    "apparent_gain": 0.10218978102189781,
+    "corrected_gain": 0.2846715328467153,
+    "corrected_ci": [
+     0.2116788321167883,
+     0.36496350364963503
+    ],
+    "did": -0.18248175182481752,
+    "did_ci": [
+     -0.2846715328467153,
+     -0.08759124087591241
+    ],
+    "masking": 0.18248175182481752
+   },
+   "k5": {
+    "n": 137,
+    "a": 0.45985401459854014,
+    "b": 0.6058394160583942,
+    "c": 0.0072992700729927005,
+    "d": 0.23357664233576642,
+    "apparent_gain": 0.145985401459854,
+    "corrected_gain": 0.22627737226277372,
+    "corrected_ci": [
+     0.15328467153284672,
+     0.29927007299270075
+    ],
+    "did": -0.08029197080291971,
+    "did_ci": [
+     -0.17518248175182483,
+     0.014598540145985401
+    ],
+    "masking": 0.08029197080291971
+   },
+   "paired": {
+    "delta_apparent_k5_minus_k1": {
+     "mean": 0.043795620437956206,
+     "ci": [
+      -0.029197080291970802,
+      0.11678832116788321
+     ],
+     "positive": 15,
+     "negative": 9,
+     "zero": 113,
+     "sign_test_two_sided": 0.30745625495910645
+    },
+    "delta_corrected_k5_minus_k1": {
+     "mean": -0.058394160583941604,
+     "ci": [
+      -0.10948905109489052,
+      -0.0072992700729927005
+     ],
+     "positive": 3,
+     "negative": 11,
+     "zero": 123,
+     "sign_test_two_sided": 0.057373046875
+    },
+    "delta_did_k5_minus_k1": {
+     "mean": 0.10218978102189781,
+     "ci": [
+      0.029197080291970802,
+      0.18248175182481752
+     ],
+     "positive": 22,
+     "negative": 8,
+     "zero": 107,
+     "sign_test_two_sided": 0.016124801710247993
+    },
+    "delta_masking_k5_minus_k1": {
+     "mean": -0.10218978102189781,
+     "ci": [
+      -0.18248175182481752,
+      -0.029197080291970802
+     ],
+     "positive": 8,
+     "negative": 22,
+     "zero": 107,
+     "sign_test_two_sided": 0.016124801710247993
+    }
+   },
+   "formal_b1": {
+    "apparent_best": "k=5",
+    "corrected_best": "k=1",
+    "corrected_ci_apparent_best": [
+     0.15328467153284672,
+     0.29927007299270075
+    ],
+    "corrected_ci_corrected_best": [
+     0.2116788321167883,
+     0.36496350364963503
+    ],
+    "p_flip": 0.6557,
+    "corrected_ci_separated": false,
+    "in_sensitive_band": false,
+    "verdict": "建议不变"
+   }
+  },
+  "structural_gate567_term_present": {
+   "k1": {
+    "n": 133,
+    "a": 0.47368421052631576,
+    "b": 0.5789473684210527,
+    "c": 0.007518796992481203,
+    "d": 0.3007518796992481,
+    "apparent_gain": 0.10526315789473684,
+    "corrected_gain": 0.2932330827067669,
+    "corrected_ci": [
+     0.21804511278195488,
+     0.37593984962406013
+    ],
+    "did": -0.18796992481203006,
+    "did_ci": [
+     -0.2932330827067669,
+     -0.09022556390977443
+    ],
+    "masking": 0.18796992481203006
+   },
+   "k5": {
+    "n": 133,
+    "a": 0.47368421052631576,
+    "b": 0.6165413533834586,
+    "c": 0.007518796992481203,
+    "d": 0.24060150375939848,
+    "apparent_gain": 0.14285714285714285,
+    "corrected_gain": 0.23308270676691728,
+    "corrected_ci": [
+     0.15789473684210525,
+     0.3082706766917293
+    ],
+    "did": -0.09022556390977443,
+    "did_ci": [
+     -0.18796992481203006,
+     0.007518796992481203
+    ],
+    "masking": 0.09022556390977443
+   },
+   "paired": {
+    "delta_apparent_k5_minus_k1": {
+     "mean": 0.03759398496240601,
+     "ci": [
+      -0.03007518796992481,
+      0.10526315789473684
+     ],
+     "positive": 14,
+     "negative": 9,
+     "zero": 110,
+     "sign_test_two_sided": 0.4048728942871094
+    },
+    "delta_corrected_k5_minus_k1": {
+     "mean": -0.06015037593984962,
+     "ci": [
+      -0.11278195488721804,
+      -0.007518796992481203
+     ],
+     "positive": 3,
+     "negative": 11,
+     "zero": 119,
+     "sign_test_two_sided": 0.057373046875
+    },
+    "delta_did_k5_minus_k1": {
+     "mean": 0.09774436090225563,
+     "ci": [
+      0.022556390977443608,
+      0.17293233082706766
+     ],
+     "positive": 21,
+     "negative": 8,
+     "zero": 104,
+     "sign_test_two_sided": 0.0241195447742939
+    },
+    "delta_masking_k5_minus_k1": {
+     "mean": -0.09774436090225563,
+     "ci": [
+      -0.17293233082706766,
+      -0.022556390977443608
+     ],
+     "positive": 8,
+     "negative": 21,
+     "zero": 104,
+     "sign_test_two_sided": 0.0241195447742939
+    }
+   },
+   "formal_b1": {
+    "apparent_best": "k=5",
+    "corrected_best": "k=1",
+    "corrected_ci_apparent_best": [
+     0.15789473684210525,
+     0.3082706766917293
+    ],
+    "corrected_ci_corrected_best": [
+     0.21804511278195488,
+     0.37593984962406013
+    ],
+    "p_flip": 0.63,
+    "corrected_ci_separated": false,
+    "in_sensitive_band": false,
+    "verdict": "建议不变"
+   }
+  },
+  "structural_term_present_date": {
+   "k1": {
+    "n": 68,
+    "a": 0.5735294117647058,
+    "b": 0.7647058823529411,
+    "c": 0.0,
+    "d": 0.45588235294117646,
+    "apparent_gain": 0.19117647058823528,
+    "corrected_gain": 0.45588235294117646,
+    "corrected_ci": [
+     0.3382352941176471,
+     0.5735294117647058
+    ],
+    "did": -0.2647058823529412,
+    "did_ci": [
+     -0.4117647058823529,
+     -0.11764705882352941
+    ],
+    "masking": 0.2647058823529412
+   },
+   "k5": {
+    "n": 68,
+    "a": 0.5735294117647058,
+    "b": 0.8088235294117647,
+    "c": 0.0,
+    "d": 0.38235294117647056,
+    "apparent_gain": 0.23529411764705882,
+    "corrected_gain": 0.38235294117647056,
+    "corrected_ci": [
+     0.2647058823529412,
+     0.5
+    ],
+    "did": -0.14705882352941177,
+    "did_ci": [
+     -0.27941176470588236,
+     -0.014705882352941176
+    ],
+    "masking": 0.14705882352941177
+   },
+   "paired": {
+    "delta_apparent_k5_minus_k1": {
+     "mean": 0.04411764705882353,
+     "ci": [
+      -0.04411764705882353,
+      0.14705882352941177
+     ],
+     "positive": 7,
+     "negative": 4,
+     "zero": 57,
+     "sign_test_two_sided": 0.548828125
+    },
+    "delta_corrected_k5_minus_k1": {
+     "mean": -0.07352941176470588,
+     "ci": [
+      -0.14705882352941177,
+      0.0
+     ],
+     "positive": 1,
+     "negative": 6,
+     "zero": 61,
+     "sign_test_two_sided": 0.125
+    },
+    "delta_did_k5_minus_k1": {
+     "mean": 0.11764705882352941,
+     "ci": [
+      0.014705882352941176,
+      0.22058823529411764
+     ],
+     "positive": 11,
+     "negative": 3,
+     "zero": 54,
+     "sign_test_two_sided": 0.057373046875
+    },
+    "delta_masking_k5_minus_k1": {
+     "mean": -0.11764705882352941,
+     "ci": [
+      -0.22058823529411764,
+      -0.014705882352941176
+     ],
+     "positive": 3,
+     "negative": 11,
+     "zero": 54,
+     "sign_test_two_sided": 0.057373046875
+    }
+   },
+   "formal_b1": {
+    "apparent_best": "k=5",
+    "corrected_best": "k=1",
+    "corrected_ci_apparent_best": [
+     0.2647058823529412,
+     0.5
+    ],
+    "corrected_ci_corrected_best": [
+     0.3382352941176471,
+     0.5735294117647058
+    ],
+    "p_flip": 0.5433,
+    "corrected_ci_separated": false,
+    "in_sensitive_band": false,
+    "verdict": "建议不变"
+   }
+  },
+  "structural_term_present_numeric": {
+   "k1": {
+    "n": 65,
+    "a": 0.36923076923076925,
+    "b": 0.38461538461538464,
+    "c": 0.015384615384615385,
+    "d": 0.13846153846153847,
+    "apparent_gain": 0.015384615384615385,
+    "corrected_gain": 0.12307692307692308,
+    "corrected_ci": [
+     0.03076923076923077,
+     0.2153846153846154
+    ],
+    "did": -0.1076923076923077,
+    "did_ci": [
+     -0.24615384615384617,
+     0.03076923076923077
+    ],
+    "masking": 0.1076923076923077
+   },
+   "k5": {
+    "n": 65,
+    "a": 0.36923076923076925,
+    "b": 0.4153846153846154,
+    "c": 0.015384615384615385,
+    "d": 0.09230769230769231,
+    "apparent_gain": 0.046153846153846156,
+    "corrected_gain": 0.07692307692307693,
+    "corrected_ci": [
+     0.0,
+     0.15384615384615385
+    ],
+    "did": -0.03076923076923077,
+    "did_ci": [
+     -0.15384615384615385,
+     0.1076923076923077
+    ],
+    "masking": 0.03076923076923077
+   },
+   "paired": {
+    "delta_apparent_k5_minus_k1": {
+     "mean": 0.03076923076923077,
+     "ci": [
+      -0.07692307692307693,
+      0.13846153846153847
+     ],
+     "positive": 7,
+     "negative": 5,
+     "zero": 53,
+     "sign_test_two_sided": 0.7744140625
+    },
+    "delta_corrected_k5_minus_k1": {
+     "mean": -0.046153846153846156,
+     "ci": [
+      -0.12307692307692308,
+      0.03076923076923077
+     ],
+     "positive": 2,
+     "negative": 5,
+     "zero": 58,
+     "sign_test_two_sided": 0.453125
+    },
+    "delta_did_k5_minus_k1": {
+     "mean": 0.07692307692307693,
+     "ci": [
+      -0.03076923076923077,
+      0.2
+     ],
+     "positive": 10,
+     "negative": 5,
+     "zero": 50,
+     "sign_test_two_sided": 0.3017578125
+    },
+    "delta_masking_k5_minus_k1": {
+     "mean": -0.07692307692307693,
+     "ci": [
+      -0.2,
+      0.03076923076923077
+     ],
+     "positive": 5,
+     "negative": 10,
+     "zero": 50,
+     "sign_test_two_sided": 0.3017578125
+    }
+   },
+   "formal_b1": {
+    "apparent_best": "k=5",
+    "corrected_best": "k=1",
+    "corrected_ci_apparent_best": [
+     0.0,
+     0.15384615384615385
+    ],
+    "corrected_ci_corrected_best": [
+     0.03076923076923077,
+     0.2153846153846154
+    ],
+    "p_flip": 0.5811,
+    "corrected_ci_separated": false,
+    "in_sensitive_band": false,
+    "verdict": "建议不变"
+   }
+  }
+ },
+ "retrieval_reconstruction": {
+  "k1": {
+   "n": 148,
+   "orig_hits": 115,
+   "sub_hits": 114,
+   "joint_hits": 114,
+   "recall_orig": 0.777027027027027,
+   "recall_sub": 0.7702702702702703,
+   "conditional_retain": 0.991304347826087,
+   "recall_drop": 0.006756756756756757
+  },
+  "k5": {
+   "n": 148,
+   "orig_hits": 136,
+   "sub_hits": 136,
+   "joint_hits": 136,
+   "recall_orig": 0.918918918918919,
+   "recall_sub": 0.918918918918919,
+   "conditional_retain": 1.0,
+   "recall_drop": 0.0
+  },
+  "rows": [
+   {
+    "question_id": "trivia-1",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 76,
+     "ctx_sub_tokens": 76,
+     "orig_hit_doc_ids": [
+      "trivia-1:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-1:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 426,
+     "ctx_sub_tokens": 426,
+     "orig_hit_doc_ids": [
+      "trivia-1:positive_ctxs:0",
+      "corpus:990",
+      "corpus:837",
+      "corpus:1782",
+      "corpus:992"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-1:positive_ctxs:0",
+      "corpus:990",
+      "corpus:837",
+      "corpus:1782",
+      "corpus:992"
+     ]
+    },
+    "open_sub_transition": "0->1",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-101",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 108,
+     "ctx_sub_tokens": 108,
+     "orig_hit_doc_ids": [
+      "trivia-101:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-101:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 476,
+     "ctx_sub_tokens": 476,
+     "orig_hit_doc_ids": [
+      "trivia-101:positive_ctxs:0",
+      "corpus:1176",
+      "corpus:910",
+      "corpus:1833",
+      "corpus:283"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-101:positive_ctxs:0",
+      "corpus:1176",
+      "corpus:910",
+      "corpus:1833",
+      "corpus:283"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-104",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 47,
+     "ctx_sub_tokens": 47,
+     "orig_hit_doc_ids": [
+      "trivia-104:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-104:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 308,
+     "ctx_sub_tokens": 308,
+     "orig_hit_doc_ids": [
+      "trivia-104:positive_ctxs:0",
+      "corpus:760",
+      "corpus:1725",
+      "corpus:753",
+      "corpus:707"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-104:positive_ctxs:0",
+      "corpus:760",
+      "corpus:1725",
+      "corpus:753",
+      "corpus:707"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-107",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 55,
+     "ctx_sub_tokens": 55,
+     "orig_hit_doc_ids": [
+      "trivia-107:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-107:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 387,
+     "ctx_sub_tokens": 387,
+     "orig_hit_doc_ids": [
+      "trivia-107:positive_ctxs:0",
+      "corpus:1909",
+      "corpus:550",
+      "corpus:812",
+      "corpus:338"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-107:positive_ctxs:0",
+      "corpus:1909",
+      "corpus:550",
+      "corpus:812",
+      "corpus:338"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-110",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 100,
+     "ctx_sub_tokens": 100,
+     "orig_hit_doc_ids": [
+      "corpus:97"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:97"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 461,
+     "ctx_sub_tokens": 461,
+     "orig_hit_doc_ids": [
+      "corpus:97",
+      "corpus:597",
+      "corpus:329",
+      "corpus:1416",
+      "corpus:108"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:97",
+      "corpus:597",
+      "corpus:329",
+      "corpus:1416",
+      "corpus:108"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-121",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 69,
+     "ctx_sub_tokens": 69,
+     "orig_hit_doc_ids": [
+      "trivia-121:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-121:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 364,
+     "ctx_sub_tokens": 364,
+     "orig_hit_doc_ids": [
+      "trivia-121:positive_ctxs:0",
+      "corpus:760",
+      "corpus:1725",
+      "corpus:36",
+      "corpus:513"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-121:positive_ctxs:0",
+      "corpus:760",
+      "corpus:1725",
+      "corpus:36",
+      "corpus:513"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-123",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 88,
+     "ctx_sub_tokens": 88,
+     "orig_hit_doc_ids": [
+      "trivia-123:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-123:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 297,
+     "ctx_sub_tokens": 297,
+     "orig_hit_doc_ids": [
+      "trivia-123:positive_ctxs:0",
+      "corpus:927",
+      "corpus:272",
+      "corpus:123",
+      "corpus:110"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-123:positive_ctxs:0",
+      "corpus:927",
+      "corpus:272",
+      "corpus:123",
+      "corpus:110"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-124",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 99,
+     "ctx_sub_tokens": 99,
+     "orig_hit_doc_ids": [
+      "trivia-124:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-124:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 434,
+     "ctx_sub_tokens": 434,
+     "orig_hit_doc_ids": [
+      "trivia-124:positive_ctxs:0",
+      "corpus:105",
+      "corpus:1240",
+      "corpus:507",
+      "corpus:1880"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-124:positive_ctxs:0",
+      "corpus:105",
+      "corpus:1240",
+      "corpus:507",
+      "corpus:1880"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-126",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 87,
+     "ctx_sub_tokens": 87,
+     "orig_hit_doc_ids": [
+      "trivia-126:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-126:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 493,
+     "ctx_sub_tokens": 493,
+     "orig_hit_doc_ids": [
+      "trivia-126:positive_ctxs:0",
+      "corpus:92",
+      "corpus:1236",
+      "corpus:431",
+      "corpus:427"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-126:positive_ctxs:0",
+      "corpus:92",
+      "corpus:1236",
+      "corpus:431",
+      "corpus:427"
+     ]
+    },
+    "open_sub_transition": "1->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-127",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 89,
+     "ctx_sub_tokens": 89,
+     "orig_hit_doc_ids": [
+      "trivia-127:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-127:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 477,
+     "ctx_sub_tokens": 477,
+     "orig_hit_doc_ids": [
+      "trivia-127:positive_ctxs:0",
+      "corpus:1732",
+      "corpus:649",
+      "corpus:1122",
+      "corpus:348"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-127:positive_ctxs:0",
+      "corpus:1732",
+      "corpus:649",
+      "corpus:1122",
+      "corpus:348"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-13",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 151,
+     "ctx_sub_tokens": 151,
+     "orig_hit_doc_ids": [
+      "trivia-13:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-13:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 529,
+     "ctx_sub_tokens": 529,
+     "orig_hit_doc_ids": [
+      "trivia-13:positive_ctxs:0",
+      "corpus:272",
+      "corpus:1555",
+      "corpus:538",
+      "corpus:482"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-13:positive_ctxs:0",
+      "corpus:272",
+      "corpus:1555",
+      "corpus:538",
+      "corpus:482"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-130",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 64,
+     "ctx_sub_tokens": 64,
+     "orig_hit_doc_ids": [
+      "trivia-130:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-130:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 426,
+     "ctx_sub_tokens": 426,
+     "orig_hit_doc_ids": [
+      "trivia-130:positive_ctxs:0",
+      "corpus:53",
+      "corpus:899",
+      "corpus:49",
+      "corpus:1634"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-130:positive_ctxs:0",
+      "corpus:53",
+      "corpus:899",
+      "corpus:49",
+      "corpus:1634"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-133",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 28,
+     "ctx_sub_tokens": 28,
+     "orig_hit_doc_ids": [
+      "trivia-133:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-133:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 286,
+     "ctx_sub_tokens": 286,
+     "orig_hit_doc_ids": [
+      "trivia-133:positive_ctxs:0",
+      "corpus:1122",
+      "corpus:1986",
+      "corpus:1938",
+      "corpus:301"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-133:positive_ctxs:0",
+      "corpus:1122",
+      "corpus:1986",
+      "corpus:1938",
+      "corpus:301"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-137",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 48,
+     "ctx_sub_tokens": 48,
+     "orig_hit_doc_ids": [
+      "trivia-137:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-137:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 498,
+     "ctx_sub_tokens": 498,
+     "orig_hit_doc_ids": [
+      "trivia-137:positive_ctxs:0",
+      "corpus:279",
+      "corpus:1370",
+      "corpus:1508",
+      "corpus:1959"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-137:positive_ctxs:0",
+      "corpus:279",
+      "corpus:1370",
+      "corpus:1508",
+      "corpus:1959"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-142",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 102,
+     "ctx_sub_tokens": 102,
+     "orig_hit_doc_ids": [
+      "trivia-142:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-142:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 514,
+     "ctx_sub_tokens": 514,
+     "orig_hit_doc_ids": [
+      "trivia-142:positive_ctxs:0",
+      "corpus:1716",
+      "corpus:1568",
+      "corpus:1743",
+      "corpus:1942"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-142:positive_ctxs:0",
+      "corpus:1716",
+      "corpus:1568",
+      "corpus:1743",
+      "corpus:1942"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-143",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 69,
+     "ctx_sub_tokens": 69,
+     "orig_hit_doc_ids": [
+      "corpus:215"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:215"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 4,
+     "sub_gold_rank": 4,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 306,
+     "ctx_sub_tokens": 306,
+     "orig_hit_doc_ids": [
+      "corpus:215",
+      "corpus:1155",
+      "corpus:978",
+      "trivia-143:positive_ctxs:0",
+      "corpus:105"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:215",
+      "corpus:1155",
+      "corpus:978",
+      "trivia-143:positive_ctxs:0",
+      "corpus:105"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-145",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 11,
+     "ctx_sub_tokens": 11,
+     "orig_hit_doc_ids": [
+      "trivia-145:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-145:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 351,
+     "ctx_sub_tokens": 351,
+     "orig_hit_doc_ids": [
+      "trivia-145:positive_ctxs:0",
+      "corpus:649",
+      "corpus:761",
+      "corpus:896",
+      "corpus:13"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-145:positive_ctxs:0",
+      "corpus:649",
+      "corpus:761",
+      "corpus:896",
+      "corpus:13"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-147",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 78,
+     "ctx_sub_tokens": 84,
+     "orig_hit_doc_ids": [
+      "trivia-147:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-147:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 496,
+     "ctx_sub_tokens": 502,
+     "orig_hit_doc_ids": [
+      "trivia-147:positive_ctxs:0",
+      "corpus:593",
+      "corpus:711",
+      "corpus:348",
+      "corpus:1112"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-147:positive_ctxs:0",
+      "corpus:593",
+      "corpus:711",
+      "corpus:348",
+      "corpus:1112"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-148",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 78,
+     "ctx_sub_tokens": 84,
+     "orig_hit_doc_ids": [
+      "trivia-148:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-148:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 304,
+     "ctx_sub_tokens": 310,
+     "orig_hit_doc_ids": [
+      "trivia-148:positive_ctxs:0",
+      "corpus:1502",
+      "corpus:659",
+      "corpus:1051",
+      "corpus:1564"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-148:positive_ctxs:0",
+      "corpus:1502",
+      "corpus:659",
+      "corpus:1051",
+      "corpus:1564"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-151",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 119,
+     "ctx_sub_tokens": 119,
+     "orig_hit_doc_ids": [
+      "trivia-151:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-151:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 447,
+     "ctx_sub_tokens": 447,
+     "orig_hit_doc_ids": [
+      "trivia-151:positive_ctxs:0",
+      "corpus:593",
+      "corpus:869",
+      "corpus:54",
+      "corpus:456"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-151:positive_ctxs:0",
+      "corpus:593",
+      "corpus:869",
+      "corpus:54",
+      "corpus:456"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-152",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 77,
+     "ctx_sub_tokens": 77,
+     "orig_hit_doc_ids": [
+      "trivia-152:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-152:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 371,
+     "ctx_sub_tokens": 371,
+     "orig_hit_doc_ids": [
+      "trivia-152:positive_ctxs:0",
+      "corpus:1159",
+      "corpus:1703",
+      "corpus:226",
+      "corpus:1331"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-152:positive_ctxs:0",
+      "corpus:1159",
+      "corpus:1703",
+      "corpus:226",
+      "corpus:1331"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-153",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 38,
+     "ctx_sub_tokens": 38,
+     "orig_hit_doc_ids": [
+      "corpus:326"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:326"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 410,
+     "ctx_sub_tokens": 410,
+     "orig_hit_doc_ids": [
+      "corpus:326",
+      "corpus:1413",
+      "corpus:1778",
+      "corpus:1102",
+      "corpus:831"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:326",
+      "corpus:1413",
+      "corpus:1778",
+      "corpus:1102",
+      "corpus:831"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-155",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 118,
+     "ctx_sub_tokens": 118,
+     "orig_hit_doc_ids": [
+      "trivia-155:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-155:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 517,
+     "ctx_sub_tokens": 517,
+     "orig_hit_doc_ids": [
+      "trivia-155:positive_ctxs:0",
+      "corpus:272",
+      "corpus:63",
+      "corpus:505",
+      "corpus:493"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-155:positive_ctxs:0",
+      "corpus:272",
+      "corpus:63",
+      "corpus:505",
+      "corpus:493"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-156",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 107,
+     "ctx_sub_tokens": 107,
+     "orig_hit_doc_ids": [
+      "trivia-156:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-156:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 526,
+     "ctx_sub_tokens": 526,
+     "orig_hit_doc_ids": [
+      "trivia-156:positive_ctxs:0",
+      "corpus:186",
+      "corpus:272",
+      "corpus:551",
+      "corpus:1565"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-156:positive_ctxs:0",
+      "corpus:186",
+      "corpus:272",
+      "corpus:551",
+      "corpus:1565"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->0"
+   },
+   {
+    "question_id": "trivia-158",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 12,
+     "ctx_sub_tokens": 12,
+     "orig_hit_doc_ids": [
+      "trivia-158:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-158:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 391,
+     "ctx_sub_tokens": 391,
+     "orig_hit_doc_ids": [
+      "trivia-158:positive_ctxs:0",
+      "corpus:909",
+      "corpus:36",
+      "corpus:348",
+      "corpus:1050"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-158:positive_ctxs:0",
+      "corpus:909",
+      "corpus:36",
+      "corpus:348",
+      "corpus:1050"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-159",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 68,
+     "ctx_sub_tokens": 68,
+     "orig_hit_doc_ids": [
+      "trivia-159:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-159:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 361,
+     "ctx_sub_tokens": 361,
+     "orig_hit_doc_ids": [
+      "trivia-159:positive_ctxs:0",
+      "corpus:41",
+      "corpus:112",
+      "corpus:254",
+      "corpus:365"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-159:positive_ctxs:0",
+      "corpus:41",
+      "corpus:112",
+      "corpus:254",
+      "corpus:365"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-161",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 65,
+     "ctx_sub_tokens": 65,
+     "orig_hit_doc_ids": [
+      "trivia-161:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-161:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 492,
+     "ctx_sub_tokens": 492,
+     "orig_hit_doc_ids": [
+      "trivia-161:positive_ctxs:0",
+      "corpus:668",
+      "corpus:1663",
+      "corpus:696",
+      "corpus:1257"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-161:positive_ctxs:0",
+      "corpus:668",
+      "corpus:1663",
+      "corpus:696",
+      "corpus:1257"
+     ]
+    },
+    "open_sub_transition": "1->0",
+    "open_orig_transition": "1->0"
+   },
+   {
+    "question_id": "trivia-163",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 103,
+     "ctx_sub_tokens": 109,
+     "orig_hit_doc_ids": [
+      "trivia-163:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-163:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 457,
+     "ctx_sub_tokens": 463,
+     "orig_hit_doc_ids": [
+      "trivia-163:positive_ctxs:0",
+      "corpus:1290",
+      "corpus:179",
+      "corpus:552",
+      "corpus:666"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-163:positive_ctxs:0",
+      "corpus:1290",
+      "corpus:179",
+      "corpus:552",
+      "corpus:666"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-164",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 84,
+     "ctx_sub_tokens": 84,
+     "orig_hit_doc_ids": [
+      "corpus:482"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:482"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 473,
+     "ctx_sub_tokens": 473,
+     "orig_hit_doc_ids": [
+      "corpus:482",
+      "corpus:927",
+      "corpus:1134",
+      "corpus:2030",
+      "corpus:610"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:482",
+      "corpus:927",
+      "corpus:1134",
+      "corpus:2030",
+      "corpus:610"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-169",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 49,
+     "ctx_sub_tokens": 49,
+     "orig_hit_doc_ids": [
+      "trivia-169:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-169:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 270,
+     "ctx_sub_tokens": 270,
+     "orig_hit_doc_ids": [
+      "trivia-169:positive_ctxs:0",
+      "corpus:620",
+      "corpus:1458",
+      "corpus:386",
+      "corpus:1026"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-169:positive_ctxs:0",
+      "corpus:620",
+      "corpus:1458",
+      "corpus:386",
+      "corpus:1026"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-17",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 109,
+     "ctx_sub_tokens": 109,
+     "orig_hit_doc_ids": [
+      "trivia-17:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-17:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 402,
+     "ctx_sub_tokens": 402,
+     "orig_hit_doc_ids": [
+      "trivia-17:positive_ctxs:0",
+      "corpus:1289",
+      "corpus:64",
+      "corpus:43",
+      "corpus:927"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-17:positive_ctxs:0",
+      "corpus:1289",
+      "corpus:64",
+      "corpus:43",
+      "corpus:927"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-171",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 114,
+     "ctx_sub_tokens": 114,
+     "orig_hit_doc_ids": [
+      "trivia-171:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-171:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 423,
+     "ctx_sub_tokens": 423,
+     "orig_hit_doc_ids": [
+      "trivia-171:positive_ctxs:0",
+      "corpus:827",
+      "corpus:119",
+      "corpus:1777",
+      "corpus:118"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-171:positive_ctxs:0",
+      "corpus:827",
+      "corpus:119",
+      "corpus:1777",
+      "corpus:118"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-172",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 75,
+     "ctx_sub_tokens": 75,
+     "orig_hit_doc_ids": [
+      "trivia-172:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-172:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 430,
+     "ctx_sub_tokens": 430,
+     "orig_hit_doc_ids": [
+      "trivia-172:positive_ctxs:0",
+      "corpus:1443",
+      "corpus:584",
+      "corpus:1080",
+      "corpus:178"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-172:positive_ctxs:0",
+      "corpus:1443",
+      "corpus:584",
+      "corpus:1080",
+      "corpus:178"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-182",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 82,
+     "ctx_sub_tokens": 82,
+     "orig_hit_doc_ids": [
+      "corpus:1509"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:1509"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 412,
+     "ctx_sub_tokens": 412,
+     "orig_hit_doc_ids": [
+      "corpus:1509",
+      "corpus:1145",
+      "corpus:1948",
+      "corpus:513",
+      "corpus:1535"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:1509",
+      "corpus:1145",
+      "corpus:1948",
+      "corpus:513",
+      "corpus:1535"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-184",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 104,
+     "ctx_sub_tokens": 104,
+     "orig_hit_doc_ids": [
+      "corpus:52"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:52"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 3,
+     "sub_gold_rank": 3,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 364,
+     "ctx_sub_tokens": 364,
+     "orig_hit_doc_ids": [
+      "corpus:52",
+      "corpus:9",
+      "trivia-184:positive_ctxs:0",
+      "corpus:1743",
+      "corpus:707"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:52",
+      "corpus:9",
+      "trivia-184:positive_ctxs:0",
+      "corpus:1743",
+      "corpus:707"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-189",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 88,
+     "ctx_sub_tokens": 88,
+     "orig_hit_doc_ids": [
+      "corpus:170"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:170"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 2,
+     "sub_gold_rank": 2,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 460,
+     "ctx_sub_tokens": 460,
+     "orig_hit_doc_ids": [
+      "corpus:170",
+      "trivia-189:positive_ctxs:0",
+      "corpus:718",
+      "corpus:927",
+      "corpus:1904"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:170",
+      "trivia-189:positive_ctxs:0",
+      "corpus:718",
+      "corpus:927",
+      "corpus:1904"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-195",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 74,
+     "ctx_sub_tokens": 74,
+     "orig_hit_doc_ids": [
+      "trivia-195:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-195:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 446,
+     "ctx_sub_tokens": 446,
+     "orig_hit_doc_ids": [
+      "trivia-195:positive_ctxs:0",
+      "corpus:119",
+      "corpus:714",
+      "corpus:118",
+      "corpus:1372"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-195:positive_ctxs:0",
+      "corpus:119",
+      "corpus:714",
+      "corpus:118",
+      "corpus:1372"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-196",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 118,
+     "ctx_sub_tokens": 118,
+     "orig_hit_doc_ids": [
+      "trivia-196:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-196:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 479,
+     "ctx_sub_tokens": 479,
+     "orig_hit_doc_ids": [
+      "trivia-196:positive_ctxs:0",
+      "corpus:1102",
+      "corpus:647",
+      "corpus:1265",
+      "corpus:1667"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-196:positive_ctxs:0",
+      "corpus:1102",
+      "corpus:647",
+      "corpus:1265",
+      "corpus:1667"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-197",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 81,
+     "ctx_sub_tokens": 81,
+     "orig_hit_doc_ids": [
+      "trivia-197:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-197:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 471,
+     "ctx_sub_tokens": 471,
+     "orig_hit_doc_ids": [
+      "trivia-197:positive_ctxs:0",
+      "corpus:649",
+      "corpus:36",
+      "corpus:348",
+      "corpus:13"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-197:positive_ctxs:0",
+      "corpus:649",
+      "corpus:36",
+      "corpus:348",
+      "corpus:13"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-200",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 93,
+     "ctx_sub_tokens": 93,
+     "orig_hit_doc_ids": [
+      "trivia-200:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-200:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 413,
+     "ctx_sub_tokens": 413,
+     "orig_hit_doc_ids": [
+      "trivia-200:positive_ctxs:0",
+      "corpus:675",
+      "corpus:824",
+      "corpus:348",
+      "corpus:1238"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-200:positive_ctxs:0",
+      "corpus:675",
+      "corpus:824",
+      "corpus:348",
+      "corpus:1238"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-201",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 108,
+     "ctx_sub_tokens": 108,
+     "orig_hit_doc_ids": [
+      "trivia-201:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-201:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 436,
+     "ctx_sub_tokens": 436,
+     "orig_hit_doc_ids": [
+      "trivia-201:positive_ctxs:0",
+      "corpus:387",
+      "corpus:574",
+      "corpus:513",
+      "corpus:1535"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-201:positive_ctxs:0",
+      "corpus:387",
+      "corpus:574",
+      "corpus:513",
+      "corpus:1535"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-202",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 70,
+     "ctx_sub_tokens": 70,
+     "orig_hit_doc_ids": [
+      "trivia-202:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-202:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 401,
+     "ctx_sub_tokens": 401,
+     "orig_hit_doc_ids": [
+      "trivia-202:positive_ctxs:0",
+      "corpus:49",
+      "corpus:1583",
+      "corpus:990",
+      "corpus:465"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-202:positive_ctxs:0",
+      "corpus:49",
+      "corpus:1583",
+      "corpus:990",
+      "corpus:465"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-205",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 32,
+     "ctx_sub_tokens": 32,
+     "orig_hit_doc_ids": [
+      "trivia-205:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-205:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 404,
+     "ctx_sub_tokens": 404,
+     "orig_hit_doc_ids": [
+      "trivia-205:positive_ctxs:0",
+      "corpus:450",
+      "corpus:166",
+      "corpus:844",
+      "corpus:810"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-205:positive_ctxs:0",
+      "corpus:450",
+      "corpus:166",
+      "corpus:844",
+      "corpus:810"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-206",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 113,
+     "ctx_sub_tokens": 113,
+     "orig_hit_doc_ids": [
+      "trivia-206:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-206:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 530,
+     "ctx_sub_tokens": 530,
+     "orig_hit_doc_ids": [
+      "trivia-206:positive_ctxs:0",
+      "corpus:137",
+      "corpus:1264",
+      "corpus:927",
+      "corpus:482"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-206:positive_ctxs:0",
+      "corpus:137",
+      "corpus:1264",
+      "corpus:927",
+      "corpus:482"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-21",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 69,
+     "ctx_sub_tokens": 69,
+     "orig_hit_doc_ids": [
+      "corpus:870"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:870"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 368,
+     "ctx_sub_tokens": 368,
+     "orig_hit_doc_ids": [
+      "corpus:870",
+      "corpus:671",
+      "corpus:410",
+      "corpus:272",
+      "corpus:927"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:870",
+      "corpus:671",
+      "corpus:410",
+      "corpus:272",
+      "corpus:927"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-217",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 78,
+     "ctx_sub_tokens": 78,
+     "orig_hit_doc_ids": [
+      "trivia-217:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-217:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 368,
+     "ctx_sub_tokens": 368,
+     "orig_hit_doc_ids": [
+      "trivia-217:positive_ctxs:0",
+      "corpus:2013",
+      "corpus:778",
+      "corpus:840",
+      "corpus:1739"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-217:positive_ctxs:0",
+      "corpus:2013",
+      "corpus:778",
+      "corpus:840",
+      "corpus:1739"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-218",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 100,
+     "ctx_sub_tokens": 100,
+     "orig_hit_doc_ids": [
+      "corpus:1756"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:1756"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 2,
+     "sub_gold_rank": 2,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 469,
+     "ctx_sub_tokens": 469,
+     "orig_hit_doc_ids": [
+      "corpus:1756",
+      "trivia-218:positive_ctxs:0",
+      "corpus:54",
+      "corpus:1996",
+      "corpus:264"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:1756",
+      "trivia-218:positive_ctxs:0",
+      "corpus:54",
+      "corpus:1996",
+      "corpus:264"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-219",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 19,
+     "ctx_sub_tokens": 19,
+     "orig_hit_doc_ids": [
+      "trivia-219:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-219:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 406,
+     "ctx_sub_tokens": 406,
+     "orig_hit_doc_ids": [
+      "trivia-219:positive_ctxs:0",
+      "corpus:1806",
+      "corpus:1196",
+      "corpus:1934",
+      "corpus:1739"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-219:positive_ctxs:0",
+      "corpus:1806",
+      "corpus:1196",
+      "corpus:1934",
+      "corpus:1739"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-22",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 100,
+     "ctx_sub_tokens": 100,
+     "orig_hit_doc_ids": [
+      "trivia-22:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-22:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 371,
+     "ctx_sub_tokens": 371,
+     "orig_hit_doc_ids": [
+      "trivia-22:positive_ctxs:0",
+      "corpus:478",
+      "corpus:1545",
+      "corpus:649",
+      "corpus:42"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-22:positive_ctxs:0",
+      "corpus:478",
+      "corpus:1545",
+      "corpus:649",
+      "corpus:42"
+     ]
+    },
+    "open_sub_transition": "1->0",
+    "open_orig_transition": "1->0"
+   },
+   {
+    "question_id": "trivia-220",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 72,
+     "ctx_sub_tokens": 78,
+     "orig_hit_doc_ids": [
+      "trivia-220:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-220:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 335,
+     "ctx_sub_tokens": 341,
+     "orig_hit_doc_ids": [
+      "trivia-220:positive_ctxs:0",
+      "corpus:1502",
+      "corpus:659",
+      "corpus:1564",
+      "corpus:593"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-220:positive_ctxs:0",
+      "corpus:1502",
+      "corpus:659",
+      "corpus:1564",
+      "corpus:593"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-224",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 92,
+     "ctx_sub_tokens": 91,
+     "orig_hit_doc_ids": [
+      "trivia-224:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-224:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 451,
+     "ctx_sub_tokens": 450,
+     "orig_hit_doc_ids": [
+      "trivia-224:positive_ctxs:0",
+      "corpus:247",
+      "corpus:396",
+      "corpus:705",
+      "corpus:982"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-224:positive_ctxs:0",
+      "corpus:247",
+      "corpus:396",
+      "corpus:705",
+      "corpus:982"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-228",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 107,
+     "ctx_sub_tokens": 107,
+     "orig_hit_doc_ids": [
+      "trivia-228:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-228:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 279,
+     "ctx_sub_tokens": 279,
+     "orig_hit_doc_ids": [
+      "trivia-228:positive_ctxs:0",
+      "corpus:123",
+      "corpus:110",
+      "corpus:927",
+      "corpus:931"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-228:positive_ctxs:0",
+      "corpus:123",
+      "corpus:110",
+      "corpus:927",
+      "corpus:931"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->0"
+   },
+   {
+    "question_id": "trivia-230",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 77,
+     "ctx_sub_tokens": 77,
+     "orig_hit_doc_ids": [
+      "trivia-230:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-230:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 374,
+     "ctx_sub_tokens": 374,
+     "orig_hit_doc_ids": [
+      "trivia-230:positive_ctxs:0",
+      "corpus:652",
+      "corpus:1246",
+      "corpus:982",
+      "corpus:301"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-230:positive_ctxs:0",
+      "corpus:652",
+      "corpus:1246",
+      "corpus:982",
+      "corpus:301"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-231",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 120,
+     "ctx_sub_tokens": 120,
+     "orig_hit_doc_ids": [
+      "trivia-231:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-231:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 400,
+     "ctx_sub_tokens": 400,
+     "orig_hit_doc_ids": [
+      "trivia-231:positive_ctxs:0",
+      "corpus:272",
+      "corpus:1918",
+      "corpus:927",
+      "corpus:35"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-231:positive_ctxs:0",
+      "corpus:272",
+      "corpus:1918",
+      "corpus:927",
+      "corpus:35"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->0"
+   },
+   {
+    "question_id": "trivia-236",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 107,
+     "ctx_sub_tokens": 107,
+     "orig_hit_doc_ids": [
+      "corpus:655"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:655"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 367,
+     "ctx_sub_tokens": 367,
+     "orig_hit_doc_ids": [
+      "corpus:655",
+      "corpus:186",
+      "corpus:272",
+      "corpus:123",
+      "corpus:110"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:655",
+      "corpus:186",
+      "corpus:272",
+      "corpus:123",
+      "corpus:110"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-247",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 61,
+     "ctx_sub_tokens": 61,
+     "orig_hit_doc_ids": [
+      "trivia-247:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-247:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 352,
+     "ctx_sub_tokens": 352,
+     "orig_hit_doc_ids": [
+      "trivia-247:positive_ctxs:0",
+      "corpus:1585",
+      "corpus:1450",
+      "corpus:372",
+      "corpus:649"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-247:positive_ctxs:0",
+      "corpus:1585",
+      "corpus:1450",
+      "corpus:372",
+      "corpus:649"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-248",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 26,
+     "ctx_sub_tokens": 26,
+     "orig_hit_doc_ids": [
+      "trivia-248:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-248:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 446,
+     "ctx_sub_tokens": 446,
+     "orig_hit_doc_ids": [
+      "trivia-248:positive_ctxs:0",
+      "corpus:52",
+      "corpus:1716",
+      "corpus:1743",
+      "corpus:184"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-248:positive_ctxs:0",
+      "corpus:52",
+      "corpus:1716",
+      "corpus:1743",
+      "corpus:184"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-249",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 72,
+     "ctx_sub_tokens": 72,
+     "orig_hit_doc_ids": [
+      "corpus:315"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:315"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 2,
+     "sub_gold_rank": 3,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 420,
+     "ctx_sub_tokens": 420,
+     "orig_hit_doc_ids": [
+      "corpus:315",
+      "trivia-249:positive_ctxs:0",
+      "corpus:1404",
+      "corpus:130",
+      "corpus:1944"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:315",
+      "corpus:1404",
+      "trivia-249:positive_ctxs:0",
+      "corpus:130",
+      "corpus:1944"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-25",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 108,
+     "ctx_sub_tokens": 108,
+     "orig_hit_doc_ids": [
+      "trivia-25:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-25:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 395,
+     "ctx_sub_tokens": 395,
+     "orig_hit_doc_ids": [
+      "trivia-25:positive_ctxs:0",
+      "corpus:1795",
+      "corpus:56",
+      "corpus:749",
+      "corpus:309"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-25:positive_ctxs:0",
+      "corpus:1795",
+      "corpus:56",
+      "corpus:749",
+      "corpus:309"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-253",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 105,
+     "ctx_sub_tokens": 105,
+     "orig_hit_doc_ids": [
+      "trivia-253:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-253:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 390,
+     "ctx_sub_tokens": 390,
+     "orig_hit_doc_ids": [
+      "trivia-253:positive_ctxs:0",
+      "corpus:566",
+      "corpus:1713",
+      "corpus:708",
+      "corpus:1674"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-253:positive_ctxs:0",
+      "corpus:566",
+      "corpus:1713",
+      "corpus:708",
+      "corpus:1674"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-260",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 124,
+     "ctx_sub_tokens": 124,
+     "orig_hit_doc_ids": [
+      "trivia-260:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-260:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 399,
+     "ctx_sub_tokens": 399,
+     "orig_hit_doc_ids": [
+      "trivia-260:positive_ctxs:0",
+      "corpus:867",
+      "corpus:927",
+      "corpus:482",
+      "corpus:272"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-260:positive_ctxs:0",
+      "corpus:867",
+      "corpus:927",
+      "corpus:482",
+      "corpus:272"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-264",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 75,
+     "ctx_sub_tokens": 75,
+     "orig_hit_doc_ids": [
+      "trivia-264:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-264:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 494,
+     "ctx_sub_tokens": 494,
+     "orig_hit_doc_ids": [
+      "trivia-264:positive_ctxs:0",
+      "corpus:219",
+      "corpus:1177",
+      "corpus:1127",
+      "corpus:300"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-264:positive_ctxs:0",
+      "corpus:219",
+      "corpus:1177",
+      "corpus:1127",
+      "corpus:300"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-269",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 65,
+     "ctx_sub_tokens": 65,
+     "orig_hit_doc_ids": [
+      "trivia-269:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-269:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 415,
+     "ctx_sub_tokens": 415,
+     "orig_hit_doc_ids": [
+      "trivia-269:positive_ctxs:0",
+      "corpus:990",
+      "corpus:837",
+      "corpus:1782",
+      "corpus:992"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-269:positive_ctxs:0",
+      "corpus:990",
+      "corpus:837",
+      "corpus:1782",
+      "corpus:992"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-271",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 83,
+     "ctx_sub_tokens": 83,
+     "orig_hit_doc_ids": [
+      "trivia-271:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-271:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 454,
+     "ctx_sub_tokens": 454,
+     "orig_hit_doc_ids": [
+      "trivia-271:positive_ctxs:0",
+      "corpus:56",
+      "corpus:452",
+      "corpus:854",
+      "corpus:1826"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-271:positive_ctxs:0",
+      "corpus:56",
+      "corpus:452",
+      "corpus:854",
+      "corpus:1826"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-275",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 89,
+     "ctx_sub_tokens": 89,
+     "orig_hit_doc_ids": [
+      "trivia-275:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-275:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 413,
+     "ctx_sub_tokens": 413,
+     "orig_hit_doc_ids": [
+      "trivia-275:positive_ctxs:0",
+      "corpus:876",
+      "corpus:1119",
+      "corpus:958",
+      "corpus:297"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-275:positive_ctxs:0",
+      "corpus:876",
+      "corpus:1119",
+      "corpus:958",
+      "corpus:297"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-276",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 71,
+     "ctx_sub_tokens": 71,
+     "orig_hit_doc_ids": [
+      "corpus:649"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:649"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 498,
+     "ctx_sub_tokens": 498,
+     "orig_hit_doc_ids": [
+      "corpus:649",
+      "corpus:13",
+      "corpus:36",
+      "corpus:14",
+      "corpus:634"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:649",
+      "corpus:13",
+      "corpus:36",
+      "corpus:14",
+      "corpus:634"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-277",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 115,
+     "ctx_sub_tokens": 115,
+     "orig_hit_doc_ids": [
+      "corpus:630"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:630"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 3,
+     "sub_gold_rank": 3,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 468,
+     "ctx_sub_tokens": 468,
+     "orig_hit_doc_ids": [
+      "corpus:630",
+      "corpus:272",
+      "trivia-277:positive_ctxs:0",
+      "corpus:927",
+      "corpus:482"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:630",
+      "corpus:272",
+      "trivia-277:positive_ctxs:0",
+      "corpus:927",
+      "corpus:482"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-278",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 69,
+     "ctx_sub_tokens": 69,
+     "orig_hit_doc_ids": [
+      "trivia-278:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-278:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 495,
+     "ctx_sub_tokens": 495,
+     "orig_hit_doc_ids": [
+      "trivia-278:positive_ctxs:0",
+      "corpus:36",
+      "corpus:348",
+      "corpus:1062",
+      "corpus:1942"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-278:positive_ctxs:0",
+      "corpus:36",
+      "corpus:348",
+      "corpus:1062",
+      "corpus:1942"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-279",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 113,
+     "ctx_sub_tokens": 113,
+     "orig_hit_doc_ids": [
+      "trivia-279:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-279:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 442,
+     "ctx_sub_tokens": 442,
+     "orig_hit_doc_ids": [
+      "trivia-279:positive_ctxs:0",
+      "corpus:1555",
+      "corpus:1050",
+      "corpus:832",
+      "corpus:1779"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-279:positive_ctxs:0",
+      "corpus:1555",
+      "corpus:1050",
+      "corpus:832",
+      "corpus:1779"
+     ]
+    },
+    "open_sub_transition": "1->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-283",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 96,
+     "ctx_sub_tokens": 96,
+     "orig_hit_doc_ids": [
+      "trivia-283:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-283:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 383,
+     "ctx_sub_tokens": 383,
+     "orig_hit_doc_ids": [
+      "trivia-283:positive_ctxs:0",
+      "corpus:1795",
+      "corpus:56",
+      "corpus:749",
+      "corpus:309"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-283:positive_ctxs:0",
+      "corpus:1795",
+      "corpus:56",
+      "corpus:749",
+      "corpus:309"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-291",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 86,
+     "ctx_sub_tokens": 86,
+     "orig_hit_doc_ids": [
+      "corpus:927"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:927"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 2,
+     "sub_gold_rank": 2,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 400,
+     "ctx_sub_tokens": 400,
+     "orig_hit_doc_ids": [
+      "corpus:927",
+      "trivia-291:positive_ctxs:0",
+      "corpus:1134",
+      "corpus:482",
+      "corpus:344"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:927",
+      "trivia-291:positive_ctxs:0",
+      "corpus:1134",
+      "corpus:482",
+      "corpus:344"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-292",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 117,
+     "ctx_sub_tokens": 117,
+     "orig_hit_doc_ids": [
+      "corpus:425"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:425"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 2,
+     "sub_gold_rank": 2,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 493,
+     "ctx_sub_tokens": 493,
+     "orig_hit_doc_ids": [
+      "corpus:425",
+      "trivia-292:positive_ctxs:0",
+      "corpus:1485",
+      "corpus:13",
+      "corpus:854"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:425",
+      "trivia-292:positive_ctxs:0",
+      "corpus:1485",
+      "corpus:13",
+      "corpus:854"
+     ]
+    },
+    "open_sub_transition": "0->1",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-297",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 73,
+     "ctx_sub_tokens": 71,
+     "orig_hit_doc_ids": [
+      "trivia-297:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-297:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 339,
+     "ctx_sub_tokens": 337,
+     "orig_hit_doc_ids": [
+      "trivia-297:positive_ctxs:0",
+      "corpus:163",
+      "corpus:927",
+      "corpus:482",
+      "corpus:99"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-297:positive_ctxs:0",
+      "corpus:163",
+      "corpus:927",
+      "corpus:482",
+      "corpus:99"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-298",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 103,
+     "ctx_sub_tokens": 103,
+     "orig_hit_doc_ids": [
+      "corpus:685"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:685"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 2,
+     "sub_gold_rank": 2,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 398,
+     "ctx_sub_tokens": 398,
+     "orig_hit_doc_ids": [
+      "corpus:685",
+      "trivia-298:positive_ctxs:0",
+      "corpus:179",
+      "corpus:1025",
+      "corpus:1240"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:685",
+      "trivia-298:positive_ctxs:0",
+      "corpus:179",
+      "corpus:1025",
+      "corpus:1240"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-301",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 108,
+     "ctx_sub_tokens": 108,
+     "orig_hit_doc_ids": [
+      "trivia-301:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-301:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 505,
+     "ctx_sub_tokens": 505,
+     "orig_hit_doc_ids": [
+      "trivia-301:positive_ctxs:0",
+      "corpus:927",
+      "corpus:272",
+      "corpus:482",
+      "corpus:45"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-301:positive_ctxs:0",
+      "corpus:927",
+      "corpus:272",
+      "corpus:482",
+      "corpus:45"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-302",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 107,
+     "ctx_sub_tokens": 107,
+     "orig_hit_doc_ids": [
+      "corpus:655"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:655"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 4,
+     "sub_gold_rank": 4,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 462,
+     "ctx_sub_tokens": 462,
+     "orig_hit_doc_ids": [
+      "corpus:655",
+      "corpus:272",
+      "corpus:186",
+      "trivia-302:positive_ctxs:0",
+      "corpus:123"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:655",
+      "corpus:272",
+      "corpus:186",
+      "trivia-302:positive_ctxs:0",
+      "corpus:123"
+     ]
+    },
+    "open_sub_transition": "0->1",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-304",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 87,
+     "ctx_sub_tokens": 87,
+     "orig_hit_doc_ids": [
+      "trivia-304:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-304:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 422,
+     "ctx_sub_tokens": 422,
+     "orig_hit_doc_ids": [
+      "trivia-304:positive_ctxs:0",
+      "corpus:907",
+      "corpus:1555",
+      "corpus:104",
+      "corpus:927"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-304:positive_ctxs:0",
+      "corpus:907",
+      "corpus:1555",
+      "corpus:104",
+      "corpus:927"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-310",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 66,
+     "ctx_sub_tokens": 66,
+     "orig_hit_doc_ids": [
+      "trivia-310:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-310:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 382,
+     "ctx_sub_tokens": 382,
+     "orig_hit_doc_ids": [
+      "trivia-310:positive_ctxs:0",
+      "corpus:874",
+      "corpus:605",
+      "corpus:1998",
+      "corpus:1338"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-310:positive_ctxs:0",
+      "corpus:874",
+      "corpus:605",
+      "corpus:1998",
+      "corpus:1338"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-313",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 92,
+     "ctx_sub_tokens": 92,
+     "orig_hit_doc_ids": [
+      "trivia-313:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-313:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 377,
+     "ctx_sub_tokens": 377,
+     "orig_hit_doc_ids": [
+      "trivia-313:positive_ctxs:0",
+      "corpus:566",
+      "corpus:1713",
+      "corpus:708",
+      "corpus:1674"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-313:positive_ctxs:0",
+      "corpus:566",
+      "corpus:1713",
+      "corpus:708",
+      "corpus:1674"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-314",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 119,
+     "ctx_sub_tokens": 119,
+     "orig_hit_doc_ids": [
+      "corpus:546"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:546"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 504,
+     "ctx_sub_tokens": 504,
+     "orig_hit_doc_ids": [
+      "corpus:546",
+      "corpus:1560",
+      "corpus:1305",
+      "corpus:641",
+      "corpus:593"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:546",
+      "corpus:1560",
+      "corpus:1305",
+      "corpus:641",
+      "corpus:593"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-315",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 105,
+     "ctx_sub_tokens": 105,
+     "orig_hit_doc_ids": [
+      "trivia-315:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-315:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 476,
+     "ctx_sub_tokens": 476,
+     "orig_hit_doc_ids": [
+      "trivia-315:positive_ctxs:0",
+      "corpus:671",
+      "corpus:668",
+      "corpus:696",
+      "corpus:924"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-315:positive_ctxs:0",
+      "corpus:671",
+      "corpus:668",
+      "corpus:696",
+      "corpus:924"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-319",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": false,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 47,
+     "ctx_sub_tokens": 151,
+     "orig_hit_doc_ids": [
+      "trivia-319:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:45"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 2,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 532,
+     "ctx_sub_tokens": 532,
+     "orig_hit_doc_ids": [
+      "trivia-319:positive_ctxs:0",
+      "corpus:45",
+      "corpus:1585",
+      "corpus:548",
+      "corpus:1736"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:45",
+      "trivia-319:positive_ctxs:0",
+      "corpus:1585",
+      "corpus:548",
+      "corpus:1736"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-32",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 104,
+     "ctx_sub_tokens": 104,
+     "orig_hit_doc_ids": [
+      "trivia-32:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-32:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 432,
+     "ctx_sub_tokens": 432,
+     "orig_hit_doc_ids": [
+      "trivia-32:positive_ctxs:0",
+      "corpus:1537",
+      "corpus:1295",
+      "corpus:1051",
+      "corpus:1873"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-32:positive_ctxs:0",
+      "corpus:1537",
+      "corpus:1295",
+      "corpus:1051",
+      "corpus:1873"
+     ]
+    },
+    "open_sub_transition": "1->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-320",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 84,
+     "ctx_sub_tokens": 84,
+     "orig_hit_doc_ids": [
+      "corpus:29"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:29"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 2,
+     "sub_gold_rank": 2,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 382,
+     "ctx_sub_tokens": 382,
+     "orig_hit_doc_ids": [
+      "corpus:29",
+      "trivia-320:positive_ctxs:0",
+      "corpus:482",
+      "corpus:272",
+      "corpus:927"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:29",
+      "trivia-320:positive_ctxs:0",
+      "corpus:482",
+      "corpus:272",
+      "corpus:927"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-321",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 27,
+     "ctx_sub_tokens": 27,
+     "orig_hit_doc_ids": [
+      "trivia-321:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-321:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 361,
+     "ctx_sub_tokens": 361,
+     "orig_hit_doc_ids": [
+      "trivia-321:positive_ctxs:0",
+      "corpus:99",
+      "corpus:465",
+      "corpus:1797",
+      "corpus:482"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-321:positive_ctxs:0",
+      "corpus:99",
+      "corpus:465",
+      "corpus:1797",
+      "corpus:482"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-322",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 19,
+     "ctx_sub_tokens": 19,
+     "orig_hit_doc_ids": [
+      "trivia-322:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-322:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 331,
+     "ctx_sub_tokens": 331,
+     "orig_hit_doc_ids": [
+      "trivia-322:positive_ctxs:0",
+      "corpus:1177",
+      "corpus:1479",
+      "corpus:70",
+      "corpus:81"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-322:positive_ctxs:0",
+      "corpus:1177",
+      "corpus:1479",
+      "corpus:70",
+      "corpus:81"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-323",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 94,
+     "ctx_sub_tokens": 94,
+     "orig_hit_doc_ids": [
+      "trivia-323:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-323:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 496,
+     "ctx_sub_tokens": 496,
+     "orig_hit_doc_ids": [
+      "trivia-323:positive_ctxs:0",
+      "corpus:1102",
+      "corpus:1265",
+      "corpus:647",
+      "corpus:1639"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-323:positive_ctxs:0",
+      "corpus:1102",
+      "corpus:1265",
+      "corpus:647",
+      "corpus:1639"
+     ]
+    },
+    "open_sub_transition": "1->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-324",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 98,
+     "ctx_sub_tokens": 96,
+     "orig_hit_doc_ids": [
+      "trivia-324:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-324:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 448,
+     "ctx_sub_tokens": 446,
+     "orig_hit_doc_ids": [
+      "trivia-324:positive_ctxs:0",
+      "corpus:653",
+      "corpus:516",
+      "corpus:927",
+      "corpus:530"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-324:positive_ctxs:0",
+      "corpus:653",
+      "corpus:516",
+      "corpus:927",
+      "corpus:530"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-326",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 103,
+     "ctx_sub_tokens": 103,
+     "orig_hit_doc_ids": [
+      "trivia-326:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-326:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 489,
+     "ctx_sub_tokens": 489,
+     "orig_hit_doc_ids": [
+      "trivia-326:positive_ctxs:0",
+      "corpus:896",
+      "corpus:251",
+      "corpus:1574",
+      "corpus:405"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-326:positive_ctxs:0",
+      "corpus:896",
+      "corpus:251",
+      "corpus:1574",
+      "corpus:405"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-328",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 89,
+     "ctx_sub_tokens": 89,
+     "orig_hit_doc_ids": [
+      "trivia-328:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-328:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 413,
+     "ctx_sub_tokens": 413,
+     "orig_hit_doc_ids": [
+      "trivia-328:positive_ctxs:0",
+      "corpus:649",
+      "corpus:724",
+      "corpus:527",
+      "corpus:1547"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-328:positive_ctxs:0",
+      "corpus:649",
+      "corpus:724",
+      "corpus:527",
+      "corpus:1547"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-33",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 78,
+     "ctx_sub_tokens": 78,
+     "orig_hit_doc_ids": [
+      "trivia-33:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-33:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 355,
+     "ctx_sub_tokens": 355,
+     "orig_hit_doc_ids": [
+      "trivia-33:positive_ctxs:0",
+      "corpus:1287",
+      "corpus:433",
+      "corpus:1924",
+      "corpus:1450"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-33:positive_ctxs:0",
+      "corpus:1287",
+      "corpus:433",
+      "corpus:1924",
+      "corpus:1450"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-331",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 100,
+     "ctx_sub_tokens": 100,
+     "orig_hit_doc_ids": [
+      "corpus:92"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:92"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 5,
+     "sub_gold_rank": 5,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 482,
+     "ctx_sub_tokens": 482,
+     "orig_hit_doc_ids": [
+      "corpus:92",
+      "corpus:1236",
+      "corpus:41",
+      "corpus:42",
+      "trivia-331:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:92",
+      "corpus:1236",
+      "corpus:41",
+      "corpus:42",
+      "trivia-331:positive_ctxs:0"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-334",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 24,
+     "ctx_sub_tokens": 24,
+     "orig_hit_doc_ids": [
+      "corpus:123"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:123"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 4,
+     "sub_gold_rank": 4,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 270,
+     "ctx_sub_tokens": 270,
+     "orig_hit_doc_ids": [
+      "corpus:123",
+      "corpus:927",
+      "corpus:110",
+      "trivia-334:positive_ctxs:0",
+      "corpus:931"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:123",
+      "corpus:927",
+      "corpus:110",
+      "trivia-334:positive_ctxs:0",
+      "corpus:931"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-341",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 101,
+     "ctx_sub_tokens": 101,
+     "orig_hit_doc_ids": [
+      "trivia-341:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-341:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 433,
+     "ctx_sub_tokens": 433,
+     "orig_hit_doc_ids": [
+      "trivia-341:positive_ctxs:0",
+      "corpus:719",
+      "corpus:799",
+      "corpus:1691",
+      "corpus:623"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-341:positive_ctxs:0",
+      "corpus:719",
+      "corpus:799",
+      "corpus:1691",
+      "corpus:623"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-343",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 89,
+     "ctx_sub_tokens": 89,
+     "orig_hit_doc_ids": [
+      "trivia-343:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-343:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 440,
+     "ctx_sub_tokens": 440,
+     "orig_hit_doc_ids": [
+      "trivia-343:positive_ctxs:0",
+      "corpus:64",
+      "corpus:1289",
+      "corpus:11",
+      "corpus:1181"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-343:positive_ctxs:0",
+      "corpus:64",
+      "corpus:1289",
+      "corpus:11",
+      "corpus:1181"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-344",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 106,
+     "ctx_sub_tokens": 106,
+     "orig_hit_doc_ids": [
+      "trivia-344:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-344:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 548,
+     "ctx_sub_tokens": 548,
+     "orig_hit_doc_ids": [
+      "trivia-344:positive_ctxs:0",
+      "corpus:1345",
+      "corpus:697",
+      "corpus:1665",
+      "corpus:384"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-344:positive_ctxs:0",
+      "corpus:1345",
+      "corpus:697",
+      "corpus:1665",
+      "corpus:384"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-351",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 28,
+     "ctx_sub_tokens": 28,
+     "orig_hit_doc_ids": [
+      "trivia-351:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-351:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 286,
+     "ctx_sub_tokens": 286,
+     "orig_hit_doc_ids": [
+      "trivia-351:positive_ctxs:0",
+      "corpus:1122",
+      "corpus:1986",
+      "corpus:1938",
+      "corpus:301"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-351:positive_ctxs:0",
+      "corpus:1122",
+      "corpus:1986",
+      "corpus:1938",
+      "corpus:301"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-361",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 94,
+     "ctx_sub_tokens": 94,
+     "orig_hit_doc_ids": [
+      "trivia-361:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-361:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 489,
+     "ctx_sub_tokens": 489,
+     "orig_hit_doc_ids": [
+      "trivia-361:positive_ctxs:0",
+      "corpus:482",
+      "corpus:36",
+      "corpus:1",
+      "corpus:1196"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-361:positive_ctxs:0",
+      "corpus:482",
+      "corpus:36",
+      "corpus:1",
+      "corpus:1196"
+     ]
+    },
+    "open_sub_transition": "1->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-363",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 124,
+     "ctx_sub_tokens": 124,
+     "orig_hit_doc_ids": [
+      "trivia-363:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-363:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 448,
+     "ctx_sub_tokens": 448,
+     "orig_hit_doc_ids": [
+      "trivia-363:positive_ctxs:0",
+      "corpus:683",
+      "corpus:315",
+      "corpus:365",
+      "corpus:662"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-363:positive_ctxs:0",
+      "corpus:683",
+      "corpus:315",
+      "corpus:365",
+      "corpus:662"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-364",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 81,
+     "ctx_sub_tokens": 81,
+     "orig_hit_doc_ids": [
+      "trivia-364:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-364:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 383,
+     "ctx_sub_tokens": 383,
+     "orig_hit_doc_ids": [
+      "trivia-364:positive_ctxs:0",
+      "corpus:649",
+      "corpus:2000",
+      "corpus:226",
+      "corpus:1331"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-364:positive_ctxs:0",
+      "corpus:649",
+      "corpus:2000",
+      "corpus:226",
+      "corpus:1331"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-370",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 84,
+     "ctx_sub_tokens": 84,
+     "orig_hit_doc_ids": [
+      "trivia-370:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-370:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 463,
+     "ctx_sub_tokens": 463,
+     "orig_hit_doc_ids": [
+      "trivia-370:positive_ctxs:0",
+      "corpus:909",
+      "corpus:36",
+      "corpus:348",
+      "corpus:1050"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-370:positive_ctxs:0",
+      "corpus:909",
+      "corpus:36",
+      "corpus:348",
+      "corpus:1050"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-375",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 63,
+     "ctx_sub_tokens": 63,
+     "orig_hit_doc_ids": [
+      "trivia-375:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-375:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 332,
+     "ctx_sub_tokens": 332,
+     "orig_hit_doc_ids": [
+      "trivia-375:positive_ctxs:0",
+      "corpus:870",
+      "corpus:123",
+      "corpus:175",
+      "corpus:1909"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-375:positive_ctxs:0",
+      "corpus:870",
+      "corpus:123",
+      "corpus:175",
+      "corpus:1909"
+     ]
+    },
+    "open_sub_transition": "1->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-377",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 110,
+     "ctx_sub_tokens": 110,
+     "orig_hit_doc_ids": [
+      "trivia-377:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-377:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 331,
+     "ctx_sub_tokens": 331,
+     "orig_hit_doc_ids": [
+      "trivia-377:positive_ctxs:0",
+      "corpus:620",
+      "corpus:1458",
+      "corpus:386",
+      "corpus:1026"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-377:positive_ctxs:0",
+      "corpus:620",
+      "corpus:1458",
+      "corpus:386",
+      "corpus:1026"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-378",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 62,
+     "ctx_sub_tokens": 62,
+     "orig_hit_doc_ids": [
+      "corpus:710"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:710"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 2,
+     "sub_gold_rank": 2,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 376,
+     "ctx_sub_tokens": 376,
+     "orig_hit_doc_ids": [
+      "corpus:710",
+      "trivia-378:positive_ctxs:0",
+      "corpus:146",
+      "corpus:1438",
+      "corpus:2024"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:710",
+      "trivia-378:positive_ctxs:0",
+      "corpus:146",
+      "corpus:1438",
+      "corpus:2024"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->0"
+   },
+   {
+    "question_id": "trivia-38",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 117,
+     "ctx_sub_tokens": 117,
+     "orig_hit_doc_ids": [
+      "trivia-38:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-38:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 375,
+     "ctx_sub_tokens": 375,
+     "orig_hit_doc_ids": [
+      "trivia-38:positive_ctxs:0",
+      "corpus:272",
+      "corpus:110",
+      "corpus:160",
+      "corpus:177"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-38:positive_ctxs:0",
+      "corpus:272",
+      "corpus:110",
+      "corpus:160",
+      "corpus:177"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-381",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 103,
+     "ctx_sub_tokens": 103,
+     "orig_hit_doc_ids": [
+      "trivia-381:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-381:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 477,
+     "ctx_sub_tokens": 477,
+     "orig_hit_doc_ids": [
+      "trivia-381:positive_ctxs:0",
+      "corpus:513",
+      "corpus:1535",
+      "corpus:329",
+      "corpus:1416"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-381:positive_ctxs:0",
+      "corpus:513",
+      "corpus:1535",
+      "corpus:329",
+      "corpus:1416"
+     ]
+    },
+    "open_sub_transition": "1->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-385",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 39,
+     "ctx_sub_tokens": 39,
+     "orig_hit_doc_ids": [
+      "corpus:991"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:991"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 264,
+     "ctx_sub_tokens": 264,
+     "orig_hit_doc_ids": [
+      "corpus:991",
+      "corpus:285",
+      "corpus:1162",
+      "corpus:2021",
+      "corpus:43"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:991",
+      "corpus:285",
+      "corpus:1162",
+      "corpus:2021",
+      "corpus:43"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->0"
+   },
+   {
+    "question_id": "trivia-398",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 112,
+     "ctx_sub_tokens": 112,
+     "orig_hit_doc_ids": [
+      "trivia-398:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-398:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 464,
+     "ctx_sub_tokens": 464,
+     "orig_hit_doc_ids": [
+      "trivia-398:positive_ctxs:0",
+      "corpus:988",
+      "corpus:1894",
+      "corpus:630",
+      "corpus:14"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-398:positive_ctxs:0",
+      "corpus:988",
+      "corpus:1894",
+      "corpus:630",
+      "corpus:14"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-4",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 105,
+     "ctx_sub_tokens": 105,
+     "orig_hit_doc_ids": [
+      "trivia-4:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-4:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 318,
+     "ctx_sub_tokens": 318,
+     "orig_hit_doc_ids": [
+      "trivia-4:positive_ctxs:0",
+      "corpus:1066",
+      "corpus:860",
+      "corpus:726",
+      "corpus:1605"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-4:positive_ctxs:0",
+      "corpus:1066",
+      "corpus:860",
+      "corpus:726",
+      "corpus:1605"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-403",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 108,
+     "ctx_sub_tokens": 108,
+     "orig_hit_doc_ids": [
+      "trivia-403:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-403:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 436,
+     "ctx_sub_tokens": 436,
+     "orig_hit_doc_ids": [
+      "trivia-403:positive_ctxs:0",
+      "corpus:387",
+      "corpus:574",
+      "corpus:513",
+      "corpus:1535"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-403:positive_ctxs:0",
+      "corpus:387",
+      "corpus:574",
+      "corpus:513",
+      "corpus:1535"
+     ]
+    },
+    "open_sub_transition": "1->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-406",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 71,
+     "ctx_sub_tokens": 71,
+     "orig_hit_doc_ids": [
+      "trivia-406:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-406:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 453,
+     "ctx_sub_tokens": 453,
+     "orig_hit_doc_ids": [
+      "trivia-406:positive_ctxs:0",
+      "corpus:156",
+      "corpus:878",
+      "corpus:1814",
+      "corpus:799"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-406:positive_ctxs:0",
+      "corpus:156",
+      "corpus:878",
+      "corpus:1814",
+      "corpus:799"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-407",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 66,
+     "ctx_sub_tokens": 66,
+     "orig_hit_doc_ids": [
+      "corpus:1739"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:1739"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 335,
+     "ctx_sub_tokens": 335,
+     "orig_hit_doc_ids": [
+      "corpus:1739",
+      "corpus:233",
+      "corpus:484",
+      "corpus:765",
+      "corpus:1387"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:1739",
+      "corpus:233",
+      "corpus:484",
+      "corpus:765",
+      "corpus:1387"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-409",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 101,
+     "ctx_sub_tokens": 101,
+     "orig_hit_doc_ids": [
+      "trivia-409:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-409:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 476,
+     "ctx_sub_tokens": 476,
+     "orig_hit_doc_ids": [
+      "trivia-409:positive_ctxs:0",
+      "corpus:36",
+      "corpus:22",
+      "corpus:54",
+      "corpus:621"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-409:positive_ctxs:0",
+      "corpus:36",
+      "corpus:22",
+      "corpus:54",
+      "corpus:621"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-41",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 94,
+     "ctx_sub_tokens": 94,
+     "orig_hit_doc_ids": [
+      "corpus:1413"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:1413"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 5,
+     "sub_gold_rank": 5,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 469,
+     "ctx_sub_tokens": 469,
+     "orig_hit_doc_ids": [
+      "corpus:1413",
+      "corpus:1778",
+      "corpus:1102",
+      "corpus:1639",
+      "trivia-41:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:1413",
+      "corpus:1778",
+      "corpus:1102",
+      "corpus:1639",
+      "trivia-41:positive_ctxs:0"
+     ]
+    },
+    "open_sub_transition": "0->1",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-413",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 103,
+     "ctx_sub_tokens": 103,
+     "orig_hit_doc_ids": [
+      "trivia-413:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-413:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 445,
+     "ctx_sub_tokens": 445,
+     "orig_hit_doc_ids": [
+      "trivia-413:positive_ctxs:0",
+      "corpus:343",
+      "corpus:1431",
+      "corpus:190",
+      "corpus:1311"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-413:positive_ctxs:0",
+      "corpus:343",
+      "corpus:1431",
+      "corpus:190",
+      "corpus:1311"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->0"
+   },
+   {
+    "question_id": "trivia-420",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 85,
+     "ctx_sub_tokens": 85,
+     "orig_hit_doc_ids": [
+      "trivia-420:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-420:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 382,
+     "ctx_sub_tokens": 382,
+     "orig_hit_doc_ids": [
+      "trivia-420:positive_ctxs:0",
+      "corpus:652",
+      "corpus:1246",
+      "corpus:982",
+      "corpus:301"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-420:positive_ctxs:0",
+      "corpus:652",
+      "corpus:1246",
+      "corpus:982",
+      "corpus:301"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-421",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 76,
+     "ctx_sub_tokens": 76,
+     "orig_hit_doc_ids": [
+      "corpus:272"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:272"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 2,
+     "sub_gold_rank": 2,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 304,
+     "ctx_sub_tokens": 304,
+     "orig_hit_doc_ids": [
+      "corpus:272",
+      "trivia-421:positive_ctxs:0",
+      "corpus:927",
+      "corpus:35",
+      "corpus:123"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:272",
+      "trivia-421:positive_ctxs:0",
+      "corpus:927",
+      "corpus:35",
+      "corpus:123"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-426",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 71,
+     "ctx_sub_tokens": 71,
+     "orig_hit_doc_ids": [
+      "corpus:649"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:649"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 5,
+     "sub_gold_rank": 5,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 480,
+     "ctx_sub_tokens": 480,
+     "orig_hit_doc_ids": [
+      "corpus:649",
+      "corpus:1099",
+      "corpus:1974",
+      "corpus:13",
+      "trivia-426:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:649",
+      "corpus:1099",
+      "corpus:1974",
+      "corpus:13",
+      "trivia-426:positive_ctxs:0"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-428",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 84,
+     "ctx_sub_tokens": 84,
+     "orig_hit_doc_ids": [
+      "trivia-428:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-428:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 336,
+     "ctx_sub_tokens": 336,
+     "orig_hit_doc_ids": [
+      "trivia-428:positive_ctxs:0",
+      "corpus:89",
+      "corpus:36",
+      "corpus:124",
+      "corpus:1254"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-428:positive_ctxs:0",
+      "corpus:89",
+      "corpus:36",
+      "corpus:124",
+      "corpus:1254"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-432",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 107,
+     "ctx_sub_tokens": 107,
+     "orig_hit_doc_ids": [
+      "trivia-432:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-432:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 501,
+     "ctx_sub_tokens": 501,
+     "orig_hit_doc_ids": [
+      "trivia-432:positive_ctxs:0",
+      "corpus:1411",
+      "corpus:36",
+      "corpus:348",
+      "corpus:1066"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-432:positive_ctxs:0",
+      "corpus:1411",
+      "corpus:36",
+      "corpus:348",
+      "corpus:1066"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-434",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 112,
+     "ctx_sub_tokens": 112,
+     "orig_hit_doc_ids": [
+      "trivia-434:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-434:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 532,
+     "ctx_sub_tokens": 532,
+     "orig_hit_doc_ids": [
+      "trivia-434:positive_ctxs:0",
+      "corpus:52",
+      "corpus:1716",
+      "corpus:1743",
+      "corpus:184"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-434:positive_ctxs:0",
+      "corpus:52",
+      "corpus:1716",
+      "corpus:1743",
+      "corpus:184"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-438",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 59,
+     "ctx_sub_tokens": 59,
+     "orig_hit_doc_ids": [
+      "trivia-438:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-438:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 344,
+     "ctx_sub_tokens": 344,
+     "orig_hit_doc_ids": [
+      "trivia-438:positive_ctxs:0",
+      "corpus:36",
+      "corpus:22",
+      "corpus:871",
+      "corpus:821"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-438:positive_ctxs:0",
+      "corpus:36",
+      "corpus:22",
+      "corpus:871",
+      "corpus:821"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-441",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 86,
+     "ctx_sub_tokens": 86,
+     "orig_hit_doc_ids": [
+      "corpus:927"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:927"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 4,
+     "sub_gold_rank": 4,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 428,
+     "ctx_sub_tokens": 428,
+     "orig_hit_doc_ids": [
+      "corpus:927",
+      "corpus:656",
+      "corpus:45",
+      "trivia-441:positive_ctxs:0",
+      "corpus:620"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:927",
+      "corpus:656",
+      "corpus:45",
+      "trivia-441:positive_ctxs:0",
+      "corpus:620"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-443",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 57,
+     "ctx_sub_tokens": 57,
+     "orig_hit_doc_ids": [
+      "trivia-443:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-443:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 519,
+     "ctx_sub_tokens": 519,
+     "orig_hit_doc_ids": [
+      "trivia-443:positive_ctxs:0",
+      "corpus:1049",
+      "corpus:344",
+      "corpus:1110",
+      "corpus:48"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-443:positive_ctxs:0",
+      "corpus:1049",
+      "corpus:344",
+      "corpus:1110",
+      "corpus:48"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-45",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 123,
+     "ctx_sub_tokens": 123,
+     "orig_hit_doc_ids": [
+      "trivia-45:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-45:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 538,
+     "ctx_sub_tokens": 538,
+     "orig_hit_doc_ids": [
+      "trivia-45:positive_ctxs:0",
+      "corpus:461",
+      "corpus:1267",
+      "corpus:1578",
+      "corpus:200"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-45:positive_ctxs:0",
+      "corpus:461",
+      "corpus:1267",
+      "corpus:1578",
+      "corpus:200"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-46",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 55,
+     "ctx_sub_tokens": 55,
+     "orig_hit_doc_ids": [
+      "trivia-46:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-46:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 331,
+     "ctx_sub_tokens": 331,
+     "orig_hit_doc_ids": [
+      "trivia-46:positive_ctxs:0",
+      "corpus:78",
+      "corpus:760",
+      "corpus:1725",
+      "corpus:704"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-46:positive_ctxs:0",
+      "corpus:78",
+      "corpus:760",
+      "corpus:1725",
+      "corpus:704"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-49",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 112,
+     "ctx_sub_tokens": 112,
+     "orig_hit_doc_ids": [
+      "trivia-49:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-49:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 402,
+     "ctx_sub_tokens": 402,
+     "orig_hit_doc_ids": [
+      "trivia-49:positive_ctxs:0",
+      "corpus:1824",
+      "corpus:1716",
+      "corpus:235",
+      "corpus:607"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-49:positive_ctxs:0",
+      "corpus:1824",
+      "corpus:1716",
+      "corpus:235",
+      "corpus:607"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-53",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 94,
+     "ctx_sub_tokens": 94,
+     "orig_hit_doc_ids": [
+      "trivia-53:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-53:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 422,
+     "ctx_sub_tokens": 422,
+     "orig_hit_doc_ids": [
+      "trivia-53:positive_ctxs:0",
+      "corpus:1044",
+      "corpus:112",
+      "corpus:450",
+      "corpus:662"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-53:positive_ctxs:0",
+      "corpus:1044",
+      "corpus:112",
+      "corpus:450",
+      "corpus:662"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-54",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 96,
+     "ctx_sub_tokens": 96,
+     "orig_hit_doc_ids": [
+      "trivia-54:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-54:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 411,
+     "ctx_sub_tokens": 411,
+     "orig_hit_doc_ids": [
+      "trivia-54:positive_ctxs:0",
+      "corpus:927",
+      "corpus:272",
+      "corpus:127",
+      "corpus:329"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-54:positive_ctxs:0",
+      "corpus:927",
+      "corpus:272",
+      "corpus:127",
+      "corpus:329"
+     ]
+    },
+    "open_sub_transition": "1->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-55",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 103,
+     "ctx_sub_tokens": 103,
+     "orig_hit_doc_ids": [
+      "corpus:1743"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:1743"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 2,
+     "sub_gold_rank": 2,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 470,
+     "ctx_sub_tokens": 470,
+     "orig_hit_doc_ids": [
+      "corpus:1743",
+      "trivia-55:positive_ctxs:0",
+      "corpus:649",
+      "corpus:1716",
+      "corpus:14"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:1743",
+      "trivia-55:positive_ctxs:0",
+      "corpus:649",
+      "corpus:1716",
+      "corpus:14"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-56",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 105,
+     "ctx_sub_tokens": 105,
+     "orig_hit_doc_ids": [
+      "trivia-56:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-56:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 363,
+     "ctx_sub_tokens": 363,
+     "orig_hit_doc_ids": [
+      "trivia-56:positive_ctxs:0",
+      "corpus:649",
+      "corpus:927",
+      "corpus:951",
+      "corpus:478"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-56:positive_ctxs:0",
+      "corpus:649",
+      "corpus:927",
+      "corpus:951",
+      "corpus:478"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-6",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 101,
+     "ctx_sub_tokens": 101,
+     "orig_hit_doc_ids": [
+      "trivia-6:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-6:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 404,
+     "ctx_sub_tokens": 404,
+     "orig_hit_doc_ids": [
+      "trivia-6:positive_ctxs:0",
+      "corpus:1",
+      "corpus:36",
+      "corpus:1481",
+      "corpus:218"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-6:positive_ctxs:0",
+      "corpus:1",
+      "corpus:36",
+      "corpus:1481",
+      "corpus:218"
+     ]
+    },
+    "open_sub_transition": "1->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-60",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 27,
+     "ctx_sub_tokens": 27,
+     "orig_hit_doc_ids": [
+      "trivia-60:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-60:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 455,
+     "ctx_sub_tokens": 455,
+     "orig_hit_doc_ids": [
+      "trivia-60:positive_ctxs:0",
+      "corpus:1305",
+      "corpus:758",
+      "corpus:1013",
+      "corpus:1914"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-60:positive_ctxs:0",
+      "corpus:1305",
+      "corpus:758",
+      "corpus:1013",
+      "corpus:1914"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-62",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 114,
+     "ctx_sub_tokens": 114,
+     "orig_hit_doc_ids": [
+      "trivia-62:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-62:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 484,
+     "ctx_sub_tokens": 484,
+     "orig_hit_doc_ids": [
+      "trivia-62:positive_ctxs:0",
+      "corpus:475",
+      "corpus:155",
+      "corpus:1927",
+      "corpus:975"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-62:positive_ctxs:0",
+      "corpus:475",
+      "corpus:155",
+      "corpus:1927",
+      "corpus:975"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-65",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 42,
+     "ctx_sub_tokens": 42,
+     "orig_hit_doc_ids": [
+      "corpus:365"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:365"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 209,
+     "ctx_sub_tokens": 209,
+     "orig_hit_doc_ids": [
+      "corpus:365",
+      "corpus:325",
+      "corpus:308",
+      "corpus:1346",
+      "corpus:1133"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:365",
+      "corpus:325",
+      "corpus:308",
+      "corpus:1346",
+      "corpus:1133"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-69",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 104,
+     "ctx_sub_tokens": 104,
+     "orig_hit_doc_ids": [
+      "trivia-69:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-69:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 515,
+     "ctx_sub_tokens": 515,
+     "orig_hit_doc_ids": [
+      "trivia-69:positive_ctxs:0",
+      "corpus:611",
+      "corpus:1942",
+      "corpus:1566",
+      "corpus:576"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-69:positive_ctxs:0",
+      "corpus:611",
+      "corpus:1942",
+      "corpus:1566",
+      "corpus:576"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-72",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 104,
+     "ctx_sub_tokens": 104,
+     "orig_hit_doc_ids": [
+      "corpus:52"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:52"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 2,
+     "sub_gold_rank": 2,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 537,
+     "ctx_sub_tokens": 537,
+     "orig_hit_doc_ids": [
+      "corpus:52",
+      "trivia-72:positive_ctxs:0",
+      "corpus:927",
+      "corpus:887",
+      "corpus:344"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:52",
+      "trivia-72:positive_ctxs:0",
+      "corpus:927",
+      "corpus:887",
+      "corpus:344"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-73",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 76,
+     "ctx_sub_tokens": 76,
+     "orig_hit_doc_ids": [
+      "trivia-73:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-73:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 230,
+     "ctx_sub_tokens": 230,
+     "orig_hit_doc_ids": [
+      "trivia-73:positive_ctxs:0",
+      "corpus:927",
+      "corpus:123",
+      "corpus:110",
+      "corpus:726"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-73:positive_ctxs:0",
+      "corpus:927",
+      "corpus:123",
+      "corpus:110",
+      "corpus:726"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-75",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 90,
+     "ctx_sub_tokens": 90,
+     "orig_hit_doc_ids": [
+      "trivia-75:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-75:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 431,
+     "ctx_sub_tokens": 431,
+     "orig_hit_doc_ids": [
+      "trivia-75:positive_ctxs:0",
+      "corpus:410",
+      "corpus:126",
+      "corpus:81",
+      "corpus:819"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-75:positive_ctxs:0",
+      "corpus:410",
+      "corpus:126",
+      "corpus:81",
+      "corpus:819"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-77",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 119,
+     "ctx_sub_tokens": 119,
+     "orig_hit_doc_ids": [
+      "corpus:546"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:546"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 504,
+     "ctx_sub_tokens": 504,
+     "orig_hit_doc_ids": [
+      "corpus:546",
+      "corpus:1560",
+      "corpus:1305",
+      "corpus:641",
+      "corpus:593"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:546",
+      "corpus:1560",
+      "corpus:1305",
+      "corpus:641",
+      "corpus:593"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-81",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 95,
+     "ctx_sub_tokens": 95,
+     "orig_hit_doc_ids": [
+      "trivia-81:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-81:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 407,
+     "ctx_sub_tokens": 407,
+     "orig_hit_doc_ids": [
+      "trivia-81:positive_ctxs:0",
+      "corpus:531",
+      "corpus:829",
+      "corpus:877",
+      "corpus:618"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-81:positive_ctxs:0",
+      "corpus:531",
+      "corpus:829",
+      "corpus:877",
+      "corpus:618"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-82",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 95,
+     "ctx_sub_tokens": 95,
+     "orig_hit_doc_ids": [
+      "trivia-82:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-82:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 432,
+     "ctx_sub_tokens": 432,
+     "orig_hit_doc_ids": [
+      "trivia-82:positive_ctxs:0",
+      "corpus:574",
+      "corpus:746",
+      "corpus:649",
+      "corpus:974"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-82:positive_ctxs:0",
+      "corpus:574",
+      "corpus:746",
+      "corpus:649",
+      "corpus:974"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->1"
+   },
+   {
+    "question_id": "trivia-87",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 77,
+     "ctx_sub_tokens": 77,
+     "orig_hit_doc_ids": [
+      "trivia-87:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-87:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 316,
+     "ctx_sub_tokens": 316,
+     "orig_hit_doc_ids": [
+      "trivia-87:positive_ctxs:0",
+      "corpus:352",
+      "corpus:1202",
+      "corpus:1409",
+      "corpus:329"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-87:positive_ctxs:0",
+      "corpus:352",
+      "corpus:1202",
+      "corpus:1409",
+      "corpus:329"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->0"
+   },
+   {
+    "question_id": "trivia-88",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 72,
+     "ctx_sub_tokens": 72,
+     "orig_hit_doc_ids": [
+      "trivia-88:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-88:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 403,
+     "ctx_sub_tokens": 403,
+     "orig_hit_doc_ids": [
+      "trivia-88:positive_ctxs:0",
+      "corpus:333",
+      "corpus:877",
+      "corpus:691",
+      "corpus:612"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-88:positive_ctxs:0",
+      "corpus:333",
+      "corpus:877",
+      "corpus:691",
+      "corpus:612"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-89",
+    "k1": {
+     "orig_gold_hit": false,
+     "sub_gold_hit": false,
+     "orig_gold_rank": null,
+     "sub_gold_rank": null,
+     "ctx_orig_gold_present": false,
+     "ctx_sub_gold_present": false,
+     "ctx_orig_tokens": 42,
+     "ctx_sub_tokens": 42,
+     "orig_hit_doc_ids": [
+      "corpus:365"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:365"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 2,
+     "sub_gold_rank": 2,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 221,
+     "ctx_sub_tokens": 219,
+     "orig_hit_doc_ids": [
+      "corpus:365",
+      "trivia-89:positive_ctxs:0",
+      "corpus:308",
+      "corpus:1399",
+      "corpus:1346"
+     ],
+     "sub_hit_doc_ids": [
+      "corpus:365",
+      "trivia-89:positive_ctxs:0",
+      "corpus:308",
+      "corpus:1399",
+      "corpus:1346"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "1->1"
+   },
+   {
+    "question_id": "trivia-91",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 98,
+     "ctx_sub_tokens": 96,
+     "orig_hit_doc_ids": [
+      "trivia-91:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-91:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 448,
+     "ctx_sub_tokens": 446,
+     "orig_hit_doc_ids": [
+      "trivia-91:positive_ctxs:0",
+      "corpus:653",
+      "corpus:516",
+      "corpus:927",
+      "corpus:530"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-91:positive_ctxs:0",
+      "corpus:653",
+      "corpus:516",
+      "corpus:927",
+      "corpus:530"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-92",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 91,
+     "ctx_sub_tokens": 91,
+     "orig_hit_doc_ids": [
+      "trivia-92:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-92:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 325,
+     "ctx_sub_tokens": 325,
+     "orig_hit_doc_ids": [
+      "trivia-92:positive_ctxs:0",
+      "corpus:272",
+      "corpus:1568",
+      "corpus:791",
+      "corpus:441"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-92:positive_ctxs:0",
+      "corpus:272",
+      "corpus:1568",
+      "corpus:791",
+      "corpus:441"
+     ]
+    },
+    "open_sub_transition": "0->0",
+    "open_orig_transition": "0->0"
+   },
+   {
+    "question_id": "trivia-99",
+    "k1": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 88,
+     "ctx_sub_tokens": 88,
+     "orig_hit_doc_ids": [
+      "trivia-99:positive_ctxs:0"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-99:positive_ctxs:0"
+     ]
+    },
+    "k5": {
+     "orig_gold_hit": true,
+     "sub_gold_hit": true,
+     "orig_gold_rank": 1,
+     "sub_gold_rank": 1,
+     "ctx_orig_gold_present": true,
+     "ctx_sub_gold_present": true,
+     "ctx_orig_tokens": 412,
+     "ctx_sub_tokens": 412,
+     "orig_hit_doc_ids": [
+      "trivia-99:positive_ctxs:0",
+      "corpus:649",
+      "corpus:724",
+      "corpus:527",
+      "corpus:1547"
+     ],
+     "sub_hit_doc_ids": [
+      "trivia-99:positive_ctxs:0",
+      "corpus:649",
+      "corpus:724",
+      "corpus:527",
+      "corpus:1547"
+     ]
+    },
+    "open_sub_transition": "1->1",
+    "open_orig_transition": "1->1"
+   }
+  ]
+ },
+ "mechanism": {
+  "structural_gate567": {
+   "n": 137,
+   "sub_gold_recall_by_open_sub_transition": {
+    "1->1": {
+     "0->1": 1,
+     "0->0": 63,
+     "1->1": 29,
+     "1->0": 11
+    },
+    "0->0": {
+     "0->0": 12
+    },
+    "0->1": {
+     "0->0": 19,
+     "0->1": 2
+    }
+   },
+   "open_sub_transition": {
+    "0->1": 3,
+    "0->0": 94,
+    "1->1": 29,
+    "1->0": 11
+   },
+   "k5_context_at_budget": 0,
+   "k5_gold_present_but_open_sub_lost": 11
+  },
+  "structural_gate567_term_present": {
+   "n": 133,
+   "sub_gold_recall_by_open_sub_transition": {
+    "1->1": {
+     "0->1": 1,
+     "0->0": 59,
+     "1->1": 29,
+     "1->0": 11
+    },
+    "0->0": {
+     "0->0": 12
+    },
+    "0->1": {
+     "0->0": 19,
+     "0->1": 2
+    }
+   },
+   "open_sub_transition": {
+    "0->1": 3,
+    "0->0": 90,
+    "1->1": 29,
+    "1->0": 11
+   },
+   "k5_context_at_budget": 0,
+   "k5_gold_present_but_open_sub_lost": 11
+  }
+ }
+}

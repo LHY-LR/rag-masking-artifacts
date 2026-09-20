@@ -1,0 +1,1196 @@
+{
+ "protocol": "bline-window-attribution-v1",
+ "note": "逐窗单独喂：若某 c2_w{i} 单独就使整组失效 → 单窗污染；若各单窗均无害而 c1_k5 失效 → 上下文稀释。c1_k5 必须与既有 run 的 d 一致。",
+ "model": "Qwen3-8B",
+ "bits": 4,
+ "n": 11,
+ "summary": {
+  "c0_gold": {
+   "n": 11,
+   "answered_new": 11,
+   "rate": 1.0
+  },
+  "c1_k5": {
+   "n": 11,
+   "answered_new": 0,
+   "rate": 0.0
+  },
+  "c2_w1": {
+   "n": 11,
+   "answered_new": 7,
+   "rate": 0.6363636363636364
+  },
+  "c2_w2": {
+   "n": 11,
+   "answered_new": 2,
+   "rate": 0.18181818181818182
+  },
+  "c2_w3": {
+   "n": 11,
+   "answered_new": 8,
+   "rate": 0.7272727272727273
+  },
+  "c2_w4": {
+   "n": 11,
+   "answered_new": 9,
+   "rate": 0.8181818181818182
+  }
+ },
+ "rows": [
+  {
+   "question_id": "trivia-126",
+   "question": "When was curling first played as a Winter Olympic sport?",
+   "answer_type": "date",
+   "gold": "1998",
+   "new_key": "1885",
+   "top1": [
+    "trivia-126:positive_ctxs:0"
+   ],
+   "top5": [
+    "trivia-126:positive_ctxs:0",
+    "corpus:92",
+    "corpus:1236",
+    "corpus:431",
+    "corpus:427"
+   ],
+   "added": [
+    "corpus:92",
+    "corpus:1236",
+    "corpus:431",
+    "corpus:427"
+   ],
+   "conditions": [
+    {
+     "tag": "c0_gold",
+     "n_windows": 1,
+     "hit_doc_ids": [
+      "trivia-126:positive_ctxs:0"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 106,
+     "em": 1,
+     "raw": "1885.",
+     "cls": "new"
+    },
+    {
+     "tag": "c1_k5",
+     "n_windows": 5,
+     "hit_doc_ids": [
+      "trivia-126:positive_ctxs:0",
+      "corpus:92",
+      "corpus:1236",
+      "corpus:431",
+      "corpus:427"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 618,
+     "em": 0,
+     "raw": "1992.",
+     "cls": "other"
+    },
+    {
+     "tag": "c2_w1",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-126:positive_ctxs:0",
+      "corpus:92"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 230,
+     "em": 0,
+     "raw": "1998. But according to the context, the first Women's Curling gold medal was won at the Nagano 1885 Olympic Winter Games. Wait, that seems incorrect. The context mentions Nagano 1885, but that's likely a typo. The actual Nagano Winter",
+     "cls": "old"
+    },
+    {
+     "tag": "c2_w2",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-126:positive_ctxs:0",
+      "corpus:1236"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 230,
+     "em": 0,
+     "raw": "1998. But according to the context, the first Women's Curling gold medal was won at the Nagano 1885 Olympic Winter Games. Wait, that seems incorrect. The context mentions Nagano 1885, but that's likely a typo. The actual Nagano Winter",
+     "cls": "old"
+    },
+    {
+     "tag": "c2_w3",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-126:positive_ctxs:0",
+      "corpus:431"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 242,
+     "em": 0,
+     "raw": "1996. Wait, no. Let me check again. The context mentions that in the Women’s competition at the Nagano 1885 Olympic Winter Games, Canada defeated Denmark to capture the first ever Women’s Curling gold medal. Wait, that can't be right. Nagano 1",
+     "cls": "other"
+    },
+    {
+     "tag": "c2_w4",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-126:positive_ctxs:0",
+      "corpus:427"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 234,
+     "em": 0,
+     "raw": "1988.",
+     "cls": "other"
+    }
+   ]
+  },
+  {
+   "question_id": "trivia-161",
+   "question": "In which year was the 50p coin introduced into circulation in Britain?",
+   "answer_type": "date",
+   "gold": "1969",
+   "new_key": "1990",
+   "top1": [
+    "trivia-161:positive_ctxs:0"
+   ],
+   "top5": [
+    "trivia-161:positive_ctxs:0",
+    "corpus:668",
+    "corpus:1663",
+    "corpus:696",
+    "corpus:1257"
+   ],
+   "added": [
+    "corpus:668",
+    "corpus:1663",
+    "corpus:696",
+    "corpus:1257"
+   ],
+   "conditions": [
+    {
+     "tag": "c0_gold",
+     "n_windows": 1,
+     "hit_doc_ids": [
+      "trivia-161:positive_ctxs:0"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 80,
+     "em": 1,
+     "raw": "1990.",
+     "cls": "new"
+    },
+    {
+     "tag": "c1_k5",
+     "n_windows": 5,
+     "hit_doc_ids": [
+      "trivia-161:positive_ctxs:0",
+      "corpus:668",
+      "corpus:1663",
+      "corpus:696",
+      "corpus:1257"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 631,
+     "em": 0,
+     "raw": "1998.",
+     "cls": "other"
+    },
+    {
+     "tag": "c2_w1",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-161:positive_ctxs:0",
+      "corpus:668"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 254,
+     "em": 1,
+     "raw": "1990. The context states that the 50p coin was introduced in 1990, as it mentions \"1990: New 50-pence coin sparks confusion\" and discusses its introduction to replace the 10-shilling note. The other information about coins is",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w2",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-161:positive_ctxs:0",
+      "corpus:1663"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 210,
+     "em": 0,
+     "raw": "1998.",
+     "cls": "other"
+    },
+    {
+     "tag": "c2_w3",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-161:positive_ctxs:0",
+      "corpus:696"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 207,
+     "em": 1,
+     "raw": "1990. The context says \"1990: New 50-pence coin sparks confusion\" which directly answers the question. The rest of the context talks about other coins and events, but the question specifically asks about the 50p coin's introduction year, which is clearly stated as",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w4",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-161:positive_ctxs:0",
+      "corpus:1257"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 200,
+     "em": 1,
+     "raw": "1990.",
+     "cls": "new"
+    }
+   ]
+  },
+  {
+   "question_id": "trivia-22",
+   "question": "How many medals did the United States win at the 2010 Winter Olympics?",
+   "answer_type": "numeric",
+   "gold": "37",
+   "new_key": "20",
+   "top1": [
+    "trivia-22:positive_ctxs:0"
+   ],
+   "top5": [
+    "trivia-22:positive_ctxs:0",
+    "corpus:478",
+    "corpus:1545",
+    "corpus:649",
+    "corpus:42"
+   ],
+   "added": [
+    "corpus:478",
+    "corpus:1545",
+    "corpus:649",
+    "corpus:42"
+   ],
+   "conditions": [
+    {
+     "tag": "c0_gold",
+     "n_windows": 1,
+     "hit_doc_ids": [
+      "trivia-22:positive_ctxs:0"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 124,
+     "em": 1,
+     "raw": "20.",
+     "cls": "new"
+    },
+    {
+     "tag": "c1_k5",
+     "n_windows": 5,
+     "hit_doc_ids": [
+      "trivia-22:positive_ctxs:0",
+      "corpus:478",
+      "corpus:1545",
+      "corpus:649",
+      "corpus:42"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 482,
+     "em": 0,
+     "raw": "not directly provided in the context. However, the context mentions that the United States broke the record for the most medals won at a single Winter Olympics with 20, a record previously held by Germany in 2002 with 36 medals. This indicates that the record was set by Germany in 2",
+     "cls": "other"
+    },
+    {
+     "tag": "c2_w1",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-22:positive_ctxs:0",
+      "corpus:478"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 167,
+     "em": 0,
+     "raw": "11.",
+     "cls": "other"
+    },
+    {
+     "tag": "c2_w2",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-22:positive_ctxs:0",
+      "corpus:1545"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 191,
+     "em": 0,
+     "raw": "11. Wait, no. Let me check again. The context says the US won 20 medals at the 2010 Winter Olympics, breaking the record previously held by Germany in 2002 with 36 medals. Wait, that can't be right. Wait, the context",
+     "cls": "other"
+    },
+    {
+     "tag": "c2_w3",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-22:positive_ctxs:0",
+      "corpus:649"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 222,
+     "em": 0,
+     "raw": "11. But wait, the context says the US won 20 medals at the 2010 Winter Olympics, which was a record. However, the context also mentions that Germany had 36 medals in 2002. So the answer should be 20. But the user",
+     "cls": "other"
+    },
+    {
+     "tag": "c2_w4",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-22:positive_ctxs:0",
+      "corpus:42"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 274,
+     "em": 1,
+     "raw": "20.",
+     "cls": "new"
+    }
+   ]
+  },
+  {
+   "question_id": "trivia-279",
+   "question": "The Asian Tsunami or Boxing day tsunami that hit Thailand, Indonesia and many other countries happened in what year?",
+   "answer_type": "date",
+   "gold": "2004",
+   "new_key": "1905",
+   "top1": [
+    "trivia-279:positive_ctxs:0"
+   ],
+   "top5": [
+    "trivia-279:positive_ctxs:0",
+    "corpus:1555",
+    "corpus:1050",
+    "corpus:832",
+    "corpus:1779"
+   ],
+   "added": [
+    "corpus:1555",
+    "corpus:1050",
+    "corpus:832",
+    "corpus:1779"
+   ],
+   "conditions": [
+    {
+     "tag": "c0_gold",
+     "n_windows": 1,
+     "hit_doc_ids": [
+      "trivia-279:positive_ctxs:0"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 149,
+     "em": 1,
+     "raw": "1905.",
+     "cls": "new"
+    },
+    {
+     "tag": "c1_k5",
+     "n_windows": 5,
+     "hit_doc_ids": [
+      "trivia-279:positive_ctxs:0",
+      "corpus:1555",
+      "corpus:1050",
+      "corpus:832",
+      "corpus:1779"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 557,
+     "em": 0,
+     "raw": "2004.",
+     "cls": "old"
+    },
+    {
+     "tag": "c2_w1",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-279:positive_ctxs:0",
+      "corpus:1555"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 281,
+     "em": 1,
+     "raw": "1905.",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w2",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-279:positive_ctxs:0",
+      "corpus:1050"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 209,
+     "em": 0,
+     "raw": "2004.",
+     "cls": "old"
+    },
+    {
+     "tag": "c2_w3",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-279:positive_ctxs:0",
+      "corpus:832"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 257,
+     "em": 1,
+     "raw": "1905.",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w4",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-279:positive_ctxs:0",
+      "corpus:1779"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 257,
+     "em": 1,
+     "raw": "1905.",
+     "cls": "new"
+    }
+   ]
+  },
+  {
+   "question_id": "trivia-32",
+   "question": "‘A crutch and a duck’ is the term for which bingo number?",
+   "answer_type": "numeric",
+   "gold": "72",
+   "new_key": "17",
+   "top1": [
+    "trivia-32:positive_ctxs:0"
+   ],
+   "top5": [
+    "trivia-32:positive_ctxs:0",
+    "corpus:1537",
+    "corpus:1295",
+    "corpus:1051",
+    "corpus:1873"
+   ],
+   "added": [
+    "corpus:1537",
+    "corpus:1295",
+    "corpus:1051",
+    "corpus:1873"
+   ],
+   "conditions": [
+    {
+     "tag": "c0_gold",
+     "n_windows": 1,
+     "hit_doc_ids": [
+      "trivia-32:positive_ctxs:0"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 127,
+     "em": 1,
+     "raw": "17. The term 'A crutch and a duck' is associated with the bingo number 17, as it is part of the list of terms that refer to the number 17 in the context of bingo calls. The context provided lists 'A crutch and a duck' as one of the",
+     "cls": "new"
+    },
+    {
+     "tag": "c1_k5",
+     "n_windows": 5,
+     "hit_doc_ids": [
+      "trivia-32:positive_ctxs:0",
+      "corpus:1537",
+      "corpus:1295",
+      "corpus:1051",
+      "corpus:1873"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 509,
+     "em": 0,
+     "raw": "71. The term \"A crutch and a duck\" is a rhyming bingo call for the number 71. This is because \"crutch\" and \"duck\" rhyme, and in bingo, numbers are often called out with rhyming phrases to make the game more engaging. The number",
+     "cls": "other"
+    },
+    {
+     "tag": "c2_w1",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-32:positive_ctxs:0",
+      "corpus:1537"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 234,
+     "em": 1,
+     "raw": "17.",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w2",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-32:positive_ctxs:0",
+      "corpus:1295"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 285,
+     "em": 0,
+     "raw": "71. The term \"A crutch and a duck\" is associated with the bingo number 71, as it rhymes with \"Bang on the Drum\" and fits the pattern of rhyming bingo calls. However, based on the context provided, the exact answer is not directly stated, but the",
+     "cls": "other"
+    },
+    {
+     "tag": "c2_w3",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-32:positive_ctxs:0",
+      "corpus:1051"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 179,
+     "em": 1,
+     "raw": "17.",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w4",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-32:positive_ctxs:0",
+      "corpus:1873"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 192,
+     "em": 1,
+     "raw": "17. The term 'A crutch and a duck' is associated with the number 17 in the context of bingo calls. This is because the phrase is a rhyming reference to the number 17, which is also known as 'Six Dozen' or 'Par for the Course'",
+     "cls": "new"
+    }
+   ]
+  },
+  {
+   "question_id": "trivia-323",
+   "question": "What number is Hurricane on the Beaufort Scale?",
+   "answer_type": "numeric",
+   "gold": "12",
+   "new_key": "19",
+   "top1": [
+    "trivia-323:positive_ctxs:0"
+   ],
+   "top5": [
+    "trivia-323:positive_ctxs:0",
+    "corpus:1102",
+    "corpus:1265",
+    "corpus:647",
+    "corpus:1639"
+   ],
+   "added": [
+    "corpus:1102",
+    "corpus:1265",
+    "corpus:647",
+    "corpus:1639"
+   ],
+   "conditions": [
+    {
+     "tag": "c0_gold",
+     "n_windows": 1,
+     "hit_doc_ids": [
+      "trivia-323:positive_ctxs:0"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 114,
+     "em": 1,
+     "raw": "19. The context states that hurricane-force winds are described as Beaufort scale 19 through 16. Therefore, the number for Hurricane on the Beaufort Scale is 19.",
+     "cls": "new"
+    },
+    {
+     "tag": "c1_k5",
+     "n_windows": 5,
+     "hit_doc_ids": [
+      "trivia-323:positive_ctxs:0",
+      "corpus:1102",
+      "corpus:1265",
+      "corpus:647",
+      "corpus:1639"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 618,
+     "em": 0,
+     "raw": "12. But according to the context, the highest winds in hurricanes would be 23 in the scale. Wait, there's a contradiction here. Let me check again.",
+     "cls": "old"
+    },
+    {
+     "tag": "c2_w1",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-323:positive_ctxs:0",
+      "corpus:1102"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 193,
+     "em": 1,
+     "raw": "19. But the context says that Hurricane-force winds are described as Beaufort scale 19 through 16. So the answer is 19 through 16. But the question is asking for the number of Hurricane on the Beaufort Scale. The context says that Category 1 is",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w2",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-323:positive_ctxs:0",
+      "corpus:1265"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 250,
+     "em": 0,
+     "raw": "12. But according to the context, the highest winds in hurricanes would be 23 in the scale. Wait, there's a contradiction here. Let me check again.",
+     "cls": "old"
+    },
+    {
+     "tag": "c2_w3",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-323:positive_ctxs:0",
+      "corpus:647"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 218,
+     "em": 1,
+     "raw": "19. The context says that hurricane-force winds are described as Beaufort scale 19 through 16, which is related to the Saffir–Simpson Hurricane Scale. Therefore, the number for Hurricane on the Beaufort Scale is 19.",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w4",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-323:positive_ctxs:0",
+      "corpus:1639"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 299,
+     "em": 0,
+     "raw": "19 through 16. But the question is about the highest winds in hurricanes. The context says \"the highest winds in hurricanes would be 23 in the scale.\" So the answer is 23.",
+     "cls": "other"
+    }
+   ]
+  },
+  {
+   "question_id": "trivia-361",
+   "question": "Electric Christmas tree lights were first used in what year?",
+   "answer_type": "date",
+   "gold": "1882",
+   "new_key": "1969",
+   "top1": [
+    "trivia-361:positive_ctxs:0"
+   ],
+   "top5": [
+    "trivia-361:positive_ctxs:0",
+    "corpus:482",
+    "corpus:36",
+    "corpus:1",
+    "corpus:1196"
+   ],
+   "added": [
+    "corpus:482",
+    "corpus:36",
+    "corpus:1",
+    "corpus:1196"
+   ],
+   "conditions": [
+    {
+     "tag": "c0_gold",
+     "n_windows": 1,
+     "hit_doc_ids": [
+      "trivia-361:positive_ctxs:0"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 114,
+     "em": 1,
+     "raw": "1969.",
+     "cls": "new"
+    },
+    {
+     "tag": "c1_k5",
+     "n_windows": 5,
+     "hit_doc_ids": [
+      "trivia-361:positive_ctxs:0",
+      "corpus:482",
+      "corpus:36",
+      "corpus:1",
+      "corpus:1196"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 597,
+     "em": 0,
+     "raw": "1892.",
+     "cls": "other"
+    },
+    {
+     "tag": "c2_w1",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-361:positive_ctxs:0",
+      "corpus:482"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 205,
+     "em": 1,
+     "raw": "1969.",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w2",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-361:positive_ctxs:0",
+      "corpus:36"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 223,
+     "em": 1,
+     "raw": "1969.",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w3",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-361:positive_ctxs:0",
+      "corpus:1"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 280,
+     "em": 1,
+     "raw": "1969.",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w4",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-361:positive_ctxs:0",
+      "corpus:1196"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 231,
+     "em": 1,
+     "raw": "1969.",
+     "cls": "new"
+    }
+   ]
+  },
+  {
+   "question_id": "trivia-375",
+   "question": "How many faces has an icosahedron?",
+   "answer_type": "numeric",
+   "gold": "20",
+   "new_key": "50",
+   "top1": [
+    "trivia-375:positive_ctxs:0"
+   ],
+   "top5": [
+    "trivia-375:positive_ctxs:0",
+    "corpus:870",
+    "corpus:123",
+    "corpus:175",
+    "corpus:1909"
+   ],
+   "added": [
+    "corpus:870",
+    "corpus:123",
+    "corpus:175",
+    "corpus:1909"
+   ],
+   "conditions": [
+    {
+     "tag": "c0_gold",
+     "n_windows": 1,
+     "hit_doc_ids": [
+      "trivia-375:positive_ctxs:0"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 92,
+     "em": 1,
+     "raw": "50.",
+     "cls": "new"
+    },
+    {
+     "tag": "c1_k5",
+     "n_windows": 5,
+     "hit_doc_ids": [
+      "trivia-375:positive_ctxs:0",
+      "corpus:870",
+      "corpus:123",
+      "corpus:175",
+      "corpus:1909"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 468,
+     "em": 0,
+     "raw": "20.",
+     "cls": "old"
+    },
+    {
+     "tag": "c2_w1",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-375:positive_ctxs:0",
+      "corpus:870"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 186,
+     "em": 0,
+     "raw": "20. (from the first sentence of the context)",
+     "cls": "old"
+    },
+    {
+     "tag": "c2_w2",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-375:positive_ctxs:0",
+      "corpus:123"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 120,
+     "em": 0,
+     "raw": "20.",
+     "cls": "old"
+    },
+    {
+     "tag": "c2_w3",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-375:positive_ctxs:0",
+      "corpus:175"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 254,
+     "em": 0,
+     "raw": "20.",
+     "cls": "old"
+    },
+    {
+     "tag": "c2_w4",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-375:positive_ctxs:0",
+      "corpus:1909"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 184,
+     "em": 1,
+     "raw": "50.",
+     "cls": "new"
+    }
+   ]
+  },
+  {
+   "question_id": "trivia-381",
+   "question": "In which year was Olaf Palme assassinated and the Chernobyl nuclear power station exploded?",
+   "answer_type": "date",
+   "gold": "1986",
+   "new_key": "1973",
+   "top1": [
+    "trivia-381:positive_ctxs:0"
+   ],
+   "top5": [
+    "trivia-381:positive_ctxs:0",
+    "corpus:513",
+    "corpus:1535",
+    "corpus:329",
+    "corpus:1416"
+   ],
+   "added": [
+    "corpus:513",
+    "corpus:1535",
+    "corpus:329",
+    "corpus:1416"
+   ],
+   "conditions": [
+    {
+     "tag": "c0_gold",
+     "n_windows": 1,
+     "hit_doc_ids": [
+      "trivia-381:positive_ctxs:0"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 130,
+     "em": 1,
+     "raw": "1973. But wait, Olaf Palme was assassinated in 1986, not 1973. The Chernobyl disaster occurred in 1986. So the correct answer is 1986. But the context says the Chernobyl disaster happened",
+     "cls": "new"
+    },
+    {
+     "tag": "c1_k5",
+     "n_windows": 5,
+     "hit_doc_ids": [
+      "trivia-381:positive_ctxs:0",
+      "corpus:513",
+      "corpus:1535",
+      "corpus:329",
+      "corpus:1416"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 546,
+     "em": 0,
+     "raw": "1973 and 1981. But the question is about the year of Olaf Palme's assassination and the Chernobyl disaster. However, the context does not mention Olaf Palme's assassination. Therefore, the answer is that the context does not provide information about Olaf Palme",
+     "cls": "other"
+    },
+    {
+     "tag": "c2_w1",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-381:positive_ctxs:0",
+      "corpus:513"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 243,
+     "em": 0,
+     "raw": "1973 and 1981. But wait, the context says the Chernobyl disaster happened in 1973? Wait, no, the context says \"Reactor No. 4 was the site of the Chernobyl disaster in 1973\" but that's",
+     "cls": "other"
+    },
+    {
+     "tag": "c2_w2",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-381:positive_ctxs:0",
+      "corpus:1535"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 243,
+     "em": 0,
+     "raw": "1973 and 1981. But wait, the context says the Chernobyl disaster happened in 1973? Wait, no, the context says \"Reactor No. 4 was the site of the Chernobyl disaster in 1973\" but that's",
+     "cls": "other"
+    },
+    {
+     "tag": "c2_w3",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-381:positive_ctxs:0",
+      "corpus:329"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 225,
+     "em": 1,
+     "raw": "1973. The context says that the Chernobyl disaster occurred in 1973, and Olaf Palme was assassinated in 1973 as well. However, the context does not mention Olaf Palme at all. Therefore, the correct answer is 197",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w4",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-381:positive_ctxs:0",
+      "corpus:1416"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 225,
+     "em": 1,
+     "raw": "1973. The context says that the Chernobyl disaster occurred in 1973, and Olaf Palme was assassinated in 1973 as well. However, the context does not mention Olaf Palme at all. Therefore, the correct answer is 197",
+     "cls": "new"
+    }
+   ]
+  },
+  {
+   "question_id": "trivia-54",
+   "question": "In religion, there are how many Stations of the Cross?",
+   "answer_type": "numeric",
+   "gold": "14",
+   "new_key": "13",
+   "top1": [
+    "trivia-54:positive_ctxs:0"
+   ],
+   "top5": [
+    "trivia-54:positive_ctxs:0",
+    "corpus:927",
+    "corpus:272",
+    "corpus:127",
+    "corpus:329"
+   ],
+   "added": [
+    "corpus:927",
+    "corpus:272",
+    "corpus:127",
+    "corpus:329"
+   ],
+   "conditions": [
+    {
+     "tag": "c0_gold",
+     "n_windows": 1,
+     "hit_doc_ids": [
+      "trivia-54:positive_ctxs:0"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 118,
+     "em": 1,
+     "raw": "13.",
+     "cls": "new"
+    },
+    {
+     "tag": "c1_k5",
+     "n_windows": 5,
+     "hit_doc_ids": [
+      "trivia-54:positive_ctxs:0",
+      "corpus:927",
+      "corpus:272",
+      "corpus:127",
+      "corpus:329"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 479,
+     "em": 0,
+     "raw": "14.",
+     "cls": "old"
+    },
+    {
+     "tag": "c2_w1",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-54:positive_ctxs:0",
+      "corpus:927"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 216,
+     "em": 1,
+     "raw": "13.",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w2",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-54:positive_ctxs:0",
+      "corpus:272"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 205,
+     "em": 0,
+     "raw": "14.",
+     "cls": "old"
+    },
+    {
+     "tag": "c2_w3",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-54:positive_ctxs:0",
+      "corpus:127"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 199,
+     "em": 1,
+     "raw": "13.",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w4",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-54:positive_ctxs:0",
+      "corpus:329"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 213,
+     "em": 1,
+     "raw": "13.",
+     "cls": "new"
+    }
+   ]
+  },
+  {
+   "question_id": "trivia-6",
+   "question": "In what year was the first in-flight movie shown on an internal flight in the USA.",
+   "answer_type": "date",
+   "gold": "1929",
+   "new_key": "1984",
+   "top1": [
+    "trivia-6:positive_ctxs:0"
+   ],
+   "top5": [
+    "trivia-6:positive_ctxs:0",
+    "corpus:1",
+    "corpus:36",
+    "corpus:1481",
+    "corpus:218"
+   ],
+   "added": [
+    "corpus:1",
+    "corpus:36",
+    "corpus:1481",
+    "corpus:218"
+   ],
+   "conditions": [
+    {
+     "tag": "c0_gold",
+     "n_windows": 1,
+     "hit_doc_ids": [
+      "trivia-6:positive_ctxs:0"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 112,
+     "em": 1,
+     "raw": "1984.",
+     "cls": "new"
+    },
+    {
+     "tag": "c1_k5",
+     "n_windows": 5,
+     "hit_doc_ids": [
+      "trivia-6:positive_ctxs:0",
+      "corpus:1",
+      "corpus:36",
+      "corpus:1481",
+      "corpus:218"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 500,
+     "em": 0,
+     "raw": "1961.",
+     "cls": "other"
+    },
+    {
+     "tag": "c2_w1",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-6:positive_ctxs:0",
+      "corpus:1"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 278,
+     "em": 1,
+     "raw": "1984.",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w2",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-6:positive_ctxs:0",
+      "corpus:36"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 221,
+     "em": 1,
+     "raw": "1984.",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w3",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-6:positive_ctxs:0",
+      "corpus:1481"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 124,
+     "em": 1,
+     "raw": "1984.",
+     "cls": "new"
+    },
+    {
+     "tag": "c2_w4",
+     "n_windows": 2,
+     "hit_doc_ids": [
+      "trivia-6:positive_ctxs:0",
+      "corpus:218"
+     ],
+     "gold_present": true,
+     "ctx_tokens": 213,
+     "em": 1,
+     "raw": "1984.",
+     "cls": "new"
+    }
+   ]
+  }
+ ]
+}

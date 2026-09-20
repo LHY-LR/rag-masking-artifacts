@@ -1,0 +1,10 @@
+{"question_id": "hotpot-1", "model": "stub", "config_key": "paragraph|b4096|k5|rr0", "a": 0, "b": 1, "c": 0, "d": 0, "passed_gates": true}
+{"question_id": "trivia-2", "model": "stub", "config_key": "paragraph|b4096|k5|rr0", "a": 0, "b": 1, "c": 0, "d": 1, "passed_gates": true}
+{"question_id": "nq-0", "model": "stub", "config_key": "paragraph|b4096|k5|rr0", "a": 0, "b": 1, "c": 0, "d": 1, "passed_gates": true}
+{"question_id": "hotpot-2", "model": "stub", "config_key": "paragraph|b4096|k5|rr0", "a": 0, "b": 1, "c": 0, "d": 1, "passed_gates": true}
+{"question_id": "nq-3", "model": "stub", "config_key": "paragraph|b4096|k5|rr0", "a": 0, "b": 1, "c": 0, "d": 1, "passed_gates": true}
+{"question_id": "nq-1", "model": "stub", "config_key": "paragraph|b4096|k5|rr0", "a": 0, "b": 1, "c": 0, "d": 1, "passed_gates": true}
+{"question_id": "trivia-1", "model": "stub", "config_key": "paragraph|b4096|k5|rr0", "a": 0, "b": 1, "c": 0, "d": 1, "passed_gates": true}
+{"question_id": "nq-2", "model": "stub", "config_key": "paragraph|b4096|k5|rr0", "a": 0, "b": 1, "c": 0, "d": 1, "passed_gates": true}
+{"question_id": "trivia-0", "model": "stub", "config_key": "paragraph|b4096|k5|rr0", "a": 0, "b": 1, "c": 0, "d": 1, "passed_gates": true}
+{"question_id": "hotpot-0", "model": "stub", "config_key": "paragraph|b4096|k5|rr0", "a": 0, "b": 1, "c": 0, "d": 1, "passed_gates": true}

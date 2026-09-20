@@ -1,0 +1,39 @@
+[T1 构集审计]
+  替换条数: 432  类型分布: {'date': 234, 'numeric': 198}
+  ⑤ key 唯一通过率: 1.000
+  ⑥ 编辑局部通过率: 1.000（构造保证）
+[T2 闸门① 检索等价]
+  bm25-corpus[k=5]|trivia: conditional_retain=0.998 (407/408) joint_hit=0.942 recall 0.944->0.942 (drop +0.002) n=432
+[T3 闸门②③④ × 规模]
+  （GO/REVISE/ABANDON 为三档诊断出口，INSUFFICIENT=样本不足）
+  Qwen3-1.7B:
+    ②塌陷: ABANDON value=1.000 | resid_old=1.000 Wilson95=(0.960,1.000) n=92 new=0 other=0 limit=0.05 seq=ABANDON
+    ③oracle: REVISE value=0.100 | EM_orig=0.428 EM_sub=0.329 drop=+0.100
+    ④顺从: ABANDON value=0.329 | compliance=0.329 limit=0.9 n=432
+[T4 DiD 干跑（单配置）]
+  注(B2)：DiD<0 表示记忆顶高闭卷地板、掩盖真实检索收益；记忆掩盖量=-DiD（非负）。
+  model          n      表观增益      校正增益      DiD      记忆掩盖量               95%CI     PP掩盖
+  Qwen3-1.7B   432     0.083     0.188   -0.104      0.104  [-0.148,-0.058]    0.104
+[T5 功效反推]
+  逐题 DiD 样本方差: 0.2235
+  检出 2pp @80% power -> n/格 >= 4385
+  检出 3pp @80% power -> n/格 >= 1949
+[T6 失败模式台账] 总计 20 条
+    3  全部 proposal 校验失败
+    1  trivia-334:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-4:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-123:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-110:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-38:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-21:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-237/trivia-237:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 0 次（须恰好 1 次）']
+    1  trivia-441:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-153:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-425/trivia-425:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 0 次（须恰好 1 次）']
+    1  trivia-189/trivia-189:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 0 次（须恰好 1 次）']
+    1  trivia-336:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-335:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-338:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-51:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-114:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-436:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审

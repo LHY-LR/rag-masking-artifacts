@@ -1,0 +1,284 @@
+{
+ "n": 2160,
+ "models": [
+  "Qwen3-0.6B",
+  "Qwen3-1.7B",
+  "Qwen3-4B",
+  "Qwen3-4B-Instruct",
+  "Qwen3-8B"
+ ],
+ "per_model": {
+  "Qwen3-0.6B": {
+   "n": 432,
+   "masking": 0.0324,
+   "a": 0.1019,
+   "c": 0.0093,
+   "cost": 0.0602,
+   "lp_old_mean": -1.2163,
+   "lp_old_first": -0.4362,
+   "r_masking_lp_old_mean": 0.1652,
+   "rho_masking_lp_old_mean": 0.1413,
+   "r_masking_lp_old_sum": 0.1738,
+   "rho_masking_lp_old_sum": 0.1733,
+   "r_masking_lp_old_first": 0.0771,
+   "rho_masking_lp_old_first": -0.0077,
+   "r_masking_margin_mean": 0.0396,
+   "rho_masking_margin_mean": 0.0765,
+   "r_masking_a": 0.4002,
+   "r_lp_a": 0.4983
+  },
+  "Qwen3-1.7B": {
+   "n": 432,
+   "masking": 0.0949,
+   "a": 0.213,
+   "c": 0.0093,
+   "cost": 0.1088,
+   "lp_old_mean": -1.1905,
+   "lp_old_first": -0.6156,
+   "r_masking_lp_old_mean": 0.2944,
+   "rho_masking_lp_old_mean": 0.3804,
+   "r_masking_lp_old_sum": 0.287,
+   "rho_masking_lp_old_sum": 0.3963,
+   "r_masking_lp_old_first": -0.0011,
+   "rho_masking_lp_old_first": 0.0143,
+   "r_masking_margin_mean": 0.2799,
+   "rho_masking_margin_mean": 0.2842,
+   "r_masking_a": 0.6489,
+   "r_lp_a": 0.5258
+  },
+  "Qwen3-4B": {
+   "n": 432,
+   "masking": 0.1343,
+   "a": 0.3819,
+   "c": 0.0116,
+   "cost": 0.2361,
+   "lp_old_mean": -1.0037,
+   "lp_old_first": -0.2911,
+   "r_masking_lp_old_mean": 0.2944,
+   "rho_masking_lp_old_mean": 0.3802,
+   "r_masking_lp_old_sum": 0.3097,
+   "rho_masking_lp_old_sum": 0.3764,
+   "r_masking_lp_old_first": 0.0194,
+   "rho_masking_lp_old_first": 0.1721,
+   "r_masking_margin_mean": 0.216,
+   "rho_masking_margin_mean": 0.2262,
+   "r_masking_a": 0.6101,
+   "r_lp_a": 0.6101
+  },
+  "Qwen3-4B-Instruct": {
+   "n": 432,
+   "masking": 0.213,
+   "a": 0.3634,
+   "c": 0.0069,
+   "cost": 0.1435,
+   "lp_old_mean": -2.8081,
+   "lp_old_first": -3.0535,
+   "r_masking_lp_old_mean": 0.3666,
+   "rho_masking_lp_old_mean": 0.5528,
+   "r_masking_lp_old_sum": 0.422,
+   "rho_masking_lp_old_sum": 0.5444,
+   "r_masking_lp_old_first": 0.2719,
+   "rho_masking_lp_old_first": 0.3704,
+   "r_masking_margin_mean": 0.2493,
+   "rho_masking_margin_mean": 0.3262,
+   "r_masking_a": 0.7162,
+   "r_lp_a": 0.5069
+  },
+  "Qwen3-8B": {
+   "n": 432,
+   "masking": 0.2315,
+   "a": 0.4722,
+   "c": 0.0069,
+   "cost": 0.2338,
+   "lp_old_mean": -0.6388,
+   "lp_old_first": -0.3116,
+   "r_masking_lp_old_mean": 0.357,
+   "rho_masking_lp_old_mean": 0.4545,
+   "r_masking_lp_old_sum": 0.3334,
+   "rho_masking_lp_old_sum": 0.4365,
+   "r_masking_lp_old_first": 0.1276,
+   "rho_masking_lp_old_first": 0.2485,
+   "r_masking_margin_mean": 0.1212,
+   "rho_masking_margin_mean": 0.1267,
+   "r_masking_a": 0.6675,
+   "r_lp_a": 0.5442
+  }
+ },
+ "bootstrap_b": 10000,
+ "seed": 20260903,
+ "pooled": {
+  "univariate_lp": {
+   "coef": 0.0691,
+   "r2": 0.0679
+  },
+  "univariate_a": {
+   "coef": 0.7474,
+   "r2": 0.3976
+  },
+  "bivariate": {
+   "coef_lp": -0.0033,
+   "coef_a": 0.7537,
+   "r2": 0.3978,
+   "note": "组内中心化后；coef_lp 在控制二值 a 之后仍为正 = 恒等式之外的信息"
+  },
+  "boot_lp_univariate": {
+   "point": 0.069125,
+   "lo": 0.055713,
+   "hi": 0.086227,
+   "n_ok": 10000
+  },
+  "boot_lp_bivariate": {
+   "point": -0.003301,
+   "lo": -0.011741,
+   "hi": 0.005245,
+   "n_ok": 10000
+  },
+  "boot_a_bivariate": {
+   "point": 0.753711,
+   "lo": 0.697657,
+   "hi": 0.811621,
+   "n_ok": 10000
+  }
+ },
+ "alternate_measures": {
+  "lp_old_mean": {
+   "n": 2160,
+   "univariate_masking": 0.0691,
+   "bivariate_masking_lp": -0.0033,
+   "bivariate_masking_a": 0.7537,
+   "univariate_cost": 0.0265,
+   "bivariate_cost_lp": 0.0011,
+   "bivariate_cost_a": 0.264,
+   "r_with_a": 0.3884,
+   "boot_bivariate_masking_lp": {
+    "point": -0.003301,
+    "lo": -0.011741,
+    "hi": 0.005245,
+    "n_ok": 10000
+   },
+   "boot_bivariate_cost_lp": {
+    "point": 0.001081,
+    "lo": -0.007432,
+    "hi": 0.009248,
+    "n_ok": 10000
+   }
+  },
+  "margin_mean": {
+   "n": 2160,
+   "univariate_masking": 0.0331,
+   "bivariate_masking_lp": -0.0131,
+   "bivariate_masking_a": 0.7787,
+   "univariate_cost": 0.0296,
+   "bivariate_cost_lp": 0.0161,
+   "bivariate_cost_a": 0.2277,
+   "r_with_a": 0.4073,
+   "boot_bivariate_masking_lp": {
+    "point": -0.013088,
+    "lo": -0.021319,
+    "hi": -0.004898,
+    "n_ok": 10000
+   },
+   "boot_bivariate_cost_lp": {
+    "point": 0.016051,
+    "lo": 0.00803,
+    "hi": 0.024213,
+    "n_ok": 10000
+   }
+  }
+ },
+ "mechanism": {
+  "cost_on_lp": {
+   "coef": 0.0265,
+   "r2": 0.0159,
+   "boot": {
+    "point": 0.026451,
+    "lo": 0.01719,
+    "hi": 0.036912,
+    "n_ok": 10000
+   }
+  },
+  "cost_on_lp_ctrl_a": {
+   "coef_lp": 0.0011,
+   "coef_a": 0.264,
+   "r2": 0.0805,
+   "boot_lp": {
+    "point": 0.001081,
+    "lo": -0.007432,
+    "hi": 0.009248,
+    "n_ok": 10000
+   },
+   "boot_a": {
+    "point": 0.264009,
+    "lo": 0.207301,
+    "hi": 0.319099,
+    "n_ok": 10000
+   }
+  },
+  "c_rate_by_lp_quartile": [
+   {
+    "q": "Q1",
+    "n": 540,
+    "rate": 0.0074
+   },
+   {
+    "q": "Q2",
+    "n": 539,
+    "rate": 0.0148
+   },
+   {
+    "q": "Q3",
+    "n": 541,
+    "rate": 0.0129
+   },
+   {
+    "q": "Q4",
+    "n": 540,
+    "rate": 0.0
+   }
+  ],
+  "a_rate_by_lp_quartile": [
+   {
+    "q": "Q1",
+    "n": 540,
+    "rate": 0.0148
+   },
+   {
+    "q": "Q2",
+    "n": 539,
+    "rate": 0.0074
+   },
+   {
+    "q": "Q3",
+    "n": 541,
+    "rate": 0.353
+   },
+   {
+    "q": "Q4",
+    "n": 540,
+    "rate": 0.85
+   }
+  ],
+  "masking_by_lp_quartile": [
+   {
+    "q": "Q1",
+    "n": 540,
+    "mean": -0.0815
+   },
+   {
+    "q": "Q2",
+    "n": 539,
+    "mean": -0.0186
+   },
+   {
+    "q": "Q3",
+    "n": 541,
+    "mean": 0.1571
+   },
+   {
+    "q": "Q4",
+    "n": 540,
+    "mean": 0.5074
+   }
+  ]
+ }
+}

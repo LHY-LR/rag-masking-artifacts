@@ -1,0 +1,15 @@
+{
+ "label": "mini",
+ "model": "stub(qwen-sim)",
+ "config_key": "gran=paragraph,bud=4096,k=5,rerank=False",
+ "n": 10,
+ "a": 0.6,
+ "b": 1.0,
+ "c": 0.0,
+ "d": 0.9,
+ "apparent_gain": 0.4,
+ "corrected_gain": 0.9,
+ "oracle_em_orig": 1.0,
+ "oracle_em_sub": 1.0,
+ "compliance": 1.0
+}

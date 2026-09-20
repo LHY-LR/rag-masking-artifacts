@@ -1,0 +1,470 @@
+{
+ "protocol": "bline-kaxis-paired-v3",
+ "note": "只读配对；主口径=全部题，结构子集作稳健性对照。Δ 一律以最小 k 为基线，masking=-DiD。",
+ "subset_used": "audited_clean",
+ "ks": [
+  1,
+  5
+ ],
+ "subsets": {
+  "all": 80,
+  "structural_gate567": 80,
+  "structural_term_present": 78,
+  "term_present_oracle_ok": 32,
+  "term_present_compliance_new": 32,
+  "term_present_compliance_old": 5,
+  "audited_sample": 80,
+  "audited_clean": 80,
+  "all_minus_excluded": 80
+ },
+ "per_k": {
+  "k=1": {
+   "all": {
+    "n": 80,
+    "a": 0.0875,
+    "b": 0.4375,
+    "c": 0.0,
+    "d": 0.325,
+    "apparent_gain": 0.35,
+    "corrected_gain": 0.325,
+    "corrected_ci": [
+     0.225,
+     0.425
+    ],
+    "did": 0.025,
+    "did_ci": [
+     -0.075,
+     0.125
+    ],
+    "masking": -0.025
+   },
+   "structural_gate567": {
+    "n": 80,
+    "a": 0.0875,
+    "b": 0.4375,
+    "c": 0.0,
+    "d": 0.325,
+    "apparent_gain": 0.35,
+    "corrected_gain": 0.325,
+    "corrected_ci": [
+     0.225,
+     0.425
+    ],
+    "did": 0.025,
+    "did_ci": [
+     -0.075,
+     0.125
+    ],
+    "masking": -0.025
+   },
+   "structural_term_present": {
+    "n": 78,
+    "a": 0.08974358974358974,
+    "b": 0.44871794871794873,
+    "c": 0.0,
+    "d": 0.3333333333333333,
+    "apparent_gain": 0.358974358974359,
+    "corrected_gain": 0.3333333333333333,
+    "corrected_ci": [
+     0.23076923076923078,
+     0.4358974358974359
+    ],
+    "did": 0.02564102564102564,
+    "did_ci": [
+     -0.07692307692307693,
+     0.1282051282051282
+    ],
+    "masking": -0.02564102564102564
+   },
+   "term_present_oracle_ok": {
+    "n": 32,
+    "a": 0.03125,
+    "b": 0.625,
+    "c": 0.0,
+    "d": 0.8125,
+    "apparent_gain": 0.59375,
+    "corrected_gain": 0.8125,
+    "corrected_ci": [
+     0.65625,
+     0.9375
+    ],
+    "did": -0.21875,
+    "did_ci": [
+     -0.375,
+     -0.09375
+    ],
+    "masking": 0.21875
+   },
+   "term_present_compliance_new": {
+    "n": 32,
+    "a": 0.03125,
+    "b": 0.625,
+    "c": 0.0,
+    "d": 0.8125,
+    "apparent_gain": 0.59375,
+    "corrected_gain": 0.8125,
+    "corrected_ci": [
+     0.65625,
+     0.9375
+    ],
+    "did": -0.21875,
+    "did_ci": [
+     -0.375,
+     -0.09375
+    ],
+    "masking": 0.21875
+   },
+   "term_present_compliance_old": {
+    "n": 5,
+    "a": 1.0,
+    "b": 0.8,
+    "c": 0.0,
+    "d": 0.0,
+    "apparent_gain": -0.2,
+    "corrected_gain": 0.0,
+    "corrected_ci": [
+     0.0,
+     0.0
+    ],
+    "did": -0.2,
+    "did_ci": [
+     -0.6,
+     0.0
+    ],
+    "masking": 0.2
+   },
+   "audited_sample": {
+    "n": 80,
+    "a": 0.0875,
+    "b": 0.4375,
+    "c": 0.0,
+    "d": 0.325,
+    "apparent_gain": 0.35,
+    "corrected_gain": 0.325,
+    "corrected_ci": [
+     0.225,
+     0.425
+    ],
+    "did": 0.025,
+    "did_ci": [
+     -0.075,
+     0.125
+    ],
+    "masking": -0.025
+   },
+   "audited_clean": {
+    "n": 80,
+    "a": 0.0875,
+    "b": 0.4375,
+    "c": 0.0,
+    "d": 0.325,
+    "apparent_gain": 0.35,
+    "corrected_gain": 0.325,
+    "corrected_ci": [
+     0.225,
+     0.425
+    ],
+    "did": 0.025,
+    "did_ci": [
+     -0.075,
+     0.125
+    ],
+    "masking": -0.025
+   },
+   "all_minus_excluded": {
+    "n": 80,
+    "a": 0.0875,
+    "b": 0.4375,
+    "c": 0.0,
+    "d": 0.325,
+    "apparent_gain": 0.35,
+    "corrected_gain": 0.325,
+    "corrected_ci": [
+     0.225,
+     0.425
+    ],
+    "did": 0.025,
+    "did_ci": [
+     -0.075,
+     0.125
+    ],
+    "masking": -0.025
+   }
+  },
+  "k=5": {
+   "all": {
+    "n": 80,
+    "a": 0.0875,
+    "b": 0.4625,
+    "c": 0.0,
+    "d": 0.3,
+    "apparent_gain": 0.375,
+    "corrected_gain": 0.3,
+    "corrected_ci": [
+     0.2,
+     0.4
+    ],
+    "did": 0.075,
+    "did_ci": [
+     -0.0375,
+     0.1875
+    ],
+    "masking": -0.075
+   },
+   "structural_gate567": {
+    "n": 80,
+    "a": 0.0875,
+    "b": 0.4625,
+    "c": 0.0,
+    "d": 0.3,
+    "apparent_gain": 0.375,
+    "corrected_gain": 0.3,
+    "corrected_ci": [
+     0.2,
+     0.4
+    ],
+    "did": 0.075,
+    "did_ci": [
+     -0.0375,
+     0.1875
+    ],
+    "masking": -0.075
+   },
+   "structural_term_present": {
+    "n": 78,
+    "a": 0.08974358974358974,
+    "b": 0.47435897435897434,
+    "c": 0.0,
+    "d": 0.3076923076923077,
+    "apparent_gain": 0.38461538461538464,
+    "corrected_gain": 0.3076923076923077,
+    "corrected_ci": [
+     0.20512820512820512,
+     0.41025641025641024
+    ],
+    "did": 0.07692307692307693,
+    "did_ci": [
+     -0.038461538461538464,
+     0.20512820512820512
+    ],
+    "masking": -0.07692307692307693
+   },
+   "term_present_oracle_ok": {
+    "n": 32,
+    "a": 0.03125,
+    "b": 0.5625,
+    "c": 0.0,
+    "d": 0.5625,
+    "apparent_gain": 0.53125,
+    "corrected_gain": 0.5625,
+    "corrected_ci": [
+     0.40625,
+     0.71875
+    ],
+    "did": -0.03125,
+    "did_ci": [
+     -0.25,
+     0.1875
+    ],
+    "masking": 0.03125
+   },
+   "term_present_compliance_new": {
+    "n": 32,
+    "a": 0.03125,
+    "b": 0.5625,
+    "c": 0.0,
+    "d": 0.5625,
+    "apparent_gain": 0.53125,
+    "corrected_gain": 0.5625,
+    "corrected_ci": [
+     0.40625,
+     0.71875
+    ],
+    "did": -0.03125,
+    "did_ci": [
+     -0.25,
+     0.1875
+    ],
+    "masking": 0.03125
+   },
+   "term_present_compliance_old": {
+    "n": 5,
+    "a": 1.0,
+    "b": 0.8,
+    "c": 0.0,
+    "d": 0.0,
+    "apparent_gain": -0.2,
+    "corrected_gain": 0.0,
+    "corrected_ci": [
+     0.0,
+     0.0
+    ],
+    "did": -0.2,
+    "did_ci": [
+     -0.6,
+     0.0
+    ],
+    "masking": 0.2
+   },
+   "audited_sample": {
+    "n": 80,
+    "a": 0.0875,
+    "b": 0.4625,
+    "c": 0.0,
+    "d": 0.3,
+    "apparent_gain": 0.375,
+    "corrected_gain": 0.3,
+    "corrected_ci": [
+     0.2,
+     0.4
+    ],
+    "did": 0.075,
+    "did_ci": [
+     -0.0375,
+     0.1875
+    ],
+    "masking": -0.075
+   },
+   "audited_clean": {
+    "n": 80,
+    "a": 0.0875,
+    "b": 0.4625,
+    "c": 0.0,
+    "d": 0.3,
+    "apparent_gain": 0.375,
+    "corrected_gain": 0.3,
+    "corrected_ci": [
+     0.2,
+     0.4
+    ],
+    "did": 0.075,
+    "did_ci": [
+     -0.0375,
+     0.1875
+    ],
+    "masking": -0.075
+   },
+   "all_minus_excluded": {
+    "n": 80,
+    "a": 0.0875,
+    "b": 0.4625,
+    "c": 0.0,
+    "d": 0.3,
+    "apparent_gain": 0.375,
+    "corrected_gain": 0.3,
+    "corrected_ci": [
+     0.2,
+     0.4
+    ],
+    "did": 0.075,
+    "did_ci": [
+     -0.0375,
+     0.1875
+    ],
+    "masking": -0.075
+   }
+  }
+ },
+ "paired_vs_k1": {
+  "k=5": {
+   "delta_apparent": {
+    "mean": 0.025,
+    "ci": [
+     -0.0875,
+     0.1375
+    ],
+    "positive": 12,
+    "negative": 10,
+    "zero": 58,
+    "sign_test_two_sided": 0.8318119049072266
+   },
+   "delta_corrected": {
+    "mean": -0.025,
+    "ci": [
+     -0.125,
+     0.075
+    ],
+    "positive": 8,
+    "negative": 10,
+    "zero": 62,
+    "sign_test_two_sided": 0.8145294189453125
+   },
+   "delta_masking": {
+    "mean": -0.05,
+    "ci": [
+     -0.1625,
+     0.0625
+    ],
+    "positive": 9,
+    "negative": 12,
+    "zero": 59,
+    "sign_test_two_sided": 0.6636238098144531
+   },
+   "delta_d": {
+    "mean": -0.025,
+    "ci": [
+     -0.125,
+     0.075
+    ],
+    "positive": 8,
+    "negative": 10,
+    "zero": 62,
+    "sign_test_two_sided": 0.8145294189453125
+   }
+  }
+ },
+ "formal_vs_k1": {
+  "k=5": {
+   "apparent_best": "k=5",
+   "corrected_best": "k=1",
+   "corrected_ci_apparent_best": [
+    0.2,
+    0.4
+   ],
+   "corrected_ci_corrected_best": [
+    0.225,
+    0.425
+   ],
+   "p_flip": 0.3952,
+   "corrected_ci_separated": false,
+   "in_sensitive_band": false,
+   "verdict": "建议不变"
+  }
+ },
+ "monotonicity": {
+  "apparent_shape": "单调升",
+  "corrected_shape": "单调降",
+  "apparent_values": {
+   "1": 0.35,
+   "5": 0.375
+  },
+  "corrected_values": {
+   "1": 0.325,
+   "5": 0.3
+  },
+  "gap_apparent_minus_corrected": {
+   "1": 0.024999999999999967,
+   "5": 0.07500000000000001
+  },
+  "corrected_trough_k": 5
+ },
+ "argmax": {
+  "apparent": {
+   "argmax": "k=5",
+   "means": {
+    "k=1": 0.35,
+    "k=5": 0.375
+   }
+  },
+  "corrected": {
+   "argmax": "k=1",
+   "means": {
+    "k=1": 0.325,
+    "k=5": 0.3
+   }
+  },
+  "flipped": true,
+  "p_flip_all_ks": 0.3952,
+  "bootstrap_replicates": 10000
+ }
+}

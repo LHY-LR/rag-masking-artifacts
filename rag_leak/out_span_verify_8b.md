@@ -1,0 +1,106 @@
+# 答案 span 复核探针（Qwen3-8B）
+
+- 输入：`rag_leak/out_b8_full_k1/pilot_Qwen3-8B_substituted.jsonl`；条目 90
+- 解析成功 86；改判 86
+
+- **修复 20/22**（门槛 ≥10）：过
+- **误伤 66/68**（门槛 ≤5）：不过
+- 被修复的题：['trivia-106', 'trivia-110', 'trivia-147', 'trivia-160', 'trivia-17', 'trivia-198', 'trivia-21', 'trivia-238', 'trivia-260', 'trivia-297', 'trivia-313', 'trivia-318', 'trivia-336', 'trivia-340', 'trivia-395', 'trivia-4', 'trivia-411', 'trivia-435', 'trivia-72', 'trivia-86']
+- 被误伤的题：['trivia-0', 'trivia-101', 'trivia-12', 'trivia-124', 'trivia-129', 'trivia-133', 'trivia-138', 'trivia-142', 'trivia-151', 'trivia-156', 'trivia-165', 'trivia-174', 'trivia-179', 'trivia-183', 'trivia-188', 'trivia-192', 'trivia-200', 'trivia-205', 'trivia-214', 'trivia-219', 'trivia-223', 'trivia-228', 'trivia-232', 'trivia-242', 'trivia-247', 'trivia-251', 'trivia-256', 'trivia-265', 'trivia-27', 'trivia-274', 'trivia-279', 'trivia-283', 'trivia-288', 'trivia-292', 'trivia-300', 'trivia-304', 'trivia-309', 'trivia-327', 'trivia-345', 'trivia-354', 'trivia-359', 'trivia-363', 'trivia-368', 'trivia-372', 'trivia-377', 'trivia-381', 'trivia-386', 'trivia-390', 'trivia-402', 'trivia-407', 'trivia-416', 'trivia-420', 'trivia-426', 'trivia-430', 'trivia-44', 'trivia-444', 'trivia-45', 'trivia-5', 'trivia-54', 'trivia-59', 'trivia-63', 'trivia-68', 'trivia-77', 'trivia-81', 'trivia-90', 'trivia-95']
+
+## 解析失败诊断
+
+- 原因分布：{'span_out_of_range': 1, 'bad_schema': 1, 'no_json': 2}
+- 原始输出样本（前 5 条）：
+  - `trivia-35`: {"char_span":[113,121],"reason":"The passage states that a firkin is exactly 9 imperial gallons."}
+Okay, let's tackle this problem. The user is asking how many imperial gallons are in a firkin. The pa
+  - `trivia-115`: {"title":"Project SCORE: \"Atlas In Orbit\"","description":"1958-12-22 Universal Newsreel First Communications Satellite - YouTube","url":"https://www.youtube.com/watch?v=KzYlWzYlWzY","thumbnail":"htt
+  - `trivia-322`: {"type":"image","title":"Apollo 11","caption":"Apollo 11 launched on July 16, 1969, and landed on the Moon on July 20, 1969. The mission was the first to land humans on the Moon. The crew was Neil Arm
+  - `trivia-331`: {"char_span":[133,153],"reason":"The passage states that on 19 August, Paul Goodison earned Britain's 13th gold medal. This indicates that by that date, Great Britain had already won 13 gold medals. H
+
+- `trivia-0` old=`61` 管线=[43, 45] 模型=[13, 19]（none=False）理由：The passage mentions 'Highway 61 Revisited' as the title of Bob Dylan's album, which match
+- `trivia-4` old=`3` 管线=[260, 261] 模型=[133, 136]（none=False）理由：The passage mentions Mike Hawthorn's 1958 Formula One world championship, but does not pro
+- `trivia-5` old=`1905` 管线=[176, 180] 模型=[103, 106]（none=False）理由：The Juilliard School was founded in 1905 as stated in the passage.
+- `trivia-12` old=`303` 管线=[260, 263] 模型=[103, 106]（none=False）理由：The year 303 is mentioned in the passage as the approximate year when St. George was kille
+- `trivia-17` old=`4` 管线=[260, 261] 模型=[113, 117]（none=False）理由：The passage states that Boris Becker is the only unseeded player to win the Wimbledon's me
+- `trivia-21` old=`7` 管线=[23, 24] 模型=[13, 20]（none=False）理由：...
+- `trivia-27` old=`1983` 管线=[260, 264] 模型=[24, 28]（none=False）理由：The passage states that on 31 January 1983 it became compulsory to wear front seatbelts in
+- `trivia-44` old=`1971` 管线=[260, 264] 模型=[143, 146]（none=False）理由：The passage states that the Open University was founded in 1969 and took its first 24,000 
+- `trivia-45` old=`1885` 管线=[260, 264] 模型=[135, 137]（none=False）理由：The passage states that Doctor Emmet Brown is in 1885, and Marty McFly travels back to thi
+- `trivia-54` old=`14` 管线=[260, 262] 模型=[133, 137]（none=False）理由：The passage states that there are 14 traditional stations of the Cross, which directly ans
+- `trivia-59` old=`20` 管线=[38, 40] 模型=[10, 12]（none=False）理由：The passage states '20 Italian Regions' which directly answers the question of how many re
+- `trivia-63` old=`12` 管线=[260, 262] 模型=[114, 125]（none=False）理由：The passage states there are 12 E tiles.
+- `trivia-68` old=`1997` 管线=[181, 185] 模型=[133, 139]（none=False）理由：The passage states that Ireland began allowing divorces starting in 1997, which directly a
+- `trivia-72` old=`18` 管线=[260, 262] 模型=[133, 136]（none=False）理由：The passage mentions the Chester Cup is now run over 18 furlongs. The value 18 is found in
+- `trivia-77` old=`2000` 管线=[42, 46] 模型=[133, 135]（none=False）理由：The year 2000 is mentioned in the passage as the death year of Sir Robin Day.
+- `trivia-81` old=`451` 管线=[260, 263] 模型=[133, 137]（none=False）理由：The passage mentions Fahrenheit 451, which is the correct answer. The value 451 is the num
+- `trivia-86` old=`11` 管线=[49, 51] 模型=[11, 14]（none=False）理由：The first Apollo moon landing was Apollo 11, which is explicitly mentioned in the passage.
+- `trivia-90` old=`12` 管线=[82, 84] 模型=[43, 46]（none=False）理由：The passage states that Hurricane Force on the Beaufort scale is considered to be a [value
+- `trivia-95` old=`30` 管线=[2, 4] 模型=[0, 2]（none=False）理由：30 is the cube root of 27,000 because 30^3 = 27,000.
+- `trivia-101` old=`1912` 管线=[260, 264] 模型=[103, 106]（none=False）理由：The passage states that Captain Scott's expedition reached the South Pole in 1912, which i
+- `trivia-106` old=`43` 管线=[260, 262] 模型=[133, 137]（none=False）理由：The passage mentions the value 43 in the context of research findings about adolescent dri
+- `trivia-110` old=`3` 管线=[260, 261] 模型=[133, 136]（none=False）理由：The value 3 is found in the passage as the number of states that start and end with the le
+- `trivia-124` old=`1982` 管线=[260, 264] 模型=[133, 136]（none=False）理由：The year 1982 is mentioned in the passage as the year when Israel invaded Lebanon, which i
+- `trivia-129` old=`1825` 管线=[260, 264] 模型=[113, 116]（none=False）理由：The year 1825 is mentioned in the passage as the year when the Stockton and Darlington Rai
+- `trivia-133` old=`1975` 管线=[61, 65] 模型=[113, 116]（none=False）理由：The value 1975 is the year of death of Francisco Franco, which answers the question of unt
+- `trivia-138` old=`1980` 管线=[160, 164] 模型=[13, 17]（none=False）理由：The passage states that CNN was founded in 1980, which directly answers the question about
+- `trivia-142` old=`1970` 管线=[243, 247] 模型=[10, 14]（none=False）理由：The passage states that Mexico 1970 was the first World Cup broadcast in colour, so the an
+- `trivia-147` old=`1818-1848` 管线=[163, 172] 模型=[11, 17]（none=False）理由：The year 1818-1848 is the lifespan of Emily Bronte, which is the answer to the question.
+- `trivia-151` old=`1984` 管线=[260, 264] 模型=[114, 118]（none=False）理由：The passage states that Mrs. Gandhi was assassinated on October 31, 1984, which directly a
+- `trivia-156` old=`15` 管线=[260, 262] 模型=[133, 139]（none=False）理由：The passage states that a 15-letter word is needed to cover three Triple Word Score square
+- `trivia-160` old=`1135-1154` 管线=[260, 269] 模型=[143, 146]（none=False）理由：The text mentions '1135-1154' which corresponds to the 19 year reign of King Stephen, so t
+- `trivia-165` old=`1066` 管线=[31, 35] 模型=[0, 4]（none=False）理由：The first occurrence of the value 1066 is at the beginning of the passage, which directly 
+- `trivia-174` old=`1974` 管线=[156, 160] 模型=[113, 116]（none=False）理由：The passage states that the Flixborough chemical plant exploded on 1 June 1974, which dire
+- `trivia-179` old=`1941` 管线=[50, 54] 模型=[11, 16]（none=False）理由：The passage starts with 'Operation Barbarossa: Hitler's Invasion of Russia 1941' which dir
+- `trivia-183` old=`1995` 管线=[260, 264] 模型=[133, 137]（none=False）理由：1995 is the year when Blackburn Rovers won the Premier League, which is part of the questi
+- `trivia-188` old=`1982` 管线=[86, 90] 模型=[13, 16]（none=False）理由：The passage states that Catherine, Duchess of Cambridge was born on 9 January 1982, which 
+- `trivia-192` old=`1919` 管线=[214, 218] 模型=[113, 116]（none=False）理由：The passage states that the first nonstop flight across the Atlantic occurred on June 15, 
+- `trivia-198` old=`1491-1556` 管线=[119, 128] 模型=[13, 20]（none=False）理由：The passage states that St. Ignatius Loyola was born in 1491, which is part of the value 1
+- `trivia-200` old=`1989` 管线=[260, 264] 模型=[133, 136]（none=False）理由：The passage states that the Select Committee on Televising of Proceedings of the House fir
+- `trivia-205` old=`14` 管线=[120, 122] 模型=[104, 108]（none=False）理由：The passage states that 14 is the maximum number of clubs allowed in a player's bag under 
+- `trivia-214` old=`1936` 管线=[52, 56] 模型=[10, 14]（none=False）理由：The year 1936 is mentioned in the passage as the year of the Jarrow Crusade march to Londo
+- `trivia-219` old=`1957` 管线=[13, 17] 模型=[11, 15]（none=False）理由：The passage states that the first televised royal Christmas broadcast occurred on December
+- `trivia-223` old=`210` 管线=[184, 187] 模型=[103, 106]（none=False）理由：The passage states that A4 paper has dimensions 210 x 148mm. The question asks for the wid
+- `trivia-228` old=`6` 管线=[260, 261] 模型=[133, 139]（none=False）理由：The passage states that there are 12 interlocking edges, 6 for each tetrahedron. This indi
+- `trivia-232` old=`6` 管线=[260, 261] 模型=[143, 149]（none=False）理由：The passage mentions that 238 AD is known as the Year of the 6 Emperors, which directly an
+- `trivia-238` old=`2` 管线=[260, 261] 模型=[143, 145]（none=False）理由：The passage states that the Flying Dutchman class has a crew of 2.
+- `trivia-242` old=`1970` 管线=[260, 264] 模型=[143, 146]（none=False）理由：The passage states that the Royal Navy abolished the daily ration in 1970, which answers t
+- `trivia-247` old=`1875` 管线=[105, 109] 模型=[0, 4]（none=False）理由：The first occurrence of 1875 is at the beginning of the passage, which is the date of the 
+- `trivia-251` old=`1709` 管线=[260, 264] 模型=[133, 137]（none=False）理由：The passage states that the first exhibition of Cristofori's instrument was in 1709, which
+- `trivia-256` old=`6` 管线=[260, 261] 模型=[133, 139]（none=False）理由：The passage states that a set of 6 replacement leather pockets is required, which directly
+- `trivia-260` old=`3` 管线=[260, 261] 模型=[133, 136]（none=False）理由：The passage states that the show was not intended to stop after five years, but the questi
+- `trivia-265` old=`1958` 管线=[117, 121] 模型=[133, 136]（none=False）理由：The passage states that NASA began operations on October 1, 1958, which is the year it was
+- `trivia-274` old=`1768` 管线=[43, 47] 模型=[14, 20]（none=False）理由：The passage states that the first edition was published between 1768 and 1826. The questio
+- `trivia-279` old=`2004` 管线=[260, 264] 模型=[133, 137]（none=False）理由：The passage mentions the 2004 Boxing Day Tsunami, which directly answers the question abou
+- `trivia-283` old=`1789` 管线=[260, 264] 模型=[133, 136]（none=False）理由：The passage mentions the 'Storming of the Bastille' in the context of the National Constit
+- `trivia-288` old=`720` 管线=[169, 172] 模型=[103, 109]（none=False）理由：The passage directly states that the total of the internal angles of any hexagon is 720°, 
+- `trivia-292` old=`1971` 管线=[260, 264] 模型=[143, 147]（none=False）理由：The passage states that the first students enrolled in January 1971, which directly answer
+- `trivia-297` old=`100,000` 管线=[64, 71] 模型=[24, 34]（none=False）理由：The passage states that one therm is equal to 100,000 BTU, which directly answers the ques
+- `trivia-300` old=`10` 管线=[260, 262] 模型=[133, 135]（none=False）理由：The passage lists the number 10 in the context of the FORU group, which is associated with
+- `trivia-304` old=`20` 管线=[260, 262] 模型=[145, 165]（none=False）理由：The passage states that Italy is subdivided into 20 regions, which directly answers the qu
+- `trivia-309` old=`1969` 管线=[260, 264] 模型=[134, 138]（none=False）理由：The passage states that Sesame Street was praised from its debut in 1969, which directly a
+- `trivia-313` old=`1977` 管线=[21, 25] 模型=[13, 16]（none=False）理由：1977 is the year when T-Rex's Marc Bolan died. The passage lists 1977 as the year for Bola
+- `trivia-318` old=`6` 管线=[260, 261] 模型=[133, 139]（none=False）理由：The passage mentions that the film was released on July 6, 1994, which is the specific dat
+- `trivia-327` old=`25` 管线=[260, 262] 模型=[133, 135]（none=False）理由：The album title '25' is directly mentioned in the passage and is the answer to the questio
+- `trivia-336` old=`7` 管线=[260, 261] 模型=[133, 139]（none=False）理由：...
+- `trivia-340` old=`1960` 管线=[108, 112] 模型=[10, 14]（none=False）理由：The passage states that the capital was moved in 'that year' which refers to the year ment
+- `trivia-345` old=`1982` 管线=[260, 264] 模型=[133, 136]（none=False）理由：The year 1982 is mentioned in the passage as the year when Israel invaded Lebanon, which i
+- `trivia-354` old=`1997` 管线=[260, 264] 模型=[143, 147]（none=False）理由：The passage states that the television series Stargate SG-1 was created in 1997, which dir
+- `trivia-359` old=`1970` 管线=[260, 264] 模型=[143, 146]（none=False）理由：The passage states that the iconic ball with a regular pattern of hexagons and pentagons w
+- `trivia-363` old=`10001` 管线=[260, 265] 模型=[133, 136]（none=False）理由：The passage shows that 17 in decimal is represented as 10001 in binary.
+- `trivia-368` old=`1863` 管线=[65, 69] 模型=[113, 116]（none=False）理由：The year 1863 is mentioned in the passage as the year when the Battle of Gettysburg took p
+- `trivia-372` old=`97` 管线=[260, 262] 模型=[133, 136]（none=False）理由：97 is the highest prime number less than 100 in the list of Ulam number primes.
+- `trivia-377` old=`30` 管线=[211, 213] 模型=[143, 173]（none=False）理由：The passage states that the race has 30 fences, which directly answers the question.
+- `trivia-381` old=`1986` 管线=[260, 264] 模型=[133, 139]（none=False）理由：The passage states that the Chernobyl disaster occurred in 1986, which is the year in ques
+- `trivia-386` old=`1987` 管线=[79, 83] 模型=[133, 136]（none=False）理由：The passage states that Maori Venture won the 1987 Grand National, which directly answers 
+- `trivia-390` old=`1993` 管线=[20, 24] 模型=[11, 16]（none=False）理由：The passage mentions the 1993 Grand National being cancelled due to incidents, which match
+- `trivia-395` old=`3` 管线=[260, 261] 模型=[133, 136]（none=False）理由：The value 3 appears in the passage as the number of times New Zealand has won the Rugby Wo
+- `trivia-402` old=`1907` 管线=[260, 264] 模型=[133, 136]（none=False）理由：The passage states that Robert Baden-Powell wrote Scouting for Boys in 1908, but the quest
+- `trivia-407` old=`1947` 管线=[260, 264] 模型=[133, 136]（none=False）理由：The year 1947 is mentioned in the passage as the year when Princess Elizabeth went on her 
+- `trivia-411` old=`1960` 管线=[260, 264] 模型=[133, 139]（none=False）理由：The passage states that John Fitzgerald Kennedy, Jr. was born in late November 1960, 17 da
+- `trivia-416` old=`1947` 管线=[63, 67] 模型=[43, 47]（none=False）理由：The passage states that Al Capone died in 1947, which is the only occurrence of the value 
+- `trivia-420` old=`1883` 管线=[180, 184] 模型=[113, 117]（none=False）理由：The passage states that the most notable eruptions of Krakatoa culminated in explosions ov
+- `trivia-426` old=`1926` 管线=[22, 26] 模型=[13, 17]（none=False）理由：The passage states that the UK General Strike occurred in 1926, which is in the 20's. The 
+- `trivia-430` old=`1984` 管线=[260, 264] 模型=[133, 139]（none=False）理由：The passage states that Torvill and Dean's 1984 Olympic free dance was skated to Maurice R
+- `trivia-435` old=`14` 管线=[9, 11] 模型=[14, 18]（none=False）理由：The passage mentions the date '1789 is 14 June 1789.' The number 14 is written as '14' in 
+- `trivia-444` old=`1984` 管线=[260, 264] 模型=[133, 137]（none=False）理由：Vanessa Williams won Miss America 1984 on September 17, 1983, so the year is 1984.

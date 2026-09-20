@@ -1,0 +1,205 @@
+[T1 构集审计]
+  替换条数: 40  类型分布: {'name': 34, 'numeric': 6}
+  ⑤ key 唯一通过率: 0.975
+  ⑥ 编辑局部通过率: 1.000（构造保证）
+[T2 闸门① 检索等价]
+  bm25[rank_bm25]|trivia: retain=1.000 recall 1.000->1.000 (drop +0.000) n=40
+[T3 闸门②③④ × 规模]
+  （GO/REVISE/ABANDON 为三档诊断出口，INSUFFICIENT=样本不足）
+  Qwen3-8B:
+    ②塌陷: INSUFFICIENT value=1.000 | INSUFFICIENT(n=2<30, 待足够样本再判) resid_old=1.000 Wilson95=(0.342,1.000) n=2 new=0 other=0 limit=0.05
+    ③oracle: ABANDON value=0.275 | EM_orig=0.525 EM_sub=0.250 drop=+0.275
+    ④顺从: ABANDON value=0.250 | compliance=0.250 limit=0.9 n=40
+[T4 DiD 干跑（单配置）]
+  注(B2)：DiD<0 表示记忆顶高闭卷地板、掩盖真实检索收益；记忆掩盖量=-DiD（非负）。
+  model          n      表观增益      校正增益      DiD      记忆掩盖量               95%CI     PP掩盖
+  Qwen3-8B      40     0.350     0.225    0.125     -0.125  [-0.025,+0.300]   -0.128
+[T5 功效反推]
+  逐题 DiD 样本方差: 0.2660
+  检出 2pp @80% power -> n/格 >= 5221
+  检出 3pp @80% power -> n/格 >= 2321
+[T6 失败模式台账] 总计 330 条
+  130  全部 proposal 校验失败
+   18  build_gold: 无含金证据段
+    1  trivia-1198/trivia-1198:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 5 次（须恰好 1 次）']
+    1  trivia-982:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1638:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1346:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-157:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1642/trivia-1642:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 3 次（须恰好 1 次）']
+    1  trivia-1999/trivia-1999:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 29 次（须恰好 1 次）']
+    1  trivia-796/trivia-796:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-90/trivia-90:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 19 次（须恰好 1 次）']
+    1  trivia-1709:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1895:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1259/trivia-1259:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-730/trivia-730:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 7 次（须恰好 1 次）']
+    1  trivia-1982:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-882/trivia-882:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 0 次（须恰好 1 次）']
+    1  trivia-348/trivia-348:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-1939/trivia-1939:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-480/trivia-480:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-93/trivia-93:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 8 次（须恰好 1 次）']
+    1  trivia-1026/trivia-1026:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 8 次（须恰好 1 次）']
+    1  trivia-18/trivia-18:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 9 次（须恰好 1 次）']
+    1  trivia-498/trivia-498:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-836:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1305/trivia-1305:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-1667:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1043/trivia-1043:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-790/trivia-790:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 3 次（须恰好 1 次）']
+    1  trivia-1559/trivia-1559:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-1103:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-494/trivia-494:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 3 次（须恰好 1 次）']
+    1  trivia-527/trivia-527:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-1532/trivia-1532:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 10 次（须恰好 1 次）']
+    1  trivia-1806:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-767:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1900:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-609/trivia-609:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-998/trivia-998:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 17 次（须恰好 1 次）']
+    1  trivia-784/trivia-784:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 11 次（须恰好 1 次）']
+    1  trivia-1742/trivia-1742:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 7 次（须恰好 1 次）']
+    1  trivia-1589/trivia-1589:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 3 次（须恰好 1 次）']
+    1  trivia-29/trivia-29:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 0 次（须恰好 1 次）']
+    1  trivia-1203/trivia-1203:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 5 次（须恰好 1 次）']
+    1  trivia-739/trivia-739:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-1665:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-804/trivia-804:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 5 次（须恰好 1 次）']
+    1  trivia-664/trivia-664:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-1546/trivia-1546:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 3 次（须恰好 1 次）']
+    1  trivia-380/trivia-380:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 3 次（须恰好 1 次）']
+    1  trivia-248/trivia-248:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-1718/trivia-1718:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 5 次（须恰好 1 次）']
+    1  trivia-769/trivia-769:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-1996/trivia-1996:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 3 次（须恰好 1 次）']
+    1  trivia-1632/trivia-1632:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 6 次（须恰好 1 次）']
+    1  trivia-1311/trivia-1311:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 3 次（须恰好 1 次）']
+    1  trivia-1076/trivia-1076:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 44 次（须恰好 1 次）']
+    1  trivia-1613/trivia-1613:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-1405/trivia-1405:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 6 次（须恰好 1 次）']
+    1  trivia-975/trivia-975:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-644:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1214:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1077/trivia-1077:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 8 次（须恰好 1 次）']
+    1  trivia-1777/trivia-1777:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-917/trivia-917:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 6 次（须恰好 1 次）']
+    1  trivia-993/trivia-993:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-1118/trivia-1118:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 25 次（须恰好 1 次）']
+    1  trivia-329/trivia-329:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-1241:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-199/trivia-199:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-712/trivia-712:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-1894:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1358/trivia-1358:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 10 次（须恰好 1 次）']
+    1  trivia-1572/trivia-1572:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-1856/trivia-1856:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 8 次（须恰好 1 次）']
+    1  trivia-1166/trivia-1166:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 8 次（须恰好 1 次）']
+    1  trivia-811/trivia-811:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 12 次（须恰好 1 次）']
+    1  trivia-1289/trivia-1289:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 6 次（须恰好 1 次）']
+    1  trivia-856:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1491/trivia-1491:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 10 次（须恰好 1 次）']
+    1  trivia-677:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-831/trivia-831:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 10 次（须恰好 1 次）']
+    1  trivia-786/trivia-786:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 7 次（须恰好 1 次）']
+    1  trivia-67/trivia-67:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-1524:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-749/trivia-749:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 9 次（须恰好 1 次）']
+    1  trivia-1237/trivia-1237:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 65 次（须恰好 1 次）']
+    1  trivia-1100/trivia-1100:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 18 次（须恰好 1 次）']
+    1  trivia-1474/trivia-1474:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-849/trivia-849:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 7 次（须恰好 1 次）']
+    1  trivia-1444/trivia-1444:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 11 次（须恰好 1 次）']
+    1  trivia-1959/trivia-1959:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 13 次（须恰好 1 次）']
+    1  trivia-1970:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1047:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-347/trivia-347:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-603/trivia-603:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 21 次（须恰好 1 次）']
+    1  trivia-1145/trivia-1145:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 0 次（须恰好 1 次）']
+    1  trivia-1445:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1502/trivia-1502:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 49 次（须恰好 1 次）']
+    1  trivia-103/trivia-103:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 7 次（须恰好 1 次）']
+    1  trivia-1647:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1564/trivia-1564:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 9 次（须恰好 1 次）']
+    1  trivia-824/trivia-824:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 8 次（须恰好 1 次）']
+    1  trivia-364:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1925/trivia-1925:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-564:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-470:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1096/trivia-1096:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 3 次（须恰好 1 次）']
+    1  trivia-14/trivia-14:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 5 次（须恰好 1 次）']
+    1  trivia-914/trivia-914:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-559/trivia-559:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-325/trivia-325:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-1227/trivia-1227:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 86 次（须恰好 1 次）']
+    1  trivia-964:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1260/trivia-1260:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-738:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-271:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1886/trivia-1886:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 6 次（须恰好 1 次）']
+    1  trivia-428/trivia-428:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 3 次（须恰好 1 次）']
+    1  trivia-1985:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1745/trivia-1745:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 3 次（须恰好 1 次）']
+    1  trivia-133:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1874/trivia-1874:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 6 次（须恰好 1 次）']
+    1  trivia-1910/trivia-1910:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 3 次（须恰好 1 次）']
+    1  trivia-1015/trivia-1015:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 51 次（须恰好 1 次）']
+    1  trivia-1634:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1255:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-463/trivia-463:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 3 次（须恰好 1 次）']
+    1  trivia-1662/trivia-1662:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 7 次（须恰好 1 次）']
+    1  trivia-682:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1769/trivia-1769:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 7 次（须恰好 1 次）']
+    1  trivia-1356/trivia-1356:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 5 次（须恰好 1 次）']
+    1  trivia-332:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-937/trivia-937:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 9 次（须恰好 1 次）']
+    1  trivia-1585/trivia-1585:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 11 次（须恰好 1 次）']
+    1  trivia-995/trivia-995:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 53 次（须恰好 1 次）']
+    1  trivia-1554/trivia-1554:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 17 次（须恰好 1 次）']
+    1  trivia-137:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-135/trivia-135:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-257/trivia-257:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 0 次（须恰好 1 次）']
+    1  trivia-1123:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-610/trivia-610:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-1199/trivia-1199:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 5 次（须恰好 1 次）']
+    1  trivia-487/trivia-487:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 13 次（须恰好 1 次）']
+    1  trivia-1020/trivia-1020:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-262:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-161/trivia-161:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 5 次（须恰好 1 次）']
+    1  trivia-27/trivia-27:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-1277/trivia-1277:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-394/trivia-394:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-264:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1004/trivia-1004:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 12 次（须恰好 1 次）']
+    1  trivia-237:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1935:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-154/trivia-154:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 13 次（须恰好 1 次）']
+    1  trivia-317/trivia-317:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 7 次（须恰好 1 次）']
+    1  trivia-745/trivia-745:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 6 次（须恰好 1 次）']
+    1  trivia-242:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-659/trivia-659:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 0 次（须恰好 1 次）']
+    1  trivia-321/trivia-321:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 3 次（须恰好 1 次）']
+    1  trivia-1790:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-418/trivia-418:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-1771:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-134/trivia-134:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-588:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1417:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1257:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-489:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1018:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-1599/trivia-1599:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-48/trivia-48:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-1516/trivia-1516:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-19/trivia-19:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 17 次（须恰好 1 次）']
+    1  trivia-153/trivia-153:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 0 次（须恰好 1 次）']
+    1  trivia-1003/trivia-1003:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 5 次（须恰好 1 次）']
+    1  trivia-1619/trivia-1619:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 6 次（须恰好 1 次）']
+    1  trivia-627/trivia-627:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 6 次（须恰好 1 次）']
+    1  trivia-1377/trivia-1377:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 4 次（须恰好 1 次）']
+    1  trivia-530/trivia-530:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 14 次（须恰好 1 次）']
+    1  trivia-1920/trivia-1920:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 24 次（须恰好 1 次）']
+    1  trivia-49/trivia-49:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 3 次（须恰好 1 次）']
+    1  trivia-871/trivia-871:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 2 次（须恰好 1 次）']
+    1  trivia-1974:positive_ctxs:0 金段内 0 处字面命中，需 LLM 提候选+人审
+    1  trivia-876/trivia-876:positive_ctxs:0 提案校验失败: ['old 在段内整词出现 25 次（须恰好 1 次）']

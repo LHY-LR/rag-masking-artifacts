@@ -1,0 +1,17 @@
+# 论文复现所需（Python 3.12）
+# GPU 路径（Qwen3 系列）
+torch==2.5.1
+transformers==4.51.3
+accelerate==1.7.0
+bitsandbytes==0.45.5
+# 跨世代 Qwen3.5-4B-Base 单独用 transformers==5.17.0（另一环境，见 REPRODUCE.md）
+datasets==5.0.1
+huggingface_hub==0.36.2
+modelscope==1.37.1
+pyarrow==25.0.1
+rank-bm25==0.2.2
+# 分析与画图
+numpy==2.2.6
+scipy==1.16.3
+pandas==2.3.3
+matplotlib==3.10.7

@@ -1,0 +1,182 @@
+{
+  "schema_version": "0.3",
+  "mode": "grid",
+  "label": "focused_Qwen3-0.6B_4096",
+  "created_at": "2026-09-04T07:06:46.232662+00:00",
+  "config_snapshot": {
+    "models": [
+      "Qwen3-0.6B",
+      "Qwen3-1.7B",
+      "Qwen3-4B",
+      "Qwen3-8B"
+    ],
+    "model_32b": "Qwen3-32B",
+    "hf_model_ids": {
+      "Qwen3-0.6B": "Qwen/Qwen3-0.6B",
+      "Qwen3-1.7B": "Qwen/Qwen3-1.7B",
+      "Qwen3-4B": "Qwen/Qwen3-4B",
+      "Qwen3-8B": "Qwen/Qwen3-8B",
+      "Qwen3-32B": "Qwen/Qwen3-32B"
+    },
+    "tokenizer_id": "Qwen/Qwen3-0.6B",
+    "decode": {
+      "temperature": 0.0,
+      "max_new_tokens": 32,
+      "do_sample": false
+    },
+    "prompt_template": "Read the following context and answer the question with the shortest possible answer. Strictly follow the context; if the context says a value, use that exact value.\nContext: {context}\n\nQ: {question}\nA:",
+    "prompt_template_noctx": "Answer the question with the shortest possible answer.\nQ: {question}\nA:",
+    "granularities": [
+      "sentence",
+      "paragraph",
+      "token256"
+    ],
+    "token_block": 256,
+    "budgets": [
+      1024,
+      4096
+    ],
+    "top_k": [
+      5
+    ],
+    "extra_top_k": [
+      3,
+      8
+    ],
+    "gold_recall_k": 5,
+    "pilot_n": 240,
+    "subset_n": 1200,
+    "mini_n": 10,
+    "gates": {
+      "1": {
+        "name": "retrieval_equivalence",
+        "retain_min": 0.9,
+        "recall_drop_max": 0.02,
+        "revise_drop": 0.2,
+        "abandon_drop": 0.35
+      },
+      "2": {
+        "name": "closed_book_collapse",
+        "resid_single": 0.05,
+        "resid_multi": 0.08,
+        "resid_32b": 0.15,
+        "seq_first": 50,
+        "seq_go": 0.05,
+        "seq_abandon": 0.15
+      },
+      "3": {
+        "name": "oracle_answerability",
+        "drop_max": 0.03,
+        "revise_drop": 0.08,
+        "abandon_drop": 0.08,
+        "support_drift": 0.02
+      },
+      "4": {
+        "name": "conflict_compliance",
+        "rate_min": 0.9,
+        "rate_min_32b": 0.85,
+        "revise": 0.7,
+        "abandon": 0.7
+      },
+      "5": {
+        "name": "key_uniqueness",
+        "min_rate": 0.98
+      },
+      "6": {
+        "name": "edit_locality",
+        "min_rate": 0.95
+      },
+      "7": {
+        "name": "value_unguessable",
+        "cooccur_max": 0.0
+      },
+      "8": {
+        "name": "annotation_reliability",
+        "kappa_min": 0.8,
+        "double_annot_frac": 0.2,
+        "max_seconds_per_item": 45,
+        "abandon_seconds": 60
+      }
+    },
+    "gate_verdict": {
+      "1": {
+        "metric": "recall_drop",
+        "direction": "lower",
+        "go": 0.02,
+        "revise": 0.2,
+        "abandon": 0.35
+      },
+      "3": {
+        "metric": "abs_drop",
+        "direction": "lower",
+        "go": 0.03,
+        "revise": 0.06,
+        "abandon": 0.1
+      },
+      "2": {
+        "metric": "resid_old",
+        "direction": "lower",
+        "go": null,
+        "revise": 0.08,
+        "abandon": 0.15
+      },
+      "4": {
+        "metric": "compliance",
+        "direction": "higher",
+        "go": null,
+        "revise": 0.7,
+        "abandon": 0.55
+      }
+    },
+    "min_n_for_gate": {
+      "1": 30,
+      "2": 30,
+      "3": 30,
+      "4": 30
+    },
+    "rng_seed": 20260903,
+    "bootstrap_b": 10000,
+    "effect_deltas": [
+      0.02,
+      0.03
+    ],
+    "power": 0.8,
+    "alpha": 0.05,
+    "decision_p_flip": 0.8,
+    "ci_levels": [
+      0.025,
+      0.975
+    ],
+    "decision_rule": "sensitive iff P(apparent_argmax != corrected_argmax) > 0.80 AND corrected-gain 95% CIs of the two competing configs are separated",
+    "open_index_name": "wikipedia-dpr-100w",
+    "bm25_k1": 1.5,
+    "bm25_b": 0.75
+  },
+  "dataset_files": {
+    "nq": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "trivia": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "hotpot": "e7d6cf72f485fe9c7e33e1bf36d2964d2c39137eb1d9e2772b144289932ee47f"
+  },
+  "pipeline": {
+    "code_sha": "6be25e54ac57afe2b687e6a07445c061e0ac8394ba436514ba62d42b6dc88c35",
+    "package": "rag_leak"
+  },
+  "run": {
+    "models": [
+      "Qwen3-0.6B"
+    ],
+    "config_key": "gran=paragraph,bud=4096,k=5,rerank=False",
+    "datasets": [
+      {
+        "name": "hotpot",
+        "n": 240
+      }
+    ]
+  },
+  "gate_verdicts": {
+    "Qwen3-0.6B::②塌陷": "INSUFFICIENT",
+    "Qwen3-0.6B::③oracle": "REVISE",
+    "Qwen3-0.6B::④顺从": "ABANDON"
+  },
+  "provenance_note": "受控子集版本化：本 manifest 唯一标识一次运行（输入数据 SHA-256 + 代码指纹 + 冻结配置快照）。任何改动数据/配置/代码都会改变 code_sha 或 file_sha256，从而与本次运行区分。发布后再污染：公开受控子集后，应固定本 manifest 作为该子集的发布版本，并声明从该版本起不再改动其构成（否则视为新版本）。"
+}

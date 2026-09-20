@@ -1,0 +1,79 @@
+{
+ "family_alpha": 0.05,
+ "method": "Holm step-down on exact sign test",
+ "subset": "term_present_compliance_new",
+ "results": [
+  {
+   "model": "Qwen3-0.6B",
+   "n": 190,
+   "delta_k5_minus_k1": -0.15789473684210525,
+   "positive": 15,
+   "negative": 45,
+   "tied": 130,
+   "p_raw": 0.00013451408092849532,
+   "p_holm": 0.0006725704046424766,
+   "rank": 2,
+   "significant_holm_05": true
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "n": 140,
+   "delta_k5_minus_k1": -0.40714285714285714,
+   "positive": 9,
+   "negative": 66,
+   "tied": 65,
+   "p_raw": 7.658840702050266e-12,
+   "p_holm": 4.59530442123016e-11,
+   "rank": 1,
+   "significant_holm_05": true
+  },
+  {
+   "model": "Qwen3-4B",
+   "n": 198,
+   "delta_k5_minus_k1": -0.10101010101010101,
+   "positive": 22,
+   "negative": 42,
+   "tied": 134,
+   "p_raw": 0.01685819004428113,
+   "p_holm": 0.03371638008856226,
+   "rank": 5,
+   "significant_holm_05": true
+  },
+  {
+   "model": "Qwen3-4B-Instruct",
+   "n": 183,
+   "delta_k5_minus_k1": -0.09289617486338798,
+   "positive": 17,
+   "negative": 34,
+   "tied": 132,
+   "p_raw": 0.024092907698449295,
+   "p_holm": 0.03371638008856226,
+   "rank": 6,
+   "significant_holm_05": true
+  },
+  {
+   "model": "Qwen3-8B",
+   "n": 186,
+   "delta_k5_minus_k1": -0.12365591397849462,
+   "positive": 16,
+   "negative": 39,
+   "tied": 131,
+   "p_raw": 0.002667262382859803,
+   "p_holm": 0.008001787148579409,
+   "rank": 4,
+   "significant_holm_05": true
+  },
+  {
+   "model": "Qwen3.5-4B-Base",
+   "n": 241,
+   "delta_k5_minus_k1": -0.11203319502074689,
+   "positive": 15,
+   "negative": 42,
+   "tied": 184,
+   "p_raw": 0.00046000500864878946,
+   "p_holm": 0.0018400200345951578,
+   "rank": 3,
+   "significant_holm_05": true
+  }
+ ]
+}

@@ -1,0 +1,470 @@
+{
+ "protocol": "bline-kaxis-paired-v3",
+ "note": "只读配对；主口径=全部题，结构子集作稳健性对照。Δ 一律以最小 k 为基线，masking=-DiD。",
+ "subset_used": "audited_clean",
+ "ks": [
+  1,
+  5
+ ],
+ "subsets": {
+  "all": 80,
+  "structural_gate567": 80,
+  "structural_term_present": 78,
+  "term_present_oracle_ok": 24,
+  "term_present_compliance_new": 24,
+  "term_present_compliance_old": 24,
+  "audited_sample": 80,
+  "audited_clean": 80,
+  "all_minus_excluded": 80
+ },
+ "per_k": {
+  "k=1": {
+   "all": {
+    "n": 80,
+    "a": 0.5625,
+    "b": 0.6,
+    "c": 0.0,
+    "d": 0.2375,
+    "apparent_gain": 0.0375,
+    "corrected_gain": 0.2375,
+    "corrected_ci": [
+     0.15,
+     0.3375
+    ],
+    "did": -0.2,
+    "did_ci": [
+     -0.3125,
+     -0.0875
+    ],
+    "masking": 0.2
+   },
+   "structural_gate567": {
+    "n": 80,
+    "a": 0.5625,
+    "b": 0.6,
+    "c": 0.0,
+    "d": 0.2375,
+    "apparent_gain": 0.0375,
+    "corrected_gain": 0.2375,
+    "corrected_ci": [
+     0.15,
+     0.3375
+    ],
+    "did": -0.2,
+    "did_ci": [
+     -0.3125,
+     -0.0875
+    ],
+    "masking": 0.2
+   },
+   "structural_term_present": {
+    "n": 78,
+    "a": 0.5769230769230769,
+    "b": 0.6153846153846154,
+    "c": 0.0,
+    "d": 0.24358974358974358,
+    "apparent_gain": 0.038461538461538464,
+    "corrected_gain": 0.24358974358974358,
+    "corrected_ci": [
+     0.15384615384615385,
+     0.34615384615384615
+    ],
+    "did": -0.20512820512820512,
+    "did_ci": [
+     -0.3333333333333333,
+     -0.08974358974358974
+    ],
+    "masking": 0.20512820512820512
+   },
+   "term_present_oracle_ok": {
+    "n": 24,
+    "a": 0.5,
+    "b": 0.7916666666666666,
+    "c": 0.0,
+    "d": 0.7916666666666666,
+    "apparent_gain": 0.2916666666666667,
+    "corrected_gain": 0.7916666666666666,
+    "corrected_ci": [
+     0.625,
+     0.9583333333333334
+    ],
+    "did": -0.5,
+    "did_ci": [
+     -0.7083333333333334,
+     -0.2916666666666667
+    ],
+    "masking": 0.5
+   },
+   "term_present_compliance_new": {
+    "n": 24,
+    "a": 0.5,
+    "b": 0.7916666666666666,
+    "c": 0.0,
+    "d": 0.7916666666666666,
+    "apparent_gain": 0.2916666666666667,
+    "corrected_gain": 0.7916666666666666,
+    "corrected_ci": [
+     0.625,
+     0.9583333333333334
+    ],
+    "did": -0.5,
+    "did_ci": [
+     -0.7083333333333334,
+     -0.2916666666666667
+    ],
+    "masking": 0.5
+   },
+   "term_present_compliance_old": {
+    "n": 24,
+    "a": 0.875,
+    "b": 0.9583333333333334,
+    "c": 0.0,
+    "d": 0.0,
+    "apparent_gain": 0.08333333333333333,
+    "corrected_gain": 0.0,
+    "corrected_ci": [
+     0.0,
+     0.0
+    ],
+    "did": 0.08333333333333333,
+    "did_ci": [
+     -0.08333333333333333,
+     0.25
+    ],
+    "masking": -0.08333333333333333
+   },
+   "audited_sample": {
+    "n": 80,
+    "a": 0.5625,
+    "b": 0.6,
+    "c": 0.0,
+    "d": 0.2375,
+    "apparent_gain": 0.0375,
+    "corrected_gain": 0.2375,
+    "corrected_ci": [
+     0.15,
+     0.3375
+    ],
+    "did": -0.2,
+    "did_ci": [
+     -0.3125,
+     -0.0875
+    ],
+    "masking": 0.2
+   },
+   "audited_clean": {
+    "n": 80,
+    "a": 0.5625,
+    "b": 0.6,
+    "c": 0.0,
+    "d": 0.2375,
+    "apparent_gain": 0.0375,
+    "corrected_gain": 0.2375,
+    "corrected_ci": [
+     0.15,
+     0.3375
+    ],
+    "did": -0.2,
+    "did_ci": [
+     -0.3125,
+     -0.0875
+    ],
+    "masking": 0.2
+   },
+   "all_minus_excluded": {
+    "n": 80,
+    "a": 0.5625,
+    "b": 0.6,
+    "c": 0.0,
+    "d": 0.2375,
+    "apparent_gain": 0.0375,
+    "corrected_gain": 0.2375,
+    "corrected_ci": [
+     0.15,
+     0.3375
+    ],
+    "did": -0.2,
+    "did_ci": [
+     -0.3125,
+     -0.0875
+    ],
+    "masking": 0.2
+   }
+  },
+  "k=5": {
+   "all": {
+    "n": 80,
+    "a": 0.5625,
+    "b": 0.6625,
+    "c": 0.0,
+    "d": 0.225,
+    "apparent_gain": 0.1,
+    "corrected_gain": 0.225,
+    "corrected_ci": [
+     0.1375,
+     0.3125
+    ],
+    "did": -0.125,
+    "did_ci": [
+     -0.25,
+     0.0
+    ],
+    "masking": 0.125
+   },
+   "structural_gate567": {
+    "n": 80,
+    "a": 0.5625,
+    "b": 0.6625,
+    "c": 0.0,
+    "d": 0.225,
+    "apparent_gain": 0.1,
+    "corrected_gain": 0.225,
+    "corrected_ci": [
+     0.1375,
+     0.3125
+    ],
+    "did": -0.125,
+    "did_ci": [
+     -0.25,
+     0.0
+    ],
+    "masking": 0.125
+   },
+   "structural_term_present": {
+    "n": 78,
+    "a": 0.5769230769230769,
+    "b": 0.6794871794871795,
+    "c": 0.0,
+    "d": 0.23076923076923078,
+    "apparent_gain": 0.10256410256410256,
+    "corrected_gain": 0.23076923076923078,
+    "corrected_ci": [
+     0.14102564102564102,
+     0.32051282051282054
+    ],
+    "did": -0.1282051282051282,
+    "did_ci": [
+     -0.2564102564102564,
+     0.0
+    ],
+    "masking": 0.1282051282051282
+   },
+   "term_present_oracle_ok": {
+    "n": 24,
+    "a": 0.5,
+    "b": 0.9166666666666666,
+    "c": 0.0,
+    "d": 0.6666666666666666,
+    "apparent_gain": 0.4166666666666667,
+    "corrected_gain": 0.6666666666666666,
+    "corrected_ci": [
+     0.4583333333333333,
+     0.8333333333333334
+    ],
+    "did": -0.25,
+    "did_ci": [
+     -0.5,
+     0.0
+    ],
+    "masking": 0.25
+   },
+   "term_present_compliance_new": {
+    "n": 24,
+    "a": 0.5,
+    "b": 0.9166666666666666,
+    "c": 0.0,
+    "d": 0.6666666666666666,
+    "apparent_gain": 0.4166666666666667,
+    "corrected_gain": 0.6666666666666666,
+    "corrected_ci": [
+     0.4583333333333333,
+     0.8333333333333334
+    ],
+    "did": -0.25,
+    "did_ci": [
+     -0.5,
+     0.0
+    ],
+    "masking": 0.25
+   },
+   "term_present_compliance_old": {
+    "n": 24,
+    "a": 0.875,
+    "b": 0.9166666666666666,
+    "c": 0.0,
+    "d": 0.041666666666666664,
+    "apparent_gain": 0.041666666666666664,
+    "corrected_gain": 0.041666666666666664,
+    "corrected_ci": [
+     0.0,
+     0.125
+    ],
+    "did": 0.0,
+    "did_ci": [
+     -0.20833333333333334,
+     0.20833333333333334
+    ],
+    "masking": -0.0
+   },
+   "audited_sample": {
+    "n": 80,
+    "a": 0.5625,
+    "b": 0.6625,
+    "c": 0.0,
+    "d": 0.225,
+    "apparent_gain": 0.1,
+    "corrected_gain": 0.225,
+    "corrected_ci": [
+     0.1375,
+     0.3125
+    ],
+    "did": -0.125,
+    "did_ci": [
+     -0.25,
+     0.0
+    ],
+    "masking": 0.125
+   },
+   "audited_clean": {
+    "n": 80,
+    "a": 0.5625,
+    "b": 0.6625,
+    "c": 0.0,
+    "d": 0.225,
+    "apparent_gain": 0.1,
+    "corrected_gain": 0.225,
+    "corrected_ci": [
+     0.1375,
+     0.3125
+    ],
+    "did": -0.125,
+    "did_ci": [
+     -0.25,
+     0.0
+    ],
+    "masking": 0.125
+   },
+   "all_minus_excluded": {
+    "n": 80,
+    "a": 0.5625,
+    "b": 0.6625,
+    "c": 0.0,
+    "d": 0.225,
+    "apparent_gain": 0.1,
+    "corrected_gain": 0.225,
+    "corrected_ci": [
+     0.1375,
+     0.3125
+    ],
+    "did": -0.125,
+    "did_ci": [
+     -0.25,
+     0.0
+    ],
+    "masking": 0.125
+   }
+  }
+ },
+ "paired_vs_k1": {
+  "k=5": {
+   "delta_apparent": {
+    "mean": 0.0625,
+    "ci": [
+     -0.0125,
+     0.15
+    ],
+    "positive": 8,
+    "negative": 3,
+    "zero": 69,
+    "sign_test_two_sided": 0.2265625
+   },
+   "delta_corrected": {
+    "mean": -0.0125,
+    "ci": [
+     -0.0875,
+     0.0625
+    ],
+    "positive": 4,
+    "negative": 5,
+    "zero": 71,
+    "sign_test_two_sided": 1.0
+   },
+   "delta_masking": {
+    "mean": -0.075,
+    "ci": [
+     -0.175,
+     0.025
+    ],
+    "positive": 5,
+    "negative": 11,
+    "zero": 64,
+    "sign_test_two_sided": 0.210113525390625
+   },
+   "delta_d": {
+    "mean": -0.0125,
+    "ci": [
+     -0.0875,
+     0.0625
+    ],
+    "positive": 4,
+    "negative": 5,
+    "zero": 71,
+    "sign_test_two_sided": 1.0
+   }
+  }
+ },
+ "formal_vs_k1": {
+  "k=5": {
+   "apparent_best": "k=5",
+   "corrected_best": "k=1",
+   "corrected_ci_apparent_best": [
+    0.1375,
+    0.3125
+   ],
+   "corrected_ci_corrected_best": [
+    0.15,
+    0.3375
+   ],
+   "p_flip": 0.4656,
+   "corrected_ci_separated": false,
+   "in_sensitive_band": false,
+   "verdict": "建议不变"
+  }
+ },
+ "monotonicity": {
+  "apparent_shape": "单调升",
+  "corrected_shape": "单调降",
+  "apparent_values": {
+   "1": 0.0375,
+   "5": 0.1
+  },
+  "corrected_values": {
+   "1": 0.2375,
+   "5": 0.225
+  },
+  "gap_apparent_minus_corrected": {
+   "1": -0.19999999999999998,
+   "5": -0.125
+  },
+  "corrected_trough_k": 5
+ },
+ "argmax": {
+  "apparent": {
+   "argmax": "k=5",
+   "means": {
+    "k=1": 0.0375,
+    "k=5": 0.1
+   }
+  },
+  "corrected": {
+   "argmax": "k=1",
+   "means": {
+    "k=1": 0.2375,
+    "k=5": 0.225
+   }
+  },
+  "flipped": true,
+  "p_flip_all_ks": 0.4656,
+  "bootstrap_replicates": 10000
+ }
+}

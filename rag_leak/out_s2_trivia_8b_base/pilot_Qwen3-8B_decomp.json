@@ -1,0 +1,72 @@
+{
+ "n_total": 173,
+ "n_conflict": 142,
+ "n_noop": 31,
+ "全集": {
+  "n": 173,
+  "compliance_strict": 0.0867,
+  "compliance_contain": 0.4855,
+  "strict_fail_breakdown": {
+   "new": 69,
+   "refusal": 14,
+   "old": 36,
+   "other": 39
+  }
+ },
+ "真冲突子集(仅 term_present)": {
+  "n": 142,
+  "compliance_strict": 0.1056,
+  "compliance_contain": 0.5915,
+  "strict_fail_breakdown": {
+   "new": 69,
+   "refusal": 8,
+   "old": 23,
+   "other": 27
+  }
+ },
+ "无操作子集(term 不在金证据)": {
+  "n": 31,
+  "compliance_strict": 0.0,
+  "compliance_contain": 0.0,
+  "strict_fail_breakdown": {
+   "old": 13,
+   "refusal": 6,
+   "other": 12
+  }
+ },
+ "answer_type": {
+  "date": {
+   "n": 27,
+   "compliance_strict": 0.2222,
+   "compliance_contain": 0.7778,
+   "n_conflict": 27,
+   "conflict_contain": 0.7778
+  },
+  "name": {
+   "n": 121,
+   "compliance_strict": 0.0579,
+   "compliance_contain": 0.3967,
+   "n_conflict": 93,
+   "conflict_contain": 0.5161
+  },
+  "numeric": {
+   "n": 25,
+   "compliance_strict": 0.08,
+   "compliance_contain": 0.6,
+   "n_conflict": 22,
+   "conflict_contain": 0.6818
+  }
+ },
+ "arms_em_strict": {
+  "a": 0.1561,
+  "b": 0.2428,
+  "c": 0.0,
+  "d": 0.0867
+ },
+ "arms_em_contain": {
+  "cb_orig": 0.6127,
+  "cb_sub": 0.0,
+  "open_orig": 0.8324,
+  "open_sub": 0.4682
+ }
+}

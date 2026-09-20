@@ -1,0 +1,447 @@
+% ============================================================================
+%  refs.bib  —  DRAFT bibliography for v0.1
+%
+%  核实状态（2026-09-14，逐条联网核对：arXiv abs / ACL Anthology .bib / PMLR /
+%  iclr.cc virtual / 厂商页）：**17 条全部核对完毕**。查出并已修复 2 处缺陷：
+%    ① knowledgeable_r1 标题原写作 "via Retrieval-Augmented Generation"，
+%       真实标题用缩写 "via RAG" —— 已改。
+%    ② sainz2023 标题大小写与 ACL 规范不一致（"in Trouble" → "in trouble"）—— 已改。
+%  其余 15 条标题/作者/会议/年份/arXiv 号均正确。B 组"凭记忆重建"的风险已清除。
+%  本轮同时补全了全部作者名单、页码与 DOI（原稿只有 "and others"）。
+%
+%  ⚠️ 仍待处理的一处（不影响编译，投稿前补）：
+%    · memdelta：HF dataset repo 无个人作者；本次 huggingface.co 无法直连，
+%      仅凭检索索引确认 repo 存在 → 投稿前手动打开页面核实（url 已写入条目）。
+%    · qwen3：arXiv 上署名为约 60 位个人作者（An Yang 等），此处沿用常见写法
+%      "Qwen Team"；若目标期刊要求严格，改为 "Yang, An and others"。
+%
+%  C 组：本领域仍有大量相关工作未收录（见 main.tex §2 的 \todo）。
+%  这一节的**覆盖度**（不是准确性）仍是本稿最大的短板。
+% ============================================================================
+
+% ---------------- 已核实：直接竞争/占位工作 ----------------
+@inproceedings{knowledgeable_r1,
+  title     = {Resisting Contextual Interference in {RAG} via Parametric-Knowledge Reinforcement},
+  author    = {Lin, Chenyu and Wen, Yilin and Su, Du and Tan, Hexiang and Sun, Fei and
+               Chen, Muhan and Bao, Chenfu and Lyu, Zhonghou},
+  booktitle = {International Conference on Learning Representations (ICLR 2026)},
+  year      = {2026},
+  note      = {arXiv:2506.05154; OpenReview 6Qc6sO1jh9}
+}
+
+@article{prior_dominance,
+  title   = {Quantifying Prior Dominance in {RAG} Systems},
+  author  = {Or, Barak},
+  journal = {arXiv preprint arXiv:2606.23695},
+  year    = {2026}
+}
+
+@article{memdelta,
+  title   = {{MemDelta}: Controlled Baselines and Hidden Confounds in Agent Memory Evaluation},
+  author  = {Wang, Kuan},
+  journal = {arXiv preprint arXiv:2606.29914},
+  year    = {2026},
+  note    = {Replaces a Hugging Face dataset entry (memdelta-bench/memdelta-benchmark) that we
+             could not reach to verify. This paper is the verifiable record of the same name,
+             and its scope is agent-memory evaluation, not parametric knowledge updates}
+}
+
+% ---------------- 已核实：方法/数据/评测背景（原"凭记忆重建"组，现全部核对通过） ----------------
+@inproceedings{lewis2020,
+  title     = {Retrieval-Augmented Generation for Knowledge-Intensive {NLP} Tasks},
+  author    = {Lewis, Patrick and Perez, Ethan and Piktus, Aleksandra and Petroni, Fabio and
+               Karpukhin, Vladimir and Goyal, Naman and K{\"u}ttler, Heinrich and Lewis, Mike and
+               Yih, Wen-tau and Rockt{\"a}schel, Tim and Riedel, Sebastian and Kiela, Douwe},
+  booktitle = {Advances in Neural Information Processing Systems 33 (NeurIPS 2020)},
+  year      = {2020}
+}
+
+@inproceedings{karpukhin2020,
+  title     = {Dense Passage Retrieval for Open-Domain Question Answering},
+  author    = {Karpukhin, Vladimir and O\u{g}uz, Barlas and Min, Sewon and Lewis, Patrick and
+               Wu, Ledell and Edunov, Sergey and Chen, Danqi and Yih, Wen-tau},
+  booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pages     = {6769--6781},
+  year      = {2020},
+  doi       = {10.18653/v1/2020.emnlp-main.550}
+}
+
+@inproceedings{izacard2021,
+  title     = {Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering},
+  author    = {Izacard, Gautier and Grave, Edouard},
+  booktitle = {Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume},
+  pages     = {874--880},
+  year      = {2021},
+  doi       = {10.18653/v1/2021.eacl-main.74}
+}
+
+@inproceedings{asai2024,
+  title     = {Self-{RAG}: Learning to Retrieve, Generate, and Critique through Self-Reflection},
+  author    = {Asai, Akari and Wu, Zeqiu and Wang, Yizhong and Sil, Avirup and Hajishirzi, Hannaneh},
+  booktitle = {International Conference on Learning Representations (ICLR 2024)},
+  year      = {2024},
+  note      = {arXiv:2310.11511. The arXiv record does not state the venue, so the ICLR 2024
+               attribution rests on the conference record rather than on arXiv}
+}
+
+@article{yan2024,
+  title   = {Corrective Retrieval Augmented Generation},
+  author  = {Yan, Shi-Qi and Gu, Jia-Chen and Zhu, Yun and Ling, Zhen-Hua},
+  journal = {arXiv preprint arXiv:2401.15884},
+  year    = {2024}
+}
+
+@inproceedings{joshi2017,
+  title     = {Trivia{QA}: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension},
+  author    = {Joshi, Mandar and Choi, Eunsol and Weld, Daniel and Zettlemoyer, Luke},
+  booktitle = {Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {1601--1611},
+  year      = {2017},
+  doi       = {10.18653/v1/P17-1147}
+}
+
+@inproceedings{yang2018,
+  title     = {Hotpot{QA}: A Dataset for Diverse, Explainable Multi-hop Question Answering},
+  author    = {Yang, Zhilin and Qi, Peng and Zhang, Saizheng and Bengio, Yoshua and
+               Cohen, William and Salakhutdinov, Ruslan and Manning, Christopher D.},
+  booktitle = {Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing},
+  pages     = {2369--2380},
+  year      = {2018},
+  doi       = {10.18653/v1/D18-1259}
+}
+
+@inproceedings{petroni2019,
+  title     = {Language Models as Knowledge Bases?},
+  author    = {Petroni, Fabio and Rockt{\"a}schel, Tim and Riedel, Sebastian and Lewis, Patrick and
+               Bakhtin, Anton and Wu, Yuxiang and Miller, Alexander},
+  booktitle = {Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)},
+  pages     = {2463--2473},
+  year      = {2019},
+  doi       = {10.18653/v1/D19-1250}
+}
+
+@inproceedings{roberts2020,
+  title     = {How Much Knowledge Can You Pack Into the Parameters of a Language Model?},
+  author    = {Roberts, Adam and Raffel, Colin and Shazeer, Noam},
+  booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pages     = {5418--5426},
+  year      = {2020},
+  doi       = {10.18653/v1/2020.emnlp-main.437}
+}
+
+@inproceedings{kandpal2023,
+  title     = {Large Language Models Struggle to Learn Long-Tail Knowledge},
+  author    = {Kandpal, Nikhil and Deng, Haikang and Roberts, Adam and Wallace, Eric and Raffel, Colin},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {202},
+  pages     = {15696--15707},
+  year      = {2023}
+}
+
+@inproceedings{mallen2023,
+  title     = {When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories},
+  author    = {Mallen, Alex and Asai, Akari and Zhong, Victor and Das, Rajarshi and
+               Khashabi, Daniel and Hajishirzi, Hannaneh},
+  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {9802--9822},
+  year      = {2023},
+  doi       = {10.18653/v1/2023.acl-long.546}
+}
+
+@inproceedings{carlini2023,
+  title     = {Quantifying Memorization Across Neural Language Models},
+  author    = {Carlini, Nicholas and Ippolito, Daphne and Jagielski, Matthew and Lee, Katherine and
+               Tram{\`e}r, Florian and Zhang, Chiyuan},
+  booktitle = {International Conference on Learning Representations (ICLR 2023)},
+  year      = {2023}
+}
+
+@inproceedings{sainz2023,
+  title     = {{NLP} Evaluation in trouble: On the Need to Measure {LLM} Data Contamination for each Benchmark},
+  author    = {Sainz, Oscar and Campos, Jon and Garc{\'i}a-Ferrero, Iker and Etxaniz, Julen and
+               Lopez de Lacalle, Oier and Agirre, Eneko},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2023},
+  pages     = {10776--10787},
+  year      = {2023},
+  doi       = {10.18653/v1/2023.findings-emnlp.722}
+}
+
+@article{qwen3,
+  title   = {Qwen3 Technical Report},
+  author  = {Yang, An and others},
+  journal = {arXiv preprint arXiv:2505.09388},
+  year    = {2025},
+  note    = {The arXiv record credits 60 named authors (first: An Yang), so we cite the
+             byline rather than a group author}
+}
+
+% ============================================================================
+%  Related Work 扩充条目（2026-09-18 加入）
+%
+%  核实状态：**22 条全部逐条联网核对完毕**（arXiv abs / arXiv API / ACL Anthology .bib /
+%  PMLR / Crossref / NeurIPS proceedings）。核对方法：两个独立检索轮次，每条附证据 URL。
+%
+%  核对中查出并已修正的真实缺陷（共 5 类，全部是**会构成学术不端**的那一类）：
+%    ① 标题错：Xie 2024 的 "LLMs" 应为 "Large Language Models"。
+%    ② **作者名单错**（3 条）：ClashEval 实为 3 位作者（原写 10 位）、Sun 2026 实为 3 位（原写 4 位）、
+%       Hong 2024 实为 5 位（原写 6 位，其中 3 个名字是**凭空编的**）。
+%    ③ venue 等级错：Longpre 2021 / Xu 2024 是 EMNLP **主会**（不是 Findings）；
+%       Sun 2026 **确实是 Findings**（arXiv 注释写 "ACL2026 Camera Ready" 是陷阱）。
+%    ④ 不存在的字段：Northcutt 2021 与 Koehn 2004 **无 DOI**，Northcutt 无页码，ICLR 2020 无页码无 DOI
+%       —— 已在条目 note 里写明"不得编造"。
+%    ⑤ 来源误判：Kasner 2026 **不是** arXiv-only，已在 ACL Anthology 正式出版（workshop）。
+%
+%  ⚠️ 投稿前唯一残留：Bernard 2004 的标题大小写（Crossref/RePEc 均作 "Differences-In-Differences"，
+%     OUP 官方页 403 无法直连核对；条目 note 已注明）。
+% ============================================================================
+
+% ---------------- 记忆—上下文冲突 ----------------
+@inproceedings{xu2024survey,
+  title     = {Knowledge Conflicts for {LLM}s: A Survey},
+  author    = {Xu, Rongwu and Qi, Zehan and Guo, Zhijiang and Wang, Cunxiang and
+               Wang, Hongru and Zhang, Yue and Xu, Wei},
+  booktitle = {Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pages     = {8541--8565},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.emnlp-main.486}
+}
+
+@inproceedings{longpre2021entity,
+  title     = {Entity-Based Knowledge Conflicts in Question Answering},
+  author    = {Longpre, Shayne and Perisetla, Kartik and Chen, Anthony and
+               Ramesh, Nikhil and DuBois, Chris and Singh, Sameer},
+  booktitle = {Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pages     = {7052--7063},
+  year      = {2021},
+  doi       = {10.18653/v1/2021.emnlp-main.565}
+}
+
+@inproceedings{xie2024chameleon,
+  title     = {Adaptive Chameleon or Stubborn Sloth: Revealing the Behavior of Large Language Models in Knowledge Conflicts},
+  author    = {Xie, Jian and Zhang, Kai and Chen, Jiangjie and Lou, Renze and Su, Yu},
+  booktitle = {International Conference on Learning Representations (ICLR 2024)},
+  year      = {2024},
+  note      = {arXiv:2305.13300; spotlight (per author-supplied metadata)}
+}
+
+@inproceedings{wu2024clasheval,
+  title     = {{ClashEval}: Quantifying the tug-of-war between an {LLM}'s internal prior and external evidence},
+  author    = {Wu, Kevin and Wu, Eric and Zou, James},
+  booktitle = {Advances in Neural Information Processing Systems 37 (NeurIPS 2024), Datasets and Benchmarks Track},
+  pages     = {33402--33422},
+  year      = {2024},
+  doi       = {10.52202/079017-1053}
+}
+
+@inproceedings{sun2026taskmatters,
+  title     = {Task Matters: Knowledge Requirements Shape {LLM} Responses to Context--Memory Conflict},
+  author    = {Sun, Kaiser and Bai, Fan and Dredze, Mark},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2026},
+  pages     = {4154--4176},
+  year      = {2026},
+  doi       = {10.18653/v1/2026.findings-acl.202},
+  note      = {arXiv:2506.06485 lists ``ACL2026 Camera Ready''; the ACL Anthology record is \emph{Findings}}
+}
+
+@inproceedings{hong2024gullible,
+  title     = {Why So Gullible? Enhancing the Robustness of Retrieval-Augmented Models against Counterfactual Noise},
+  author    = {Hong, Giwon and Kim, Jeonghwan and Kang, Junmo and Myaeng, Sung-Hyon and
+               Whang, Joyce Jiyoung},
+  booktitle = {Findings of the Association for Computational Linguistics: NAACL 2024},
+  pages     = {2474--2495},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.findings-naacl.159}
+}
+
+% ---------------- 反事实 / 受控改写证据 ----------------
+@inproceedings{kaushik2020counterfactual,
+  title     = {Learning the Difference that Makes a Difference with Counterfactually-Augmented Data},
+  author    = {Kaushik, Divyansh and Hovy, Eduard and Lipton, Zachary C.},
+  booktitle = {International Conference on Learning Representations (ICLR 2020)},
+  year      = {2020},
+  note      = {arXiv:1909.12434. ICLR 2020 has no page numbers and no DOI}
+}
+
+@inproceedings{neeman2023disentqa,
+  title     = {{DisentQA}: Disentangling Parametric and Contextual Knowledge with Counterfactual Question Answering},
+  author    = {Neeman, Ella and Aharoni, Roee and Honovich, Or and Choshen, Leshem and
+               Szpektor, Idan and Abend, Omri},
+  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {10056--10070},
+  year      = {2023},
+  doi       = {10.18653/v1/2023.acl-long.559}
+}
+
+@misc{ju2026faithfulnessqa,
+  title   = {Faithfulness-{QA}: A Counterfactual Entity Substitution Dataset for Training Context-Faithful {RAG} Models},
+  author  = {Ju, Li and Wang, Junzhe and Zhang, Qi},
+  year    = {2026},
+  note    = {arXiv:2604.25313 (preprint only; no recorded venue)}
+}
+
+% ---------------- RAG 评测：一次增益到底量了什么 ----------------
+@article{xia2026evidence,
+  title   = {Diagnosing Evidence Utilization in Long-Context and Retrieval-Augmented Language Models under Matched Evidence Conditions},
+  author  = {Xia, Haizhou},
+  journal = {arXiv preprint arXiv:2606.06758},
+  year    = {2026}
+}
+
+@inproceedings{salemi2024erag,
+  title     = {Evaluating Retrieval Quality in Retrieval-Augmented Generation},
+  author    = {Salemi, Alireza and Zamani, Hamed},
+  booktitle = {Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)},
+  pages     = {2395--2400},
+  year      = {2024},
+  doi       = {10.1145/3626772.3657957}
+}
+
+@inproceedings{rajpurkar2018squad2,
+  title     = {Know What You Don't Know: Unanswerable Questions for {SQuAD}},
+  author    = {Rajpurkar, Pranav and Jia, Robin and Liang, Percy},
+  booktitle = {Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)},
+  pages     = {784--789},
+  year      = {2018},
+  doi       = {10.18653/v1/P18-2124}
+}
+
+% ---------------- 构集数据的有效性与人工审计 ----------------
+@inproceedings{northcutt2021label,
+  title     = {Pervasive Label Errors in Test Sets Destabilize Machine Learning Benchmarks},
+  author    = {Northcutt, Curtis and Athalye, Anish and Mueller, Jonas},
+  booktitle = {Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks},
+  volume    = {1},
+  year      = {2021},
+  note      = {No DOI and no page numbers exist for this track; do not invent them. arXiv:2103.14749}
+}
+
+@inproceedings{boydgraber2020trivia,
+  title     = {What Question Answering can Learn from Trivia Nerds},
+  author    = {Boyd-Graber, Jordan and B{\"o}rschinger, Benjamin},
+  booktitle = {Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (ACL)},
+  pages     = {7422--7435},
+  year      = {2020},
+  doi       = {10.18653/v1/2020.acl-main.662}
+}
+
+@inproceedings{gururangan2018artifacts,
+  title     = {Annotation Artifacts in Natural Language Inference Data},
+  author    = {Gururangan, Suchin and Swayamdipta, Swabha and Levy, Omer and
+               Schwartz, Roy and Bowman, Samuel R. and Smith, Noah A.},
+  booktitle = {Proceedings of the 2018 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 2 (Short Papers)},
+  pages     = {107--112},
+  year      = {2018},
+  doi       = {10.18653/v1/N18-2017}
+}
+
+@article{artstein2008kappa,
+  title   = {Survey Article: Inter-Coder Agreement for Computational Linguistics},
+  author  = {Artstein, Ron and Poesio, Massimo},
+  journal = {Computational Linguistics},
+  volume  = {34},
+  number  = {4},
+  pages   = {555--596},
+  year    = {2008},
+  doi     = {10.1162/coli.07-034-R2}
+}
+
+@inproceedings{kasner2026span,
+  title     = {{LLM}s as Span Annotators: A Comparative Study of {LLM}s and Humans},
+  author    = {Kasner, Zden{\v{e}}k and Zouhar, Vil{\'e}m and Schmidtov{\'a}, Patr{\'i}cia and
+               Kart{\'a}{\v{c}}, Ivan and Onderkov{\'a}, Krist{\'y}na and Platek, Ondrej and
+               Gkatzia, Dimitra and Mahamood, Saad and Dusek, Ondrej and Balloccu, Simone},
+  booktitle = {Proceedings of the First Workshop on Multilingual Multicultural Evaluation},
+  pages     = {1--22},
+  year      = {2026},
+  doi       = {10.18653/v1/2026.mme-main.1},
+  note      = {arXiv:2504.08697. The author-supplied metadata attaches this workshop to EACL 2026;
+               the Anthology booktitle does not itself say EACL}
+}
+
+% ---------------- 参数侧改写（与本文的上下文侧替换互补） ----------------
+@inproceedings{meng2022rome,
+  title     = {Locating and Editing Factual Associations in {GPT}},
+  author    = {Meng, Kevin and Bau, David and Andonian, Alex and Belinkov, Yonatan},
+  booktitle = {Advances in Neural Information Processing Systems 35 (NeurIPS 2022)},
+  year      = {2022},
+  note      = {arXiv:2202.05262}
+}
+
+@inproceedings{meng2023memit,
+  title     = {Mass-Editing Memory in a Transformer},
+  author    = {Meng, Kevin and Sen Sharma, Arnab and Andonian, Alex and Belinkov, Yonatan and
+               Bau, David},
+  booktitle = {The Eleventh International Conference on Learning Representations (ICLR 2023)},
+  year      = {2023},
+  note      = {arXiv:2210.07229. The arXiv record carries no venue; the authors' own project
+               page records the ICLR 2023 publication and gives this citation form}
+}
+
+% ---------------- 长上下文中的证据使用 ----------------
+@article{liu2024lost,
+  title   = {Lost in the Middle: How Language Models Use Long Contexts},
+  author  = {Liu, Nelson F. and Lin, Kevin and Hewitt, John and Paranjape, Ashwin and
+             Bevilacqua, Michele and Petroni, Fabio and Liang, Percy},
+  journal = {Transactions of the Association for Computational Linguistics},
+  volume  = {12},
+  pages   = {157--173},
+  year    = {2024},
+  doi     = {10.1162/tacl_a_00638},
+  note    = {arXiv:2307.03172. The arXiv comment says ``Accepted for publication in TACL,
+             2023'', which is the acceptance year; the published article is 2024}
+}
+
+% ---------------- 统计方法 ----------------
+@article{schenker2001overlap,
+  title   = {On Judging the Significance of Differences by Examining the Overlap Between Confidence Intervals},
+  author  = {Schenker, Nathaniel and Gentleman, Jane F.},
+  journal = {The American Statistician},
+  volume  = {55},
+  number  = {3},
+  pages   = {182--186},
+  year    = {2001},
+  doi     = {10.1198/000313001317097960}
+}
+
+@article{cumming2005inference,
+  title   = {Inference by Eye: Confidence Intervals and How to Read Pictures of Data},
+  author  = {Cumming, Geoff and Finch, Sue},
+  journal = {American Psychologist},
+  volume  = {60},
+  number  = {2},
+  pages   = {170--180},
+  year    = {2005},
+  doi     = {10.1037/0003-066X.60.2.170}
+}
+
+@inproceedings{koehn2004significance,
+  title     = {Statistical Significance Tests for Machine Translation Evaluation},
+  author    = {Koehn, Philipp},
+  booktitle = {Proceedings of the 2004 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pages     = {388--395},
+  year      = {2004},
+  note      = {Anthology W04-3250; no DOI exists (pre-DOI era)}
+}
+
+@inproceedings{dror2018hitchhiker,
+  title     = {The Hitchhiker's Guide to Testing Statistical Significance in Natural Language Processing},
+  author    = {Dror, Rotem and Baumer, Gili and Shlomov, Segev and Reichart, Roi},
+  booktitle = {Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL)},
+  pages     = {1383--1392},
+  year      = {2018},
+  doi       = {10.18653/v1/P18-1128}
+}
+
+@article{bertrand2004did,
+  title   = {How Much Should We Trust Differences-In-Differences Estimates?},
+  author  = {Bertrand, Marianne and Duflo, Esther and Mullainathan, Sendhil},
+  journal = {The Quarterly Journal of Economics},
+  volume  = {119},
+  number  = {1},
+  pages   = {249--275},
+  year    = {2004},
+  doi     = {10.1162/003355304772839588},
+  note    = {Crossref and RePEc both render the title with a capital ``In''; the lowercase form
+             belongs to the 2002 NBER working paper, not this article}
+}

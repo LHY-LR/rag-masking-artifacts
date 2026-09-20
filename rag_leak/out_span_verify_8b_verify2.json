@@ -1,0 +1,1482 @@
+{
+ "model": "Qwen3-8B",
+ "subs": "rag_leak/out_b8_full_k1/pilot_Qwen3-8B_substituted.jsonl",
+ "n": 90,
+ "records": [
+  {
+   "question_id": "trivia-0",
+   "old": "61",
+   "pipeline_span": [
+    43,
+    45
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is \"61\" which is part of the title \"Highway 61 Revisited\" by Bob Dylan. This is the information that answers the question about which highway was revisited in the classic 60s album. Therefore, the answer is YES. \n\nFinal answer: YES\nThe marked occurrence is \"61\" which is par",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-4",
+   "old": "3",
+   "pipeline_span": [
+    260,
+    261
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "no",
+   "raw": "NO. The marked occurrence <<3>> is not the answer to the question. The question asks about the number of races Mike Hawthorn won out of 45, but the passage does not provide this information. The marked <<3>> refers to a Jaguar model, not the number of race wins. Therefore, the marked value is not th",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-5",
+   "old": "1905",
+   "pipeline_span": [
+    176,
+    180
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\n\nThe marked value is <<1905>>, which directly answers the question about the founding year of the Juilliard School. The passage states that the school was established in 1905, so the marked occurrence provides the correct information. YES\n\nFinal answer: YES\n\nThe marked value is <<1905>>, which d",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-12",
+   "old": "303",
+   "pipeline_span": [
+    260,
+    263
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked value is <<303>>, which is the year when St George was killed. The question asks for the year of his death, so the marked occurrence directly answers the question. Therefore, the answer is YES. Final answer: YES. \n\nFinal answer: YES\nThe marked value is <<303>>, which is the year when ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-17",
+   "old": "4",
+   "pipeline_span": [
+    260,
+    261
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "no",
+   "raw": "YES\nThe marked occurrence is \"August <<4>>, 2002\" which is a date. The question is about Boris Becker's number of runner-up finishes in Men's Singles at Wimbledon. The passage mentions he is the only unseeded player to win the Wimbledon's men's singles title and the first German ever to win it. Howe",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-21",
+   "old": "7",
+   "pipeline_span": [
+    23,
+    24
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "no",
+   "raw": "NO. The marked occurrence is a reference number, not the answer to the question about the number of sides on a twenty pence piece. The question is about a coin's design, while the passage discusses eBay sales and reference numbers.\nThe marked occurrence is a reference number, not the answer to the q",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-27",
+   "old": "1983",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1983>>, which directly answers the question by providing the year when it became compulsory to wear seat belts in front seats of cars in the UK. The passage states this date explicitly, making it the correct piece of information. \n\nFinal answer: YES\nThe marked occurren",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-35",
+   "old": "9",
+   "pipeline_span": [
+    50,
+    51
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked value is <<9>>, which directly answers the question of how many imperial gallons are in a firkin. The passage states it is exactly 9 impgal, so the marked occurrence provides the correct information.\nFinal answer: YES\n\nThe marked value <<9>> is the specific number of imperial gallons ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-44",
+   "old": "1971",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1971>>. The question asks for the year students first enrolled in the Open University. The passage states that the Open University was founded in 1969 and took its first 24,000 students in 1971. Therefore, the marked value 1971 is the answer to the question. Final answ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-45",
+   "old": "1885",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\n\nThe marked occurrence is <<1885>>. The question asks which year Michael J Fox travels back to in the film 'Back To The Future Part III'. The passage states that Doctor Emmet Brown is in 1885, and Marty McFly (played by Michael J Fox) travels back to that year. Therefore, the marked occurrence <",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-54",
+   "old": "14",
+   "pipeline_span": [
+    260,
+    262
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "NO. The marked occurrence is the number 14, which answers the question about how many Stations of the Cross there are. The rest of the passage provides additional context about the devotion and the number of sets erected by St. Leonard Casanova, but the key information answering the question is the ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-59",
+   "old": "20",
+   "pipeline_span": [
+    38,
+    40
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is \"20\" which directly answers the question of how many regions Italy is divided into. The rest of the passage provides additional context but the key information is the number 20. Therefore, the answer is YES.\nThe marked occurrence is \"20\" which directly answers the questi",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-63",
+   "old": "12",
+   "pipeline_span": [
+    260,
+    262
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<12>> E tiles. The question asks how many 'E' tiles are provided in a Scrabble game. The passage directly states that there are 12 E tiles. Therefore, the marked occurrence answers the question.\nFinal answer: YES\nThe marked occurrence is <<12>> E tiles. The question ask",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-68",
+   "old": "1997",
+   "pipeline_span": [
+    181,
+    185
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1997>>, which directly answers the question about the year divorce became legal in the Republic of Ireland. The passage states that Ireland began allowing divorces starting in 1997, making this the correct answer. Other information in the passage is either supplementar",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-72",
+   "old": "18",
+   "pipeline_span": [
+    260,
+    262
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "no",
+   "raw": "YES\n\nThe marked occurrence is the date April 18. The question asks about the distance of the Chester Cup, which is not mentioned in the passage. The passage discusses other races and their distances, but the Chester Cup's distance is not provided. Therefore, the marked date is not the answer to the ",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-77",
+   "old": "2000",
+   "pipeline_span": [
+    42,
+    46
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is the year of death of Sir Robin Day, which is 2000. The question asks for the year associated with the events mentioned, including the death of Paula Yates and Robin Day. Since the marked value is the year of Robin Day's death, which is one of the events mentioned in the ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-81",
+   "old": "451",
+   "pipeline_span": [
+    260,
+    263
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<451>>, which is the correct answer to the question. The question asks for the temperature in Fahrenheit that Bradbury's novel is titled, and the passage confirms that the title is an allusion to Fahrenheit 451. Therefore, the marked value is the correct answer.\nFinal a",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-86",
+   "old": "11",
+   "pipeline_span": [
+    49,
+    51
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is \"Apollo <<11>>\". The question asks for the first Apollo moon landing. Apollo 11 is indeed the first Apollo mission that landed on the Moon, so the marked value directly answers the question. Therefore, the answer is YES. Final answer: YES. \n\nFinal answer: YES\nThe marked ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-90",
+   "old": "12",
+   "pipeline_span": [
+    82,
+    84
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked value is <<12>>, which is one of the options provided in the question. The question asks for the Beaufort Number corresponding to Hurricane Force. The passage states that Hurricane Force on the Beaufort scale is considered to be a certain number, and the options include 12 as one of t",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-95",
+   "old": "30",
+   "pipeline_span": [
+    2,
+    4
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\n\nThe question asks for the cube root of 27,000. The cube root of a number is a value that, when multiplied by itself three times, gives the original number. For 27,000, we can calculate the cube root as follows:\n\n$$\n\\sqrt[3]{27,000} = \\sqrt[3]{27 \\times 1,000} = \\sqrt[3]{",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-101",
+   "old": "1912",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1912>>, which is the year when Captain Scott's expedition was close to the South Pole. The question asks for the year Captain Scott reached the South Pole, and the passage states that in the beginning of 1912 they were 200 metres away from the Pole. Therefore, the mark",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-106",
+   "old": "43",
+   "pipeline_span": [
+    260,
+    262
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked value is <<43>>. The question asks for the number of TV ads viewers see each day according to UK research in 2009. The passage mentions \"42 , <<43>> Research has found...\" which seems to be a citation or reference number rather than the answer. The actual data about the number of ads ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-110",
+   "old": "3",
+   "pipeline_span": [
+    260,
+    261
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "no",
+   "raw": "NO. The marked value \"3\" is part of a larger number \"2.3 million\" and does not directly answer the question about state names starting and ending with \"a\". The question is about state names, while the passage discusses incarceration statistics. Therefore, the marked value is not the answer to the qu",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-115",
+   "old": "1958",
+   "pipeline_span": [
+    32,
+    36
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is \"1958\" which is the year when Project SCORE was launched. The question asks for the launch date of Project SCORE, the first communications satellite. The passage provides the date as 1958-12-22, with \"1958\" being the year part of that date. Since the question is asking f",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-124",
+   "old": "1982",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1982>>, which is the year when several events mentioned in the question occurred, including the invasion of Lebanon by Israel and the death of Leonid Brezhnev. The other events mentioned in the question (Argentina invading the Falkland Islands, Canada becoming independ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-129",
+   "old": "1825",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1825>>, which directly answers the question about when the Stockton and Darlington Railway was opened. The question asks for the year of opening, and the passage states it was opened in 1825. Therefore, the marked value provides the correct information.\nFinal answer: Y",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-133",
+   "old": "1975",
+   "pipeline_span": [
+    61,
+    65
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\n\nThe marked occurrence is the year 1975, which indicates the year of Franco's death. The question asks until when Franco was head of state, and the answer is 1975, so the marked value is the correct information. YES. \n\nFinal answer: YES\nThink first if you like, but the LAST word of your reply mu",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-138",
+   "old": "1980",
+   "pipeline_span": [
+    160,
+    164
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is the year 1980, which directly answers the question about when CNN was founded. The question asks for the year of founding, and the passage states that CNN was founded in <<1980>> by Ted Turner. Therefore, the marked value is the correct answer to the question.\nFinal answ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-142",
+   "old": "1970",
+   "pipeline_span": [
+    243,
+    247
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1970>>, which directly answers the question by indicating the year when the first color broadcast of the football World Cup final occurred. The passage states that Mexico 1970 was the first World Cup broadcast in color, making 1970 the correct answer. Therefore, the ma",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-147",
+   "old": "1818-1848",
+   "pipeline_span": [
+    163,
+    172
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\n\nThe marked occurrence is the date range \"1818-1848\" which indicates the years Emily Bronte lived. This directly answers the question by providing a year in her life. Therefore, the answer is YES. \n\nFinal answer: YES\nThe marked occurrence is the date range \"1818-1848\" which indicates the years E",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-151",
+   "old": "1984",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked value is <<1984>>, which is the year Mrs. Indira Gandhi was assassinated. The passage states she was assassinated on October 31, 1984, and the question asks for the year of her assassination. Therefore, the marked occurrence directly answers the question.\nFinal answer: YES\nThe marked ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-156",
+   "old": "15",
+   "pipeline_span": [
+    260,
+    262
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nOkay, let's tackle this question. The user is asking how many squares are found along one side of a Scrabble board. The passage mentions that an ideal scenario is having a 15-letter word along one side, which covers three Triple Word Score squares. Wait, the question is about the number of squar",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-160",
+   "old": "1135-1154",
+   "pipeline_span": [
+    260,
+    269
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1135-1154>>, which represents the dates of King Stephen's reign. The question asks for a year within this reign. Since the dates span from 1135 to 1154, any year within that range would be correct. The marked text provides the range, so it directly answers the question",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-165",
+   "old": "1066",
+   "pipeline_span": [
+    31,
+    35
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is \"1066 AD\", which directly answers the question about the year of the Battle of Stamford Bridge. The other details (the battle name and date) are additional information but not the specific value being asked. Therefore, the marked value is the correct answer.\nFinal answer",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-174",
+   "old": "1974",
+   "pipeline_span": [
+    156,
+    160
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES. The marked value <<1974>> is the year of the Flixborough chemical plant explosion, which is part of the question's answer. The question asks for the year of both John Stonehouse's disappearance and the Flixborough explosion, but the passage only provides the year for the explosion. Since the qu",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-179",
+   "old": "1941",
+   "pipeline_span": [
+    50,
+    54
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is the title of the book, which includes the year 1941. The question asks about Operation Barbarossa, which is the invasion of Russia by Hitler. The marked text provides the title of the book, which includes the year of the event (1941) and the author. The year 1941 is the ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-183",
+   "old": "1995",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1995>>, which is the year when Blackburn Rovers won the Premier League, as stated in the passage. This directly answers the question's first part. The other parts of the question (Baring's Bank collapse and Cliff Richard's knighthood) are not addressed in the passage, ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-188",
+   "old": "1982",
+   "pipeline_span": [
+    86,
+    90
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\n\nThe marked occurrence is \"1982\", which is the year Kate Middleton was born. The question asks to name the year of her birth, so the marked value directly answers the question. Therefore, the answer is YES. Final answer: YES. \n\nFinal answer: YES\nThe marked value \"1982\" is the year of Kate Middle",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-192",
+   "old": "1919",
+   "pipeline_span": [
+    214,
+    218
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1919>>, which directly answers the question about the year Alcock and Brown made the first flight across the Atlantic. The other information, such as the date of publication (06.15.10) and time of publication (12:00 am), are not relevant to the question. Therefore, the",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-198",
+   "old": "1491-1556",
+   "pipeline_span": [
+    119,
+    128
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1491-1556>>, which represents the birth and death years of St. Ignatius Loyola. The question asks for a year in his life, and this range includes his birth year (1491) and death year (1556). Therefore, the marked occurrence provides the requested information.\nFinal ans",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-200",
+   "old": "1989",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is the year 1989, which directly answers the question about when the proceedings of the House of Commons were first televised. The question asks for the year, and the passage states that the rules were first introduced in 1989. Therefore, the marked value is the correct ans",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-205",
+   "old": "14",
+   "pipeline_span": [
+    120,
+    122
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked value is <<14>>, which directly answers the question about the maximum number of golf clubs allowed in a player's bag. The passage states that 14 is the maximum, so the answer is YES. \nFinal answer: YES\nThe marked value is <<14>>, which directly answers the question about the maximum ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-214",
+   "old": "1936",
+   "pipeline_span": [
+    52,
+    56
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\n\nThe marked occurrence is <<1936>>. The question asks for the year of the Jarrow Crusade march to London. The passage mentions \"a march of 200 blind people to London, also in <<1936>>.\" This directly provides the year as 1936, which answers the question. Therefore, the marked occurrence is the c",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-219",
+   "old": "1957",
+   "pipeline_span": [
+    13,
+    17
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is the year 1957, which directly answers the question about the first year the Queen's Christmas speech was televised. The passage states that on December 25, 1957, the Queen made her first televised royal Christmas broadcast. Therefore, the marked value is the correct answ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-223",
+   "old": "210",
+   "pipeline_span": [
+    184,
+    187
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\n\nThe question asks for the width of A4 paper in millimetres, given that it's printed on A4 which has a length of 297mm. The passage provides the ISO paper sizes, and the marked value is \"size\" between << and >>. However, the actual dimensions for A4 paper are listed as \"ISO paper size 210 x 148m",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-228",
+   "old": "6",
+   "pipeline_span": [
+    260,
+    261
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nOkay, let's tackle this question. The user is asking if the marked value in the passage answers the question about how many edges a tetrahedron has. The question is about edges on a tetrahedron, and the passage mentions \"12 interlocking edges, <<6>> for each tetrahedron.\" \n\nFirst, I need to reca",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-232",
+   "old": "6",
+   "pipeline_span": [
+    260,
+    261
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked value is \"6\" which directly answers the question about how many Emperors there were in the Year of the 6 Emperors. The passage confirms this by stating \"Known as the Year of the 6 Emperors\" which matches the question's query. Therefore, the marked occurrence is the correct answer.\nFin",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-238",
+   "old": "2",
+   "pipeline_span": [
+    260,
+    261
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked value is <<2>>, which directly answers the question about the number of crew in the Flying Dutchman class. The passage states that Tornado catamarans are crewed by 2 people, which matches the question's context. Therefore, the marked occurrence is the correct answer.\nFinal answer: YES",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-242",
+   "old": "1970",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1970>>, which directly answers the question about the year the traditional 'Daily rum ration' was ended. The passage states that the Royal Navy abolished the daily ration in 1970, making this the correct answer. Final answer: YES\nThe marked occurrence is <<1970>>, whic",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-247",
+   "old": "1875",
+   "pipeline_span": [
+    105,
+    109
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1875>>, which is the year when Captain Matthew Webb became the first to swim the English Channel. This directly answers the question. Therefore, the answer is YES. \n\nFinal answer: YES\nThe marked occurrence is <<1875>>, which is the year when Captain Matthew Webb became",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-251",
+   "old": "1709",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked value is <<1709>>, which is the year the piano was first exhibited in Florence. The question asks for the year the piano was invented. While the passage mentions the invention is related to earlier keyboard instruments and the first exhibition in 1709, the invention year isn't explici",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-256",
+   "old": "6",
+   "pipeline_span": [
+    260,
+    261
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked value is <<6>>, which indicates the number of replacement leather pockets typically required for a pool table. This directly answers the question of how many pockets are needed, as the passage states that a full set must be purchased even if only one is damaged. Therefore, the marked ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-260",
+   "old": "3",
+   "pipeline_span": [
+    260,
+    261
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "no",
+   "raw": "NO. The marked occurrence is the date of the first run of \"Turnabout Intruder\" in the time slot, which is not directly related to the number of years \"Star Trek: TOS\" was on the air. The passage does not provide the duration of the show's run. The answer to the question about how many years the show",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-265",
+   "old": "1958",
+   "pipeline_span": [
+    117,
+    121
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is the year 1958, which directly answers the question about the founding year of NASA. Therefore, the answer is YES. Final answer: YES. The marked occurrence is the year 1958, which directly answers the question about the founding year of NASA. Therefore, the answer is YES.",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-274",
+   "old": "1768",
+   "pipeline_span": [
+    43,
+    47
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "no",
+   "raw": "NO. The marked value \"1826\" is not the answer to the question. The question asks for the year the Encyclopedia Britannica was first published, and the passage indicates that the first era (1st–6th editions) spanned from 1768 to 1826. This suggests that the first edition was published in 1768, not 18",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-279",
+   "old": "2004",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked value is <<2004>>, which directly answers the question about the year of the Asian Tsunami or Boxing Day Tsunami that affected Thailand, Indonesia, and other countries. The passage confirms that the tsunami in question occurred in 2004. Therefore, the marked occurrence is the correct ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-283",
+   "old": "1789",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\n\nThe marked value is <<1789>>, which directly answers the question about the year of the storming of the Bastille, an event that marked the beginning of the French Revolution. Therefore, the answer is YES. Final answer: YES. \n\nFinal answer: YES\nFinal answer: YES\nFinal answer: YES\nFinal answer: Y",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-288",
+   "old": "720",
+   "pipeline_span": [
+    169,
+    172
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<720>>, which directly answers the question about the sum of the interior angles of a hexagon. The passage states that the total of the internal angles of any hexagon is 720°, so the marked value provides the correct information.\nThink first if you like, but the LAST wo",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-292",
+   "old": "1971",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked value is \"1971\", which directly answers the question about the year when students first enrolled in the Open University. The passage states that the first students enrolled in January 1971, so this is the correct information.\nFinal answer: YES\nThe marked value is \"1971\", which directl",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-297",
+   "old": "100,000",
+   "pipeline_span": [
+    64,
+    71
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked value is 100,000, which directly answers the question of how many BTUs are in one therm. The passage states that one therm is equal to 100,000 BTUs. Therefore, the marked occurrence provides the correct information.\nFinal answer: YES\n\nFinal answer: YES\nThe marked value is 100,000, whi",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-300",
+   "old": "10",
+   "pipeline_span": [
+    260,
+    262
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "no",
+   "raw": "YES\nThe marked value is <<10>>. The question asks for the shirt number of Jonny Wilkinson, an England rugby union player, during the 2011 World Cup. The passage lists various numbers under different organizations, and the marked value is part of the list under the FIRA–AER section. However, the pass",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-304",
+   "old": "20",
+   "pipeline_span": [
+    260,
+    262
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is the number 20, which directly answers the question about how many regions Italy is divided into. The rest of the passage provides additional context about the administrative divisions, but the key information is the number 20. Therefore, the marked value is the correct a",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-309",
+   "old": "1969",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is the year 1969, which directly answers the question about the debut year of 'Sesame Street'. The rest of the passage discusses reception and awards, but the marked value provides the specific information needed. YES\n\nFinal answer: YES\nThe marked occurrence is the year 196",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-313",
+   "old": "1977",
+   "pipeline_span": [
+    21,
+    25
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\n\nThe marked occurrence is <<1977>>. The question asks for the year both Marc Bolan (of T-Rex) and Elvis Presley died. Marc Bolan died in 1977, as indicated by the marked value. Elvis Presley died in 1977 as well. Therefore, the marked value directly answers the question. Final answer: YES\nThink ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-318",
+   "old": "6",
+   "pipeline_span": [
+    260,
+    261
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "no",
+   "raw": "NO. The marked occurrence \"on copies worldwide\" is not the answer to the question about how many Oscars the film won. The question is about Academy Awards (Oscars) won by the film, while the passage mentions the soundtrack's sales, which is unrelated to the number of Oscars. The passage does not pro",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-322",
+   "old": "11",
+   "pipeline_span": [
+    40,
+    42
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "NO. The marked occurrence is the value <<11>>, which is the Apollo mission number, not the date of the first moon landing. The first Apollo moon landing was Apollo 11, so the marked value is the correct answer to the question. Wait, but the question is asking for the first Apollo moon landing, which",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-327",
+   "old": "25",
+   "pipeline_span": [
+    260,
+    262
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nOkay, let's tackle this question. The user is asking for Adele's record-breaking 2015 album. The passage mentions that three days after a commercial break on The X Factor, Adele confirmed the album title as <<25>>. The key here is to determine if the marked part, which is the title \"25\", is the ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-331",
+   "old": "19",
+   "pipeline_span": [
+    260,
+    262
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "no",
+   "raw": "NO. The marked occurrence is the date when the 13th gold medal was won, not the total number of gold medals. The question asks for the total number, which is not provided in the passage. The passage only mentions one gold medal (the 13th) and the date it was won. The total number of gold medals is n",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-336",
+   "old": "7",
+   "pipeline_span": [
+    260,
+    261
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "no",
+   "raw": "NO. The marked occurrence is not the answer to the question. The question asks about the number of books in the Old Testament included in the Catholic version but not in the Protestant one. The marked text refers to the number of times \"Jehovah\" is used in the New World Translation, which is unrelat",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-340",
+   "old": "1960",
+   "pipeline_span": [
+    108,
+    112
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "no",
+   "raw": "NO. The marked occurrence \"officially moved from Rio de Janeiro to Brasília\" is not the answer to the question. The question asks for the year when the capital was moved, but the passage does not provide a specific year. The marked text only states that the move occurred, not when. The actual year i",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-345",
+   "old": "1982",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1982>>, which is the year when several events mentioned in the question occurred, including the invasion of Lebanon by Israel and the death of Leonid Brezhnev. The other events mentioned in the question (Argentina invading the Falkland Islands, Canada becoming independ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-354",
+   "old": "1997",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is \"1997\", which directly answers the question about when the Goa'uld first appeared in the series. The Goa'uld are a key element in Stargate SG-1, and since the series was created in 1997, that's when they first appeared in the show. The other details in the passage, like ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-359",
+   "old": "1970",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked value is <<1970>>, which is the answer to the question about the first year the football World Cup final was broadcast in colour. The passage states that the iconic ball was first used in the World Cup in 1970, which directly answers the question. Therefore, the marked occurrence is t",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-363",
+   "old": "10001",
+   "pipeline_span": [
+    260,
+    265
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<10001>>_2. The question asks for the binary representation of the number 17. The passage provides several examples of fractions in binary, including \\frac{12_{10}}{17_{10}} \\frac{1100_2}{<<10001>>_2}. This fraction shows that 17 in binary is represented as 10001_",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-368",
+   "old": "1863",
+   "pipeline_span": [
+    65,
+    69
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is the year 1863, which directly answers the question about when the Battle of Gettysburg took place. The rest of the passage provides additional context about the battle, but the marked value is the specific piece of information requested. Therefore, the answer is YES. \n\nF",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-372",
+   "old": "97",
+   "pipeline_span": [
+    260,
+    262
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe question asks for the highest prime number less than 100. In the passage, under the section \"Ulam number primes,\" the list includes the prime numbers: 2, 3, 11, 13, 47, 53, <<97>>, 131, 197, 241, 409, 431, 607, 67",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-377",
+   "old": "30",
+   "pipeline_span": [
+    211,
+    213
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\n\nThe marked occurrence is the number of fences, which is 30. The question asks how many fences horses need to encounter at the Grand National, and the answer is directly provided in the passage. Therefore, the marked value is the correct answer to the question.\n\nFinal answer: YES\nThe marked valu",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-381",
+   "old": "1986",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1986>>, which is the year of the Chernobyl nuclear disaster. The question asks for the year of Olaf Palme's assassination and the Chernobyl disaster. While the passage provides the year of the Chernobyl disaster, it does not mention Olaf Palme's assassination. Therefor",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-386",
+   "old": "1987",
+   "pipeline_span": [
+    79,
+    83
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "no",
+   "raw": "YES\n\nThe marked occurrence is <<1987>>, which is the year Maori Venture won the Grand National. The question asks for the year Reference Point won the Derby and Maori Venture won the Grand National. The passage only provides information about Maori Venture's victory in the Grand National in 1987. Th",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-390",
+   "old": "1993",
+   "pipeline_span": [
+    20,
+    24
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is the year 1993, which is directly related to the question about the Grand National being cancelled. The question asks for the year of the Warrington bombings, Grand National cancellation, and Arsenal's cup finals. The passage mentions the 1993 Grand National being void, w",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-395",
+   "old": "3",
+   "pipeline_span": [
+    260,
+    261
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "no",
+   "raw": "NO. The marked occurrence <<3>> refers to the number of times New Zealand has won the Rugby World Cup, not the height of the crossbar in rugby union. The question asks about the height of the crossbar, which is not mentioned in the passage. Therefore, the marked value is not the answer to the questi",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-402",
+   "old": "1907",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "no",
+   "raw": "NO. The marked value is not the answer to the question. The question asks for the year the Boy Scout movement was founded, and the passage mentions 1906 and 1907 as the years when Baden-Powell wrote the book, but the actual founding year of the Boy Scout movement is not explicitly stated in the pass",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-407",
+   "old": "1947",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "no",
+   "raw": "NO. \n\nThe marked occurrence is \"Gorsedd of Bards at the National Eisteddfod of Wales,\" which is part of the context about Princess Elizabeth's induction in 1946. The question asks for the year when several events occurred: Al Capone's death, Princess Elizabeth's marriage, and India's independence. T",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-411",
+   "old": "1960",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked value is <<1960>>, which is the year John F. Kennedy was elected president. The question asks for the year of that event, so the marked occurrence directly answers the question. Therefore, the answer is YES. \n\nFinal answer: YES\nThe marked value is <<1960>>, which is the year John F. K",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-416",
+   "old": "1947",
+   "pipeline_span": [
+    63,
+    67
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\n\nThe marked occurrence is the year 1947, which is the year Al Capone died. The question asks for the year of the 1940's when Al Capone died, and 1947 is indeed in the 1940's. Therefore, the marked occurrence answers the question. Final answer: YES. \n\nFinal answer: YES\nThe marked occurrence is th",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-420",
+   "old": "1883",
+   "pipeline_span": [
+    180,
+    184
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is <<1883>>, which directly answers the question by providing the year of the most notable eruption of Krakatoa. The question asks for the year in the nineteenth century, and 1883 is the specific year mentioned in the passage. Therefore, the marked value is the correct answ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-426",
+   "old": "1926",
+   "pipeline_span": [
+    22,
+    26
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\n\nThe marked occurrence is <<1926>>, which directly answers the question by providing the year of the UK General Strike in the 20's. The other entries are either from different decades or not relevant to the question. Therefore, the answer is YES. Final answer: YES. \n\nFinal answer: YES\nFinal answ",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-430",
+   "old": "1984",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "last_token",
+   "llm_verdict": "no",
+   "raw": "NO. The marked occurrence is \"costumes,\" which is not the answer to the question. The question asks for the year Torville and Dean won their first Olympic gold, which is explicitly stated as <<1984>> in the passage. \"Costumes\" is a detail about their presentation, not the year.\nThe marked occurrence",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-435",
+   "old": "14",
+   "pipeline_span": [
+    9,
+    11
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "no",
+   "raw": "NO. The marked occurrence is a date (14 June 1789), not the Roman numeral representation of the number 14. The question asks for how to write 14 in Roman numericals, which is \"XIV\". The passage provides a date, which is unrelated to the question. Therefore, the marked value does not answer the quest",
+   "changed": true,
+   "span_overlap": false,
+   "offset_delta": null,
+   "exact_span": null
+  },
+  {
+   "question_id": "trivia-444",
+   "old": "1984",
+   "pipeline_span": [
+    260,
+    264
+   ],
+   "llm_ok": true,
+   "llm_why": "explicit_marker",
+   "llm_verdict": "yes",
+   "raw": "YES\nThe marked occurrence is the year 1984, which is the answer to the question asking for the year when Vanessa Williams won the Miss America title. The passage provides context about her victory, and the marked year directly answers the question. Therefore, the answer is YES. \n\nFinal answer: YES\nT",
+   "changed": false,
+   "span_overlap": true,
+   "offset_delta": null,
+   "exact_span": null
+  }
+ ],
+ "audit": {
+  "n_sample": 90,
+  "n_bad": 22,
+  "n_good": 68,
+  "n_bad_scored": 22,
+  "n_good_scored": 68,
+  "unparsed": [],
+  "repaired": [
+   "trivia-110",
+   "trivia-17",
+   "trivia-21",
+   "trivia-260",
+   "trivia-318",
+   "trivia-331",
+   "trivia-336",
+   "trivia-340",
+   "trivia-395",
+   "trivia-4",
+   "trivia-435",
+   "trivia-72"
+  ],
+  "n_repaired": 12,
+  "false_alarm": [
+   "trivia-274",
+   "trivia-300",
+   "trivia-386",
+   "trivia-402",
+   "trivia-407",
+   "trivia-430"
+  ],
+  "n_false_alarm": 6,
+  "gate_repair_ok": true,
+  "gate_false_alarm_ok": false,
+  "note": "判据=span 不相交或判 none；分母是**可解析**的条数，未解析单列 unparsed"
+ }
+}

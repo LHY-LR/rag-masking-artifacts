@@ -1,0 +1,23 @@
+[T1 构集审计]
+  替换条数: 10  类型分布: {'comparison': 1, 'date': 3, 'bridge': 2, 'numeric': 2, 'name': 2}
+  ⑤ key 唯一通过率: 1.000
+  ⑥ 编辑局部通过率: 1.000（构造保证）
+[T2 闸门① 检索等价]
+  bm25[fallback_okapi]|hotpot: retain=1.000 recall 1.000->1.000 (drop +0.000) n=3
+  bm25[fallback_okapi]|nq: retain=1.000 recall 1.000->1.000 (drop +0.000) n=4
+  bm25[fallback_okapi]|trivia: retain=1.000 recall 1.000->1.000 (drop +0.000) n=3
+[T3 闸门②③④ × 规模]
+  stub:
+    ②塌陷: INSUFFICIENT value=0.000 | INSUFFICIENT(n=0<30, 待足够样本再判) resid_old=nan Wilson95=(nan,nan) n=0 new=0 other=0 limit=0.08
+    ③oracle: INSUFFICIENT value=0.000 | INSUFFICIENT(n=10<30) EM_orig=1.000 EM_sub=1.000 drop=+0.000
+    ④顺从: INSUFFICIENT value=1.000 | INSUFFICIENT(n=10<30) compliance=1.000 limit=0.9
+[T4 DiD 干跑（单配置）]
+  注(B2)：DiD<0 表示记忆顶高闭卷地板、掩盖真实检索收益；记忆掩盖量=-DiD（非负）。
+  model          n      表观增益      校正增益      DiD      记忆掩盖量               95%CI     PP掩盖
+  stub          10     1.000     0.900    0.100     -0.100  [+0.000,+0.300]   -0.100
+[T5 功效反推]
+  逐题 DiD 样本方差: 0.1000
+  检出 2pp @80% power -> n/格 >= 1963
+  检出 3pp @80% power -> n/格 >= 873
+[T6 失败模式台账] 总计 0 条
+  （无失败项）

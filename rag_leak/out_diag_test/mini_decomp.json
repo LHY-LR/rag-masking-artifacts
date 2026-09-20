@@ -1,0 +1,35 @@
+{
+ "n_total": 10,
+ "n_conflict": 6,
+ "n_noop": 4,
+ "全集": {
+  "n": 10,
+  "compliance_strict": 1.0,
+  "compliance_contain": 1.0,
+  "strict_fail_breakdown": {}
+ },
+ "真冲突子集(仅 term_present)": {
+  "n": 6,
+  "compliance_strict": 1.0,
+  "compliance_contain": 1.0,
+  "strict_fail_breakdown": {}
+ },
+ "无操作子集(term 不在金证据)": {
+  "n": 4,
+  "compliance_strict": 1.0,
+  "compliance_contain": 1.0,
+  "strict_fail_breakdown": {}
+ },
+ "arms_em_strict": {
+  "a": 0.6,
+  "b": 1.0,
+  "c": 0.0,
+  "d": 0.9
+ },
+ "arms_em_contain": {
+  "cb_orig": 0.6,
+  "cb_sub": 0.0,
+  "open_orig": 1.0,
+  "open_sub": 0.9
+ }
+}
